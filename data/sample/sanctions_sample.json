@@ -1,0 +1,44 @@
+{
+  "entities": [
+    {
+      "id": "SYN-001",
+      "caption": "Zarechnyi Trading Company",
+      "aliases": [
+        "Zarechny Trading Ltd",
+        "Zarechnyi Trd Co",
+        "Zarechny"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "dataset": "SYNTHETIC_DAY1_PLACEHOLDER"
+    },
+    {
+      "id": "SYN-002",
+      "caption": "Ostrava Holdings PLC",
+      "aliases": [
+        "Ostrava Hldgs",
+        "Ostrava Holding"
+      ],
+      "country": "GB",
+      "topics": [
+        "sanction"
+      ],
+      "dataset": "SYNTHETIC_DAY1_PLACEHOLDER",
+      "_note": "ultimate parent of Harbourgate Components GmbH"
+    },
+    {
+      "id": "SYN-003",
+      "caption": "Marisol Petrochemicals SA",
+      "aliases": [
+        "Marisol Petro"
+      ],
+      "country": "FR",
+      "topics": [
+        "pep"
+      ],
+      "dataset": "SYNTHETIC_DAY1_PLACEHOLDER"
+    }
+  ]
+}
