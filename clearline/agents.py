@@ -341,6 +341,10 @@ def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int,
 
 ADJUDICATOR_SYSTEM = """You produce the final recommendation.
 
+`chain_walked` says whether the control chain was actually traversed. An empty
+chain that WAS walked is a clean result; an empty chain that was NOT walked is
+an open question. Never report the second as the first.
+
 `chain` is the control chain walked upward from the vendor. A hop whose
 sanctions_hit is set means the vendor is clean on its own name but CONTROLLED
 by a listed entity -- indirect exposure, and a BLOCK. Report it as a control
@@ -367,7 +371,7 @@ unresolved_conflicts, caveats, human_question."""
 
 def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
                 chain: list[dict], dq: dict, trace, risk_tier: str,
-                rejections: int) -> Decision:
+                rejections: int, chain_walked: bool = False) -> Decision:
     contested = risk_tier == "HIGH" or rejections >= 2
     tier = Tier.ULTRA if contested else Tier.SUPER
     # Its output is long by design (evidence list, conflicts, caveats), so it
@@ -379,7 +383,9 @@ def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
         if not chain:
             # "No indirect exposure found" and "the chain was never walked" are
             # different claims, and a reviewer must be able to tell them apart.
-            base_caveats.append("control chain not walked for this vendor")
+            base_caveats.append(
+                "control chain walked, no listed entity found"
+                if chain_walked else "control chain NOT walked for this vendor")
 
         chain_hits = [h for h in (chain or []) if h.get("sanctions_hit")]
         if chain_hits:
@@ -432,11 +438,24 @@ def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
                                "source": top.source, "row_ref": top.source_id}] if top else []),
                 "unresolved_conflicts": [], "caveats": base_caveats, "human_question": "",
             }
-        elif critic_out.verdict == "REROUTE" and not chain:
+        elif critic_out.verdict == "REROUTE" and chain_walked and not chain_hits:
+            # No name match AND a chain that was walked and came back clean is
+            # a genuine clearance, not an open question.
+            fake = {
+                "decision": "CLEAR", "confidence": 0.85,
+                "rationale": ("No watchlist match on the vendor's own name, and the control "
+                              f"chain was walked ({len(chain)} hop(s)) without reaching a "
+                              "listed entity."),
+                "evidence": [{"claim": f"control chain hop {h['depth']}: {h['name']}",
+                              "source": "control_graph", "row_ref": str(h.get("lei"))}
+                             for h in chain],
+                "unresolved_conflicts": [], "caveats": base_caveats, "human_question": "",
+            }
+        elif critic_out.verdict == "REROUTE":
             fake = {
                 "decision": "ESCALATE", "confidence": 0.45,
-                "rationale": ("No match on the vendor's own name. Indirect exposure "
-                              "cannot be ruled out until the control chain is walked."),
+                "rationale": ("No match on the vendor's own name, and indirect exposure "
+                              "could not be assessed because the control chain was not walked."),
                 "evidence": [], "unresolved_conflicts": critic_out.reasons,
                 "caveats": base_caveats,
                 "human_question": "Walk the ownership chain for this vendor before approving.",

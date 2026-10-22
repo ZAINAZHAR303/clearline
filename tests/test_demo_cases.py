@@ -16,12 +16,20 @@ from __future__ import annotations
 
 import json
 import os
+import tempfile
 from pathlib import Path
 
 import pytest
 
 os.environ["CLEARLINE_FAKE_LLM"] = "1"
 os.environ.setdefault("SAMPLE_MODE", "true")
+# Isolated memory. The suite must not read state a demo left behind, nor leave
+# state behind for one -- the override loop mutates exactly what it asserts on.
+_MEM = Path(tempfile.gettempdir()) / "clearline-test-memory" / "hmem.json"
+_MEM.parent.mkdir(parents=True, exist_ok=True)
+if _MEM.exists():
+    _MEM.unlink()
+os.environ["CLEARLINE_MEMORY_PATH"] = str(_MEM)
 
 ROOT = Path(__file__).resolve().parent.parent
 MASTER = json.loads((ROOT / "data" / "sample" / "vendor_master.json").read_text(encoding="utf-8"))
@@ -114,3 +122,39 @@ def test_rank_caps_candidates():
                  "aliases": [], "country": "IQ"} for i in range(50)]
     assert len(rank({"legal_name": "South Wealth Resources Ltd.", "country": "IQ"},
                     entities, top_n=5)) <= 5
+
+
+# --- the correction loop -----------------------------------------------------
+
+def test_reviewer_override_changes_the_next_decision():
+    """The loop the product rests on.
+
+    A screening tool that cannot be corrected is worse than useless: every
+    false positive costs a supplier relationship and nobody can stop it
+    recurring. So a reviewer marks a match wrong, H-MEM drops its confidence by
+    the spec's exact delta and tags it for review, and the NEXT run must reach
+    a different decision and say which correction did it.
+    """
+    from clearline.memory import ledger, override, recall
+
+    first, _ = screen("V0001")
+    assert first.decision == "BLOCK", "precondition: V0001 blocks on an exact alias"
+
+    entity_id = first.evidence[0].row_ref
+    assert entity_id, "a block must cite the entity it matched"
+
+    result = override("V0001", entity_id, "wrong", reviewer="pytest")
+    assert result["confidence_after"] == round(result["confidence_before"] - 0.20, 10), \
+        "the spec fixes the 'wrong' delta at exactly -0.20"
+    assert "review" in result["tags"]
+
+    second, _ = screen("V0001")
+    assert second.decision != "BLOCK", (
+        f"a reviewer said this match was wrong; the system must not keep asserting it "
+        f"(got {second.decision})")
+    assert any("reviewer correction" in c for c in second.caveats), second.caveats
+
+    # The correction is auditable, not just applied.
+    actions = [e["action"] for e in ledger("V0001")]
+    assert "create" in actions and "feedback" in actions, actions
+    assert any(m["overridden"] for m in recall("V0001"))

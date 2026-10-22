@@ -20,6 +20,7 @@ from .agents import (
     AVAILABLE_FIELDS,
     CriticOut, Decision, ResolverOut, adjudicator, critic, resolver, router,
 )
+from .memory import overridden_entities, recall, remember
 from .walker import ownership_walker
 from .trace import Trace
 from .zetaris import dq_report, get_vendor, search_sanctions
@@ -89,7 +90,33 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
             from_bar=routed.evidence_bar, to_bar=round(evidence_bar, 2),
         )
 
+    # Recall first. A reviewer's correction has to reach the decision BEFORE
+    # the evidence is weighed, not be applied afterwards as an apology.
+    memories = recall(vendor_id)
+    overridden = overridden_entities(memories, vendor_id)
+    if memories:
+        trace.tool("hmem.recall", engine="meterless/hmem",
+                   implementation="clearline (engines/hmem/src/index.ts)",
+                   remembered=len(memories), overridden=len(overridden))
+
     hits = search_sanctions(vendor)
+    if overridden:
+        kept = []
+        for hit in hits:
+            correction = overridden.get(hit["id"])
+            if correction:
+                # Branch 6: a human said this match was wrong, so the system
+                # does not get to keep asserting it.
+                trace.branch(
+                    f"reviewer marked {hit.get('caption')!r} a wrong match for this vendor "
+                    f"(confidence now {correction.get('confidence')})",
+                    "DROP_OVERRIDDEN_CANDIDATE",
+                    memory_id=correction.get("id"), entity_id=hit["id"],
+                )
+            else:
+                kept.append(hit)
+        hits = kept
+
     trace.tool("search_sanctions", terms=routed.entities, n_hits=len(hits),
                candidates=[{"id": h["id"], "caption": h.get("caption"),
                             **h.get("_features", {})} for h in hits])
@@ -101,6 +128,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
     rejections = 0
     demanded: list[str] = []
     chain: list[dict] = []
+    chain_walked = False
 
     for round_no in range(1, MAX_ROUNDS + 1):
         proposal = resolver(vendor, hits, trace, critic_feedback=feedback)
@@ -122,7 +150,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
         if verdict.verdict == "REROUTE":
             # Branch 4: name evidence cannot settle it -- walk the control chain.
             trace.branch("name evidence exhausted", "WALK_CONTROL_CHAIN")
-            chain = ownership_walker(vendor, trace)
+            chain, chain_walked = ownership_walker(vendor, trace)
             break
 
         if verdict.verdict == "DEMAND_EVIDENCE":
@@ -134,7 +162,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
                 verdict = CriticOut(verdict="REROUTE",
                                     reasons=verdict.reasons + ["requested evidence is not obtainable"],
                                     caveats=verdict.caveats)
-                chain = ownership_walker(vendor, trace)
+                chain, chain_walked = ownership_walker(vendor, trace)
                 break
             demanded.append(_tail(verdict.missing_field))
             rejections += 1
@@ -151,7 +179,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
 
     # 4 -- adjudication, with the budget scaled by risk and critic pushback
     decision = adjudicator(vendor, proposal, verdict, chain, dq, trace,
-                           routed.risk_tier, rejections)
+                           routed.risk_tier, rejections, chain_walked=chain_walked)
 
     # Branch 5: a block must rest on evidence that clears the bar.
     #
@@ -183,6 +211,22 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
             + [f"match evidence {evidence_strength:.2f} below required {evidence_bar:.2f}"],
             "human_question": decision.human_question
             or "Please review the evidence trail and confirm or reject this match.",
+        })
+
+    # Remember what was decided, so the next run can be corrected against it.
+    top_entity = proposal.candidates[0].source_id if (proposal and proposal.candidates) else None
+    if top_entity:
+        stored = remember(vendor_id, top_entity, decision.decision, decision.confidence)
+        if stored:
+            trace.event("hmem.remember", status=stored.get("status"),
+                        record_id=(stored.get("record") or {}).get("id"),
+                        entity_id=top_entity)
+
+    if overridden:
+        decision = decision.model_copy(update={
+            "caveats": decision.caveats + [
+                f"{len(overridden)} candidate(s) excluded by a reviewer correction held in "
+                f"H-MEM; the trust ledger records who changed what and when"],
         })
 
     trace.close(outcome=decision.decision, confidence=decision.confidence,

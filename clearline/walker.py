@@ -69,13 +69,13 @@ def walk(vendor_id: str, max_depth: int = 5, carryover_tokens: int = 640,
         raise WalkerUnavailable(f"walk returned non-JSON: {error}") from error
 
 
-def ownership_walker(vendor: dict, trace, max_depth: int = 5) -> list[dict]:
+def ownership_walker(vendor: dict, trace, max_depth: int = 5) -> tuple[list[dict], bool]:
     """Agent 4. Degrades to an empty chain rather than failing the screening.
 
-    An unavailable engine must not take down a run that has already produced
-    name evidence -- but the caveat it leaves behind matters, because "no
-    indirect exposure found" and "the chain was never walked" are different
-    claims and a reviewer has to be able to tell them apart.
+    Returns (chain, walked). The flag exists because "no indirect exposure
+    found" and "the chain was never walked" are different claims and an empty
+    list cannot distinguish them -- a reviewer reading a clean result has to
+    know which one it is.
     """
     vendor_id = vendor["vendor_id"]
     with trace.agent("ownership_walker", vendor_id=vendor_id, max_depth=max_depth):
@@ -84,7 +84,7 @@ def ownership_walker(vendor: dict, trace, max_depth: int = 5) -> list[dict]:
         except (WalkerUnavailable, subprocess.TimeoutExpired) as error:
             trace.event("walker.unavailable", error=str(error)[:200],
                         consequence="indirect exposure not assessed")
-            return []
+            return [], False
 
         engine = record.get("engine", {})
         trace.tool(
@@ -115,4 +115,4 @@ def ownership_walker(vendor: dict, trace, max_depth: int = 5) -> list[dict]:
         else:
             trace.event("walker.clean", terminated_because=record.get("terminated_because"),
                         hops=len(chain))
-        return chain
+        return chain, True
