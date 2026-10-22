@@ -1,0 +1,14 @@
+{
+  "name": "clearline-markovian",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Clearline's implementation of the Meterless Markovian engine spec",
+  "scripts": {
+    "conformance": "tsx ../../../conformance/runner.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

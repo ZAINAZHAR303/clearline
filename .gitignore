@@ -7,3 +7,5 @@ __pycache__/
 node_modules/
 .DS_Store
 .ipynb_checkpoints/
+engines/.meterless-upstream/
+engines/markovian/node_modules/
