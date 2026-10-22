@@ -100,7 +100,52 @@ The chat-template flag turns deliberation off outright. It must travel in
 Four branches fired in that run: the DQ-driven bar raise, a critic revision
 round, a reroute to the control chain, and a confidence escalation.
 
-### Still over budget
+---
+
+## Day 2 — correctness and cost together
+
+All five demo cases now produce the right decision against the live model.
+
+| vendor | | decision | seconds | reasoning |
+|---|---|---|---|---|
+| V0001 | Metaalkunde BV | **BLOCK** | 132.0 | 9795 |
+| V0002 | South Wealth Resources Ltd. | **BLOCK** | 136.3 | 11032 |
+| V0003 | Southwealth Resources Pty Ltd | **CLEAR** | 105.5 | 5727 |
+| V0004 | Nordvik Components GmbH | ESCALATE | 181.1 | 13284 |
+| V0005 | Global Trading Ltd | ESCALATE | **2.4** | **0** |
+
+V0005 is the shape of the whole argument: an unresolvable name is settled by
+the router in 2.4 seconds with zero reasoning tokens, and never reaches the
+expensive agents at all.
+
+### V0001, per agent
+
+| agent | tier | calls | seconds | reasoning | share |
+|---|---|---|---|---|---|
+| adjudicator | super | 3 | 107.4 | 8400 | 94% |
+| critic | super | 1 | 21.5 | 1395 | 95% |
+| resolver | nano | 1 | 1.6 | 0 | 0% |
+| router | nano | 1 | 1.6 | 0 | 0% |
+| **total** | | **6** | **132.0** | **9795** | |
+
+| | baseline | Day 2 | change |
+|---|---|---|---|
+| one vendor, end to end | 1236.3 s | 132.0 s | **9.4× faster** |
+| LLM calls | 10 | 6 | |
+| correct decision | no | yes | |
+
+The critic fell from 5 calls to 1 once it could see the candidate's alias list
+and understood the task. Most of what looked like a cost problem was a
+correctness problem: an agent that cannot resolve a question keeps asking.
+
+### What remains
+
+The adjudicator is now the whole cost — 107 of 132 seconds, three calls, 94%
+reasoning. Two of those calls are budget escalations before it degrades to a
+direct answer. Giving it a realistic starting budget for a long structured
+output, rather than discovering the need twice per run, is the next change.
+
+### Earlier: still over budget
 
 6.9 minutes for one vendor, against 5–10 minutes for an entire demo. Where the
 remaining time goes:
