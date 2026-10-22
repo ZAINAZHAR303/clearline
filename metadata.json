@@ -1,0 +1,94 @@
+{
+  "project": "Clearline",
+  "tagline": "Counterparty exposure adjudication across fragmented sources, with an evidence trail for every claim.",
+  "track": "Track 1 - Solving Fragmented Intelligence",
+  "cross_track_relevance": "Track 2 - every answer is traceable to a source row",
+  "repository": "https://github.com/ZAINAZHAR303/clearline",
+  "team": { "name": "Argon", "size": 1 },
+
+  "pre_existing_components": {
+    "declared": "none",
+    "evidence": "The repository was empty at 2026-10-22T08:48Z. First commit 0f7900a is dated 2026-10-22T15:06Z, after the build window opened at 00:00Z. Verify with: git log --reverse --format='%H %aI' | head -1"
+  },
+
+  "sponsors": {
+    "meterless": {
+      "status": "working",
+      "summary": "Two engines implemented from the Meterless specs, both passing the upstream conformance suites, and both load-bearing in the product rather than mentioned.",
+      "engines": [
+        {
+          "engine": "Markovian",
+          "implementation": "engines/markovian/src/index.ts",
+          "used_by": "engines/markovian/src/walk.ts and clearline/walker.py",
+          "what_it_does_here": "Bounds the corporate control-chain walk. One hop per chunk, carrying a compressed state summary (frontier, visited set, hits) instead of the whole traversal, so cost per hop is flat with depth. Termination is the engine's: [TASK_COMPLETE] on a listed entity or a root, cycle detection on a revisited node, maxChunks as the depth cap.",
+          "evidence": "bash scripts/conformance.sh markovian -> 8/8 checks passed",
+          "verified_behaviour": "V0004 Nordvik Components GmbH is clean on its own name; the walk reaches a listed entity at depth 2 and the decision becomes BLOCK, citing each hop."
+        },
+        {
+          "engine": "H-MEM",
+          "implementation": "engines/hmem/src/index.ts",
+          "used_by": "engines/hmem/src/cli.ts and clearline/memory.py",
+          "what_it_does_here": "Holds reviewer corrections so they change future decisions. A reviewer marks a match wrong, confidence drops by the spec's exact -0.20, a review tag is applied, and both states are written to an append-only trust ledger. The next run recalls that BEFORE weighing evidence, drops the overridden candidate, and says which correction did it.",
+          "evidence": "bash scripts/conformance.sh hmem -> 13/13 checks passed; tests/test_demo_cases.py::test_reviewer_override_changes_the_next_decision",
+          "verified_behaviour": "V0001 BLOCK -> reviewer marks the match wrong -> same vendor now CLEAR, caveat citing the correction and the ledger."
+        }
+      ],
+      "what_was_unique": "Both engines are load-bearing, not demonstrated in isolation. H-MEM's supersede-never-delete rule and required-provenance-at-construction gave a better design than we would have improvised for a compliance product: a contradiction that was once believed stays in the record, and a memory with no source is rejected rather than stored unauditable.",
+      "not_used": "The Meterless runtime (Nightshift). Local inference does not fit alongside Zetaris on a 15.8 GB machine, so Nemotron is reached through NVIDIA's API instead. The sponsor overview scopes Meterless to the agent engines, which is how it is used here."
+    },
+
+    "zetaris": {
+      "status": "working",
+      "summary": "The provenance and governance layer, not a database.",
+      "where": [
+        { "path": "sql/01_databases.sql", "what": "Lightning database and schemastore container" },
+        { "path": "sql/02_rest_tables.sql", "what": "REST tables over the internal vendor book and the OFAC extract, aliases flattened with LATERAL VIEW explode()" },
+        { "path": "sql/03_usl_counterparty.sql", "what": "Unified Semantic Layer: counterparty, watchlist_entity and watchlist_alias related by foreign key" },
+        { "path": "clearline/zetaris.py", "what": "REST client and dq_report()" },
+        { "path": "scripts/sidecar.sh", "what": "serves data/sample on the Zetaris docker network" }
+      ],
+      "what_was_unique": "RUN DQ output is read by the agent AT RUNTIME and changes its plan: when tax_id coverage is unreliable the evidence bar rises before any matching happens, and the trace records the branch. Data quality steers the agent rather than being reported alongside it. Aliases are modelled as a first-class table because the alias, not the caption, is what identifies a counterparty.",
+      "verified_behaviour": "One semantic query across the internal book and the OFAC list returns exactly the two expected alias hits out of 200 vendors. RUN DQ TABLE returns a primary-key constraint check: 200 total, 200 valid, 0 invalid."
+    },
+
+    "nvidia": {
+      "status": "working",
+      "summary": "Nemotron, tiered by stakes, with the reasoning budget driven by risk.",
+      "where": [{ "path": "clearline/llm.py", "what": "tier router, reasoning-budget policy, usage accounting" }],
+      "models": {
+        "nano": "nvidia/nemotron-3.5-lightning-30b-a3b, deliberation disabled - extraction and routing",
+        "super": "nvidia/nemotron-3.5-lightning-30b-a3b - the resolver/critic loop",
+        "ultra": "nvidia/nemotron-3-ultra-550b-a55b - contested adjudication only"
+      },
+      "what_was_unique": "The reasoning toggle was established by measurement, not documentation: a /no_think system directive only halves deliberation (429 tokens) while extra_body chat_template_kwargs thinking=false zeroes it. Reasoning tokens are read from the provider's own usage accounting, so the 'spend reasoning in proportion to risk' claim is measured rather than asserted.",
+      "evidence": "docs/measurements.md",
+      "verified_behaviour": "One vendor end to end: 1236s with a single model on every tier, 132s tiered. Router 102.8s -> 2.9s with zero reasoning tokens. An unresolvable vendor is settled in 2.4s and never reaches the expensive agents."
+    },
+
+    "cursor": {
+      "status": "not_used",
+      "note": "Cursor became optional in the 22 October announcement. Built with Claude Code, which that announcement explicitly permits."
+    }
+  },
+
+  "how_a_judge_runs_it_without_our_keys": {
+    "command": "python -m clearline.run --vendor V0001 --fake",
+    "explanation": "--fake substitutes deterministic model responses. The whole agent system - every branch, the revision loop, the control-chain walk, the override loop - runs offline in about a second with no API key and no Zetaris. Data quality and sanctions lookups fall back to local files, recording in the trace which path ran.",
+    "tests": "pytest -q  (17 tests, offline, ~15s)",
+    "conformance": "bash scripts/conformance.sh  (8/8 Markovian, 13/13 H-MEM)"
+  },
+
+  "evidence_artifacts": {
+    "traces": "logs/run-*.jsonl, one JSONL event per agent turn, tool call, branch and verdict",
+    "trace_summary": "python scripts/trace_summary.py --all",
+    "measurements": "docs/measurements.md",
+    "data_provenance": "data/README.md and the provenance block inside data/sample/sanctions_sample.json"
+  },
+
+  "limitations": [
+    "The vendor book and control graph are synthetic; real vendor masters are confidential and fictional vendors have no LEI.",
+    "No ownership percentage is ever asserted: the sources publish control and consolidation relationships, not percentages, and OFAC's 50% rule needs data they do not provide. A test enforces this.",
+    "The watchlist is a 300-record curated subset of ~72,600, with the snapshot date recorded in the file.",
+    "Decision support, not decision authority: every output names what a human must confirm."
+  ]
+}

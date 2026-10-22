@@ -148,13 +148,17 @@ internal book and the OFAC list. `RUN DQ TABLE` checks the constraints the
 semantic layer declares, and **the agent reads that result at runtime and
 raises its evidence bar because of it**.
 
-**Meterless** — two engines implemented from the specs and passing the upstream
-conformance suites, both load-bearing:
+**Meterless** — two engines implemented from the specs, passing the upstream
+conformance suites, and load-bearing rather than mentioned:
+
+| Engine | Implementation | Used by | What it does here |
+|---|---|---|---|
+| **Markovian** | `engines/markovian/src/index.ts` | `engines/markovian/src/walk.ts`, `clearline/walker.py` | Bounds the control-chain walk — one hop per chunk carrying a compressed state summary, and termination via markers, cycle detection and a depth cap |
+| **H-MEM** | `engines/hmem/src/index.ts` | `engines/hmem/src/cli.ts`, `clearline/memory.py` | Holds reviewer corrections. A wrong match loses exactly 0.20 confidence, gains a review tag, and both states go to an append-only trust ledger that changes the next decision |
 
 ```bash
 bash scripts/conformance.sh
-#   Markovian   8/8    bounds the control-chain walk
-#   H-MEM      13/13   holds reviewer corrections
+#   Markovian   8/8    H-MEM   13/13
 ```
 
 **NVIDIA Nemotron** is tiered by stakes — Lightning (3B active) for extraction
