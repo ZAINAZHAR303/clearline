@@ -75,27 +75,60 @@ def _parse(model: type[BaseModel], payload: dict, agent: str):
 # --- agents ------------------------------------------------------------------
 
 ROUTER_SYSTEM = """You are the intake and risk router for a vendor sanctions-screening system.
-Extract the entity names worth searching, note risk signals, flag ambiguity, and set a risk tier.
-Flag ambiguity when the name is so generic that matching it would be unreliable.
+Extract the entity names worth searching, note risk signals, and set a risk tier.
+
+is_ambiguous has a NARROW meaning. Set it true ONLY when the name is made up
+entirely of generic business words -- Global, International, National, Trading,
+Services, Holdings, Group, Solutions, Enterprises -- with no distinctive token
+left after removing legal suffixes (Ltd, Limited, LLC, GmbH, Pte, Inc, SA, BV).
+
+  "Global Trading Ltd"        -> ambiguous: nothing distinctive remains
+  "International Services LLC"-> ambiguous
+  "Zarechny Trading Ltd"      -> NOT ambiguous: "Zarechny" is distinctive
+  "Harbourgate Components"    -> NOT ambiguous
+
+An unusual, foreign or transliterated proper noun is DISTINCTIVE, not generic.
+Rare spelling is exactly what watchlist matching exists to catch, so never call
+a name ambiguous merely because it is unfamiliar or hard to transliterate.
+Never set is_ambiguous true when the vendor has a tax_id: a unique identifier
+makes the entity resolvable regardless of how common its name is.
+
 A bank country that disagrees with the registered country is a risk signal.
 JSON keys: entities, signals, is_ambiguous, ambiguity_reason, risk_tier (LOW|MED|HIGH), evidence_bar (0-1)."""
 
 
 def router(vendor: dict, trace) -> RouterOut:
     with trace.agent("router", vendor_id=vendor["vendor_id"]):
+        # Deterministic signals handed to the model as evidence. The refusal
+        # path is too consequential to rest on model judgement alone -- a
+        # wrongly-flagged name never reaches the resolver at all.
+        precomputed = {
+            "deterministic_generic_name": _is_generic(vendor["legal_name"]),
+            "has_unique_identifier": bool(vendor.get("tax_id")),
+            "bank_country_mismatch": vendor.get("bank_country") != vendor.get("country"),
+        }
         fake = {
             "entities": [vendor["legal_name"], vendor.get("trading_name") or ""],
             "signals": (["bank_country != country"]
-                        if vendor.get("bank_country") != vendor.get("country") else []),
-            "is_ambiguous": _is_generic(vendor["legal_name"]),
-            "ambiguity_reason": "generic trading name" if _is_generic(vendor["legal_name"]) else "",
+                        if precomputed["bank_country_mismatch"] else []),
+            "is_ambiguous": precomputed["deterministic_generic_name"],
+            "ambiguity_reason": "generic trading name" if precomputed["deterministic_generic_name"] else "",
             "risk_tier": "HIGH" if vendor.get("annual_spend_usd", 0) > 500_000 else "MED",
             "evidence_bar": 0.7,
         }
         out = _parse(RouterOut, complete_json(
             tier=Tier.NANO, system=ROUTER_SYSTEM,
-            user=_as_json(vendor), budget=1, trace=trace, agent="router", fake=fake,
+            user=_as_json({"vendor": vendor, "precomputed_signals": precomputed}),
+            budget=1, trace=trace, agent="router", fake=fake,
         ), "router")
+
+        # Guard: a vendor with a unique identifier is resolvable by definition.
+        # Honour the model's refusal only when the deterministic check agrees.
+        if out.is_ambiguous and precomputed["has_unique_identifier"]:
+            trace.event("router.override", reason="model flagged ambiguity but vendor has a tax_id",
+                        model_reason=out.ambiguity_reason)
+            out = out.model_copy(update={"is_ambiguous": False, "ambiguity_reason": ""})
+
         trace.event("router.out", risk_tier=out.risk_tier,
                     ambiguous=out.is_ambiguous, signals=out.signals)
         return out

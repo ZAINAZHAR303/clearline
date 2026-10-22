@@ -43,6 +43,29 @@ This is the single hardest-edged requirement in the whole event, and it is exact
 
 ---
 
+## 0.6 From the onboarding call (21 Oct recording)
+
+**The team gate is worse than it looked.** Creating a team doesn't just satisfy a rule — it is what **unlocks the submission portal**, the task board and the AI tooling. Solo builders included: *"You are able to compete solo, but you still need to make a team."* Without one you cannot submit at all.
+
+**The HackOS task board is watched by sponsors and organizers.** *"On the back end ourselves and the sponsor can see where every team is at."* Sponsors proactively help teams they can see are blocked, and at a previous event Oracle offered two internships based on what they saw there. Almost nobody will keep it updated. Mirror this plan's daily gates onto it — it costs minutes and it is a direct channel to the people scoring you.
+
+**Judges are explicitly weighted toward their own sponsor's product**, and the Zetaris **CTO** is on the panel. Depth in Zetaris is worth more than its 10 rubric points imply.
+
+**GenAI Works does the first-line shortlist**, cutting roughly 200 teams to about 50 before sponsors ever see them. That pass is fast and shallow, so the README's first line and the demo's first thirty seconds decide whether a sponsor judge ever looks at your work. Lead with the one-liner everywhere.
+
+**Cross-track relevance can be noted in the submission description** — one primary track, but say if it speaks to others. Clearline is Track 1 and has genuine Track 2 relevance (every answer is evidence-backed and traceable). Say so.
+
+**Product & UX sits lowest on purpose**, because the organizers judge UI as cheap to fix with AI coding. Confirms: do not over-invest in the interface.
+
+**⚠️ Risk: NVIDIA API keys are returning zero tokens for many participants.** Multiple reports on the call and in chat. This is a direct hit on the Power route in §6, so:
+1. Test the key the moment you have it (`python smoke_test.py`).
+2. Nightshift **is** downloadable now, Windows included — docs were updated 20–21 Oct. It is the fallback, at the memory cost noted in §6.
+3. Development is not blocked either way: `--fake` runs the whole agent system deterministically with no model.
+
+**Deadline wording differs** — the call said "midnight UTC", the written rules say 23:45 UTC. Trust 23:45. The 16:00 target covers both.
+
+---
+
 ### Why this problem wins Impact (30 pts, and the tie-breaker)
 
 A mid-market company (200–2,000 staff) has no sanctions-screening desk and no $50k/yr Refinitiv or Dow Jones subscription. So it either doesn't screen vendors at all, or screens on legal name only. Name-only screening misses the two things that actually matter:

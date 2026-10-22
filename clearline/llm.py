@@ -44,7 +44,27 @@ class Tier(str, Enum):
 
 BASE_BUDGET = {"LOW": 1, "MED": 2, "HIGH": 4}
 BUDGET_CEILING = 6
-_TOKENS_PER_UNIT = 700
+
+# Nemotron 3.x is a reasoning model: it emits its chain of thought into a
+# SEPARATE `reasoning_content` field, but those tokens are still billed against
+# max_tokens. A budget sized for the answer alone gets entirely consumed by
+# reasoning and returns EMPTY content -- which looks like a JSON parse failure
+# and is not one. Measured: a trivial prompt spent 65 reasoning tokens for 7 of
+# answer, so a real prompt needs room in the thousands.
+_TOKENS_PER_UNIT = 1600
+_MIN_TOKENS = 1200
+
+# Per-tier ceilings. Measured on nemotron-3.5-super-vl: the router spent 1093
+# reasoning tokens and 103 seconds deciding a name was not generic, and the
+# critic truncated at 3200. Extraction does not need deliberation; adjudication
+# does. Capping the cheap tiers is what keeps a run inside its time budget.
+_TIER_CEILING = {"nano": 900, "super": 4000, "ultra": 9000}
+
+# Reasoning toggle for the cheap tier. Nemotron accepts a system directive to
+# suppress deliberation; the exact token varies by serving stack, so it is
+# configurable. Verify it on your model card at build.nvidia.com -- if the model
+# ignores it, the tier ceiling above still bounds the damage.
+NOTHINK = os.environ.get("NEMOTRON_NOTHINK_DIRECTIVE", "/no_think")
 
 
 def budget_for(risk_tier: str, critic_rejections: int = 0) -> int:
@@ -114,12 +134,16 @@ def complete_json(
         return fake
 
     model = _model_for(tier)
-    max_tokens = _TOKENS_PER_UNIT * budget
-    directive = (
-        "Think briefly." if budget <= 1
-        else "Think carefully and check your reasoning." if budget <= 3
-        else "Think very carefully. Consider alternatives and challenge your first conclusion."
-    )
+    max_tokens = max(_MIN_TOKENS, _TOKENS_PER_UNIT * budget)
+    max_tokens = min(max_tokens, _TIER_CEILING[tier.value])
+    if tier is Tier.NANO:
+        # Pure extraction and normalisation. Deliberation here is waste.
+        directive = f"{NOTHINK} Answer directly without deliberating."
+    elif budget <= 3:
+        directive = "Think carefully and check your reasoning."
+    else:
+        directive = ("Think very carefully. Consider alternatives and challenge "
+                     "your first conclusion.")
     extra: dict[str, Any] = {}
     if REASONING_PARAM:
         extra[REASONING_PARAM] = max_tokens
@@ -140,7 +164,42 @@ def complete_json(
             model=model, messages=messages, max_tokens=max_tokens,
             temperature=0.2 if tier is Tier.NANO else 0.6, **extra,
         )
-        text = (reply.choices[0].message.content or "").strip()
+        choice = reply.choices[0]
+        text = (choice.message.content or "").strip()
+
+        # Actual reasoning tokens spent. This is the measurement behind the
+        # "spend reasoning in proportion to risk" claim -- real usage data, not
+        # an estimate, and the input to the demo's budget histogram.
+        reasoning_tokens = None
+        details = getattr(reply.usage, "completion_tokens_details", None)
+        if details is not None:
+            reasoning_tokens = getattr(details, "reasoning_tokens", None)
+        if trace:
+            trace.event(
+                "llm.result", agent=agent, tier=tier.value,
+                finish_reason=choice.finish_reason,
+                completion_tokens=getattr(reply.usage, "completion_tokens", None),
+                reasoning_tokens=reasoning_tokens, max_tokens=max_tokens,
+                reasoning=(getattr(choice.message, "model_extra", None) or {})
+                .get("reasoning_content", "")[:400],
+            )
+
+        # Truncated mid-reasoning: the budget is the problem, so retrying at the
+        # same size cannot help. Escalate it instead of burning an attempt.
+        if choice.finish_reason == "length" and not text:
+            last_error = "reasoning consumed the whole token budget before any answer"
+            # Escalate, but never past the tier ceiling: an unbounded retry is
+            # how a run stops being demoable.
+            escalated = min(max_tokens * 2, _TIER_CEILING[tier.value])
+            if trace:
+                trace.event("llm.budget_exhausted", agent=agent, attempt=attempt,
+                            max_tokens=max_tokens, next_max_tokens=escalated,
+                            at_ceiling=escalated == max_tokens)
+            if escalated == max_tokens:
+                break  # already at the ceiling; repair prompt cannot help either
+            max_tokens = escalated
+            continue
+
         try:
             return json.loads(_strip_fences(text))
         except json.JSONDecodeError as error:
