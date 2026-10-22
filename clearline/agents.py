@@ -158,6 +158,10 @@ def router(vendor: dict, trace) -> RouterOut:
                         model_reason=out.ambiguity_reason)
             out = out.model_copy(update={"is_ambiguous": False, "ambiguity_reason": ""})
 
+        if not 0.6 <= out.evidence_bar <= 0.85:
+            trace.event("router.bar_clamped", model_said=out.evidence_bar,
+                        clamped_to=min(0.85, max(0.6, out.evidence_bar)))
+            out = out.model_copy(update={"evidence_bar": min(0.85, max(0.6, out.evidence_bar))})
         trace.event("router.out", risk_tier=out.risk_tier,
                     ambiguous=out.is_ambiguous, signals=out.signals)
         return out
@@ -225,7 +229,33 @@ AVAILABLE_FIELDS = [
     "candidate.dataset", "candidate.programme", "control_chain",
 ]
 
-CRITIC_SYSTEM = """You are an adversarial critic. Try to BREAK the proposed match.
+CRITIC_SYSTEM = """You are an adversarial critic in a vendor SANCTIONS SCREENING system.
+
+What the task is. A candidate is a watchlist entry that may BE this vendor,
+trading under a different name. You are judging identity: is the vendor the
+listed entity? You are NOT merging two companies, and the vendor record never
+carries a sanctions flag -- establishing that is the whole point, so its
+absence is not evidence either way.
+
+Two things that are not contradictions:
+  - OFAC designates entities WORLDWIDE. A Belgian, Emirati or Iraqi entity on a
+    US list is ordinary. The dataset names the list an entity appears on, never
+    where it is registered.
+  - A listed entity's caption routinely differs from the name a vendor trades
+    under. That is what the alias list is for. An exact match against an alias
+    IS the identification.
+
+An exact_alias match with country_agreement is strong evidence FOR the match
+and should be ACCEPTed unless you can name a concrete defect in it.
+
+Now: try to BREAK the proposed match.
+candidates_detail carries each candidate's full record: its aliases, country,
+dataset and the deterministically computed features. A listed entity's CAPTION
+routinely differs from the alias a vendor trades under -- that is normal, and
+an exact_alias match against the alias list is strong evidence, not a
+contradiction. The dataset is the list the entity appears ON, never a claim
+about where it is registered; compare candidate.country, not the dataset name.
+
 Test specifically for: generic-name collisions, jurisdiction contradiction,
 date incompatibility, single-source assertions, and any column the data-quality
 report has flagged unreliable. Do not rubber-stamp.
@@ -233,11 +263,20 @@ Return DEMAND_EVIDENCE only when a field listed in available_fields would
 settle it, and set missing_field to that exact field name. Fields outside that
 list cannot be fetched, so demanding one wastes a round -- if what you need is
 not available, say so in reasons and return REJECT or REROUTE instead.
-Return REROUTE when name evidence cannot settle it and the control chain should be walked.
+Choose the verdict by what the evidence DID:
+  ACCEPT  the candidate is the vendor, and you cannot name a concrete defect.
+  REJECT  the evidence rules the candidate OUT -- different jurisdiction with
+          no exact alias means these are not the same entity. This is a
+          finding, not a failure, and it is how a vendor gets cleared.
+  REROUTE only when the name evidence is genuinely INCONCLUSIVE, or no
+          candidate matched the name at all, so that indirect exposure through
+          the control chain is the remaining open question. Do not REROUTE a
+          candidate you have just ruled out.
 JSON keys: verdict (ACCEPT|REJECT|DEMAND_EVIDENCE|REROUTE), reasons, missing_field, caveats."""
 
 
 def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int,
+           hits: list[dict] | None = None,
            already_demanded: list[str] | None = None) -> CriticOut:
     with trace.agent("critic", round=round_no):
         unreliable = [c for c, s in dq.get("columns", {}).items()
@@ -276,7 +315,18 @@ def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int,
             tier=Tier.SUPER, system=CRITIC_SYSTEM,
             user=_as_json({"vendor": vendor, "proposal": proposal.model_dump(),
                            "data_quality": dq, "available_fields": AVAILABLE_FIELDS,
-                           "already_demanded": already_demanded or []}),
+                           "already_demanded": already_demanded or [],
+                           # The candidate records themselves. Without the
+                           # alias list the critic cannot see why an unrelated
+                           # caption is a valid match, and correctly rejects it.
+                           "candidates_detail": [{
+                               "id": h["id"], "caption": h.get("caption"),
+                               "aliases": h.get("aliases", []),
+                               "country": h.get("country"),
+                               "dataset": h.get("dataset"),
+                               "programme": h.get("programme"),
+                               "computed": h.get("_features", {}),
+                           } for h in (hits or [])]}),
             budget=3, trace=trace, agent="critic", fake=fake,
         ), "critic")
         trace.verdict("critic", out.verdict, reasons=out.reasons, round=round_no)
@@ -286,7 +336,17 @@ def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int,
 ADJUDICATOR_SYSTEM = """You produce the final recommendation.
 EVERY claim in rationale must map to an entry in evidence. Anything unsupported
 goes in unresolved_conflicts, never into the rationale.
-This is decision SUPPORT: recommend, and say what a human must confirm.
+This is decision SUPPORT: you RECOMMEND, and a human confirms. Express that
+confirmation in human_question -- never by escalating a case you can decide.
+
+  BLOCK     the critic ACCEPTed a match. Recommend it even though a human will
+            confirm; that is what human_question is for.
+  CLEAR     the critic REJECTed the candidate. Ruling one out is a result, and
+            clearing is the correct recommendation. Record why in the evidence.
+  ESCALATE  only when the evidence is genuinely insufficient to recommend
+            either way -- an unresolvable name, or an open control-chain
+            question on a vendor carrying a risk signal. Escalating everything
+            is alert fatigue and makes the system useless.
 Never assert an ownership percentage -- the sources provide control and
 consolidation relationships, not measured ownership.
 JSON keys: decision (CLEAR|BLOCK|ESCALATE), confidence, rationale, evidence[{claim,source,row_ref}],

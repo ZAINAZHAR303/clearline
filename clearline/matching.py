@@ -79,6 +79,11 @@ def match_features(vendor: dict, entity: dict) -> dict:
     names.add((entity.get("caption") or "").strip().lower())
 
     exact_alias = legal in names or (bool(trading) and trading in names)
+    matched_alias = ""
+    if exact_alias:
+        matched_alias = next(
+            (a for a in [*entity.get("aliases", []), entity.get("caption", "")]
+             if a and a.strip().lower() in {legal, trading}), "")
     country_agreement = bool(entity.get("country")) and entity["country"] == vendor.get("country")
     overlap = max(
         _overlap(distinctive(vendor.get("legal_name", "")), distinctive(name))
@@ -110,6 +115,7 @@ def match_features(vendor: dict, entity: dict) -> dict:
 
     return {
         "exact_alias": exact_alias,
+        "matched_alias": matched_alias,
         "country_agreement": country_agreement,
         "token_overlap": round(overlap, 2),
         "features": features,

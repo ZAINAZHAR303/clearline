@@ -78,7 +78,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
                   if isinstance(s, dict) and (s.get("null_rate") or 0) > 0.1]
     # Branch 2: the DQ-driven replan.
     if unreliable:
-        evidence_bar = min(0.95, evidence_bar + 0.12)
+        evidence_bar = min(0.85, evidence_bar + 0.12)  # same ceiling as the router clamp
         trace.branch(
             f"{', '.join(unreliable)} unreliable in this source "
             f"({', '.join(f'{c} {dq['columns'][c]['null_rate']:.0%} null' for c in unreliable)})",
@@ -101,7 +101,8 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
 
     for round_no in range(1, MAX_ROUNDS + 1):
         proposal = resolver(vendor, hits, trace, critic_feedback=feedback)
-        verdict = critic(vendor, proposal, dq, trace, round_no, already_demanded=demanded)
+        verdict = critic(vendor, proposal, dq, trace, round_no, hits=hits,
+                         already_demanded=demanded)
 
         if verdict.verdict == "ACCEPT":
             if proposal.confidence < evidence_bar:
@@ -149,14 +150,24 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
     decision = adjudicator(vendor, proposal, verdict, chain, dq, trace,
                            routed.risk_tier, rejections)
 
-    # Branch 5: confidence band -> hand back to a human with a specific question.
-    if decision.decision != "ESCALATE" and decision.confidence < evidence_bar:
-        trace.branch(f"confidence {decision.confidence:.2f} < bar {evidence_bar:.2f}",
-                     "ESCALATE_ON_CONFIDENCE")
+    # Branch 5: a block must rest on evidence that clears the bar.
+    #
+    # Compares the DETERMINISTIC match score, not the adjudicator's
+    # self-reported confidence. The live model once returned BLOCK with
+    # confidence 0.18 on an exact alias match -- a narrative number,
+    # inconsistent with its own decision, which then drove control flow.
+    # Evidence strength is a fact; the model's certainty about itself is not.
+    #
+    # BLOCK only: weak match evidence is the REASON to clear, so escalating a
+    # CLEAR on the same test would invert the logic.
+    evidence_strength = proposal.confidence if proposal else 0.0
+    if decision.decision == "BLOCK" and evidence_strength < evidence_bar:
+        trace.branch(f"block rests on evidence {evidence_strength:.2f} "
+                     f"< bar {evidence_bar:.2f}", "ESCALATE_ON_WEAK_EVIDENCE")
         decision = decision.model_copy(update={
             "decision": "ESCALATE",
             "unresolved_conflicts": decision.unresolved_conflicts
-            + [f"confidence {decision.confidence:.2f} below required {evidence_bar:.2f}"],
+            + [f"match evidence {evidence_strength:.2f} below required {evidence_bar:.2f}"],
             "human_question": decision.human_question
             or "Please review the evidence trail and confirm or reject this match.",
         })
