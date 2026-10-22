@@ -69,9 +69,11 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
         return decision, trace
 
     # 2 -- data quality, read BEFORE matching so it can change the plan
-    dq = dq_report("clearline.vendor_master_table", ["tax_id", "country", "bank_country"])
+    dq = dq_report()
     trace.tool("dq_report", table=dq["table"], source=dq["source"],
-               columns={c: s.get("null_rate") for c, s in dq["columns"].items()})
+               columns={c: s.get("null_rate") for c, s in dq["columns"].items()},
+               constraints=[{k: v for k, v in c.items() if k in ("column", "check", "passed", "invalid")}
+                            for c in dq.get("constraints", [])])
 
     evidence_bar = routed.evidence_bar
     unreliable = [c for c, s in dq["columns"].items()

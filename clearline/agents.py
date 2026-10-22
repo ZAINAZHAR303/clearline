@@ -366,7 +366,7 @@ def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
     tier = Tier.ULTRA if contested else Tier.SUPER
     # Its output is long by design (evidence list, conflicts, caveats), so it
     # needs content headroom regardless of how uncontested the case is.
-    budget = max(2, budget_for(risk_tier, rejections))
+    budget = max(3, budget_for(risk_tier, rejections))
     with trace.agent("adjudicator", tier=tier.value, budget=budget, contested=contested):
         top = proposal.candidates[0] if proposal.candidates else None
         base_caveats = list(critic_out.caveats) + [_watchlist_provenance()]

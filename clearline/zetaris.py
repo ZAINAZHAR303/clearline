@@ -152,27 +152,83 @@ def _sanctions_from_zetaris() -> list[dict]:
     return list(by_id.values())
 
 
-def dq_report(table: str, columns: list[str]) -> dict[str, Any]:
-    """Data-quality signal the agents read at RUNTIME and change their plan on.
+USL = "lightning.metastore.clearline.counterparty_usl"
 
-    Day 1 computes it locally so the branch is exercised from the start.
-    Day 2 replaces the body with Zetaris `RUN DQ <column> TABLE <table>` and
-    keeps this signature, so no caller changes.
+
+_DQ_CACHE: dict[tuple, dict] = {}
+
+
+def dq_report(table: str = f"{USL}.counterparty",
+              columns: list[str] | None = None,
+              timeout: int = 8) -> dict[str, Any]:
+    """Data quality, read from Zetaris, that the agents act on at RUNTIME.
+
+    Two things are asked of the platform and combined:
+
+      RUN DQ TABLE <usl>   the constraints DECLARED in the semantic layer --
+                           primary keys, foreign keys -- checked by Zetaris
+                           rather than asserted by us
+      a null-rate query    coverage of the specific columns the decision rests
+                           on, which is the signal that moves the evidence bar
+
+    Falls back to computing the null rates locally if Zetaris is unreachable,
+    so a run still completes offline -- with `source` saying which it was, since
+    a quality report that hides its own provenance is worth little.
     """
-    if sample_mode():
+    columns = columns or ["tax_id", "country", "bank_country"]
+    # Memoised per process. Data quality does not change within a batch of
+    # screenings, and without this the test suite made fifteen round trips and
+    # went from 1.5s to 60s -- losing the fast offline guard it exists to be.
+    key = (table, tuple(columns))
+    if key in _DQ_CACHE:
+        return _DQ_CACHE[key]
+
+    out: dict[str, Any] = {"table": table, "source": "zetaris", "columns": {}, "constraints": []}
+
+    try:
+        for row in run_sql(f"RUN DQ TABLE {table}", limit=50, timeout=timeout):
+            # [column, table, check, total, valid, invalid]
+            if len(row) >= 6:
+                total, valid, invalid = (_as_int(row[3]), _as_int(row[4]), _as_int(row[5]))
+                out["constraints"].append({
+                    "column": row[0], "check": row[2],
+                    "total": total, "valid": valid, "invalid": invalid,
+                    "passed": invalid == 0,
+                })
+
+        selected = ", ".join(
+            f"COUNT(*) AS n_{i}, COUNT({c}) AS present_{i}" for i, c in enumerate(columns)
+        )
+        rows = run_sql(f"SELECT {selected} FROM {table}", limit=1, timeout=timeout)
+        if rows:
+            values = rows[0]
+            for i, column in enumerate(columns):
+                total = _as_int(values[i * 2]) or 0
+                present = _as_int(values[i * 2 + 1]) or 0
+                out["columns"][column] = {
+                    "n": total,
+                    "null_rate": round((total - present) / total, 3) if total else 0.0,
+                }
+        _DQ_CACHE[key] = out
+        return out
+
+    except ZetarisError as error:
+        out = {"table": table, "source": "local-fallback",
+               "note": f"Zetaris unavailable ({str(error)[:80]}); null rates computed locally",
+               "columns": {}, "constraints": []}
         vendors = _load_sample("vendor_master.json", "vendors")
-        out: dict[str, Any] = {"table": table, "source": "local-sample", "columns": {}}
         for column in columns:
             total = len(vendors)
             nulls = sum(1 for v in vendors if not v.get(column))
             out["columns"][column] = {
-                "null_rate": round(nulls / total, 3) if total else 0.0,
-                "n": total,
+                "null_rate": round(nulls / total, 3) if total else 0.0, "n": total,
             }
+        _DQ_CACHE[key] = out
         return out
 
-    out = {"table": table, "source": "zetaris-run-dq", "columns": {}}
-    for column in columns:
-        rows = run_sql(f"RUN DQ {column} TABLE {table}", limit=50)
-        out["columns"][column] = {"raw": rows}
-    return out
+
+def _as_int(value: Any) -> int | None:
+    try:
+        return int(str(value).strip())
+    except (TypeError, ValueError):
+        return None
