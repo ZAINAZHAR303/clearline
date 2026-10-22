@@ -18,6 +18,7 @@ the trace records.
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -54,9 +55,14 @@ def walk(vendor_id: str, max_depth: int = 5, carryover_tokens: int = 640,
     if shutil.which("node") is None:
         raise WalkerUnavailable("node is not on PATH; the Markovian engine needs it")
 
+    # Per-hop materiality is a live model call. Fake mode must stay
+    # deterministic and offline, so it falls back to the heuristic assessor.
+    cmd = [str(_tsx()), str(WALK), "--vendor", vendor_id,
+           "--max-depth", str(max_depth), "--carryover", str(carryover_tokens)]
+    if os.environ.get("CLEARLINE_FAKE_LLM", "").lower() in {"1", "true", "yes"}:
+        cmd.append("--no-model")
     result = subprocess.run(
-        [str(_tsx()), str(WALK), "--vendor", vendor_id,
-         "--max-depth", str(max_depth), "--carryover", str(carryover_tokens)],
+        cmd,
         cwd=str(ENGINE), capture_output=True, text=True, timeout=timeout,
     )
     if result.returncode != 0:

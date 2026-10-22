@@ -24,6 +24,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { Markovian, runEfficiency, MARKERS } from "./index.js";
+import { assessHop } from "./assess.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const SAMPLE = path.resolve(here, "..", "..", "..", "data", "sample");
@@ -78,7 +79,9 @@ async function main() {
     process.exit(2);
   }
   const maxDepth = Number.parseInt(arg("--max-depth", "5")!, 10);
-  const carryoverTokens = Number.parseInt(arg("--carryover", "640")!, 10);
+  // Model assessment is on by default and off for tests and offline runs.
+  const useModel = !process.argv.includes("--no-model");
+  const carryoverTokens = Number.parseInt(arg("--carryover", "256")!, 10);
 
   const graph = readJson("control_graph.json");
   const sanctions = readJson("sanctions_sample.json");
@@ -93,6 +96,12 @@ async function main() {
   const entityById = new Map<string, any>(sanctions.entities.map((e: any) => [e.id, e]));
 
   const chain: Array<Record<string, unknown>> = [];
+  const vendorNode = nodes.get(vendorId);
+  const vendorRecord = (readJson("vendor_master.json").vendors as Array<Record<string, string>>)
+    .find((v) => v.vendor_id === vendorId);
+  const vendorBankCountry = vendorRecord?.bank_country ?? vendorNode?.country ?? "";
+  const assessments: string[] = [];
+  let carriedSummary = "";
   let state: CarriedState = { current: vendorId, visited: [vendorId], hits: [], depth: 0 };
   let terminated = "DEPTH";
 
@@ -132,12 +141,33 @@ async function main() {
     const depth = state.depth + 1;
     const hit = parentNode?.entity_id && listed.has(parentNode.entity_id) ? parentNode.entity_id : null;
 
+    // The model call that makes this a reasoning step rather than a lookup.
+    // It receives the CARRIED state, not the whole traversal -- which is the
+    // engine's contribution and what keeps prompt size flat as depth grows.
+    const assessment = await assessHop(
+      {
+        vendorName: vendorNode?.name ?? vendorId,
+        vendorCountry: vendorNode?.country ?? "",
+        vendorBankCountry: vendorBankCountry,
+        depth,
+        parentName: parentNode?.name ?? next.parent,
+        parentCountry: parentNode?.country ?? "",
+        relation: next.relation,
+        carried: carriedSummary,
+      },
+      useModel,
+    );
+    assessments.push(assessment.source);
+
     chain.push({
       lei: next.parent,
       name: parentNode?.name ?? next.parent,
       country: parentNode?.country ?? null,
       relation: next.relation,
       depth,
+      materiality: assessment.material,
+      assessment: assessment.reason,
+      assessed_by: assessment.source,
       sanctions_hit: hit
         ? {
             entity_id: hit,
@@ -157,20 +187,32 @@ async function main() {
       depth,
     };
 
+    // The findings so far, kept to one line per hop. This is the text the
+    // engine compresses into the carryover; the naive shape would instead
+    // append every hop's full assessment to every later prompt.
+    carriedSummary =
+      `${carriedSummary}\nhop ${depth} ${parentNode?.name ?? next.parent} ` +
+      `(${next.relation}, ${assessment.material}): ${assessment.reason}`.trim();
+
+    const body =
+      `Hop ${depth}: ${parentNode!.name} (${next.relation}) in ${parentNode?.country ?? "?"}.\n` +
+      `Materiality ${assessment.material} — ${assessment.reason}`;
+
     if (hit) {
       terminated = "SANCTIONS_HIT";
-      return {
-        text: `Hop ${depth}: ${parentNode!.name} (${next.relation}) is a LISTED entity. ${MARKERS.complete}`,
-      };
+      return { text: `${body}\nThis is a LISTED entity. ${MARKERS.complete}` };
     }
     if (depth >= maxDepth) {
       terminated = "DEPTH";
-      return { text: `Hop ${depth}: reached the depth cap. ${MARKERS.complete}` };
+      return { text: `${body}\nReached the depth cap. ${MARKERS.complete}` };
     }
+    // assessment.continue_walk is recorded as advice and deliberately NOT
+    // acted on. Letting the model end the search is how exposure gets missed:
+    // on its first outing it judged hop 1 immaterial and would have stopped
+    // one hop short of a listed ultimate parent. Materiality shapes the
+    // REPORT; only a hit, a cycle, a root or the depth cap stops the WALK.
     return {
-      text:
-        `Hop ${depth}: ${parentNode!.name} (${next.relation}), no listing.\n` +
-        `${MARKERS.checkpoint}\n${encode(state)}`,
+      text: `${body}\n${MARKERS.checkpoint}\n${encode(state)}\nFINDINGS:${carriedSummary}`,
     };
   };
 
@@ -199,6 +241,10 @@ async function main() {
           chunks: run.chunks.length,
           chunkConfig: run.chunkConfig,
           tokenLabel: run.tokenLabel,
+        assessed_by: assessments.length
+          ? (assessments.every((a) => a === "model") ? "model"
+             : assessments.every((a) => a === "heuristic") ? "heuristic" : "mixed")
+          : "none",
           // The point of using the engine, stated in numbers: what appending
           // the whole traversal to each prompt would have cost, versus
           // carrying a bounded summary.
