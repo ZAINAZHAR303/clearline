@@ -60,11 +60,17 @@ _MIN_TOKENS = 1200
 # does. Capping the cheap tiers is what keeps a run inside its time budget.
 _TIER_CEILING = {"nano": 900, "super": 4000, "ultra": 9000}
 
-# Reasoning toggle for the cheap tier. Nemotron accepts a system directive to
-# suppress deliberation; the exact token varies by serving stack, so it is
-# configurable. Verify it on your model card at build.nvidia.com -- if the model
-# ignores it, the tier ceiling above still bounds the damage.
-NOTHINK = os.environ.get("NEMOTRON_NOTHINK_DIRECTIVE", "/no_think")
+# Reasoning toggle, established by measurement rather than documentation
+# (scripts/ has the A/B; docs/measurements.md has the table). On
+# nemotron-3.5-lightning-30b-a3b, asked for a small JSON extraction:
+#
+#   plain                                  900 reasoning tokens, EMPTY content
+#   "/no_think" system directive           429 reasoning tokens
+#   chat_template_kwargs thinking=False      0 reasoning tokens   <-- this one
+#
+# The system directive only halves deliberation, which is why the nano tier
+# kept exhausting its budget. The chat-template flag turns it off outright.
+THINKING_OFF = {"chat_template_kwargs": {"thinking": False}}
 
 
 def budget_for(risk_tier: str, critic_rejections: int = 0) -> int:
@@ -136,17 +142,21 @@ def complete_json(
     model = _model_for(tier)
     max_tokens = max(_MIN_TOKENS, _TOKENS_PER_UNIT * budget)
     max_tokens = min(max_tokens, _TIER_CEILING[tier.value])
+    # Provider-specific fields travel in extra_body; the OpenAI client
+    # rejects them as top-level keyword arguments.
+    extra_body: dict[str, Any] = {}
+    if REASONING_PARAM:
+        extra_body[REASONING_PARAM] = max_tokens
     if tier is Tier.NANO:
-        # Pure extraction and normalisation. Deliberation here is waste.
-        directive = f"{NOTHINK} Answer directly without deliberating."
+        # Pure extraction and normalisation. Deliberation here is waste, so the
+        # whole budget goes to the answer.
+        directive = "Answer directly."
+        extra_body.update(THINKING_OFF)
     elif budget <= 3:
         directive = "Think carefully and check your reasoning."
     else:
         directive = ("Think very carefully. Consider alternatives and challenge "
                      "your first conclusion.")
-    extra: dict[str, Any] = {}
-    if REASONING_PARAM:
-        extra[REASONING_PARAM] = max_tokens
 
     messages = [
         {"role": "system", "content": f"{system}\n\n{directive}\nReply with JSON only."},
@@ -162,7 +172,8 @@ def complete_json(
             )
         reply = _get_client().chat.completions.create(
             model=model, messages=messages, max_tokens=max_tokens,
-            temperature=0.2 if tier is Tier.NANO else 0.6, **extra,
+            temperature=0.2 if tier is Tier.NANO else 0.6,
+            **({"extra_body": extra_body} if extra_body else {}),
         )
         choice = reply.choices[0]
         text = (choice.message.content or "").strip()
@@ -180,8 +191,10 @@ def complete_json(
                 finish_reason=choice.finish_reason,
                 completion_tokens=getattr(reply.usage, "completion_tokens", None),
                 reasoning_tokens=reasoning_tokens, max_tokens=max_tokens,
-                reasoning=(getattr(choice.message, "model_extra", None) or {})
-                .get("reasoning_content", "")[:400],
+                # Present but null when deliberation is disabled, so coalesce
+                # before slicing rather than relying on a default.
+                reasoning=((getattr(choice.message, "model_extra", None) or {})
+                           .get("reasoning_content") or "")[:400],
             )
 
         # Truncated mid-reasoning: the budget is the problem, so retrying at the
@@ -191,12 +204,22 @@ def complete_json(
             # Escalate, but never past the tier ceiling: an unbounded retry is
             # how a run stops being demoable.
             escalated = min(max_tokens * 2, _TIER_CEILING[tier.value])
+            at_ceiling = escalated == max_tokens
             if trace:
                 trace.event("llm.budget_exhausted", agent=agent, attempt=attempt,
                             max_tokens=max_tokens, next_max_tokens=escalated,
-                            at_ceiling=escalated == max_tokens)
-            if escalated == max_tokens:
-                break  # already at the ceiling; repair prompt cannot help either
+                            at_ceiling=at_ceiling)
+            if at_ceiling:
+                # Last resort: stop deliberating and answer. Degrading to a
+                # shallower answer beats returning none at all, and the trace
+                # records that this run was answered without reasoning.
+                if "chat_template_kwargs" in extra_body:
+                    break  # already direct-answering; more tokens will not help
+                extra_body.update(THINKING_OFF)
+                if trace:
+                    trace.event("llm.degraded", agent=agent,
+                                reason="budget exhausted at tier ceiling; reasoning disabled")
+                continue
             max_tokens = escalated
             continue
 

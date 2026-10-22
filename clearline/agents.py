@@ -10,16 +10,44 @@ validation error fed back (see llm.complete_json), it does not crash the run.
 
 from __future__ import annotations
 
-from typing import Literal
+from typing import Literal, get_origin
 
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field, ValidationError, model_validator
 
 from .llm import Tier, budget_for, complete_json
 
 
+class Contract(BaseModel):
+    """Base for every agent contract.
+
+    Language models emit `null` for optional fields rather than omitting them,
+    which defeats Python defaults: `ambiguity_reason: str = ""` rejects None.
+    Dropping nulls before validation lets the declared default apply, so one
+    rule covers every field instead of a validator per field.
+    """
+
+    @model_validator(mode="before")
+    @classmethod
+    def _coerce(cls, data):
+        if not isinstance(data, dict):
+            return data
+        out = {}
+        for key, value in data.items():
+            if value is None:
+                continue  # let the declared default apply
+            field = cls.model_fields.get(key)
+            if field is not None and get_origin(field.annotation) is list \
+                    and not isinstance(value, list):
+                # A single caveat comes back as a bare string rather than a
+                # one-element list. Wrap it instead of failing the whole turn.
+                value = [] if value == "" else [value]
+            out[key] = value
+        return out
+
+
 # --- contracts ---------------------------------------------------------------
 
-class RouterOut(BaseModel):
+class RouterOut(Contract):
     entities: list[str] = Field(default_factory=list)
     signals: list[str] = Field(default_factory=list)
     is_ambiguous: bool = False
@@ -28,7 +56,7 @@ class RouterOut(BaseModel):
     evidence_bar: float = 0.7
 
 
-class Candidate(BaseModel):
+class Candidate(Contract):
     source: str
     source_id: str
     matched_name: str
@@ -36,26 +64,26 @@ class Candidate(BaseModel):
     features_used: list[str] = Field(default_factory=list)
 
 
-class ResolverOut(BaseModel):
+class ResolverOut(Contract):
     candidates: list[Candidate] = Field(default_factory=list)
     hypothesis: str
     confidence: float
 
 
-class CriticOut(BaseModel):
+class CriticOut(Contract):
     verdict: Literal["ACCEPT", "REJECT", "DEMAND_EVIDENCE", "REROUTE"]
     reasons: list[str] = Field(default_factory=list)
     missing_field: str = ""
     caveats: list[str] = Field(default_factory=list)
 
 
-class Evidence(BaseModel):
+class Evidence(Contract):
     claim: str
     source: str
     row_ref: str = ""
 
 
-class Decision(BaseModel):
+class Decision(Contract):
     decision: Literal["CLEAR", "BLOCK", "ESCALATE"]
     confidence: float
     rationale: str
