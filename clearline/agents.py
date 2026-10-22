@@ -37,11 +37,17 @@ class Contract(BaseModel):
             if value is None:
                 continue  # let the declared default apply
             field = cls.model_fields.get(key)
-            if field is not None and get_origin(field.annotation) is list \
-                    and not isinstance(value, list):
-                # A single caveat comes back as a bare string rather than a
-                # one-element list. Wrap it instead of failing the whole turn.
-                value = [] if value == "" else [value]
+            if field is not None:
+                wants_list = get_origin(field.annotation) is list
+                if wants_list and not isinstance(value, list):
+                    # A single caveat arrives as a bare string rather than a
+                    # one-element list. Wrap it instead of failing the turn.
+                    value = [] if value == "" else [value]
+                elif not wants_list and field.annotation is str and isinstance(value, list):
+                    # And the inverse: a rationale arrives as a list of points
+                    # where prose is declared. Join rather than discard -- the
+                    # content is right, only the shape is wrong.
+                    value = " ".join(str(v).strip() for v in value if v)
             out[key] = value
         return out
 

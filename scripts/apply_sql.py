@@ -24,15 +24,39 @@ from clearline.zetaris import ZetarisError, run_sql  # noqa: E402
 ALREADY_EXISTS = re.compile(r"already exists|duplicate", re.I)
 
 
+DELIMITER = "-- @@"
+
+
 def statements(sql: str):
-    """Split on semicolons, dropping comments and blank lines. Adequate for
-    these files, which contain no string literals with semicolons in them."""
-    cleaned = "\n".join(
-        line for line in sql.splitlines()
-        if not line.strip().startswith("--")
-    )
-    for raw in cleaned.split(";"):
-        statement = raw.strip()
+    """Split a file into statements.
+
+    Semicolons alone are not enough: a `COMPILE USL ... DDL` statement contains
+    several `CREATE TABLE (...);` blocks and splitting on `;` shreds it. A file
+    may therefore mark its own boundaries with a `-- @@` line, which takes
+    precedence. Files without one keep the simple semicolon behaviour.
+    """
+    lines = sql.splitlines()
+    # A LINE that is the delimiter -- not the text appearing mid-sentence, as
+    # it does in the comment explaining this very rule.
+    if any(line.strip() == DELIMITER for line in lines):
+        chunks, current = [], []
+        for line in lines:
+            if line.strip() == DELIMITER:
+                chunks.append("\n".join(current))
+                current = []
+            else:
+                current.append(line)
+        chunks.append("\n".join(current))
+    else:
+        cleaned = "\n".join(
+            line for line in sql.splitlines() if not line.strip().startswith("--")
+        )
+        chunks = cleaned.split(";")
+
+    for raw in chunks:
+        statement = "\n".join(
+            line for line in raw.splitlines() if not line.strip().startswith("--")
+        ).strip().rstrip(";").strip()
         if statement:
             yield statement
 
