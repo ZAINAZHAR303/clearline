@@ -23,6 +23,8 @@ from typing import Any
 import requests
 from dotenv import load_dotenv
 
+from .matching import rank
+
 load_dotenv()
 
 REST_URL = os.environ.get("ZETARIS_REST_URL", "http://localhost:8888/api/v1.0").rstrip("/")
@@ -117,37 +119,37 @@ def get_vendor(vendor_id: str) -> dict | None:
     return dict(zip(cols, rows[0]))
 
 
-def search_sanctions(terms: list[str]) -> list[dict]:
-    """Crude Day-1 candidate generation: substring overlap on caption and
-    aliases. Day 2 replaces this with a Zetaris query across the registered
-    OpenSanctions extract, and the scoring moves into the Resolver."""
-    entities = _load_sample("sanctions_sample.json", "entities") if sample_mode() else []
-    needles = [t.lower() for t in terms if t and len(t) > 3]
-    hits = []
-    for entity in entities:
-        haystack = " ".join([entity.get("caption", ""), *entity.get("aliases", [])]).lower()
-        matched = [n for n in needles if n in haystack or haystack_token_overlap(haystack, n)]
-        if matched:
-            hits.append({**entity, "_matched_on": matched})
-    return hits
+def search_sanctions(vendor: dict, top_n: int = 5) -> list[dict]:
+    """Candidate generation: block, score and cap.
+
+    Scoring is deterministic (clearline.matching) and each candidate carries
+    its features under `_features`, so the resolver judges evidence rather than
+    re-deriving it. Day 1 scanned every entity with substring matching and
+    handed the model whatever came back; that cost 9,660 reasoning tokens a run.
+    """
+    entities = _load_sample("sanctions_sample.json", "entities") if sample_mode() else         _sanctions_from_zetaris()
+    return rank(vendor, entities, top_n=top_n)
 
 
-def haystack_token_overlap(haystack: str, needle: str) -> bool:
-    """Loose token overlap so 'Zarechny Trading Ltd' can reach 'Zarechnyi
-    Trading Company'. Deliberately permissive -- generating false candidates is
-    fine, because the Conflict Critic exists to kill them."""
-    h = set(haystack.replace(",", " ").split())
-    n = set(needle.replace(",", " ").split())
-    stop = {"ltd", "limited", "llc", "inc", "gmbh", "sa", "plc", "co", "company",
-            "trading", "holdings", "pte", "bv", "the"}
-    h, n = h - stop, n - stop
-    if not n:
-        return False
-    for a in n:
-        for b in h:
-            if a == b or (len(a) > 4 and len(b) > 4 and (a.startswith(b[:5]) or b.startswith(a[:5]))):
-                return True
-    return False
+def _sanctions_from_zetaris() -> list[dict]:
+    """Live path: read the registered watchlist through the semantic layer.
+
+    One row per alias, folded back into one record per entity.
+    """
+    rows = run_sql(
+        "SELECT entity_id, caption, country, dataset, alias "
+        "FROM clearline.sanctions_table",
+        limit=5000,
+    )
+    by_id: dict[str, dict] = {}
+    for entity_id, caption, country, dataset, alias in rows:
+        entity = by_id.setdefault(entity_id, {
+            "id": entity_id, "caption": caption, "country": country,
+            "dataset": dataset, "topics": ["sanction"], "aliases": [],
+        })
+        if alias:
+            entity["aliases"].append(alias)
+    return list(by_id.values())
 
 
 def dq_report(table: str, columns: list[str]) -> dict[str, Any]:

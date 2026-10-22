@@ -1,44 +1,4327 @@
 {
+  "provenance": {
+    "dataset": "us_ofac_sdn",
+    "title": "US OFAC Specially Designated Nationals (SDN) List",
+    "publisher": "Office of Foreign Assets Control",
+    "publisher_url": "https://www.treasury.gov/",
+    "source_url": "https://data.opensanctions.org/datasets/latest/us_ofac_sdn/targets.simple.csv",
+    "snapshot_updated_at": "2026-10-22T16:10:05",
+    "entity_count_full_dataset": 72614,
+    "license": "https://www.treasury.gov/",
+    "note": "Curated subset. Re-fetch with scripts/fetch_sanctions.py --refresh."
+  },
+  "anchors": [
+    "NK-22T6dTsc6umYgEA33vME3t",
+    "NK-24kqBFxEsFzjqBYhaNHkC9",
+    "NK-26aLUdNdrvaLZphX6xQrr5",
+    "NK-276gB7L8sFEhctkuEpZsus",
+    "NK-2CdXhyCy9XzyZgcFcHXrTZ",
+    "NK-2NYMNhw4S47widuXoBXJZb"
+  ],
   "entities": [
     {
-      "id": "SYN-001",
-      "caption": "Zarechnyi Trading Company",
+      "id": "NK-22T6dTsc6umYgEA33vME3t",
+      "caption": "Digital Marketing Awards FZ LLC",
       "aliases": [
-        "Zarechny Trading Ltd",
-        "Zarechnyi Trd Co",
-        "Zarechny"
+        "SD Digital Marketing Awards",
+        "Swiss Dragons Management Digital Marketing Awards"
       ],
       "country": "AE",
       "topics": [
         "sanction"
       ],
-      "dataset": "SYNTHETIC_DAY1_PLACEHOLDER"
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
     },
     {
-      "id": "SYN-002",
-      "caption": "Ostrava Holdings PLC",
+      "id": "NK-24kqBFxEsFzjqBYhaNHkC9",
+      "caption": "TAWU Mechanical Engineering and Trading Company",
       "aliases": [
-        "Ostrava Hldgs",
-        "Ostrava Holding"
+        "Metaalkunde BV",
+        "TAWU",
+        "TAWU BVBA",
+        "TAWU BVBA Mechanical Engineering and Trading Company"
+      ],
+      "country": "BE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-26aLUdNdrvaLZphX6xQrr5",
+      "caption": "South Wealth Resources Company",
+      "aliases": [
+        "Manabea Tharwat Al-Janoob General Trading Company, LLC",
+        "Shirkat Manabi' Tharawat Al-Janub Liltijarah Al-'Ammah",
+        "South Wealth Resources Ltd."
+      ],
+      "country": "IQ",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-276gB7L8sFEhctkuEpZsus",
+      "caption": "BANK SADERAT PLC",
+      "aliases": [
+        "IRAN OVERSEAS INVESTMENT BANK LIMITED",
+        "IRAN OVERSEAS INVESTMENT BANK PLC",
+        "IRAN OVERSEAS INVESTMENT CORPORATION LIMITED"
       ],
       "country": "GB",
       "topics": [
         "sanction"
       ],
-      "dataset": "SYNTHETIC_DAY1_PLACEHOLDER",
-      "_note": "ultimate parent of Harbourgate Components GmbH"
+      "programme": "IRAN - Unknown",
+      "dataset": "us_ofac_sdn"
     },
     {
-      "id": "SYN-003",
-      "caption": "Marisol Petrochemicals SA",
+      "id": "NK-2CdXhyCy9XzyZgcFcHXrTZ",
+      "caption": "LIMITED LIABILITY COMPANY KHAVERIM",
       "aliases": [
-        "Marisol Petro"
+        "Chaverim",
+        "LLC Haverim"
       ],
-      "country": "FR",
+      "country": "RU",
       "topics": [
-        "pep"
+        "sanction"
       ],
-      "dataset": "SYNTHETIC_DAY1_PLACEHOLDER"
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2NYMNhw4S47widuXoBXJZb",
+      "caption": "Shahid Shustari Industries",
+      "aliases": [
+        "Shahid Shoshtari Industries",
+        "Shahid Shoushtari",
+        "Shahid Shushtari Industries"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hh5uogxGaohPLZHJ3yQnTV",
+      "caption": "DENKARS",
+      "aliases": [
+        "Денкарс"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-TY6ppHYHFZnzt6sAtsWL4Z",
+      "caption": "Limited Liability Company Active Business Consult",
+      "aliases": [
+        "ABC LLC",
+        "AKTIVBIZNESKOLLEKSHN, OOO",
+        "LIMITED LIABILITY COMPANY ACTIVEBUSINESSCOLLECTION",
+        "LLC ACTIVEBUSINESSCOLLECTION",
+        "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU AKTIVBIZNESKOLLEKSHN"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZXLHM9zgCo5JTJUSpWi3Jj",
+      "caption": "HK Hesin Industry Co Limited",
+      "aliases": [
+        "香港赫新實業有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XUHmqd6Nm24erWRGsy4pgY",
+      "caption": "SHANGHAI FUTURE SHIP MANAGEMENT CO LTD",
+      "aliases": [
+        "Shanghai Future Ship Mgmt Co"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ndzYCYhMD9pwbYoRMiF55J",
+      "caption": "Asia Sun Trading Co. Ltd.",
+      "aliases": [
+        "Asia Sun Trading",
+        "Asia Sun Trading Company Limited"
+      ],
+      "country": "MM",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "BURMA-EO14014 - Executive Order 14014",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mp3FtmefE8dkK3Zo5E8YG3",
+      "caption": "Open Joint Stock Company EBC Management Company",
+      "aliases": [
+        "OAO UK EPK",
+        "OAO Upravlayushaya Kompaniya EPK"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-4PWyaTJ8fFVqDTSjkry69m",
+      "caption": "LIMITED LIABILITY COMPANY PROTEY SPETSTEKHNIKA",
+      "aliases": [
+        "Protei ST LTD"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-evWrKtQ6TzwC2AWD9MUwHU",
+      "caption": "Fornacis Energy Trading Co. L.L.C",
+      "aliases": [
+        "فورناسيس انرجي للتجارة شركة الشخص الواحد ذ.م.م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-EYpFgU7PUQsbz5BncBKf5g",
+      "caption": "Vahid Ghayoumy Goods Wholesalers LLC",
+      "aliases": [
+        "وحيد قيومي لتجارة السلع بالجملة ش.ذ.م.م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dCTfcntv5vhJa6k732vVzE",
+      "caption": "IRGC Navy",
+      "aliases": [
+        "Islamic Revolution Guards Corps Naval Force"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "FTO - INA",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QBTwnXtEqhNZ3znuwrjFgy",
+      "caption": "AKTSIONERNOE OBSHCHESTVO MALMYZHSKII ZAVOD PO REMONTU DIZELNYKH DVIGATELEI",
+      "aliases": [
+        "Joint Stock Company Malmyzh Diesel Engine Repair Plant"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-VmYq39b7qWfjLawQDekMSn",
+      "caption": "Joint Stock Company Akmetron",
+      "aliases": [
+        "AO Akmetron"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZRRaR8pcBF8bSauFP58o5H",
+      "caption": "Team Mohamed's Racing Team",
+      "aliases": [
+        "Team Mohamed's"
+      ],
+      "country": "GY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nw25PoEWtM5MjvQsML3Gwg",
+      "caption": "Alborz Organic Material Engineering Company",
+      "aliases": [
+        "شرکت مهندسی مواد آلی البرز"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-d3EDp9jW6m6nP7dWxjETdo",
+      "caption": "AlAlamiyah Express Company for Exchange and Remittance",
+      "aliases": [
+        "AlAlamiyah Express Company",
+        "الشرکة العالمیة إکسبرس للصرافة والتحویلات المالیة"
+      ],
+      "country": "YE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-MKvnNDadfySmJTKZi9a5oN",
+      "caption": "JOINT STOCK COMPANY LISKINSKII ZAVOD MONTAZHNYKH ZAGOTOVOK",
+      "aliases": [
+        "JSC Liskimontazhkonstruktsiya"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cBXAio3i9ddiwtGYpjdSXD",
+      "caption": "OJSC Vladimir Radio Communications Design Bureau",
+      "aliases": [
+        "OAO VKBR",
+        "Otkrytoe Aktsionernoe Obshchestvo Vladimirskoe Konstruktorskoe Byuro Radiosvyazi"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bcGNRK5UgTaUE4EBCT9yHb",
+      "caption": "LIMITED LIABILITY COMPANY ELGA MAGISTRAL",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Эльга Магистраль"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-YKrUVvjExNSZdZJyyXviij",
+      "caption": "LIMITED LIABILITY COMPANY GULFWIND",
+      "aliases": [
+        "Halfwind Limited Liability Company",
+        "Limited Liability Company Galfvind"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-CjSy7SniZXzSCdxJBKtzVh",
+      "caption": "Finder Technology Ltd",
+      "aliases": [
+        "超達科技有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ULkeyuwpRKFayadir2n6pY",
+      "caption": "OAO 'URANIS-RADIOSISTEMY'",
+      "aliases": [
+        "OJSC 'URANIS RADIO SYSTEMS'",
+        "OJSC URANIS-RADIOSISTEMY",
+        "URANIS-RADIOSISTEMY OAO"
+      ],
+      "country": "UA",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13685 - Executive Order 13685 (Ukraine)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hJyRKu5P86zWQfaLvzAAG6",
+      "caption": "Samidoun Palestinian Prisoner Solidarity Network",
+      "aliases": [
+        "Hirak",
+        "Le Reseau De Solidarite Aux Prisonniers Palestiniens Samidoun",
+        "Samidoun"
+      ],
+      "country": "CA",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-TBbzhgdhkqFnnZnkpFg9Cg",
+      "caption": "CHONGCHONGANG SHIPPING COMPANY LIMITED",
+      "aliases": [
+        "Chong Chon Gang Shipping Co. Ltd",
+        "Chongchongang Shipping Co Ltd"
+      ],
+      "country": "KP",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK - Executive Order 13551 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-7BzKWBQp9jcfbQdfKVmKkb",
+      "caption": "LIMITED LIABILITY COMPANY CYBERSTEEL",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Киберсталь"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bNA47Smd8vYNTP4LRsBPx6",
+      "caption": "Aman Holding Company",
+      "aliases": [
+        "Aman Group",
+        "Aman Holding Group",
+        "Aman Holding Private JSC"
+      ],
+      "country": "SY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "PAARSSR-EO13894 - Executive Order 13894 (Syria-related) - Executive Order 14312 (PAARSSR)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3YZ6aYzLaf7ogQQGiBcmZn",
+      "caption": "SHREEGEE IMPEX PRIVATE LIMITED",
+      "aliases": [
+        "Darwin Plus"
+      ],
+      "country": "IN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eEDY6Yqggu7ezLuPJJAXMp",
+      "caption": "Kobe Yamaguchi-gumi",
+      "aliases": [
+        "神戸山口組"
+      ],
+      "country": "JP",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "TCO - Executive Order 13581 (TCO)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bMgf6Y87k9A7usmTr8cZXS",
+      "caption": "UNITARY PRIVATE SCIENCE PRODUCTION ENTERPRISE TEHNOLIT",
+      "aliases": [
+        "Technolyte",
+        "Unitarnoe Chastnoe Nauchno Proizvodstvennoe Predpriyatie Tekhnolit"
+      ],
+      "country": "BY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-oN4V9PcudbqqHzBgaZWCfc",
+      "caption": "Patriot Private Military Company",
+      "aliases": [
+        "Patriot PMC",
+        "ЧВК Патриот"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Cxpr4cxCUZVwKfuYC2dboy",
+      "caption": "LIMITED LIABILITY COMPANY NEW DECISIONS 4",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Новые Решения 4"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2gnXxYSmNUWxsvX5gyMmGh",
+      "caption": "OOO STANDARD LINE",
+      "aliases": [
+        "OOO Standart Lain"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-oXZkUuDfkeFeVLpswNAMGp",
+      "caption": "Limited Liability Company Fo-Menedzhment",
+      "aliases": [
+        "FO-Menedzhment OOO",
+        "Общество С Ограниченной Ответственностью ФО-Менеджмент"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-A4X2h2h3BqwCTaWKNWhRox",
+      "caption": "Swissol Trade DMCC",
+      "aliases": [
+        "‫سویسول تراید م.د.م.س.‬"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nJxoRbVVpMj9vwKMLMuBrZ",
+      "caption": "Red Sea Transit & Transport Service",
+      "aliases": [
+        "Red Sea Maritimes Surveyors SARL",
+        "Red Sea Shipping Agency",
+        "Red Sea Surveyor Maritime",
+        "Red Sea Transit And Transport Service",
+        "Red Sea Transit and Transport"
+      ],
+      "country": "DJ",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SOMALIA - Executive Order 13620 (Somalia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dXAURt3D53BFeqUMWLDB89",
+      "caption": "COMPLEX UNMANNED SOLUTIONS CENTER LTD",
+      "aliases": [
+        "USC LTD"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-aRXrKfyzg6itcukRjGx9dT",
+      "caption": "LIMITED LIABILITY COMPANY VMK",
+      "aliases": [
+        "Vmk OOO Samara",
+        "Вмк ООО Самара",
+        "Общество С Ограниченной Ответственностью Вмк"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-iKYcPGJWwwqJzZEqGyuMKg",
+      "caption": "OOO NAUCHNO PROIZVODSTVENNOE OBYEDINENIE TSVBP",
+      "aliases": [
+        "NPO TSVBP"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XZ5qUDFshJ83N9L7R6NQNx",
+      "caption": "GUANGSHA ZHOUSHAN ENERGY GROUP CO., LTD.",
+      "aliases": [
+        "Guangxia Zhoushan Energy Sources Group Co., Ltd.",
+        "广厦舟山能源集团有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-53tKfStEZPMfBpaKuVaihz",
+      "caption": "NPF Otkritie Group",
+      "aliases": [
+        "AO NPF Otkrytie",
+        "Aktsionernoe Obshchestvo Negosudarstvennyi Pensionnyi Fond Otkrytie",
+        "Группа НПФ Открытие"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jSTwCFeLbVVEzh5gCAxLcH",
+      "caption": "UT IT Novaya Industriya OOO",
+      "aliases": [
+        "New Industry Ventures"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bTBS4Qu7L5NMai4K6U565j",
+      "caption": "IRAN ASEMAN AIRLINES",
+      "aliases": [
+        "Aseman Air Services"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jkMGmozQKLSKb6t5VXXaQs",
+      "caption": "TURKIK UNION DIGITAL TECHNOLOGY TRANSFORMATION OFFICE INCORPORATED COMPANY",
+      "aliases": [
+        "Turkik Union Dig Tech Transformation JSC",
+        "Turkik Union Dijital Teknoloji Dönüşüm Ofisi Anonim Şirketi"
+      ],
+      "country": "TR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-e6SjbjjwYFKG7edsDJucn4",
+      "caption": "XINJIANG PRODUCTION AND CONSTRUCTION CORPS",
+      "aliases": [
+        "新疆生产建设兵团"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-epJdDWXKgViqEuMhCkM87R",
+      "caption": "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU SHAKHTA ESAULSKAYA",
+      "aliases": [
+        "OOO Esaulskaya Mine",
+        "OOO Shakhta Esaulskaia",
+        "Shakhta Esaulskaya OOO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ntyLT6ZMcGjFjVhoDiZVWr",
+      "caption": "Joint Stock Company the 224th Flight Unit State Airlines",
+      "aliases": [
+        "224 FU JSC",
+        "224th Flight Unit",
+        "224th Flight Unit State Airlines",
+        "JSC The 224th Flight Unit State Airlines",
+        "Lyotny Otryad 224",
+        "OAO 224 LO",
+        "OJSC Gosudarstvennaya aviakompaniya 224 letny otryad",
+        "TTF Air Heavy Lifting",
+        "ОАО Государственная Авиакомпания 224 Летный Отряд"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-MH5gRLzFQSwQhV4atE6fZC",
+      "caption": "Phoenix Electronics",
+      "aliases": [
+        "Feniks Elektroniks"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-fJokELHcQscBF7JseYyqoj",
+      "caption": "Joint Stock Company United Engine Corporation",
+      "aliases": [
+        "AO ODK",
+        "Aktsionernoe Obshchestvo Obedinennaya Dvigatelestroitelnaya Korporatsiya",
+        "OTKRYTOE AKTSIONERNOE OBSHCHESTVO UPRAVLYAYUSHCHAYA KOMPANIYA OBEDINENNAYA DVIGATELESTROITELNAYA KORPORATSIYA",
+        "United Engine Corp JSC",
+        "АО ОДК",
+        "Акционерное Общество Объединенная Двигателестроительная Корпорация"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-KbpshLrddCCGaKzfDtifWL",
+      "caption": "Al Moukhtar Products Co. SARL",
+      "aliases": [
+        "منتوجات المختار"
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-oKXigHvoK5eczDERsXqY5q",
+      "caption": "JOINT STOCK COMPANY SOVCOMBANK LIFE",
+      "aliases": [
+        "JSC Sovcombank Life",
+        "Sovcombank Life JSC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-LWkoAe8yfMQGu8TXJMpC2y",
+      "caption": "Iranian Ghadir Iron & Steel Co.",
+      "aliases": [
+        "IGISCO",
+        "IRANIAN GHADIR IRON AND STEEL CO."
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13871 - Executive Order 13871 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-AUFDybEfoMpWHyzDmnd33f",
+      "caption": "CRYNOFIST AVIATION FZCO",
+      "aliases": [
+        "كرينوفيست افييشن ش.م.ج"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Z4iALANAkKZJxArbor2oAG",
+      "caption": "AKTSIONERNOE OBSHCHESTVO INDEPENDENT SPECIALIZED DEPOSITORY",
+      "aliases": [
+        "AO NSD",
+        "Joint Stock Company Investment Company Peko Invest",
+        "Акционерное Общество Независимый Специализированный Депозитарий"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-AryxiJMmLa9rZHwLvFrpee",
+      "caption": "Khavar Tejarat Arka Kish Company",
+      "aliases": [
+        "شرکت خاور تجارت آرکا کیش"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-kBsYYTJDpDoaMHDhX9QvBL",
+      "caption": "Podolskkabel",
+      "aliases": [
+        "AO NP Podolskkabel"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hyGjegBf98VpqMMrh27W6U",
+      "caption": "Kitoko Food Farm",
+      "aliases": [
+        "Kitoko",
+        "KitokoFood, SPRL",
+        "La Ferme Kitoko Food"
+      ],
+      "country": "CD",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XVhem2ztGsaFKVq9x3wU9k",
+      "caption": "Securol Glass Curtains",
+      "aliases": [
+        "New Securol",
+        "Securol Advanced Glazing Curtains"
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eF3xvDrhA4eymKHeFeS3Z2",
+      "caption": "JOINT STOCK COMPANY ULAN-UDE AVIATION PLANT",
+      "aliases": [
+        "AO U-UAZ",
+        "Ulan-Ude Aviation Plant"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-gi7rgpNBnXSGHkKQdiVs9r",
+      "caption": "Al-Qatirji Company",
+      "aliases": [
+        "Al-Sham and al-Darwish Company",
+        "KATERJI GROUP COMPANY",
+        "Katerji Group LTD",
+        "Khatirji Group"
+      ],
+      "country": "SY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nUUkta3Ci2FZqFxvbJCpPq",
+      "caption": "LIMITED LIABILITY COMPANY SCIENTIFIC AND PRODUCTION COMPANY TEKHINKOM",
+      "aliases": [
+        "LLC Scientific and Production Firm Techinkom",
+        "NPF Tehinkom OOO",
+        "ООО НПФ Техинком",
+        "Общество с ограниченной ответственностью Научно-производственная фирма Техинком"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-6qnXXumHHjjApXEWTruoET",
+      "caption": "Arkan Mars Petroleum Company for Oil Products Imports",
+      "aliases": [
+        "Arkan Mars Petroleum Company for Oil Derivatives Imports",
+        "Arkan Mars Petroleum Derivatives Import Company Limited",
+        "‫شركة اركان مارس بتروليم لاستيراد المشتقات النفطية‬"
+      ],
+      "country": "YE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2jgGmJaCam25UVaLGFrL4y",
+      "caption": "IRANIAN INVESTMENT PETROCHEMICAL GROUP COMPANY",
+      "aliases": [
+        "Iranian Petrochemical Investment Group Company"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "NPWMD - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-8jHKiGjFn5Am3ffxfjEorW",
+      "caption": "JOINT STOCK COMPANY KLINTSOVSKIY MOBILE CRANE PLANT",
+      "aliases": [
+        "Joint Stock Company Klintsy Mobile Cranes Plant",
+        "Акционерное Общество Клинцовский Автокрановый Завод"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Yd9NUQb6nagLvKryZ8L3X7",
+      "caption": "LIMITED LIABILITY COMPANY ECHELON INNOVATIONS",
+      "aliases": [
+        "Eshelon Innovatsii",
+        "LLC Echelon Innovations",
+        "ЭШЕЛОН ИННОВАЦИИ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZUgzoZx2XacMesxYna7fYu",
+      "caption": "REVOLUTIONARY STRUGGLE",
+      "aliases": [
+        "EPANASTATIKOS AGHONAS"
+      ],
+      "country": "GR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "FTO - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-EBCVmgkA5oR4vAvZ4Wvk67",
+      "caption": "Tulskoe NIGP AO",
+      "aliases": [
+        "Tulskoe Nauchno Issledovatelskoe Geologicheskoe Predpriyatie AO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SDPrhKFvovSxX6eFoyrNBE",
+      "caption": "MINISTRY OF LAND AND MARITIME TRANSPORTATION OF THE DEMOCRATIC PEOPLE'S REPUBLIC OF KOREA",
+      "aliases": [
+        "MINISTRY OF LAND AND MARINE TRANSPORT"
+      ],
+      "country": "KP",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK3 - Executive Order 13722 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dpLc27sU5qP4T8cKSTNnJ3",
+      "caption": "AO REESTR",
+      "aliases": [
+        "ZAO Reestr"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-YaBXJirXBqHxP28PL6qgVB",
+      "caption": "Hebei Crovell Biotech Co., LTD.",
+      "aliases": [
+        "河北克拉维尔生物科技有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "ILLICIT-DRUGS-EO14059 - Executive Order 14059 (Illicit Drugs)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nqb7xxNZ47BrHj5zXPMjz3",
+      "caption": "BANCO DE DESARROLLO ECONOMICO Y SOCIAL DE VENEZUELA",
+      "aliases": [
+        "BANDES",
+        "Banco Bandes",
+        "Fondo de Inversiones de Venezuela"
+      ],
+      "country": "VE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "VENEZUELA-EO13850 - Executive Order 13850 (Venezuela)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Ec4rR8MrHXhKJ9TEZdqLEW",
+      "caption": "Limited Liability Company Armor Engineering",
+      "aliases": [
+        "OOO Armor Inzhiniring",
+        "Общество С Ограниченной Ответственностью Армор Инжиниринг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-MzkcsfSy7ttFacahpaWD4E",
+      "caption": "National Iranian Oil Products Distribution Company",
+      "aliases": [
+        "NIOPDC"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2wZ3i6uauS2iwkRCsLfbB2",
+      "caption": "Dream Lite Trading LLC",
+      "aliases": [
+        "دريم لايت للتجارة ش.ذ.م.م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bJtpcYrPr4gc76aAtuViFk",
+      "caption": "NAI LOGISTICS B.V.",
+      "aliases": [
+        "ناي لوجيستيكس بي . في"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SRoQ2BoWVU25nwkhEGBrVX",
+      "caption": "JOINT STOCK COMPANY KONAR",
+      "aliases": [
+        "Акционерное Общество Конар"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jfCuCMaTUgTEmbDWMfZujm",
+      "caption": "AL-HARAMAIN : Pakistan Branch",
+      "aliases": [
+        "AL-HARAMAIN FOUNDATION",
+        "AL-HARAMAIN HUMANITARIAN FOUNDATION",
+        "AL-HARAMAIN ISLAMIC FOUNDATION",
+        "AL-HARAMAYN",
+        "AL-HARAMAYN FOUNDATION",
+        "AL-HARAMAYN HUMANITARIAN FOUNDATION",
+        "AL-HARAMAYN ISLAMIC FOUNDATION",
+        "AL-HARAMEIN",
+        "AL-HARAMEIN FOUNDATION",
+        "AL-HARAMEIN HUMANITARIAN FOUNDATION",
+        "AL-HARAMEIN ISLAMIC FOUNDATION",
+        "ALHARAMAIN",
+        "ALHARAMAIN FOUNDATION",
+        "ALHARAMAIN HUMANITARIAN FOUNDATION",
+        "ALHARAMAIN ISLAMIC FOUNDATION",
+        "ALHARAMAYN",
+        "ALHARAMAYN FOUNDATION",
+        "ALHARAMAYN HUMANITARIAN FOUNDATION",
+        "ALHARAMAYN ISLAMIC FOUNDATION",
+        "ALHARAMEIN",
+        "ALHARAMEIN FOUNDATION",
+        "ALHARAMEIN HUMANITARIAN FOUNDATION",
+        "ALHARAMEIN ISLAMIC FOUNDATION",
+        "MU'ASSASAT AL-HARAMAIN AL-KHAYRIYYA",
+        "MU'ASSASAT AL-HARAMAYN AL-KHAYRIYYA",
+        "MU'ASSASAT AL-HARAMEIN AL-KHAYRIYYA",
+        "VAZIR",
+        "VEZIR"
+      ],
+      "country": "PK",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Qk5ASWefynPCW4y5UDQAqU",
+      "caption": "Accenture Building Materials",
+      "aliases": [
+        "Accenture Building Materials Trading LLC"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFCA - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3T8WCxThnWaTZwrj6L2sWU",
+      "caption": "Limited Liability Company Profi Glass Plus",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Профи Гласс Плюс"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZNVKNKGknrb8TnzWfWXdLM",
+      "caption": "Petrokick LLC",
+      "aliases": [
+        "بتروكيك ذ م م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hyNX2j6tkZPd8ndZeLtcbp",
+      "caption": "Damai Technology Development Limited",
+      "aliases": [
+        "大麥科技發展有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-GgsfhKoLmgzNpsz8M3DmW3",
+      "caption": "FEDERAL STATE BUDGETARY INSTITUTION TECHNOLOGICAL INSTITUTION FOR SUPERHARD AND NOVEL CARBON MATERIALS",
+      "aliases": [
+        "FGBNU TISNUM",
+        "FSBI TISNCM",
+        "Institute of Technology of Ultra Hard and New Carbon Materials"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZagM6iniePNaVWzPD62Pej",
+      "caption": "Shandong Shengxing Chemical Co., Ltd.",
+      "aliases": [
+        "山东胜星化工有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-VaLUfUKpDPFCUgCr7zRdy9",
+      "caption": "Cabuk Calisan Tasimacilik Ve Endustri Makineleri Ticaret Limited Sirketi",
+      "aliases": [
+        "Cabuk Calisan Tasimacilik Ve Endustri Makineleri Tic Ltd Sti",
+        "ÇABUK ÇALIŞAN TAŞIMACILIK VE ENDÜSTRİ MAKİNELERİ TİCARET LİMİTED ŞİRKETİ"
+      ],
+      "country": "TR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mktSMNrMutJFq5Kyn7ni8J",
+      "caption": "NAJI PAS COMPANY",
+      "aliases": [
+        "Naji Pas",
+        "شرکت ناجی پاس"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-HR - Executive Order 13553 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-gRgSubs5z5ABkMnDvuicVy",
+      "caption": "LIMITED LIABILITY COMPANY RTK",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью РТК"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-JKdKpd7jDM3YjDN9yDL6Vu",
+      "caption": "TEKHNOLOGIYA, OOO",
+      "aliases": [
+        "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU TEKHNOLOGIYA",
+        "TECHNOLOGY COMPANY LIMITED",
+        "Technology LLC",
+        "Technology Limited Liability Company",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТЕХНОЛОГИЯ",
+        "ООО ТЕХНОЛОГИЯ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK - Executive Order 13551 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-VhTsJUsp6jqz6VSAbeUGgi",
+      "caption": "Elfaro OU",
+      "aliases": [
+        "OU Inelso"
+      ],
+      "country": "EE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mxteNu3stL8sxR9v7FWoBc",
+      "caption": "REGENT BALTICA COMPANY LIMITED",
+      "aliases": [
+        "Regent Baltica Co Ltd"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2Po2aBLrsDQGPBEbgQ6Jmu",
+      "caption": "desert pulse trading fze",
+      "aliases": [
+        "Siwan Trading International FZE",
+        "ديزرت بلس تريدينغ م م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-RaWbmguXYqupUL3wGWXdQ2",
+      "caption": "LIMITED LIABILITY COMPANY ALLRUS",
+      "aliases": [
+        "Allrus Group"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eC7dmjtHpHrs2eS3n2Y2Js",
+      "caption": "Joint Stock Company Research and Production Enterprise Radar MMS",
+      "aliases": [
+        "Joint Stock Company Radar MMS",
+        "Radar MMS NPP",
+        "Scientific Production Association Radar MMS JSC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-L5yozcjwQFE2EGhVBWAB6i",
+      "caption": "OOO Smartlogister",
+      "aliases": [
+        "Smart Lines Trading FZC",
+        "Smartlogister"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cyXUQ5RpkTjJDjM4PWoGD3",
+      "caption": "DOO RAD 028 ZVECAN",
+      "aliases": [
+        "Drustvo Sa Ogranicenom Odgovornoscu Rad 028 Zvecan"
+      ],
+      "country": "RS",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hgN9B3Zt2dYdVMtFiYrAJy",
+      "caption": "Joint Stock Company Chernigovets",
+      "aliases": [
+        "Акционерное Общество Черниговец"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hCaHgYtLraXh5q2tJ8qwuj",
+      "caption": "CAVALLY ANTRO AND BAR",
+      "aliases": [
+        "CAVALLY ANTRO & BAR"
+      ],
+      "country": "MX",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "ILLICIT-DRUGS-EO14059 - Executive Order 14059 (Illicit Drugs) - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-PKiyhQDsPhSpGPMwjv9mPU",
+      "caption": "ZAKRYTOE AKTSIONERNOE OBSHCHESTVO MAGNITOGORSKII ZAVOD PROKATNYKH VALKOV",
+      "aliases": [
+        "CJSC MMRP",
+        "CJSC Magnitogorsk Mill Rolls Plant",
+        "ZAO MZPV"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-6XrSFwA94EBqGqKV4pXYuF",
+      "caption": "International Anticrisis Center",
+      "aliases": [
+        "Международный Антикризисный Центр"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "CYBER2 - Executive Order 13757 (Cyber) - Executive Order 13848 (Election) - Executive Order 13661 (Ukraine) - Executive Order 13694 (Cyber)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-gxUonCjLpmk23JFaJVDx2M",
+      "caption": "KODO-KAI",
+      "aliases": [
+        "KODOKAI",
+        "KOUDOU-KAI",
+        "SANDAIME KODO-KAI",
+        "THIRD KODO-KAI",
+        "三代目弘道会",
+        "弘道会"
+      ],
+      "country": "JP",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "TCO - Executive Order 13581 (TCO)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-RymWVGwERJTn94AKLvWm9m",
+      "caption": "Guangzhou Yakai International Freight Forwarding Co., Ltd.",
+      "aliases": [
+        "Guangzhou YK Logistics Company Ltd",
+        "Guangzhou Yakai International Freight Agency Co., Ltd",
+        "YK Global Cargo Guangzhou Company Limited"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bRMgRBsbkUkAc7WEcp8emS",
+      "caption": "Publichnoe Aktsionernoe Obschestvo Sollers",
+      "aliases": [
+        "Public Joint Stock Company Sollers",
+        "Sollers Public Joint Stock Company"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cCANraVUPFx2WuVzVvAHf9",
+      "caption": "SHAHED AVIATION INDUSTRIES RESEARCH CENTER",
+      "aliases": [
+        "SAIC",
+        "SAIRC",
+        "SHAHED AVIATION",
+        "SHAHED AVIATION INDUSTRIES",
+        "SHAHED AVIATION INDUSTRIES COMPLEX",
+        "SHAHED AVIATION INDUSTRIES RESEARCH",
+        "SHAHED AVIATION INDUSTRIES RESEARCH CENTRE",
+        "تحقیقات صنایع هوایی شاهد"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "NPWMD - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2qwt6eV2sLUsce8viEvWUb",
+      "caption": "WAAD PROJECT",
+      "aliases": [
+        "'MASHURA WAAD LAADAT AL-AAMAR",
+        "AL-WAAD AL-SADIQ",
+        "WA'AD AS SADIQ",
+        "WA'D PROJECT",
+        "WA'ED ORGANIZATION",
+        "WA'ID COMPANY",
+        "WAAD",
+        "WAAD COMPANY",
+        "WAAD FOR REBUILDING THE SOUTHERN SUBURB",
+        "WAAD PROJECT FOR RECONSTRUCTION",
+        "WAED"
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-h2cWP3LdGwndyFzCoV6ot6",
+      "caption": "Dandong Kehua Economy & Trade Co., Ltd.",
+      "aliases": [
+        "Dandong Kehua Economic And Trade Co. Ltd."
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK4 - Executive Order 13810 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Z9oNBzxf4NzcB6GKXwgPUL",
+      "caption": "Aktsionernoe Obshchestvo Konsalt",
+      "aliases": [
+        "Aktsionernoe Obshchestvo CHVK Vagner Tsentr",
+        "Joint Stock Company PMC Wagner Center"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-E9RFumZWwPLkpZdn3FzWRb",
+      "caption": "HAJI JUMA KHAN ORGANIZATION",
+      "aliases": [
+        "HJK ORGANIZATION",
+        "KHAN ORGANIZATION"
+      ],
+      "country": "AF",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDNTK - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-f3xFBgNpPMhxLMVoinbMhk",
+      "caption": "AL-SALAH SOCIETY",
+      "aliases": [
+        "AL-SALAH",
+        "AL-SALAH ASSOCIATION",
+        "AL-SALAH ISLAMIC ASSOCIATION",
+        "AL-SALAH ISLAMIC COMMITTEE",
+        "AL-SALAH ISLAMIC FOUNDATION",
+        "AL-SALAH ISLAMIC SOCIETY",
+        "AL-SALAH ORGANIZATION",
+        "ISLAMIC AL SALAH SOCIETY",
+        "ISLAMIC RIGHTEOUSNESS SOCIETY",
+        "ISLAMIC SALAH FOUNDATION",
+        "ISLAMIC SALAH SOCIETY",
+        "ISLAMIC SALVATION SOCIETY",
+        "JAMI'A AL-SALAH",
+        "JAMI'AT AL-SALAH AL-ISLAMI",
+        "JAMMEAT EL-SALAH",
+        "SALAH CHARITABLE ASSOCIATION",
+        "SALAH ISLAMIC ASSOCIATION",
+        "SALAH WELFARE ORGANIZATION"
+      ],
+      "country": "PS",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cpurJYaMsA8Tn6LjNHkyRh",
+      "caption": "OPEN JOINT STOCK COMPANY ILYUSHIN AVIATION COMPLEX",
+      "aliases": [
+        "JSC Ilyushin Aviation Complex",
+        "OAO Ilyushin Aviation Complex",
+        "OJSC IL",
+        "OJSC Ilyushin Aviation Complex",
+        "Publichnoe Aktsionernoe Obschestvo Aviatsionnyi Kompleks Im S. V Ilyushina"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-GgeDDtRxaTF9AHHqbXJeYK",
+      "caption": "Gudzon Shipping Co LLC",
+      "aliases": [
+        "LLC Gudzon Shipping Co",
+        "OOO Gudzon Shipping Co",
+        "SK Gudzon, OOO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK4 - Executive Order 13810 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-aBKr2ik3fBoygNg3Kq9SU9",
+      "caption": "T.G.A. D.O.O. za Trgovinu i Usluge",
+      "aliases": [
+        "T.G.A. D.O.O."
+      ],
+      "country": "HR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-JmxoKNhAfyzpHikPohfPec",
+      "caption": "P.C.C. (SINGAPORE) PRIVATE LIMITED",
+      "aliases": [
+        "P.C.C. SINGAPORE BRANCH",
+        "PCC SINGAPORE PTE LTD"
+      ],
+      "country": "SG",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN - Executive Order 13599 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cpy5EwWn5w5ZZNsWZsFv3n",
+      "caption": "Joint Stock Company 53 Arsenal",
+      "aliases": [
+        "53 Arsenal PAO",
+        "Акционерное Общество 53 Арсенал"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-LFVntKSVQPjU87gBVFzqbQ",
+      "caption": "Opytno Konstruktorskoe Byuro Pribor",
+      "aliases": [
+        "OKB Pribor",
+        "Pribor Open Design Bureau"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-kL5urGiKf2sPAGbR25qiuj",
+      "caption": "LLC RM Design and Development",
+      "aliases": [
+        "OSOO RM Dizayn and Development",
+        "OSOO RM Dizayn end Development",
+        "RM Design&Development",
+        "RM DesignandDevelopment",
+        "RM Dizain and Development OSOO"
+      ],
+      "country": "KG",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mcvjxNrmzWPX5vE9Y4GqPB",
+      "caption": "Limited Liability Company I Machine Technology",
+      "aliases": [
+        "Ai Mashin Tekhnolodzhi"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-BBhoi3myeh5Vi4itv4aqLw",
+      "caption": "SHENZHEN HUASHUO SEMICONDUCTOR CO LTD",
+      "aliases": [
+        "Huashuo Semiconductor Co Ltd",
+        "深圳市华朔半导体有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-GaKhSJmFtFsh6wjf6h7KRE",
+      "caption": "HOLY LAND FOUNDATION FOR RELIEF AND DEVELOPMENT",
+      "aliases": [
+        "OCCUPIED LAND FUND"
+      ],
+      "country": "US",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eAXz8ridoUoRz2dTYGvBMt",
+      "caption": "LIMITED LIABILITY COMPANY TMK TAYMIR",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью ТМК Таймыр"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bjJdxHGuTsHqfZCzkeye2E",
+      "caption": "KONSTRUKTORSKOE BYURO PRIBOROSTROENIYA OTKRYTOE AKTSIONERNOE OBSHCHESTVO",
+      "aliases": [
+        "INSTRUMENT DESIGN BUREAU",
+        "JSC KBP INSTRUMENT DESIGN BUREAU",
+        "KBP INSTRUMENT DESIGN BUREAU",
+        "KBP INSTRUMENT DESIGN BUREAU JOINT STOCK COMPANY",
+        "KBP OAO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13661 - Executive Order 13661 (Ukraine)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-9H3PXzkRebXym2wVWkQLmE",
+      "caption": "SHANDONG UNITED ENERGY PIPELINE TRANSPORTATION CO LTD",
+      "aliases": [
+        "Shandong United Energy Pipeline Delivery Co Ltd",
+        "Shandong United Energy Pipeline Transmission Co Ltd",
+        "山东联合能源管道输送有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-HHfdh63iYeRayWbqCxhmu4",
+      "caption": "LIMITED LIABILITY COMPANY TUBES 2000",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Трубы 2000"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mYiMWA4oeUW8wyGX97wzSv",
+      "caption": "Severo Vostochnoe PGO AO",
+      "aliases": [
+        "Северо Восточное ПГО АО"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QiVTft3NqxXMChqCsdGWo3",
+      "caption": "PUBLIC JOINT STOCK COMPANY TRANSKAPITALBANK",
+      "aliases": [
+        "JOINT STOCK BANK TRANSCAPITALBANK",
+        "JOINT STOCK COMMERCIAL BANK TRANSCAPITALBANK CLOSED JOINT STOCK COMPANY",
+        "OPEN JOINT STOCK BANK TRANSCAPITALBANK",
+        "PJSC TRANSKAPITALBANK",
+        "TKB BANK PJSC",
+        "TKB PJSC",
+        "TRANSCAPITALBANK PJSC",
+        "TRANSKAPITALBANK",
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО ТРАНСКАПИТАЛБАНК",
+        "ТКБ БАНК ПАО"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-fGXV7hZM8TR7spYcLmtTtS",
+      "caption": "PSB Avializing OOO",
+      "aliases": [
+        "Obshchestvo S Ogranichennoi Otvetstvennostyu PSB Avializing"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-M5ADiHpZeMBJZq7uxsjiad",
+      "caption": "Amana Fuel Co.",
+      "aliases": [
+        "Al Amana S.A.R.L.",
+        "Amana for Hydrocarbons"
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-efD9TNPR7eJKZYyXfkop8b",
+      "caption": "Elprom Limited Liability Company",
+      "aliases": [
+        "Elprom LLC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XEYRiMKUN2n59XLFhJn74h",
+      "caption": "STAR TWINKLE SHIPPING LIMITED",
+      "aliases": [
+        "星耀船務有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jALpmUe9WLWEzPufEnVdMx",
+      "caption": "CJSC VANKORNEFT",
+      "aliases": [
+        "VANKORNEFT",
+        "ZAO VANKORNEFT"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NuYCfevartdwPNAVTzxqPW",
+      "caption": "LIMITED LIABILITY COMPANY PROMELEKTRO ENGINEERING",
+      "aliases": [
+        "Promelectro Engineering OOO",
+        "Promelektro Inzhiniring",
+        "Общество С Ограниченной Ответственностью Промэлектро Инжиниринг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-i8iBJu8qcwVRSkEUAjFgcb",
+      "caption": "FAJR INDUSTRIES GROUP",
+      "aliases": [
+        "FADJR INDUSTRIES GROUP",
+        "IFP",
+        "INDUSTRIAL FACTORIES OF PRECISION-MACHINERY",
+        "INSTRUMENTATION FACTORIES OF PRECISION MACHINERY",
+        "INSTRUMENTATION FACTORY PLANT",
+        "MOJTAME SANTY AJZAE DAGHIGH",
+        "NASR INDUSTRIES GROUP"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "NPWMD - TRA",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-m6q6EDzbSK248pPhU3qD7r",
+      "caption": "Zareche-Oka OOO",
+      "aliases": [
+        "Zarechye-Oka"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-j5v5PQgwosdGZuxaBLzgP4",
+      "caption": "Windfel Properties Limited",
+      "aliases": [
+        "Predstavitelstvo Windfel Properties Limited"
+      ],
+      "country": "CY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZRTxXctbfyp5fmBoFLyLx8",
+      "caption": "Elvees Research and Development Center JSC",
+      "aliases": [
+        "Elvees R and D Center JSC",
+        "Elvees R&D Center JSC",
+        "JSC SPC Elvis",
+        "Joint Stock Company Scientific and Production Center Electronic Computing and Information Systems"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Xnx2QkxAw3aeqRPg5W3eY5",
+      "caption": "Stock Company Morion Inc",
+      "aliases": [
+        "AO Morion"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-JsDxvwA9CU5TZPVw3SiztN",
+      "caption": "LIMITED LIABILITY COMPANY EKSPRESS IMPORT",
+      "aliases": [
+        "OOO Ekspress Import",
+        "ООО Экспресс Импорт"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-e3g4DvTv5pEB5wJn4YcEA3",
+      "caption": "NINGBO MORE INTEREST I/E CO., LTD.",
+      "aliases": [
+        "NINGBO MORE INTEREST IMP. AND EXP. CO., LTD.",
+        "Ningbo More Interest Imp. & Exp. Co., Ltd.",
+        "宁波市摩利进出口有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-DbNo27tCzEWszMMfbSgH8E",
+      "caption": "VTB BANK GEORGIA JOINT STOCK COMPANY",
+      "aliases": [
+        "JSC VTB BANK GEORGIA",
+        "UNITED GEORGIAN BANK",
+        "VTB Bank Georgia JSC"
+      ],
+      "country": "GE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QYjyT6KHGLL4PLDTxnmkaD",
+      "caption": "Limited Liability Company Legion",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Легион"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-4tgHBJJsKJqgqf9tXKqwaJ",
+      "caption": "LIMITED LIABILITY COMPANY KORNET",
+      "aliases": [
+        "CorNET OOO",
+        "Общество С Ограниченной Ответственностью Корнет"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nebRV6tGmhsmEuYy4A2bMh",
+      "caption": "STAR RAPID MANUFACTURING CO LTD",
+      "aliases": [
+        "Star Rapid Manufacturers Co Ltd",
+        "Zhongshan Shida Model Manufacturing Co Ltd",
+        "中山世达模型制造有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3JmD6mbxfhY2X5Z3dAtpHJ",
+      "caption": "LIMITED LIABILITY COMPANY WELLTECH",
+      "aliases": [
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ВЭЛЛТЕХ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cFBgfyRNNf533xGFbyp6E6",
+      "caption": "HK SIHAI YINGTONG INDUSTRY CO., LIMITED",
+      "aliases": [
+        "Tropical Rain Forest Logistics Co., Limited"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NNU2XQVnifuWsz7SW5G3xK",
+      "caption": "DESARROLLO AGRICOLA ORGANICO S.P.R. DE R.L.",
+      "aliases": [
+        "DESARROLLO AGRICULTURA ORGANICO, S.P.R. DE R.L."
+      ],
+      "country": "MX",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDNTK - Foreign Narcotics Kingpin Designation Act",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-BA4PDofbzjMfnYCGBYeH9T",
+      "caption": "PHOENIX SHIP MANAGEMENT FZE",
+      "aliases": [
+        "فينيكس لإدارة السفن م م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Y3aZU8kcDHeRc4DYaDq6C6",
+      "caption": "Derecttor Company Limited",
+      "aliases": [
+        "Derecttor Co Ltd",
+        "Derecttor Co., Limited"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-D7yGyNLnaPyzJgKrYtTMcN",
+      "caption": "ALFA-FOREX LLC",
+      "aliases": [
+        "ALFA-FOREKS"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QfW2YfhZRLRNCA8o5NHewL",
+      "caption": "VG DESARROLLOS DE LA BAHIA, S.A. DE C.V.",
+      "aliases": [
+        "Faro Grill",
+        "Grupo Kovay",
+        "Kovay Desarrollos",
+        "Marine Diamond",
+        "Navis by La Cruz",
+        "Quiya Residences",
+        "Santa Julia Seaside Living",
+        "Selvara Signature Collection",
+        "Zul by La Cruz"
+      ],
+      "country": "MX",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "ILLICIT-DRUGS-EO14059 - Executive Order 14059 (Illicit Drugs) - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-BMH7PJR8zQicHfCTJzxZod",
+      "caption": "INTERMOST LOGISTICS EAST CO LTD",
+      "aliases": [
+        "Intermost Logistika Vostok"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cYguaqMz4RHAvJ27sJzWmv",
+      "caption": "Picaso 3D LLC",
+      "aliases": [
+        "Limited Liability Company Pikaso 3D"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-FvuGaBYsMPLv2hPoY866D4",
+      "caption": "Didzhital Sekyuriti Servisis, OOO",
+      "aliases": [
+        "Digital Security Services"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bs7PKRnHQ3k5qJLH6Sbvfk",
+      "caption": "Vela-Marine Ltd.",
+      "aliases": [
+        "OOO Вела-Марин"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "CYBER2 - Executive Order 13694 (Cyber)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3KjKEauQtEsXvHa7g9VYiq",
+      "caption": "Rotek Elpom, LLC",
+      "aliases": [
+        "Rotek-Elpom"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-32MwgF8eZBb7LqsJPZ9xo7",
+      "caption": "Bavi General Trading CO L.L.C",
+      "aliases": [
+        "‫شركة باوي للتجارة العامة ش.ذ.م.م‬"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-F4QaZ2uQZAweWvDTFC2daC",
+      "caption": "Sum Five Petrochemicals Trading L.L.C",
+      "aliases": [
+        "سم فايف لتجارة البتروكيماويات ذ.م.م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QYWA3stM8otwnMhzMJTXJb",
+      "caption": "GENERAL TECHNOLOGY GROUP DALIAN MACHINE TOOL IMPORT & EXPORT CO LTD",
+      "aliases": [
+        "General Technology Group Dalian Machine Tool Import and Export Co Ltd",
+        "通用技术集团大连机床进出口有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Y5Z5Adfi4ipfpVEC8PJiRQ",
+      "caption": "JOINT STOCK COMPANY NEW HOLDING 2",
+      "aliases": [
+        "Акционерное Общество Новый Холдинг 2"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-BYieXss8R8P3pHsYQDHuYs",
+      "caption": "Zavod Podshipnikovykh Uzlov",
+      "aliases": [
+        "OOO ZPU"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-KEVbcUfoKZ7Cq5nSW8BT2W",
+      "caption": "Antifa Ost",
+      "aliases": [
+        "Antifa-East",
+        "Antifa-Ost",
+        "Hammer Gang",
+        "Hammerbande"
+      ],
+      "country": "DE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-F7URoLwPYsETzJpvo9zp8A",
+      "caption": "Joint Stock Company Pribory Service Torgovlya",
+      "aliases": [
+        "Joint Stock Company Devices Service Trade",
+        "Prist"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nHBRTRXNmaCWwm5n7grs4F",
+      "caption": "LIMITED LIABILITY COMPANY FIFTH ELEMENT TRADING",
+      "aliases": [
+        "Pyaty Element Treiding OOO",
+        "Pyatyi Element Trading OOO",
+        "Общество с ограниченной ответственностью Пятый Элемент Трейдинг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-RP9kQf9SPpGajyitePWPzM",
+      "caption": "Petrochemical Non-Industrial Operations & Services Co.",
+      "aliases": [
+        "PETROCHEMICAL NON-INDUSTRIAL OPERATIONS AND SERVICES CO."
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "NPWMD - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-5G5mbXyZXdjtntEmoYquAm",
+      "caption": "Thieves-in-Law",
+      "aliases": [
+        "Kanonieri Kurdebi",
+        "Kanonieri Qurdebi",
+        "Kanonieri Qurdi",
+        "Ramkiani Qurdebi",
+        "Ramkiani Qurdi",
+        "Sinie",
+        "Thief-in-Law",
+        "Thieves Professing the Code",
+        "Thieves-within-the-Law",
+        "Vor v Zakonye",
+        "Vor-Zakonnik",
+        "Vor-v-Zakone",
+        "Vory v Zakoni",
+        "Vory v Zakonye",
+        "Vory-v-Zakone",
+        "Zakonnik",
+        "ВОР В ЗАКОНЕ",
+        "ВОРЫ В ЗАКОНЕ",
+        "ЗАКОННИК"
+      ],
+      "country": "ES",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "TCO - Executive Order 13581 (TCO)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dHMacVt8YXQC3QPCmig5gs",
+      "caption": "VTB PENSION ADMINISTRATOR LIMITED",
+      "aliases": [
+        "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU VTB PENSIONNY ADMINISTRATOR",
+        "VTB PENSION ADMINISTRATOR LTD",
+        "VTB PENSIONNY ADMINISTRATOR OOO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SgGAkVKTnvxGQrz97UPGTH",
+      "caption": "Gharzolhasaneh Resalat Bank",
+      "aliases": [
+        "Bank-e Gharzolhasaneh Resalat"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN - Executive Order 13902 (Iran) - Executive Order 13599 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-L3QR5w35oSQPgt5LXRJjXn",
+      "caption": "Worldwide Shipping & Transportation Limited",
+      "aliases": [
+        "Worldwide Shipping & Trans",
+        "Worldwide Shipping and Trans",
+        "Worldwide Shipping and Transportation Limited"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN - Executive Order 13599 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jw2xBqZm4DurmXvVXoZpPm",
+      "caption": "SUE RC 'FEODOSIA OPTICAL PLANT'",
+      "aliases": [
+        "FEODOSIA STATE OPTICAL PLANT",
+        "STATE OPTICAL PLANT - FEODOSIA"
+      ],
+      "country": "UA",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13685 - Executive Order 13685 (Ukraine)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XxnScmBFAW5Aqc4cRAMtoN",
+      "caption": "Limited Liability Company Prospekt",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Проспект"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-B8h433KEGn3tQM6naqwMbc",
+      "caption": "Limited Liability Company Nauchno-Proizvodstvennoye Obyedineniye Radiovolna",
+      "aliases": [
+        "LLC Research and Production Association Radiovolna",
+        "NPO Radiovolna"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-VjcaphPGWESJ98crS2mhAA",
+      "caption": "BEIJING LUCHENG WEIYE TECHNOLOGY DEVELOPMENT COMPANY LIMITED",
+      "aliases": [
+        "Luchengtech Co. Ltd",
+        "北京鲁成伟业科技发展有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hscpnGPX48s9xivhT72Rez",
+      "caption": "JOINT STOCK COMPANY RESEARCH INSTITUTE OF GRAPHITE-BASED MATERIALS NIIGRAFIT",
+      "aliases": [
+        "Aktsionernoe Obshchestvo Nauchno Issledovatelski Institut Konstruksionnykh Materialov Na Osnove Grafita NIIGRAFIT",
+        "JSC NIIGRAFIT",
+        "NIIGRAFIT AO",
+        "Nauchno Issledovatelski Institut Konstruksionnykh Materialov Na Osnove Grafita NIIGRAFIT AO",
+        "НИИГРАФИТ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jnUydJuGwWnEsiNdVnPAL4",
+      "caption": "MINERVEN",
+      "aliases": [
+        "COMPANIA GENERAL DE MINERIA DE VENEZUELA",
+        "CVG Compania General de Mineria de Venezuela CA",
+        "CVG Minerven",
+        "Corporacion Venezolana de Guayana Minerven C.A."
+      ],
+      "country": "VE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "VENEZUELA-EO13850 - Executive Order 13850 (Venezuela)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-KT4dVQSNu2XBke6b5BXMdu",
+      "caption": "SILVER BRIDGE SHIPPING CO-HKG",
+      "aliases": [
+        "SILVER BRIDGE SHIPPING CO., LIMITED",
+        "SILVER BRIDGE SHIPPING CO., LTD."
+      ],
+      "country": "HK",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK4 - Executive Order 13810 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-d9fPtz7JranhEQ7gj8Usmw",
+      "caption": "JOINT STOCK COMPANY 5 ARSENAL",
+      "aliases": [
+        "AO 5 Arsenal",
+        "Aktsionernoe Obshchestvo 5 Arsenal"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dRVCdriBbyC5NWL5Kcv5Xo",
+      "caption": "SHIP REPAIR YARD OF THE BLACK SEA FLEET OF THE MINISTRY OF DEFENSE OF THE RUSSIAN FEDERATION",
+      "aliases": [
+        "13 SRZ CHF Minoborony Rossii",
+        "13 Sudoremontnyi Zavod Chernomorskogo Flota Ministerstva Oborony Rossiiskoi Federatsii"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UDfrok9EBosKxQtFq9bwPk",
+      "caption": "Public Joint Stock Company Vympel Interstate Corporation",
+      "aliases": [
+        "JSC MAC Vympel",
+        "Vimpel",
+        "Vympel Interstate Commercial Corporation",
+        "Vympel MAK PAO Defense Corporation"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "ofac-58398",
+      "caption": "Shipoil FZCO",
+      "aliases": [
+        "Shipoil DMCC",
+        "شيبويل ش م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Wg47Gg5eDDKwcB2vXFehGk",
+      "caption": "LIMITED LIABILITY COMPANY VEGA STRATEGIC SERVICES",
+      "aliases": [
+        "PMC Vega",
+        "Vegacy",
+        "Общество с Ограниченной Ответственностью Вега Стратеджик Сервисес"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-KQNjp2jY4jBVwMzcJD6Fbs",
+      "caption": "Komponenta AO",
+      "aliases": [
+        "Komponenta Inc"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ksqS3SNHDbygqwXGEgMpep",
+      "caption": "Air Koryo",
+      "aliases": [
+        "Airkoryo"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK3 - Executive Order 13722 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eHh2EXtX6CRfASzThqUT3Q",
+      "caption": "Azal Company",
+      "aliases": [
+        "Azal Petrolic Petroleum Derivatives Import",
+        "شركة أزال"
+      ],
+      "country": "YE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hALUqgFjLV6et8cDnRjCr8",
+      "caption": "Shandong Ki Forest New Advanced Co Ltd",
+      "aliases": [
+        "Shandong Kesen New Material Co Ltd"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-E7cy3TyDrrToWgR885vURG",
+      "caption": "IRANIAN MINES AND MINING INDUSTRIES DEVELOPMENT AND RENOVATION ORGANIZATION",
+      "aliases": [
+        "IMIDRO",
+        "IRAN MINING INDUSTRIES DEVELOPMENT AND RENOVATION ORGANIZATION",
+        "IRANIAN MINES AND MINERAL INDUSTRIES DEVELOPMENT AND RENOVATION"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN - Executive Order 13599 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Vjrcn4VtTHr9ks696KTKdc",
+      "caption": "Shandong Jingang Port Co., Ltd.",
+      "aliases": [
+        "山东金港港务有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-KG6s4yRnyxBDDVgc23SRNT",
+      "caption": "Astoria Star Heavy Equipment Trading L.L.C",
+      "aliases": [
+        "استوريا ستار لتجارة المعدات الثقيلة ش.ذ.م.م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-CJta8MGKAyGeBS4LEBNgHw",
+      "caption": "International Limited Liability Company TMK Steel Holding",
+      "aliases": [
+        "Международная Компания Общество С Ограниченной Ответственностью Тмк Стил Холдинг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Y2HdvUZ2juMYBW28Jm5CxF",
+      "caption": "CEIEC",
+      "aliases": [
+        "China National Electronic Import-Export Company",
+        "China National Electronics Import and Export Corporation",
+        "中国电子进出口总公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "VENEZUELA - Executive Order 13692 (Venezuela)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-gpFmGhcjSWQ3qWQweGaWVn",
+      "caption": "PETROPLUS LTD",
+      "aliases": [
+        "Petro Plus Limited",
+        "Tiko Tiko Ltd."
+      ],
+      "country": "MT",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "LIBYA3 - Executive Order 13726 (Libya)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-a8Bb4yp8BRYcuDgLPJEd67",
+      "caption": "Talaqi Group",
+      "aliases": [
+        "Talaqi Group LLC",
+        "Talaqi Group for Trade LLC"
+      ],
+      "country": "SY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mTvKZPoVPBqrdkmdWKmBP8",
+      "caption": "LIMITED LIABILITY COMPANY ENTEP",
+      "aliases": [
+        "Aviator RC",
+        "Общество С Ограниченной Ответственностью Энтеп"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-izn5VxudNcuBrspaLdQHDM",
+      "caption": "Myanmar Imperial Jade Co., Ltd.",
+      "aliases": [
+        "MYANMAR IMPERIAL JADE GEMS AND JEWELLERY CO., LTD.",
+        "MYANMAR IMPERIAL JADE GEMS AND JEWELLERY COMPANY LIMITED",
+        "Myanmar Imperial Jade Gems & Jewellery Co., Ltd.",
+        "Myanmar Imperial Jade Gems & Jewellery Company Limited"
+      ],
+      "country": "MM",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "BURMA-EO14014 - Executive Order 14014",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-YJBsqcDu4CjcYC5gKLTJr4",
+      "caption": "JSC All Russian Research Institute of Radio Engineering",
+      "aliases": [
+        "Joint Stock Company Vserossiysky Institute for Scientific Research Radiotekhniki",
+        "VNIIRT"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-WWvKfQKEBZmQJZ2pSC4mwJ",
+      "caption": "Joint Stock Company Murom Special Design Bureau",
+      "aliases": [
+        "AO Muromskoe SKB",
+        "Aktsionernoe Obshchestvo Muromskoe Spetsialnoe Konstruktorskoe Byuro"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-bkA4amemgJhCXXQvofihhM",
+      "caption": "Liaoning China Trade Industry Co., LTD.",
+      "aliases": [
+        "Liaoning Zhongmao Industrial Co., Ltd",
+        "辽宁中贸实业有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK2 - Executive Order 13687 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UFUCKEQTNwsRrt79srtPde",
+      "caption": "Limited Liability Company Lis Grupp",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Лис групп"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-E6sJBkcoVP9hynQ93SA5oa",
+      "caption": "KAIKAI TECHNOLOGY CO., LTD.",
+      "aliases": [
+        "EASTNINE CHEMICALS CO., LTD.",
+        "EASTNINE INTERNATIONAL TRADING CO., LTD.",
+        "NANJING KAIKAI POLYURETHANE CO., LTD.",
+        "NANJING KAIKAI TECHNOLOGY CO., LTD."
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDNTK - Foreign Narcotics Kingpin Designation Act",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-78yNY2dscixyfCLVKvcMAY",
+      "caption": "EAST ASIA TRADING IMPORT AND EXPORT TRADE CO., LTD.",
+      "aliases": [
+        "East Asia General Trading Co. Ltd.",
+        "East Asia Trading"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-m6Fr24DMCDQGJQKuskvz2S",
+      "caption": "Al-Adham Exchange Company",
+      "aliases": [
+        "Al-Adham Foreign Exchange",
+        "شركة الادهم للصرافة"
+      ],
+      "country": "SY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "PAARSSR-EO13894 - Executive Order 14312 (PAARSSR)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-kbsn9FMdZbsHS8P24SCL9s",
+      "caption": "Publichnoe Aktsionernoe Obshchestvo Kommercheski Bank Russki Regionalny Bank",
+      "aliases": [
+        "Rusregionbank JSC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "ofac-57905",
+      "caption": "Cuban Institute of Friendship with the Peoples",
+      "aliases": [
+        "ICAP",
+        "Instituto Cubano De Amistad Con Los Pueblos"
+      ],
+      "country": "CU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "CUBA-EO14404 - Executive Order 14404 (Cuba)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-awfxG5QmikNFSpSCVymwHB",
+      "caption": "SPİDER GAYRİMENKUL VE GENEL TİCARET LİMİTED ŞİRKETİ",
+      "aliases": [
+        "Spider Gayrimenkul Ve Genel Ticaret Limited Sirketi",
+        "Spider General Trading Company",
+        "Spider General Trading and Money Transfer Company",
+        "Spider Money Transfer Company",
+        "Spider Real Estate and General Trade Limited Company",
+        "Spider Ticaret",
+        "شركة سبايدر للتجارة العامة"
+      ],
+      "country": "TR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-k5WmCYutQ3T5QmcM53MLfa",
+      "caption": "KAVEH CUTTING TOOLS COMPANY",
+      "aliases": [
+        "KAVEH CUTTING TOOLS",
+        "KAVEH CUTTING TOOLS COMPLEX",
+        "KAVEH CUTTING TOOLS FACTORIES"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "NPWMD - TRA",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-AKf8vdwYy3tsxX5u6aKfmL",
+      "caption": "15 Khordad Foundation",
+      "aliases": [
+        "Bonyad-e Panzdah-e Khordad",
+        "بنیاد پانزده خرداد"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Nc4SaUuxMNn7ptxPzaG62M",
+      "caption": "INDIAN MUJAHIDEEN",
+      "aliases": [
+        "INDIAN MUJAHEDEEN",
+        "INDIAN MUJAHIDIN",
+        "ISLAMIC SECURITY FORCE-INDIAN MUJAHIDEEN (ISF-IM)"
+      ],
+      "country": "IN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "FTO - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-EhfhqiPjcc2ahwZJFM2r5M",
+      "caption": "Safe Seas Ship Management FZE",
+      "aliases": [
+        "سیف سیز شیب مانجمینت م م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mEhedHdyjtggVQKYyNynZ2",
+      "caption": "ALGAE SHIP CHARTER - FZCO",
+      "aliases": [
+        "الجاي شيب تشارتر - ش.م.ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-H8eBiMmK2Tq58L6gssoGrm",
+      "caption": "AKTSIONERNOE OBSHCHESTVO AKONIT ALABUGA",
+      "aliases": [
+        "AO Akonit A"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ELoFKTbzRzBhLSzDQvWGYT",
+      "caption": "Limited Liability Company Vladeks Kholding",
+      "aliases": [
+        "LLC Vladeks Kholding",
+        "ООО Владекс Холдинг",
+        "Общество с ограниченной ответственностью Владекс Холдинг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-H6pzcYNu5txWrCfT42RsWH",
+      "caption": "Yousef Ibrahim Mansour and Partner for Exchange",
+      "aliases": [
+        "YIM Exchange",
+        "Youssef Ibrahim Mansour and Co. for Exchange",
+        "Youssef Ibrahim Mansour for Exchange",
+        "شركة یوسف ابراھیم منصور وشریكھ للصیرفة"
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SyuEKXsBvTdrfTdycmJFAg",
+      "caption": "NAJI PARS AMIN INSTITUTE",
+      "aliases": [
+        "NAPA",
+        "Naji Pars Amin Non-Commercial Institute",
+        "Naji Pars Institute",
+        "مؤسسه ناجی پارس امین"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-HR - Executive Order 13553 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UENhWV72xKTY8kdLvjUbEd",
+      "caption": "SARMAND SAZEH SAZAN SOROUSH",
+      "aliases": [
+        "شرکت سرآمد سازه سازان سروش"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-kNPrEVStXhiuhSaVsvgoYz",
+      "caption": "JOINT STOCK COMPANY MINING AND COAL PREPARATION COMPLEX DENISOVSKIY",
+      "aliases": [
+        "Denisovsky Mine",
+        "GOK Denisovskiy"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XhaByxEo2Q96NkACfJVw2v",
+      "caption": "OOO MORSKIE PAROMNYE LINII VANINO SAKHALIN",
+      "aliases": [
+        "OOO MPL Vanino Sakhalin",
+        "ООО МПЛ Ванино Сахалин"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-RVnWZtDSHimXYYeVA9wtdc",
+      "caption": "BONYAD TAAVON SEPAH",
+      "aliases": [
+        "BONYAD-E TA'AVON-E",
+        "IRGC COOPERATIVE FOUNDATION",
+        "SEPAH COOPERATIVE FOUNDATION"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRGC - Executive Order 13553 (Iran) - TRA - 31 CFR 594.201(a)(5)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-btfU5CpVvmLZRjsAgYBgbp",
+      "caption": "Rah Negar Pars Middle East Company",
+      "aliases": [
+        "Rahnegar Khavarmiyaneh Pars Company",
+        "Rahnegar Middle East Pars Company",
+        "شرکت ره نگار خوار میانه پارس"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13876 - Executive Order 13876 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nZqsHYGR5hsa86PQ4haybA",
+      "caption": "LIMITED LIABILITY COMPANY KINGISEPSKY MACHINE BUILDING PLANT",
+      "aliases": [
+        "KMZ Co Ltd",
+        "Kingisepp Machine Building Plant LLC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SL3JKVhbXs6kWiSaQ6kKad",
+      "caption": "PRODUCTION UNITARY ENTERPRISE PLANT SVT",
+      "aliases": [
+        "Proizvodstvennoe Unitarnoe Predpriyatie Zavod SVT",
+        "Vyrobnyche Unitarne Pidpryiemstvo Zavod SVT"
+      ],
+      "country": "BY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-4HrNTdTzAHvDUe6ADHsSpv",
+      "caption": "Barash Aviation and Cargo Company Limited",
+      "aliases": [
+        "Barash Aviation"
+      ],
+      "country": "YE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-8g4sqorDcZb9TJEB5STVgw",
+      "caption": "Aircraft, Avionics, Parts & Support Ltd.",
+      "aliases": [
+        "Aircraft Avionics Parts and Support Ltd."
+      ],
+      "country": "GB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - TRA - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ScZyhXuwEvVAsaRJAbJReX",
+      "caption": "EMMR & CIA. S.A.S.",
+      "aliases": [
+        "EMMR AND CIA. S.A.S.",
+        "EMMR Y CIA. S.A.S.",
+        "EMMR Y COMPANIA S A S"
+      ],
+      "country": "CO",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "VENEZUELA-EO13850 - Executive Order 13850 (Venezuela)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-5auQ9Ed8Mi3k7RyV33jr4p",
+      "caption": "Saman Air Services Company",
+      "aliases": [
+        "Saman Air Services Private Joint Stock Company"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cMVJg7cQL8BXkb32HvoFx2",
+      "caption": "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTYU MANOMETR",
+      "aliases": [
+        "Manometr Limited Liability Company",
+        "Manometr OOO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2FXVTzwpqTUutRE8DjyEde",
+      "caption": "AO Inforus",
+      "aliases": [
+        "АО Инфорус"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-5WfCymKHvZjMnHanR6UozW",
+      "caption": "Lama Foods International Offshore S.A.L.",
+      "aliases": [
+        "Lama Food International Off Shore S.A.L.",
+        "Lama Foods International S.A.R.L."
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-YyafSJtwfqV635y9oi29ps",
+      "caption": "Korea Cholsan General Trading Corporation",
+      "aliases": [
+        "Chkholsan",
+        "Cholsan Trading Company",
+        "Cholson LLC",
+        "OOO ЧХОЛСАН",
+        "ГЕНЕРАЛЬНАЯ ТОРГОВАЯ КОМПАНИЯ ЧХОЛСАН КНДР"
+      ],
+      "country": "KP",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK3 - Executive Order 13722 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mFXFUzrS4MDpbmBumzcnE2",
+      "caption": "AKTSIONERNOE OBSHCHESTVO MOSINZHPROEKT",
+      "aliases": [
+        "Mosinzhproekt AO",
+        "Mosinzhproekt JSC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Fs2URNVSNtDDQBMSbZELmu",
+      "caption": "State Duma of the Federal Assembly of the Russian Federation",
+      "aliases": [
+        "Государственная Дума Федерального Собрания Российской Федерации"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nDY8bryyp9VGokhu6zHgU5",
+      "caption": "JOINT STOCK COMPANY ARDAL",
+      "aliases": [
+        "Акционерное Общество Ардал"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2rbjmwJ6FmGAA8GJG3eMfr",
+      "caption": "LNG Delta Shipping PTE LTD",
+      "aliases": [
+        "SCF NYK Delta Shipping Pte Ltd"
+      ],
+      "country": "SG",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nJoVAzeEFcNEb2WXfFcu9m",
+      "caption": "Kaveh Shargh Steel Co.",
+      "aliases": [
+        "Kaveh East Steel Company",
+        "Kaveh Shargh Steel Company",
+        "شرکت فولاد شرق کاوه"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13876 - Executive Order 13876 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ZprEkj83hhNuCWQHRQGoEE",
+      "caption": "Limited Liability Company Yuna Engineering",
+      "aliases": [
+        "Yuna Engineering LLC",
+        "Yuna Inzhiniring"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UpfdhZNUUrUrKXnpEi5wyU",
+      "caption": "Royal Pearl General T.R.D.",
+      "aliases": [
+        "Royal Pearl Chemical",
+        "Royal Pearls",
+        "Royal Pearls General Trading"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hM4XabdzNZCTCyz8hDGdGR",
+      "caption": "TRV Engineering JSC",
+      "aliases": [
+        "AO ТРВ-ИНЖИНИРИНГ",
+        "Aktsionernoe Obschchestvo TRV Inzhiniring",
+        "Joint Stock Company Togoviy Dom Zvezda-Strela",
+        "TD Zvezda-Strela OOO",
+        "TRV Inzhiniring AO",
+        "Zvezda-Strela Trading House LLC",
+        "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ ТРВ-ИНЖИНИРИНГ",
+        "ООО Торговый дом Звезда-Стрела"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-n5wgGBj3XQAeqkKG5j5Kf8",
+      "caption": "HAVANATUR CHILE S.A.",
+      "aliases": [
+        "GUAMATUR S.A."
+      ],
+      "country": "CL",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "CUBA - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-XYxSvvnZk26buN4dwaZ96L",
+      "caption": "Kumu Limited",
+      "aliases": [
+        "枯木有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-cyvSdn43esN9otKzbWNRea",
+      "caption": "OBSHCHESTVO S OGRANICHENNOY OTVETSTVENNOSTYU VEB3 INTEGRATOR",
+      "aliases": [
+        "OOO Web3 Integrator",
+        "Общество С Ограниченной Ответственностью Веб3 Интегратор"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-PmyppChwW5zPSdtUnBV2te",
+      "caption": "JOINT STOCK COMPANY RUSSKIE ELEKTRICHESKIE DVIGATELI",
+      "aliases": [
+        "Joint Stock Company Russian Electric Motors",
+        "Red AO",
+        "Акционерное Общество Русские Электрические Двигатели",
+        "Рэд АО"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SF7yXNBzQ9H4E8UpgQUj3f",
+      "caption": "Golden Warriors Investment Pvt Ltd",
+      "aliases": [
+        "GW Investment"
+      ],
+      "country": "MV",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NKo45wKDPx356nVRooRhfc",
+      "caption": "LLC Holding GPM",
+      "aliases": [
+        "OOO Холдинг ГПМ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-6Pv2xrTx69VymvKuWoH26c",
+      "caption": "Federal State Enterprise Amur Cartridge Plant Vympel",
+      "aliases": [
+        "FKP APZ Vympel Im PV Finogenova",
+        "FSE ACP Vympel",
+        "Federalnoe Kazennoe Predpriiatie Amurskii Patronnyi Zavod Vympel Imeni PV Finogenova",
+        "Vympel State Production Association"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QZXarqtS3pEDEGubBxk3gT",
+      "caption": "Limited Liability Company Tekhspetskomplekt",
+      "aliases": [
+        "LLC TSK"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-SWEnqQyksrDSRPeE3H4YJW",
+      "caption": "TRUST LIFE INSURANCE COMPANY S.A.L.",
+      "aliases": [
+        "Trust Life",
+        "Trust Life Insurance Co SAL"
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eLTV7rfmaSQFnhzCokvvfQ",
+      "caption": "PENTA OCEAN SHIP MANAGEMENT and OPERATION LLC",
+      "aliases": [
+        "Penta Ocean Ship Management",
+        "Penta Ocean Ship Management & Operations LLC",
+        "Penta Ocean Ship Management and Operations LLC"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-8FPe9MaaKTaeBakYcGveik",
+      "caption": "Shahid Hemmat Space Group",
+      "aliases": [
+        "SHSG"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Fav5FcZ3vnAJcfeXVSNWyt",
+      "caption": "Limited Liability Company Stork",
+      "aliases": [
+        "Stork OOO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-DrwNFynXvyTaTgQM933Cn3",
+      "caption": "ORBIT INTERNATIONAL FZE",
+      "aliases": [
+        "Orbit International Group LLC",
+        "اوربيت انترناشيونال م م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Qszz6d3pBtJnEMuBCZPHcu",
+      "caption": "Confident Apex Limited",
+      "aliases": [
+        "Confident Apex Ltd",
+        "帆起有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-nfbZXN2fxRbY5iYdK5rf9V",
+      "caption": "FEDERAL STATE UNITARY ENTERPRISE STATE RESEARCH AND PRODUCTION ENTERPRISE BAZALT",
+      "aliases": [
+        "AO NPO Bazalt",
+        "FSUE SRPE BAZALT",
+        "Joint Stock Company Scientific Production Association Bazalt"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13661 - Executive Order 14024 (Russia) - Executive Order 13661 (Ukraine)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-PMhyQd2vCZVfZ9zwHLvnYr",
+      "caption": "Dynapex Energy Limited",
+      "aliases": [
+        "Singh Daily Culture Press Limited",
+        "Singh Science and Technology Development Co., Limited"
+      ],
+      "country": "HK",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-T5qbnZPXm9mHJSZinvYqRH",
+      "caption": "Otkrytye Aktivy OOO",
+      "aliases": [
+        "ООО Открытые Активы"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-aL874tVUWakYfmyfYL55wP",
+      "caption": "Arvand Kaveh Steel Co.",
+      "aliases": [
+        "شرکت فولاد کاوه اروند"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13876 - Executive Order 13876 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-LWTYKiJw3aNBjQNNiqtWNe",
+      "caption": "ADMINISTRADORA DEL ORIENTE",
+      "aliases": [
+        "ESTACION GUADALUPE",
+        "HOTEL REGENTE"
+      ],
+      "country": "GT",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDNTK - Foreign Narcotics Kingpin Designation Act",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2ZMYBhEKVGEG6YH83wLbxk",
+      "caption": "FARMACIA Y MINI SUPER TRINIDAD",
+      "aliases": [
+        "FARMACIA TRINIDAD",
+        "farmaciatrinidadnogales"
+      ],
+      "country": "MX",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "ILLICIT-DRUGS-EO14059 - Executive Order 14059 (Illicit Drugs)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-7XxNpjSg7DjB235UzonZf5",
+      "caption": "ESTATE MANAGMENT COMPANY LIMITED",
+      "aliases": [
+        "Estate Management Co. LTD.",
+        "ООО Эстейт Менеджмент"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-YzYbZGNrgoBGvzaicpFXuT",
+      "caption": "Arfada Petroleum Private Joint Stock Company",
+      "aliases": [
+        "Arfada Petroleum Company JSC",
+        "Arvada Petroleum Company JSC",
+        "شركة أرفادا البترولية المساهمة المغفلة الخاصة"
+      ],
+      "country": "SY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "PAARSSR-EO13894 - Executive Order 14312 (PAARSSR)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-6tK6ZHwXfn4xmtg6vdApR6",
+      "caption": "LIMITED LIABILITY COMPANY ELGA MINING",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Эльга Майнинг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-TPBVL62QF6G957GC27qXJ3",
+      "caption": "LIMITED LIABILITY COMPANY INDUSTRIAL PARK STANKOMASH",
+      "aliases": [
+        "Stankomash LLC",
+        "Общество С Ограниченной Ответственностью Индустриальный Парк Станкомаш"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UUkAToU4XVUJBHzAdK9wGa",
+      "caption": "LIMITED LIABILITY COMPANY CHERMET SERVIS",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Чермет Сервис"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-b4bvEoF3vbLouvxwuBuWCN",
+      "caption": "MIDDLE EAST KIMIYA PARS CO.",
+      "aliases": [
+        "KIMIAYE PARS KHAVARMIANEH PETROCHEMICAL CO.",
+        "MEKPCO",
+        "MIDDLE EAST KIMIAYE PARS CO.",
+        "پتروشیمی کیمیای پارس خاورمیانه"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mPk2GFDAcrxqtor7xPQitQ",
+      "caption": "Aktsionernoye Obshchestvo 179 Sudoremontnyy Zavod",
+      "aliases": [
+        "179 SRZ AO",
+        "179th Ship Repair Plant Joint Stock Company",
+        "179th Ship Repair Yard JSC",
+        "Акционерное Общество 179 cудоремонтный завод"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QV4NsNvMHCrdsn5KqhAccQ",
+      "caption": "Aktsionernoe Obshchestvo PASIT",
+      "aliases": [
+        "PASIT, AO",
+        "Акционерное Общество ПАСИТ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NGuFnSpzAbypWXBxcsvoXs",
+      "caption": "SOVCOMBANK ASSET MANAGEMENT LIMITED LIABILITY COMPANY",
+      "aliases": [
+        "Sovcombank Asset Management LLC",
+        "Vostochny Capital Management Company LLC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3gZb2Q6E77zNmGUKiP92RC",
+      "caption": "LLC Cityimpex",
+      "aliases": [
+        "CitiImpex",
+        "Sitiimpeks"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NmbS3RsgMPHriFhRie8SpH",
+      "caption": "Clever Shipping Limited",
+      "aliases": [
+        "智運航運有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-CeRHDuCoYVTNgSamNHs9Qe",
+      "caption": "Gokler Dis Ticaret Limited Sirketi",
+      "aliases": [
+        "Gokler Import and Export Limited Company"
+      ],
+      "country": "TR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13382 (Non-proliferation)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-YbTHVWh7KgMfpAeMqvN6SR",
+      "caption": "International Bank of Yemen Y.S.C.",
+      "aliases": [
+        "Yemen International Bank",
+        "بنك اليمن الدولي"
+      ],
+      "country": "YE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-crZjZpJt7gH5GmCYDF3SYP",
+      "caption": "GRAND CASINO",
+      "aliases": [
+        "GRAND CASINO ZAPOPAN"
+      ],
+      "country": "MX",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDNTK - Foreign Narcotics Kingpin Designation Act",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3WV9EaEUBS45g2zsEKnREH",
+      "caption": "JSC RUSSIAN EXPORT CENTER",
+      "aliases": [
+        "AO Natsionalny Eksportny Tsentr",
+        "AO Rossiiskii Eksportnyi Tsentr",
+        "AO Rossiski Eksportny Tsentr",
+        "Aktsionernoe Obshchestvo Rossiiskii Eksportnyi Tsentr"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jtnMzUT2iEQPVVvb4W29WJ",
+      "caption": "OPEN JOINT STOCK COMPANY VA DEGTYAREV PLANT",
+      "aliases": [
+        "OAO ZID",
+        "OJSC Plant Im VA Degtyareva",
+        "Otkrytoe Aktsionernoe Obshchestvo Zavod Im VA Degtiareva"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-GUtMiJ8vLU3Y8V3cc84muG",
+      "caption": "LIMITED LIABILITY COMPANY TREYDSTROYTSENTR",
+      "aliases": [
+        "LLC TSTS"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-VVHzXKVFKZDwhCLy2SYgYR",
+      "caption": "FIRST OF OCTOBER ANTIFASCIST RESISTANCE GROUP",
+      "aliases": [
+        "GRAPO"
+      ],
+      "country": "ES",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Unknown",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-673sg72dtKtTikfC457k27",
+      "caption": "VTB LEASING JOINT STOCK COMPANY",
+      "aliases": [
+        "AO VTB Lizing",
+        "JSC VTB Leasing",
+        "VTB Leasing JSC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UbtiZd5KcsA3NMzPVCjFSc",
+      "caption": "Sea River Service Limited Liability Company",
+      "aliases": [
+        "More Reka Servis",
+        "Obshchestvo S Ogranichennoi Otvetstvennostiu More Reka Servis",
+        "Sea River Service LLC"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-4WdUq9yJu4Memif7emB3YP",
+      "caption": "Seven Seas Group S.A.R.L.",
+      "aliases": [
+        "مجموعة السبعة بحار ش.م.م."
+      ],
+      "country": "LB",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-FrL6LMrhsHazceZs2Urcbw",
+      "caption": "Hilal Ahmar Society Indonesia",
+      "aliases": [
+        "Hilal Ahmar Society of Indonesia",
+        "Indonesia Hilal Ahmar Society for Syria",
+        "Yayasan Hilal Ahmar"
+      ],
+      "country": "ID",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Swu3HtXhQ3B7x6fE3ngmej",
+      "caption": "Hanista Programing Group",
+      "aliases": [
+        "Hanista Developer Group",
+        "گروه برنامه نوسیس هانیستا"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "HRIT-IR - Executive Order 13606 (Iran/Syria)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dhgaFMFHF3A6xQq7tiQCgw",
+      "caption": "Brighten Star FZE",
+      "aliases": [
+        "بريتين ستار م م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-FP88CjmXAXVM47Tr6n5sd4",
+      "caption": "Biznesa Attistibas Asociacija",
+      "aliases": [
+        "Business Development Association"
+      ],
+      "country": "LV",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "GLOMAG - Executive Order 13818 (Global Magnitsky)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-W6YhAAoqmwgtWMhaSjdBga",
+      "caption": "Limited Liability Company Keramaks Lizing",
+      "aliases": [
+        "Travel Art LLC",
+        "Общество C Ограниченной Ответственностью Керамакс Лизинг"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-g8Smh3JS538EcNYBeS7zTg",
+      "caption": "LIMITED LIABILITY COMPANY RIMERA ALNAS",
+      "aliases": [
+        "Общество С Ограниченной Ответственностью Римера Алнас"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-TmKW5MNwoZbiYeY53haCzB",
+      "caption": "LIMITED LIABILITY COMPANY ALABUGA-FIBRE",
+      "aliases": [
+        "Alabuga-Volokno OOO",
+        "Obshchestvo S Ogranichennoi Otvetstvennostyu Alabuga-Volokno"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-byriu4pYa865yvFDrSrqrP",
+      "caption": "Nord Trading L.L.C",
+      "aliases": [
+        "نورد للتجارة ش.ذ.م.م"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-dg5a7fgHqhAujxCm8SjTmY",
+      "caption": "Sky Zone Trading FZE",
+      "aliases": [
+        "Skyzone Trading FZE",
+        "سكاي زون تريدينغ م م ح"
+      ],
+      "country": "AE",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-goG4cKHXyXJaGFY8fwwQTH",
+      "caption": "Mahan Travel and Tourism Sdn Bhd",
+      "aliases": [
+        "Mahan Travel",
+        "Mihan Travel & Tourism SDN BHD"
+      ],
+      "country": "MY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-keGeCjXitwSce7A4wjkyvp",
+      "caption": "Dirección General de Minas",
+      "aliases": [
+        "General Directorate of Mines"
+      ],
+      "country": "NI",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "NICARAGUA - Executive Order 13851 (Nicaragua)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-KcWVfiucBgSVnXuQ8Fo6VK",
+      "caption": "Tabak Invest LLC",
+      "aliases": [
+        "Obshchestvo S Ogranichennoi Otvetstvennostyu Tabak Invest",
+        "ООО Табак Инвест"
+      ],
+      "country": "BY",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "BELARUS-EO14038 - Executive Order 14038 (Belarus)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-3odNMdm6xQ3XeJeFhaoRP2",
+      "caption": "Gent Elektrik Enerjisi Toptan Satis Anonim Sirketi",
+      "aliases": [
+        "Bati Enerji Uretim Sanayi Ve Ticaret Anonim Sirketi",
+        "Gent Elektrik Enerjisi Toptan Sati AS"
+      ],
+      "country": "TR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SDGT - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-U3QoBHag4ND74d5owfz7yn",
+      "caption": "LIMITED LIABILITY COMPANY SIBIRSKAYA UGOLNAYA KOMPANIYA",
+      "aliases": [
+        "OOO SIBUGOL",
+        "Общество C Ограниченной Ответственностью Сибирская Угольная Компания"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-LwBHGnp5oWhciBB9VpUJFv",
+      "caption": "Dena Airways",
+      "aliases": [
+        "Dena Airlines"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IFSR - Executive Order 13224 (Terrorism)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-EMsn2oMUNhuzsSVMHvnPj4",
+      "caption": "LLC AEON HOLDING DEVELOPMENT",
+      "aliases": [
+        "OOO Аеон Холдинг Девелопмент"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2arErTdTu3UfQBRjJwhxGq",
+      "caption": "International Development Bank for Investment and Finance",
+      "aliases": [
+        "International Development Bank",
+        "Iraq Development Bank",
+        "مصرف التنمية الدولي للاستثمار والتمويل"
+      ],
+      "country": "IQ",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-hifsdsc93dA6EabrAf23N5",
+      "caption": "Joint Stock Company 41 Central Plant of the Railway Technology",
+      "aliases": [
+        "41st Central Railway Equipment Plant",
+        "AO 41 Tsentralnyi Zavod",
+        "Aktsionernoe Obshchestvo 41 Tsentralnyi Zavod Zheleznodorozhnoi Tekhniki"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-2udNfFsJBAPopMJ9yroFvQ",
+      "caption": "SIA FALCON INTERNATIONAL GROUP",
+      "aliases": [
+        "Atacar Otomotiv Dis Ticaret Ve Savunma Sanayi Limited Sirketi",
+        "Falcon International SIA",
+        "Murat Insaat Dis Ticaret Ve Savunma Sanayi Limited Sirketi",
+        "SIA Falcon International Tarim Ve Hayvancilik Limited Sikreti",
+        "Sabiedriba ar ierobezotu atbildibu 'FALON INTERNATIONAL'"
+      ],
+      "country": "LV",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "DPRK - Executive Order 13551 (North Korea)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NczmLUgVzyUJVYrw2ogEqe",
+      "caption": "Asian Sea Angel Shipping Co",
+      "aliases": [
+        "Angel Shipping",
+        "Asian Sea Angel",
+        "Asian Sea Angel Shipping Agency",
+        "شرکت فرشته دریای آسیا شركت"
+      ],
+      "country": "IR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-kUMCh93J92ZCy52pPMbeqn",
+      "caption": "FEDERAL STATE BUDGETARY EDUCATIONAL INSTITUTION OF HIGHER EDUCATION GROZNY STATE OIL TECHNICAL UNIVERSITY NAMED AFTER ACADEMICIAN M.D. MILLIONSHchIKOV",
+      "aliases": [
+        "Federalnoe Gosudarstvennoe Byudzhetnoe Obrazovatelnoe Uchrezhdenie Vysshego Obrazovaniya Groznenski Gosudarstvenny Neftyanoi Tekhnicheski Universitet Imeni Akademika M.D. Millionshchikova",
+        "GGNTU IM. Akad. M.D. Millionshchikova FGBOU VO GGNTU IM. Akad. M. D. Millionshchikova FGBU",
+        "Grozny State Oil Technical University",
+        "Grozny State Oil Technical University Named After M.D. Millionshikova"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-NEag3pSZirttGSJjvTbMvx",
+      "caption": "Empresa Importadora Y Abastecedora Del Niquel",
+      "aliases": [
+        "Cexni"
+      ],
+      "country": "CU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "CUBA-EO14404 - Executive Order 14404 (Cuba)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-PRRquAdpVYj9YA7D3oisfL",
+      "caption": "YOULI TECHNOLOGY DEVELOPMENT CO., LTD.",
+      "aliases": [
+        "Yoli Group Ltd.",
+        "Yoli Machine",
+        "尤里科技发展有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "ILLICIT-DRUGS-EO14059 - Executive Order 14059 (Illicit Drugs)",
+      "dataset": "us_ofac_sdn"
     }
   ]
 }

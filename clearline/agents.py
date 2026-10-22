@@ -15,6 +15,7 @@ from typing import Literal, get_origin
 from pydantic import BaseModel, Field, ValidationError, model_validator
 
 from .llm import Tier, budget_for, complete_json
+from .matching import is_generic
 
 
 class Contract(BaseModel):
@@ -131,7 +132,7 @@ def router(vendor: dict, trace) -> RouterOut:
         # path is too consequential to rest on model judgement alone -- a
         # wrongly-flagged name never reaches the resolver at all.
         precomputed = {
-            "deterministic_generic_name": _is_generic(vendor["legal_name"]),
+            "deterministic_generic_name": is_generic(vendor["legal_name"]),
             "has_unique_identifier": bool(vendor.get("tax_id")),
             "bank_country_mismatch": vendor.get("bank_country") != vendor.get("country"),
         }
@@ -162,11 +163,17 @@ def router(vendor: dict, trace) -> RouterOut:
         return out
 
 
-RESOLVER_SYSTEM = """You resolve a vendor against sanctions-list candidates.
-For each candidate give a score 0-1 and name the FEATURES that drove it
-(exact_tax_id, token_overlap, country_agreement, alias_match). A score without
-features is unauditable and will be rejected by the critic.
-If the critic has demanded a specific missing field, address it directly.
+RESOLVER_SYSTEM = """You assess watchlist candidates for a vendor.
+
+The evidence is ALREADY COMPUTED and given to you under `_features` for each
+candidate: exact_alias, country_agreement, token_overlap and a score. Do not
+recompute them and do not invent new scores -- they are reproducible facts a
+reviewer can check, and yours would not be.
+
+Your job is judgement, not arithmetic: state the hypothesis, carry the computed
+score through as confidence, and say in one line what the evidence supports.
+If the critic has demanded a specific missing field, address that field.
+
 JSON keys: candidates[{source,source_id,matched_name,score,features_used}], hypothesis, confidence."""
 
 
@@ -174,18 +181,18 @@ def resolver(vendor: dict, hits: list[dict], trace, critic_feedback: dict | None
     with trace.agent("resolver", n_candidates=len(hits), revision=bool(critic_feedback)):
         scored = []
         for hit in hits:
-            feats = match_features(vendor, hit)
-            score = feats["score"]
-            # A revision round means the critic demanded a specific field and
-            # the resolver went and looked: that is new evidence, not a nudge.
+            feats = hit.get("_features") or {}
+            score = feats.get("score", 0.0)
+            # A revision round means the critic demanded a field and the
+            # resolver went and looked: new evidence, not a nudge.
             if critic_feedback and vendor.get("tax_id"):
                 score = round(min(1.0, score + 0.08), 2)
             scored.append({
-                "source": "opensanctions",
+                "source": hit.get("dataset", "opensanctions"),
                 "source_id": hit["id"],
                 "matched_name": hit.get("caption", ""),
                 "score": score,
-                "features_used": feats["features"],
+                "features_used": feats.get("features", []),
             })
         scored.sort(key=lambda c: c["score"], reverse=True)
         best = scored[0]["score"] if scored else 0.0
@@ -196,25 +203,42 @@ def resolver(vendor: dict, hits: list[dict], trace, critic_feedback: dict | None
             "confidence": best,
         }
         out = _parse(ResolverOut, complete_json(
-            tier=Tier.SUPER, system=RESOLVER_SYSTEM,
+            tier=Tier.NANO, system=RESOLVER_SYSTEM,
             user=_as_json({"vendor": vendor, "candidates": hits,
                            "critic_feedback": critic_feedback}),
-            budget=2, trace=trace, agent="resolver", fake=fake,
+            budget=1, trace=trace, agent="resolver", fake=fake,
         ), "resolver")
+        computed = max((h.get("_features", {}).get("score", 0.0) for h in hits), default=0.0)
+        if abs(out.confidence - computed) > 0.01:
+            trace.event("resolver.confidence_override", model_said=out.confidence,
+                        computed=computed,
+                        reason="confidence is the deterministic score, not a model opinion")
+            out = out.model_copy(update={"confidence": computed})
         trace.event("resolver.out", confidence=out.confidence, n=len(out.candidates))
         return out
 
+
+AVAILABLE_FIELDS = [
+    "vendor.legal_name", "vendor.trading_name", "vendor.tax_id", "vendor.country",
+    "vendor.bank_country", "vendor.onboarded_date", "vendor.annual_spend_usd",
+    "candidate.caption", "candidate.aliases", "candidate.country",
+    "candidate.dataset", "candidate.programme", "control_chain",
+]
 
 CRITIC_SYSTEM = """You are an adversarial critic. Try to BREAK the proposed match.
 Test specifically for: generic-name collisions, jurisdiction contradiction,
 date incompatibility, single-source assertions, and any column the data-quality
 report has flagged unreliable. Do not rubber-stamp.
-Return DEMAND_EVIDENCE with a specific missing_field when more evidence would settle it.
+Return DEMAND_EVIDENCE only when a field listed in available_fields would
+settle it, and set missing_field to that exact field name. Fields outside that
+list cannot be fetched, so demanding one wastes a round -- if what you need is
+not available, say so in reasons and return REJECT or REROUTE instead.
 Return REROUTE when name evidence cannot settle it and the control chain should be walked.
 JSON keys: verdict (ACCEPT|REJECT|DEMAND_EVIDENCE|REROUTE), reasons, missing_field, caveats."""
 
 
-def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int) -> CriticOut:
+def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int,
+           already_demanded: list[str] | None = None) -> CriticOut:
     with trace.agent("critic", round=round_no):
         unreliable = [c for c, s in dq.get("columns", {}).items()
                       if isinstance(s, dict) and s.get("null_rate", 0) > 0.1]
@@ -231,7 +255,7 @@ def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int) 
         elif round_no == 1 and proposal.confidence < 0.8:
             fake = {"verdict": "DEMAND_EVIDENCE",
                     "reasons": ["single-source assertion", "token overlap alone is weak"],
-                    "missing_field": "tax_id", "caveats": caveats}
+                    "missing_field": "vendor.tax_id", "caveats": caveats}
         elif "exact_alias" in features and "country_agreement" in features:
             fake = {"verdict": "ACCEPT",
                     "reasons": ["exact alias of a listed entity", "jurisdiction agrees"],
@@ -251,8 +275,9 @@ def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int) 
         out = _parse(CriticOut, complete_json(
             tier=Tier.SUPER, system=CRITIC_SYSTEM,
             user=_as_json({"vendor": vendor, "proposal": proposal.model_dump(),
-                           "data_quality": dq}),
-            budget=2, trace=trace, agent="critic", fake=fake,
+                           "data_quality": dq, "available_fields": AVAILABLE_FIELDS,
+                           "already_demanded": already_demanded or []}),
+            budget=3, trace=trace, agent="critic", fake=fake,
         ), "critic")
         trace.verdict("critic", out.verdict, reasons=out.reasons, round=round_no)
         return out
@@ -273,10 +298,12 @@ def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
                 rejections: int) -> Decision:
     contested = risk_tier == "HIGH" or rejections >= 2
     tier = Tier.ULTRA if contested else Tier.SUPER
-    budget = budget_for(risk_tier, rejections)
+    # Its output is long by design (evidence list, conflicts, caveats), so it
+    # needs content headroom regardless of how uncontested the case is.
+    budget = max(2, budget_for(risk_tier, rejections))
     with trace.agent("adjudicator", tier=tier.value, budget=budget, contested=contested):
         top = proposal.candidates[0] if proposal.candidates else None
-        base_caveats = list(critic_out.caveats) + ["synthetic Day-1 sanctions placeholder"]
+        base_caveats = list(critic_out.caveats) + [_watchlist_provenance()]
         if not chain:
             # Say what was NOT checked. Silence here would be the dishonest kind
             # of clean result, and the Day-4 walk is exactly what closes it.
@@ -337,6 +364,22 @@ def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
         return out
 
 
+def _watchlist_provenance() -> str:
+    """State which watchlist snapshot a decision rests on. A screening result
+    without a snapshot date is not auditable -- designations change weekly."""
+    try:
+        import json
+        from pathlib import Path as _P
+        data = json.loads((_P(__file__).resolve().parent.parent / "data" / "sample"
+                           / "sanctions_sample.json").read_text(encoding="utf-8"))
+        prov = data.get("provenance", {})
+        return (f"watchlist: {prov.get('dataset')} snapshot "
+                f"{(prov.get('snapshot_updated_at') or '?')[:10]}, curated subset "
+                f"of {prov.get('entity_count_full_dataset')} entities")
+    except Exception:
+        return "watchlist provenance unavailable"
+
+
 def walker_stub(trace) -> list[dict]:
     """Day 4 replaces this with the Markovian-backed GLEIF control-chain walk."""
     trace.event("walker.skipped", reason="not implemented until Day 4 (Markovian engine)")
@@ -344,61 +387,6 @@ def walker_stub(trace) -> list[dict]:
 
 
 # --- helpers -----------------------------------------------------------------
-
-_GENERIC = {"global", "international", "trading", "services", "holdings", "group"}
-
-
-def _is_generic(name: str) -> bool:
-    """Generic only when NOTHING distinctive survives.
-
-    'Global Trading Ltd' -> {global, trading} - generic -> {} -> generic.
-    'Zarechny Trading Ltd' -> {zarechny} -> NOT generic. An earlier `<= 1`
-    threshold swallowed every two-word name and short-circuited real matches
-    straight to ESCALATE.
-    """
-    tokens = {t.lower().strip(".,") for t in name.split()}
-    meaningful = tokens - {"ltd", "limited", "llc", "inc", "gmbh", "sa", "plc", "pte", "bv", "co"}
-    return len(meaningful - _GENERIC) == 0
-
-
-def match_features(vendor: dict, hit: dict) -> dict:
-    """The discriminators, computed once and shared by the resolver and critic.
-
-    Kept as a pure function because the whole product rests on a score being
-    explainable: a score without named features is unauditable, and the critic
-    is instructed to reject one.
-    """
-    legal = (vendor.get("legal_name") or "").strip().lower()
-    aliases = {a.strip().lower() for a in hit.get("aliases", [])}
-    aliases.add((hit.get("caption") or "").strip().lower())
-
-    exact_alias = legal in aliases
-    country_agreement = bool(hit.get("country")) and hit.get("country") == vendor.get("country")
-
-    features = []
-    score = 0.30
-    if exact_alias:
-        features.append("exact_alias")
-        score += 0.50
-    else:
-        features.append("token_overlap")
-    if country_agreement:
-        features.append("country_agreement")
-        score += 0.15
-    else:
-        features.append("country_disagreement")
-        score -= 0.15
-    if vendor.get("tax_id"):
-        features.append("tax_id_present")
-        score += 0.05
-
-    return {
-        "exact_alias": exact_alias,
-        "country_agreement": country_agreement,
-        "features": features,
-        "score": round(max(0.0, min(1.0, score)), 2),
-    }
-
 
 def _as_json(obj) -> str:
     import json

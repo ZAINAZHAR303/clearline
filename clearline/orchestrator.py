@@ -17,12 +17,26 @@ implemented on Day 4.
 from __future__ import annotations
 
 from .agents import (
+    AVAILABLE_FIELDS,
     CriticOut, Decision, ResolverOut, adjudicator, critic, resolver, router, walker_stub,
 )
 from .trace import Trace
 from .zetaris import dq_report, get_vendor, search_sanctions
 
-MAX_ROUNDS = 3
+MAX_ROUNDS = 2  # a third round never converged and cost ~90s
+
+
+def _tail(name: str) -> str:
+    """Field names arrive either bare ('tax_id') or qualified
+    ('vendor.tax_id') depending on how the model echoes the schema. Comparing
+    the qualified list against a bare name rejected every legitimate demand and
+    short-circuited the revision loop on round one."""
+    return (name or "").strip().split(".")[-1]
+
+
+def _field_available(name: str) -> bool:
+    tail = _tail(name)
+    return bool(tail) and any(_tail(f) == tail for f in AVAILABLE_FIELDS)  # a third round never converged and cost ~90s
 
 
 def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
@@ -72,19 +86,22 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
             from_bar=routed.evidence_bar, to_bar=round(evidence_bar, 2),
         )
 
-    hits = search_sanctions(routed.entities)
-    trace.tool("search_sanctions", terms=routed.entities, n_hits=len(hits))
+    hits = search_sanctions(vendor)
+    trace.tool("search_sanctions", terms=routed.entities, n_hits=len(hits),
+               candidates=[{"id": h["id"], "caption": h.get("caption"),
+                            **h.get("_features", {})} for h in hits])
 
     # 3 -- the resolver <-> critic revision loop
     proposal: ResolverOut | None = None
     verdict: CriticOut | None = None
     feedback = None
     rejections = 0
+    demanded: list[str] = []
     chain: list[dict] = []
 
     for round_no in range(1, MAX_ROUNDS + 1):
         proposal = resolver(vendor, hits, trace, critic_feedback=feedback)
-        verdict = critic(vendor, proposal, dq, trace, round_no)
+        verdict = critic(vendor, proposal, dq, trace, round_no, already_demanded=demanded)
 
         if verdict.verdict == "ACCEPT":
             if proposal.confidence < evidence_bar:
@@ -105,6 +122,17 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
             break
 
         if verdict.verdict == "DEMAND_EVIDENCE":
+            if not _field_available(verdict.missing_field) or _tail(verdict.missing_field) in demanded:
+                # Asking again for something unavailable, or already asked for,
+                # cannot converge. Treat the name evidence as exhausted.
+                trace.branch(f"critic demanded unavailable or repeated field "
+                             f"{verdict.missing_field!r}", "STOP_DEMANDING")
+                verdict = CriticOut(verdict="REROUTE",
+                                    reasons=verdict.reasons + ["requested evidence is not obtainable"],
+                                    caveats=verdict.caveats)
+                chain = walker_stub(trace)
+                break
+            demanded.append(_tail(verdict.missing_field))
             rejections += 1
             # Branch 3: revise with a SPECIFIC missing field, not just "try again".
             trace.branch(f"critic demanded {verdict.missing_field!r}", "REVISE_WITH_FEEDBACK",

@@ -58,7 +58,7 @@ _MIN_TOKENS = 1200
 # reasoning tokens and 103 seconds deciding a name was not generic, and the
 # critic truncated at 3200. Extraction does not need deliberation; adjudication
 # does. Capping the cheap tiers is what keeps a run inside its time budget.
-_TIER_CEILING = {"nano": 900, "super": 4000, "ultra": 9000}
+_TIER_CEILING = {"nano": 900, "super": 5200, "ultra": 9000}
 
 # Reasoning toggle, established by measurement rather than documentation
 # (scripts/ has the A/B; docs/measurements.md has the table). On
@@ -164,7 +164,13 @@ def complete_json(
     ]
 
     last_error = ""
-    for attempt in range(max_repair + 1):
+    attempt = 0
+    budget_retries = 0
+    # Repair attempts and budget retries are counted separately. A truncated
+    # call is not a model mistake, and letting it consume the repair allowance
+    # meant the one fix that works -- turning deliberation off -- was tried on
+    # the final iteration and never got to run.
+    while attempt <= max_repair and budget_retries <= 2:
         if trace:
             trace.event(
                 "llm.call", agent=agent, tier=tier.value, model=model,
@@ -201,25 +207,28 @@ def complete_json(
         # same size cannot help. Escalate it instead of burning an attempt.
         if choice.finish_reason == "length" and not text:
             last_error = "reasoning consumed the whole token budget before any answer"
-            # Escalate, but never past the tier ceiling: an unbounded retry is
-            # how a run stops being demoable.
+            budget_retries += 1
+            already_direct = "chat_template_kwargs" in extra_body
             escalated = min(max_tokens * 2, _TIER_CEILING[tier.value])
-            at_ceiling = escalated == max_tokens
+
+            # Escalate ONCE. If a second call still spends the whole budget
+            # deliberating, more tokens is a gamble while disabling reasoning
+            # is near-certain -- and each truncated call costs ~40 seconds, so
+            # climbing the ceiling one doubling at a time is the expensive way
+            # to arrive at the same answer.
+            if not already_direct and (budget_retries >= 2 or escalated == max_tokens):
+                extra_body.update(THINKING_OFF)
+                max_tokens = max(max_tokens, _MIN_TOKENS)
+                if trace:
+                    trace.event("llm.degraded", agent=agent, attempt=attempt,
+                                reason="budget spent on reasoning twice; answering directly")
+                continue
+
+            if already_direct or escalated == max_tokens:
+                break  # nothing left to try
             if trace:
                 trace.event("llm.budget_exhausted", agent=agent, attempt=attempt,
-                            max_tokens=max_tokens, next_max_tokens=escalated,
-                            at_ceiling=at_ceiling)
-            if at_ceiling:
-                # Last resort: stop deliberating and answer. Degrading to a
-                # shallower answer beats returning none at all, and the trace
-                # records that this run was answered without reasoning.
-                if "chat_template_kwargs" in extra_body:
-                    break  # already direct-answering; more tokens will not help
-                extra_body.update(THINKING_OFF)
-                if trace:
-                    trace.event("llm.degraded", agent=agent,
-                                reason="budget exhausted at tier ceiling; reasoning disabled")
-                continue
+                            max_tokens=max_tokens, next_max_tokens=escalated)
             max_tokens = escalated
             continue
 
@@ -234,6 +243,7 @@ def complete_json(
                 "role": "user",
                 "content": f"That was not valid JSON ({last_error}). Reply with JSON only.",
             })
+            attempt += 1
 
     raise RuntimeError(f"{agent}: could not obtain valid JSON after {max_repair + 1} attempts: {last_error}")
 
