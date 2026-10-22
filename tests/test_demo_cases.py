@@ -41,17 +41,10 @@ def test_demo_case_outcome(vendor_id):
     decision, trace = screen(vendor_id)
     assert decision is not None, f"{vendor_id} produced no decision"
 
-    if expected == "ESCALATE_THEN_BLOCK":
-        # Indirect exposure. Until the control chain is walked (Day 4) the
-        # honest answer is escalation, never a clean pass.
-        assert decision.decision == "ESCALATE", (
-            f"{vendor_id} ({CASES[vendor_id]['why']}) must not be cleared "
-            f"before the chain is walked, got {decision.decision}")
-    else:
-        assert decision.decision == expected, (
-            f"{vendor_id} {_vendor(vendor_id)['legal_name']!r}: "
-            f"expected {expected}, got {decision.decision}. "
-            f"Case: {CASES[vendor_id]['why']}")
+    assert decision.decision == expected, (
+        f"{vendor_id} {_vendor(vendor_id)['legal_name']!r}: "
+        f"expected {expected}, got {decision.decision}. "
+        f"Case: {CASES[vendor_id]['why']}")
 
 
 def test_every_claim_is_evidenced():
@@ -79,6 +72,16 @@ def test_near_miss_is_not_blocked():
     assert decision.decision == "CLEAR"
     assert any("juris" in r.lower() or "alias" in r.lower()
                for r in [decision.rationale, *decision.unresolved_conflicts]), decision.rationale
+
+
+def test_indirect_exposure_is_found_by_the_chain_walk():
+    """V0004 is clean on its own name. Only the Markovian-bounded control-chain
+    walk reaches the listed entity, so this is the assertion that the engine is
+    load-bearing rather than merely conformant."""
+    decision, _ = screen("V0004")
+    assert decision.decision == "BLOCK", decision.rationale
+    assert any("chain" in e.claim.lower() for e in decision.evidence),         "a block on indirect exposure must cite the hops that found it"
+    assert any("ownership percentage" in c for c in decision.caveats),         "control relationships must never be reported as ownership percentages"
 
 
 def test_generic_names_are_refused_not_guessed():

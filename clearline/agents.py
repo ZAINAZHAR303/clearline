@@ -340,6 +340,12 @@ def critic(vendor: dict, proposal: ResolverOut, dq: dict, trace, round_no: int,
 
 
 ADJUDICATOR_SYSTEM = """You produce the final recommendation.
+
+`chain` is the control chain walked upward from the vendor. A hop whose
+sanctions_hit is set means the vendor is clean on its own name but CONTROLLED
+by a listed entity -- indirect exposure, and a BLOCK. Report it as a control
+relationship and never as an ownership percentage: the source publishes
+consolidation relationships, not percentages.
 EVERY claim in rationale must map to an entry in evidence. Anything unsupported
 goes in unresolved_conflicts, never into the rationale.
 This is decision SUPPORT: you RECOMMEND, and a human confirms. Express that
@@ -371,11 +377,36 @@ def adjudicator(vendor: dict, proposal: ResolverOut, critic_out: CriticOut,
         top = proposal.candidates[0] if proposal.candidates else None
         base_caveats = list(critic_out.caveats) + [_watchlist_provenance()]
         if not chain:
-            # Say what was NOT checked. Silence here would be the dishonest kind
-            # of clean result, and the Day-4 walk is exactly what closes it.
-            base_caveats.append("control chain not walked (Markovian engine lands Day 4)")
+            # "No indirect exposure found" and "the chain was never walked" are
+            # different claims, and a reviewer must be able to tell them apart.
+            base_caveats.append("control chain not walked for this vendor")
 
-        if critic_out.verdict == "ACCEPT" and top:
+        chain_hits = [h for h in (chain or []) if h.get("sanctions_hit")]
+        if chain_hits:
+            hop = chain_hits[0]
+            hit = hop["sanctions_hit"]
+            fake = {
+                "decision": "BLOCK",
+                "confidence": 0.9,
+                "rationale": (
+                    f"{vendor['legal_name']} is clean on its own name, but its control "
+                    f"chain reaches {hit['caption']}, a listed entity, at depth {hop['depth']} "
+                    f"via {hop['relation'].replace('_', ' ').lower()}."),
+                "evidence": [
+                    {"claim": f"control chain hop {h['depth']}: {h['name']} ({h['relation']})",
+                     "source": "control_graph", "row_ref": str(h.get("lei"))}
+                    for h in (chain or [])
+                ] + [{"claim": f"{hit['caption']} is listed", "source": hit.get("dataset", "watchlist"),
+                      "row_ref": hit.get("entity_id", "")}],
+                "unresolved_conflicts": [],
+                "caveats": base_caveats + [
+                    "control relationship, NOT a measured ownership percentage: the source "
+                    "publishes consolidation relationships, and OFAC's 50% rule needs ownership "
+                    "data it does not provide"],
+                "human_question": ("Confirm the control relationship with the registry before "
+                                   "freezing payments."),
+            }
+        elif critic_out.verdict == "ACCEPT" and top:
             fake = {
                 "decision": "BLOCK",
                 "confidence": round(proposal.confidence, 2),
@@ -444,12 +475,6 @@ def _watchlist_provenance() -> str:
                 f"of {prov.get('entity_count_full_dataset')} entities")
     except Exception:
         return "watchlist provenance unavailable"
-
-
-def walker_stub(trace) -> list[dict]:
-    """Day 4 replaces this with the Markovian-backed GLEIF control-chain walk."""
-    trace.event("walker.skipped", reason="not implemented until Day 4 (Markovian engine)")
-    return []
 
 
 # --- helpers -----------------------------------------------------------------

@@ -2418,8 +2418,8 @@
       "anchor": null
     },
     "V0004": {
-      "expect": "ESCALATE_THEN_BLOCK",
-      "why": "clean name; ultimate parent is 'LIMITED LIABILITY COMPANY KHAVERIM'. Bank country disagrees with registered country.",
+      "expect": "BLOCK",
+      "why": "clean on its own name; control chain reaches 'LIMITED LIABILITY COMPANY KHAVERIM'. Only the Markovian-bounded walk finds this.",
       "anchor": "NK-2CdXhyCy9XzyZgcFcHXrTZ"
     },
     "V0005": {

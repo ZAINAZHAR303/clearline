@@ -10,16 +10,17 @@ each one writes a `branch` event so it is visible in the trace:
   4. reroute to chain walk   -- name evidence cannot settle it
   5. confidence escalation   -- hand back to a human with a specific question
 
-Day 1 wires all five. Branch 4 lands on a stub until the Markovian engine is
-implemented on Day 4.
+Branch 4 runs the Markovian-bounded control-chain walk (clearline/walker.py),
+which is where indirect exposure is actually found.
 """
 
 from __future__ import annotations
 
 from .agents import (
     AVAILABLE_FIELDS,
-    CriticOut, Decision, ResolverOut, adjudicator, critic, resolver, router, walker_stub,
+    CriticOut, Decision, ResolverOut, adjudicator, critic, resolver, router,
 )
+from .walker import ownership_walker
 from .trace import Trace
 from .zetaris import dq_report, get_vendor, search_sanctions
 
@@ -121,7 +122,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
         if verdict.verdict == "REROUTE":
             # Branch 4: name evidence cannot settle it -- walk the control chain.
             trace.branch("name evidence exhausted", "WALK_CONTROL_CHAIN")
-            chain = walker_stub(trace)
+            chain = ownership_walker(vendor, trace)
             break
 
         if verdict.verdict == "DEMAND_EVIDENCE":
@@ -133,7 +134,7 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
                 verdict = CriticOut(verdict="REROUTE",
                                     reasons=verdict.reasons + ["requested evidence is not obtainable"],
                                     caveats=verdict.caveats)
-                chain = walker_stub(trace)
+                chain = ownership_walker(vendor, trace)
                 break
             demanded.append(_tail(verdict.missing_field))
             rejections += 1
@@ -162,7 +163,17 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
     #
     # BLOCK only: weak match evidence is the REASON to clear, so escalating a
     # CLEAR on the same test would invert the logic.
-    evidence_strength = proposal.confidence if proposal else 0.0
+    # Evidence arrives by two independent routes and the bar applies to the
+    # stronger. A name match scores 0.00 for a vendor that is clean on its own
+    # name -- which is exactly what indirect exposure looks like -- so testing
+    # only the name score escalated every chain-based block the walk found.
+    name_evidence = proposal.confidence if proposal else 0.0
+    chain_evidence = 0.9 if any(h.get("sanctions_hit") for h in chain) else 0.0
+    evidence_strength = max(name_evidence, chain_evidence)
+    if chain_evidence > name_evidence:
+        trace.event("evidence.route", route="control_chain",
+                    name_evidence=name_evidence, chain_evidence=chain_evidence)
+
     if decision.decision == "BLOCK" and evidence_strength < evidence_bar:
         trace.branch(f"block rests on evidence {evidence_strength:.2f} "
                      f"< bar {evidence_bar:.2f}", "ESCALATE_ON_WEAK_EVIDENCE")

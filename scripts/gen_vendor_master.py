@@ -102,9 +102,9 @@ def build_cases(anchors: dict[str, dict]) -> list[dict]:
             # what finds it, which is the Day-4 Markovian walk.
             "legal_name": "Nordvik Components GmbH", "trading_name": "Nordvik",
             "country": "DE", "bank_country": khaverim["country"],
-            "expect": "ESCALATE_THEN_BLOCK",
-            "why": f"clean name; ultimate parent is {khaverim['caption']!r}. "
-                   "Bank country disagrees with registered country.",
+            "expect": "BLOCK",
+            "why": f"clean on its own name; control chain reaches {khaverim['caption']!r}. "
+                   "Only the Markovian-bounded walk finds this.",
             "anchor": khaverim["id"],
         },
         {

@@ -1,0 +1,2017 @@
+{
+  "provenance": {
+    "synthetic": true,
+    "modelled_on": "GLEIF Level 2 direct and ultimate accounting-consolidating parent relationships",
+    "not_included": "ownership percentages -- GLEIF does not publish them, so no percentage is asserted anywhere",
+    "listed_entities_are_real": "parent nodes of kind 'entity' are real OFAC SDN records from sanctions_sample.json"
+  },
+  "nodes": [
+    {
+      "key": "V0001",
+      "name": "Metaalkunde BV",
+      "country": "BE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0002",
+      "name": "South Wealth Resources Ltd.",
+      "country": "IQ",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0003",
+      "name": "Southwealth Resources Pty Ltd",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0004",
+      "name": "Nordvik Components GmbH",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0005",
+      "name": "Global Trading Ltd",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0006",
+      "name": "International Services LLC",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0007",
+      "name": "Copperline Industries Limited",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0008",
+      "name": "Copperline Industries Ltd.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0009",
+      "name": "Baltic Trading GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0010",
+      "name": "Orchard Logistics L.L.C.",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0011",
+      "name": "Thornhill Logistics S.A.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0012",
+      "name": "Kestrel Trading B.V.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0013",
+      "name": "Larkspur Supply Co Pte Ltd",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0014",
+      "name": "Oakhaven Supply Co Limited",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0015",
+      "name": "Stormline Logistics B.V.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0016",
+      "name": "Pinecrest Partners Limited",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0017",
+      "name": "Greyfriars Supply Co Ltd",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0018",
+      "name": "Cedar Point Supply Co Limited",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0019",
+      "name": "Kestrel Partners Pte Ltd",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0020",
+      "name": "Thornhill Supply Co Limited",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0021",
+      "name": "Fenwick Industries L.L.C.",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0022",
+      "name": "Ironside Trading Inc",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0023",
+      "name": "Lantern Supply Co Inc",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0024",
+      "name": "Bluewater Trading S.A.",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0025",
+      "name": "Ridgeway Industries S.A.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0026",
+      "name": "Fairweather Trading Pte Ltd",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0027",
+      "name": "Halcyon Logistics L.L.C.",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0028",
+      "name": "Saltmarsh Partners S.A.",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0029",
+      "name": "Fairweather Partners L.L.C.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0030",
+      "name": "Kestrel Logistics L.L.C.",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0031",
+      "name": "Thornhill Partners Limited",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0032",
+      "name": "Lantern Trading Inc",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0033",
+      "name": "Stormline Trading GmbH",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0034",
+      "name": "Fenwick Trading GmbH",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0035",
+      "name": "Northwind Trading GmbH",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0036",
+      "name": "Ridgeway Logistics S.A.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0037",
+      "name": "Ironside Trading Limited",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0038",
+      "name": "Copperline Trading B.V.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0039",
+      "name": "Fairweather Supply Co L.L.C.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0040",
+      "name": "Fairweather Logistics Limited",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0041",
+      "name": "Northwind Logistics LLC",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0042",
+      "name": "Greyfriars Industries Pte Ltd",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0043",
+      "name": "Lantern Industries B.V.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0044",
+      "name": "Quarry Logistics S.A.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0045",
+      "name": "Ridgeway Logistics GmbH",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0046",
+      "name": "Pinecrest Trading Limited",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0047",
+      "name": "Bluewater Trading Ltd",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0048",
+      "name": "Fenwick Supply Co Inc",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0049",
+      "name": "Baltic Trading Limited",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0050",
+      "name": "Ridgeway Trading Inc",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0051",
+      "name": "Cedar Point Logistics L.L.C.",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0052",
+      "name": "Fenwick Trading Limited",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0053",
+      "name": "Saltmarsh Industries Pte Ltd",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0054",
+      "name": "Vantage Logistics Pte Ltd",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0055",
+      "name": "Fairweather Partners Ltd",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0056",
+      "name": "Quarry Supply Co B.V.",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0057",
+      "name": "Lantern Industries Ltd",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0058",
+      "name": "Saltmarsh Supply Co GmbH",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0059",
+      "name": "Sandstone Supply Co Pte Ltd",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0060",
+      "name": "Saltmarsh Logistics S.A.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0061",
+      "name": "Meridian Logistics Inc",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0062",
+      "name": "Thornhill Partners GmbH",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0063",
+      "name": "Quarry Supply Co B.V.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0064",
+      "name": "Ridgeway Partners L.L.C.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0065",
+      "name": "Oakhaven Supply Co Inc",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0066",
+      "name": "Vantage Partners B.V.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0067",
+      "name": "Kestrel Industries L.L.C.",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0068",
+      "name": "Larkspur Partners GmbH",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0069",
+      "name": "Fenwick Trading GmbH",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0070",
+      "name": "Meridian Partners GmbH",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0071",
+      "name": "Cedar Point Supply Co Limited",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0072",
+      "name": "Meridian Supply Co L.L.C.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0073",
+      "name": "Greyfriars Industries L.L.C.",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0074",
+      "name": "Orchard Supply Co Inc",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0075",
+      "name": "Cedar Point Trading GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0076",
+      "name": "Kestrel Industries Ltd",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0077",
+      "name": "Fenwick Logistics S.A.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0078",
+      "name": "Northwind Trading Ltd",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0079",
+      "name": "Kestrel Partners Pte Ltd",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0080",
+      "name": "Orchard Supply Co Inc",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0081",
+      "name": "Quarry Supply Co S.A.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0082",
+      "name": "Greyfriars Supply Co Ltd",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0083",
+      "name": "Oakhaven Trading LLC",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0084",
+      "name": "Meridian Trading Inc",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0085",
+      "name": "Ridgeway Supply Co L.L.C.",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0086",
+      "name": "Pinecrest Industries GmbH",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0087",
+      "name": "Lantern Partners S.A.",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0088",
+      "name": "Baltic Supply Co Pte Ltd",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0089",
+      "name": "Meridian Industries S.A.",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0090",
+      "name": "Kestrel Partners Pte Ltd",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0091",
+      "name": "Ridgeway Partners Limited",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0092",
+      "name": "Oakhaven Industries Inc",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0093",
+      "name": "Lantern Supply Co LLC",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0094",
+      "name": "Greyfriars Trading Inc",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0095",
+      "name": "Thornhill Partners LLC",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0096",
+      "name": "Thornhill Trading Pte Ltd",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0097",
+      "name": "Northwind Supply Co GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0098",
+      "name": "Bluewater Trading GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0099",
+      "name": "Thornhill Partners B.V.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0100",
+      "name": "Halcyon Logistics S.A.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0101",
+      "name": "Meridian Industries LLC",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0102",
+      "name": "Kestrel Industries Inc",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0103",
+      "name": "Vantage Partners S.A.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0104",
+      "name": "Meridian Industries Ltd",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0105",
+      "name": "Lantern Partners Pte Ltd",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0106",
+      "name": "Baltic Logistics L.L.C.",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0107",
+      "name": "Baltic Logistics L.L.C.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0108",
+      "name": "Baltic Trading LLC",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0109",
+      "name": "Halcyon Industries GmbH",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0110",
+      "name": "Halcyon Logistics L.L.C.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0111",
+      "name": "Larkspur Supply Co Inc",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0112",
+      "name": "Larkspur Partners GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0113",
+      "name": "Fenwick Industries Limited",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0114",
+      "name": "Fairweather Partners GmbH",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0115",
+      "name": "Copperline Trading Pte Ltd",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0116",
+      "name": "Lantern Supply Co Limited",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0117",
+      "name": "Halcyon Industries S.A.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0118",
+      "name": "Sandstone Logistics B.V.",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0119",
+      "name": "Lantern Logistics Limited",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0120",
+      "name": "Northwind Logistics GmbH",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0121",
+      "name": "Halcyon Industries Limited",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0122",
+      "name": "Larkspur Partners Limited",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0123",
+      "name": "Stormline Supply Co Inc",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0124",
+      "name": "Stormline Partners Inc",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0125",
+      "name": "Sandstone Trading GmbH",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0126",
+      "name": "Pinecrest Logistics Limited",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0127",
+      "name": "Saltmarsh Supply Co GmbH",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0128",
+      "name": "Cedar Point Industries L.L.C.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0129",
+      "name": "Quarry Industries S.A.",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0130",
+      "name": "Bluewater Trading GmbH",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0131",
+      "name": "Stormline Partners B.V.",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0132",
+      "name": "Kestrel Industries B.V.",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0133",
+      "name": "Oakhaven Partners S.A.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0134",
+      "name": "Greyfriars Partners LLC",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0135",
+      "name": "Bluewater Supply Co Inc",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0136",
+      "name": "Stormline Industries B.V.",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0137",
+      "name": "Quarry Partners LLC",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0138",
+      "name": "Ridgeway Logistics LLC",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0139",
+      "name": "Northwind Logistics LLC",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0140",
+      "name": "Sandstone Partners S.A.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0141",
+      "name": "Orchard Partners LLC",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0142",
+      "name": "Bluewater Trading GmbH",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0143",
+      "name": "Sandstone Partners S.A.",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0144",
+      "name": "Lantern Industries S.A.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0145",
+      "name": "Cedar Point Supply Co B.V.",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0146",
+      "name": "Bluewater Logistics Limited",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0147",
+      "name": "Fenwick Supply Co Ltd",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0148",
+      "name": "Meridian Trading GmbH",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0149",
+      "name": "Oakhaven Partners L.L.C.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0150",
+      "name": "Stormline Industries S.A.",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0151",
+      "name": "Oakhaven Logistics GmbH",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0152",
+      "name": "Saltmarsh Logistics LLC",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0153",
+      "name": "Oakhaven Trading Limited",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0154",
+      "name": "Quarry Partners Pte Ltd",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0155",
+      "name": "Baltic Logistics GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0156",
+      "name": "Orchard Supply Co B.V.",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0157",
+      "name": "Ridgeway Logistics Limited",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0158",
+      "name": "Orchard Supply Co B.V.",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0159",
+      "name": "Stormline Supply Co B.V.",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0160",
+      "name": "Baltic Industries L.L.C.",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0161",
+      "name": "Lantern Supply Co Limited",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0162",
+      "name": "Northwind Trading Inc",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0163",
+      "name": "Fenwick Trading Limited",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0164",
+      "name": "Stormline Industries S.A.",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0165",
+      "name": "Ironside Trading Inc",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0166",
+      "name": "Greyfriars Industries GmbH",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0167",
+      "name": "Halcyon Industries Inc",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0168",
+      "name": "Meridian Trading GmbH",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0169",
+      "name": "Ironside Partners GmbH",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0170",
+      "name": "Orchard Partners B.V.",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0171",
+      "name": "Oakhaven Partners Pte Ltd",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0172",
+      "name": "Stormline Logistics Inc",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0173",
+      "name": "Quarry Trading B.V.",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0174",
+      "name": "Quarry Supply Co Limited",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0175",
+      "name": "Bluewater Logistics B.V.",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0176",
+      "name": "Cedar Point Partners Inc",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0177",
+      "name": "Sandstone Industries Limited",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0178",
+      "name": "Saltmarsh Trading B.V.",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0179",
+      "name": "Halcyon Supply Co B.V.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0180",
+      "name": "Pinecrest Industries Ltd",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0181",
+      "name": "Quarry Logistics LLC",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0182",
+      "name": "Fenwick Logistics Inc",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0183",
+      "name": "Greyfriars Logistics L.L.C.",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0184",
+      "name": "Baltic Industries L.L.C.",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0185",
+      "name": "Pinecrest Supply Co Ltd",
+      "country": "CA",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0186",
+      "name": "Quarry Supply Co S.A.",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0187",
+      "name": "Bluewater Logistics L.L.C.",
+      "country": "NL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0188",
+      "name": "Sandstone Partners S.A.",
+      "country": "GB",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0189",
+      "name": "Lantern Logistics Inc",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0190",
+      "name": "Bluewater Partners L.L.C.",
+      "country": "US",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0191",
+      "name": "Northwind Trading Pte Ltd",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0192",
+      "name": "Cedar Point Partners L.L.C.",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0193",
+      "name": "Fairweather Trading GmbH",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0194",
+      "name": "Halcyon Supply Co GmbH",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0195",
+      "name": "Northwind Logistics GmbH",
+      "country": "JP",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0196",
+      "name": "Fairweather Industries LLC",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0197",
+      "name": "Kestrel Logistics Ltd",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0198",
+      "name": "Orchard Partners GmbH",
+      "country": "AE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0199",
+      "name": "Vantage Supply Co B.V.",
+      "country": "DE",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0200",
+      "name": "Pinecrest Partners B.V.",
+      "country": "IN",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "E:NK-2CdXhyCy9XzyZgcFcHXrTZ",
+      "name": "LIMITED LIABILITY COMPANY KHAVERIM",
+      "country": "RU",
+      "kind": "entity",
+      "entity_id": "NK-2CdXhyCy9XzyZgcFcHXrTZ"
+    },
+    {
+      "key": "E:NK-2NYMNhw4S47widuXoBXJZb",
+      "name": "Shahid Shustari Industries",
+      "country": "IR",
+      "kind": "entity",
+      "entity_id": "NK-2NYMNhw4S47widuXoBXJZb"
+    },
+    {
+      "key": "H:baltic",
+      "name": "Baltic Holdings Oy",
+      "country": "FI",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:pellervo",
+      "name": "Pellervo Invest AB",
+      "country": "SE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:kronstadt",
+      "name": "Kronstadt Capital BV",
+      "country": "SE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:vantaa",
+      "name": "Vantaa Industrial Group",
+      "country": "FI",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:narva",
+      "name": "Narva Partners SARL",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:loop_a",
+      "name": "Saaremaa Trading House",
+      "country": "EE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:loop_b",
+      "name": "Lahti Equity Partners",
+      "country": "FI",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:aurora",
+      "name": "Aurora Beteiligungs GmbH",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain0",
+      "name": "Baltic Holdings Oy 0",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain1",
+      "name": "Pellervo Invest AB 1",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain2",
+      "name": "Kronstadt Capital BV 2",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain3",
+      "name": "Vantaa Industrial Group 3",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain4",
+      "name": "Narva Partners SARL 4",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain5",
+      "name": "Aurora Beteiligungs GmbH 5",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain6",
+      "name": "Saaremaa Trading House 6",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain7",
+      "name": "Lahti Equity Partners 7",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain8",
+      "name": "Riga Industrial Holding 8",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain9",
+      "name": "Baltic Holdings Oy 9",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain10",
+      "name": "Pellervo Invest AB 10",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain11",
+      "name": "Kronstadt Capital BV 11",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain12",
+      "name": "Vantaa Industrial Group 12",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain13",
+      "name": "Narva Partners SARL 13",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain14",
+      "name": "Aurora Beteiligungs GmbH 14",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain15",
+      "name": "Saaremaa Trading House 15",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain16",
+      "name": "Lahti Equity Partners 16",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain17",
+      "name": "Riga Industrial Holding 17",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain18",
+      "name": "Baltic Holdings Oy 18",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain19",
+      "name": "Pellervo Invest AB 19",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain20",
+      "name": "Kronstadt Capital BV 20",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain21",
+      "name": "Vantaa Industrial Group 21",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain22",
+      "name": "Narva Partners SARL 22",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain23",
+      "name": "Aurora Beteiligungs GmbH 23",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain24",
+      "name": "Saaremaa Trading House 24",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain25",
+      "name": "Lahti Equity Partners 25",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain26",
+      "name": "Riga Industrial Holding 26",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain27",
+      "name": "Baltic Holdings Oy 27",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain28",
+      "name": "Pellervo Invest AB 28",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain29",
+      "name": "Kronstadt Capital BV 29",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain30",
+      "name": "Vantaa Industrial Group 30",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain31",
+      "name": "Narva Partners SARL 31",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain32",
+      "name": "Aurora Beteiligungs GmbH 32",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain33",
+      "name": "Saaremaa Trading House 33",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain34",
+      "name": "Lahti Equity Partners 34",
+      "country": "US",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain35",
+      "name": "Riga Industrial Holding 35",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain36",
+      "name": "Baltic Holdings Oy 36",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain37",
+      "name": "Pellervo Invest AB 37",
+      "country": "NL",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain38",
+      "name": "Kronstadt Capital BV 38",
+      "country": "DE",
+      "kind": "holdco",
+      "entity_id": null
+    },
+    {
+      "key": "H:plain39",
+      "name": "Vantaa Industrial Group 39",
+      "country": "GB",
+      "kind": "holdco",
+      "entity_id": null
+    }
+  ],
+  "edges": [
+    {
+      "child": "V0004",
+      "parent": "H:baltic",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:baltic",
+      "parent": "E:NK-2CdXhyCy9XzyZgcFcHXrTZ",
+      "relation": "ULTIMATE_PARENT"
+    },
+    {
+      "child": "V0007",
+      "parent": "H:pellervo",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:pellervo",
+      "parent": "H:kronstadt",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:kronstadt",
+      "parent": "H:vantaa",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:vantaa",
+      "parent": "H:narva",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0008",
+      "parent": "H:loop_a",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:loop_a",
+      "parent": "H:loop_b",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:loop_b",
+      "parent": "H:loop_a",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "H:aurora",
+      "parent": "E:NK-2NYMNhw4S47widuXoBXJZb",
+      "relation": "ULTIMATE_PARENT"
+    },
+    {
+      "child": "V0010",
+      "parent": "H:aurora",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0021",
+      "parent": "H:plain0",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0022",
+      "parent": "H:plain1",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0023",
+      "parent": "H:plain2",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0024",
+      "parent": "H:plain3",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0025",
+      "parent": "H:plain4",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0026",
+      "parent": "H:plain5",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0027",
+      "parent": "H:plain6",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0028",
+      "parent": "H:plain7",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0029",
+      "parent": "H:plain8",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0030",
+      "parent": "H:plain9",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0031",
+      "parent": "H:plain10",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0032",
+      "parent": "H:plain11",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0033",
+      "parent": "H:plain12",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0034",
+      "parent": "H:plain13",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0035",
+      "parent": "H:plain14",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0036",
+      "parent": "H:plain15",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0037",
+      "parent": "H:plain16",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0038",
+      "parent": "H:plain17",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0039",
+      "parent": "H:plain18",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0040",
+      "parent": "H:plain19",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0041",
+      "parent": "H:plain20",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0042",
+      "parent": "H:plain21",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0043",
+      "parent": "H:plain22",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0044",
+      "parent": "H:plain23",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0045",
+      "parent": "H:plain24",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0046",
+      "parent": "H:plain25",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0047",
+      "parent": "H:plain26",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0048",
+      "parent": "H:plain27",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0049",
+      "parent": "H:plain28",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0050",
+      "parent": "H:plain29",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0051",
+      "parent": "H:plain30",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0052",
+      "parent": "H:plain31",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0053",
+      "parent": "H:plain32",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0054",
+      "parent": "H:plain33",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0055",
+      "parent": "H:plain34",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0056",
+      "parent": "H:plain35",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0057",
+      "parent": "H:plain36",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0058",
+      "parent": "H:plain37",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0059",
+      "parent": "H:plain38",
+      "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "V0060",
+      "parent": "H:plain39",
+      "relation": "DIRECT_PARENT"
+    }
+  ]
+}
