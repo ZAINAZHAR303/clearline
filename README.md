@@ -7,6 +7,10 @@ Open Agent Hackathon 2026 · **Track 1 — Solving Fragmented Intelligence**
 
 ---
 
+> New to this domain? [`docs/DOMAIN.md`](docs/DOMAIN.md) explains vendors,
+> sanctions screening and OFAC's 50 Percent Rule from zero, with sources —
+> including the October 2026 enforcement action this project mirrors.
+
 ## The problem
 
 A company with 200–2,000 staff has no sanctions-screening desk and no $50k/yr
