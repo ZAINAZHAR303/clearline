@@ -134,6 +134,13 @@ A reviewer marks the match wrong. H-MEM drops its confidence by exactly 0.20,
 tags it for review, and writes both states to an append-only trust ledger. The
 next run reaches a different decision and says which correction did it.
 
+The correction **persists** — that is the point — so V0001 stays CLEAR until
+you clear the memory. To return to a clean slate:
+
+```bash
+cd engines/hmem && npx tsx src/cli.ts forget-all && cd ../..
+```
+
 ---
 
 ## Sponsor technology
