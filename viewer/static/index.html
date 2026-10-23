@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearline — trace viewer</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --line: #262b36; --ink: #e6e9ef;
+    --dim: #8a92a6; --accent: #6ea8fe;
+    --block: #ff6b6b; --clear: #51cf66; --escalate: #ffd43b;
+    --branch: #c084fc; --engine: #4dd4ac;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  header {
+    padding: 14px 20px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  header h1 { font-size: 15px; margin: 0; letter-spacing: .3px; }
+  header span { color: var(--dim); font-size: 12.5px; }
+  .wrap { display: grid; grid-template-columns: 330px 1fr; height: calc(100vh - 53px); }
+  .runs { border-right: 1px solid var(--line); overflow-y: auto; }
+  .run {
+    padding: 11px 16px; border-bottom: 1px solid var(--line); cursor: pointer;
+  }
+  .run:hover { background: var(--panel); }
+  .run.active { background: var(--panel); box-shadow: inset 3px 0 0 var(--accent); }
+  .run .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .run .name { font-weight: 600; }
+  .run .meta { color: var(--dim); font-size: 12px; margin-top: 3px; }
+  .pill {
+    font-size: 10.5px; font-weight: 700; letter-spacing: .6px;
+    padding: 2px 7px; border-radius: 99px; white-space: nowrap;
+  }
+  .BLOCK { background: rgba(255,107,107,.16); color: var(--block); }
+  .CLEAR { background: rgba(81,207,102,.16); color: var(--clear); }
+  .ESCALATE { background: rgba(255,212,59,.16); color: var(--escalate); }
+  .NOT_FOUND, .None { background: #2a2f3a; color: var(--dim); }
+
+  main { overflow-y: auto; padding: 20px 26px 60px; }
+  .empty { color: var(--dim); padding: 40px 0; }
+  .stats { display: flex; flex-wrap: wrap; gap: 26px; margin: 4px 0 22px; }
+  .stat .k { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .7px; }
+  .stat .v { font-size: 19px; font-weight: 600; }
+
+  .ev { display: grid; grid-template-columns: 58px 1fr; gap: 12px; padding: 5px 0; }
+  .t { color: var(--dim); font-variant-numeric: tabular-nums; font-size: 12px; text-align: right; padding-top: 2px; }
+  .body { border-left: 2px solid var(--line); padding: 2px 0 2px 14px; }
+  .agent > .body { border-left-color: var(--accent); }
+  .branch > .body { border-left-color: var(--branch); }
+  .engine > .body { border-left-color: var(--engine); }
+
+  .label { font-size: 10.5px; letter-spacing: .7px; text-transform: uppercase; color: var(--dim); }
+  .agent .label { color: var(--accent); }
+  .branch .label { color: var(--branch); }
+  .engine .label { color: var(--engine); }
+  .what { margin-top: 1px; }
+  .why { color: var(--dim); font-size: 13px; }
+  code { background: #1e222b; padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
+
+  .decision { border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin: 10px 0 24px; background: var(--panel); }
+  .decision h2 { margin: 0 0 6px; font-size: 16px; }
+  .decision ul { margin: 6px 0 0; padding-left: 18px; }
+  .decision li { margin: 3px 0; }
+  .sub { color: var(--dim); font-size: 12px; text-transform: uppercase; letter-spacing: .7px; margin-top: 12px; }
+  details summary { cursor: pointer; color: var(--dim); font-size: 12.5px; }
+  pre { background: #12151c; border: 1px solid var(--line); border-radius: 6px; padding: 10px; overflow-x: auto; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Clearline</h1>
+  <span>trace viewer &mdash; what the agents did, and why</span>
+</header>
+
+<div class="wrap">
+  <div class="runs" id="runs"><div class="empty" style="padding:20px">loading…</div></div>
+  <main id="detail"><div class="empty">Select a run.</div></main>
+</div>
+
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let runs = [], current = null;
+
+async function loadRuns() {
+  runs = await (await fetch("/api/runs")).json();
+  const el = document.getElementById("runs");
+  if (!runs.length) { el.innerHTML = '<div class="empty" style="padding:20px">No traces yet. Run:<br><code>python -m clearline.run --vendor V0001 --fake</code></div>'; return; }
+  el.innerHTML = runs.map(r => `
+    <div class="run" data-file="${esc(r.file)}">
+      <div class="top">
+        <span class="name">${esc(r.legal_name || r.subject || "?")}</span>
+        <span class="pill ${esc(r.outcome)}">${esc(r.outcome ?? "—")}</span>
+      </div>
+      <div class="meta">${esc(r.subject)} · ${r.seconds}s · ${r.llm_calls} calls · ${r.branches} branches</div>
+    </div>`).join("");
+  el.querySelectorAll(".run").forEach(n => n.onclick = () => select(n.dataset.file));
+  select(runs[0].file);
+}
+
+async function select(file) {
+  current = file;
+  document.querySelectorAll(".run").forEach(n => n.classList.toggle("active", n.dataset.file === file));
+  const { summary, events } = await (await fetch(`/api/runs/${encodeURIComponent(file)}`)).json();
+  render(summary, events);
+}
+
+function render(s, events) {
+  const stat = (k, v) => `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div></div>`;
+  let html = `<div class="stats">
+    ${stat("Vendor", esc(s.legal_name || s.subject))}
+    ${stat("Decision", `<span class="pill ${esc(s.outcome)}">${esc(s.outcome ?? "—")}</span>`)}
+    ${stat("Wall clock", s.seconds + "s")}
+    ${stat("LLM calls", s.llm_calls)}
+    ${stat("Reasoning tokens", s.reasoning_tokens.toLocaleString())}
+    ${stat("Branches", s.branches)}
+  </div>`;
+
+  const final = [...events].reverse().find(e => e.kind === "adjudicator.out");
+  if (final) {
+    html += `<div class="decision"><h2>${esc(s.outcome)} · confidence ${final.confidence ?? "—"}</h2>`;
+    html += `<div class="why">Adjudicated on the <code>${esc(final.tier ?? "?")}</code> tier with reasoning budget ${esc(final.budget_spent ?? "?")}.</div></div>`;
+  }
+
+  // The branches are the argument: they are what a pipeline cannot produce.
+  const rows = events.filter(e => [
+    "agent.start","branch","verdict","tool.call","llm.result","adjudicator.out",
+    "resolver.out","router.out","walker.hop","hmem.remember","router.override",
+    "resolver.confidence_override","llm.degraded","walker.unavailable","run.end",
+  ].includes(e.kind));
+
+  html += rows.map(e => {
+    const t = (e.t ?? 0).toFixed(1) + "s";
+    let cls = "", label = e.kind, what = "", why = "";
+    switch (e.kind) {
+      case "agent.start": cls = "agent"; label = "agent"; what = `<b>${esc(e.agent)}</b>`;
+        why = e.tier ? `tier ${esc(e.tier)}, budget ${esc(e.budget)}` : ""; break;
+      case "branch": cls = "branch"; label = "branch"; what = `<b>${esc(e.taken)}</b>`;
+        why = esc(e.reason); break;
+      case "verdict": label = "critic"; what = `<b>${esc(e.verdict)}</b> (round ${esc(e.round)})`;
+        why = (e.reasons || []).join(" · "); why = esc(why.slice(0, 260)); break;
+      case "tool.call":
+        cls = /markovian|hmem/.test(e.tool) ? "engine" : "";
+        label = /markovian|hmem/.test(e.tool) ? "meterless engine" : "tool";
+        what = `<code>${esc(e.tool)}</code>`;
+        why = esc(Object.entries(e).filter(([k]) => !["t","run_id","kind","tool"].includes(k))
+                 .map(([k,v]) => `${k}=${typeof v === "object" ? JSON.stringify(v) : v}`).join("  ").slice(0, 300));
+        break;
+      case "llm.result": label = "nemotron"; what = `${esc(e.agent)} · <code>${esc(e.tier)}</code>`;
+        why = `${e.completion_tokens ?? "?"} tokens, ${e.reasoning_tokens ?? 0} reasoning · ${esc(e.finish_reason)}`; break;
+      case "walker.hop": cls = "engine"; label = "chain hop";
+        what = `depth ${esc(e.depth)} — <b>${esc(e.name)}</b> (${esc(e.country)})`;
+        why = e.sanctions_hit ? "LISTED ENTITY" : esc(e.relation); break;
+      case "router.out": label = "router"; what = `risk ${esc(e.risk_tier)}`;
+        why = (e.signals || []).join(", "); break;
+      case "resolver.out": label = "resolver"; what = `confidence ${esc(e.confidence)}`;
+        why = `${esc(e.n)} candidate(s)`; break;
+      case "resolver.confidence_override": label = "guard";
+        what = `confidence replaced with the computed score`;
+        why = `model said ${esc(e.model_said)}, computed ${esc(e.computed)}`; break;
+      case "router.override": label = "guard"; what = "ambiguity refusal overridden";
+        why = esc(e.reason); break;
+      case "llm.degraded": label = "recovery"; what = "answered without deliberation";
+        why = esc(e.reason); break;
+      case "walker.unavailable": label = "degraded"; what = "chain walk unavailable";
+        why = esc(e.consequence); break;
+      case "hmem.remember": cls = "engine"; label = "meterless engine";
+        what = `<code>hmem.remember</code> ${esc(e.status)}`; why = esc(e.entity_id); break;
+      case "adjudicator.out": label = "adjudicator";
+        what = `<b>${esc(e.decision)}</b> confidence ${esc(e.confidence)}`;
+        why = `tier ${esc(e.tier)}, budget ${esc(e.budget_spent)}`; break;
+      case "run.end": label = "end"; what = `<b>${esc(e.outcome)}</b>`;
+        why = `evidence bar ${esc(e.evidence_bar)}, ${esc(e.rejections)} rejection(s)`; break;
+    }
+    return `<div class="ev ${cls}"><div class="t">${t}</div><div class="body">
+      <div class="label">${esc(label)}</div><div class="what">${what}</div>
+      ${why ? `<div class="why">${why}</div>` : ""}</div></div>`;
+  }).join("");
+
+  html += `<div class="sub">Raw events</div>
+    <details><summary>${events.length} JSONL events</summary><pre>${esc(events.map(e => JSON.stringify(e)).join("\n"))}</pre></details>`;
+
+  document.getElementById("detail").innerHTML = html;
+}
+
+loadRuns();
+setInterval(async () => {
+  const fresh = await (await fetch("/api/runs")).json();
+  if (fresh.length !== runs.length) loadRuns();   // a new run appeared while watching
+}, 3000);
+</script>
+</body>
+</html>

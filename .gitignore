@@ -11,3 +11,4 @@ engines/.meterless-upstream/
 engines/markovian/node_modules/
 engines/hmem/node_modules/
 data/memory/
+.claude/
