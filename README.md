@@ -73,6 +73,7 @@ python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   # Window
 
 python scripts/fetch_sanctions.py      # curates 300 OFAC records (one download, cached)
 python scripts/gen_vendor_master.py    # builds the vendor book around them
+python scripts/fetch_gleif_chains.py   # REAL ownership chains from GLEIF
 python scripts/gen_control_graph.py    # builds the control graph
 
 cd engines/markovian && npm install && cd ../..
@@ -121,6 +122,8 @@ live in `data/sample/vendor_master.json` under `_demo_cases`; nothing in
 | `V0004` Nordvik Components GmbH | Clean on its own name; the **control chain** reaches a listed entity | **BLOCK** |
 | `V0005` / `V0006` | Generic names, no identifier | ESCALATE |
 | `V0007` / `V0008` Copperline | Same entity, two IDs, two spellings | CLEAR |
+| **`V0009` Xing Ao Energy Pte. Ltd.** | **Real** Singapore company. GLEIF reports its ultimate parent as a **real OFAC-designated** Chinese group | **BLOCK** |
+| **`V0010` Rayblue International Corp.** | **Real** BVI company, **real** sanctioned ultimate parent | **BLOCK** |
 
 **V0002 and V0003 are the pair worth watching.** Same watchlist entity,
 near-identical names, opposite outcomes — and the system has to say why.
@@ -224,9 +227,13 @@ Stated plainly, because a screening tool that overclaims is worse than none.
   Several vendors are deliberately named after real OFAC aliases, because that
   is what a true positive looks like. No claim is made about any real company
   beyond the public designation already in the source data.
-- **The control graph is synthetic.** Modelled on GLEIF Level 2 relationships.
-  Fictional vendors have no LEI, and inventing one would be worse than saying
-  so. Real LEIs would resolve against the live GLEIF API.
+- **The control graph is part real, part synthetic.** 47 chains are **real**,
+  retrieved from the GLEIF Level 2 API and joined to OFAC SDN entries that
+  publish an LEI (`scripts/fetch_gleif_chains.py`). `V0009` and `V0010` are
+  real companies with real LEIs whose real ultimate parents are really
+  designated — both halves are public record, and Clearline states nothing
+  beyond what OFAC and GLEIF already publish. The remaining chains are
+  synthetic, because the fictional vendors they belong to have no LEI.
 - **No ownership percentages, ever.** GLEIF publishes control and
   consolidation relationships, not percentages. OFAC's 50% rule needs ownership
   data these sources do not provide, so indirect findings are reported as

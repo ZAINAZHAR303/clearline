@@ -98,9 +98,53 @@ def main() -> None:
              rng.choice(["GB", "DE", "NL", "US"]), "holdco")
         edge(vendor_id, key)
 
+    # --- REAL chains from GLEIF, merged in alongside the synthetic ones -----
+    # These are public record on both halves: the designation is OFAC's, the
+    # parent relationship is self-reported to GLEIF by the entity itself.
+    real_path = SAMPLE / "gleif_chains.json"
+    real_count = 0
+    if real_path.exists():
+        real = json.loads(real_path.read_text(encoding="utf-8"))
+        for chain in real["chains"]:
+            child, parent = chain["child"], chain["parent"]
+            ckey, pkey = f"L:{child['lei']}", f"L:{parent['lei']}"
+            node(ckey, child["name"], child.get("country") or "", "real_entity")
+            nodes[ckey]["lei"] = child["lei"]
+            nodes[ckey]["source"] = "gleif"
+            node(pkey, parent["name"], parent.get("country") or "", "real_entity")
+            nodes[pkey].update({"lei": parent["lei"], "source": "gleif",
+                                "sanctioned": True, "ofac_id": chain.get("ofac_id"),
+                                # entity_id is what the walker screens against
+                                "entity_id": chain.get("ofac_id"),
+                                "programme": chain.get("programme")})
+            edge(ckey, pkey, chain["relation"])
+            edges[-1]["source"] = "gleif"
+            real_count += 1
+
+    # A vendor row that carries a real LEI is one of the real companies, so
+    # wire it to the real parent GLEIF reports -- the walk then traverses
+    # genuine public-record structure rather than a fixture.
+    chain_by_child = {c["child"]["lei"]: c for c in
+                      (json.loads((SAMPLE / "gleif_chains.json").read_text(encoding="utf-8"))["chains"]
+                       if (SAMPLE / "gleif_chains.json").exists() else [])}
+    real_vendor_links = 0
+    for vendor in vendors["vendors"]:
+        chain = chain_by_child.get(vendor.get("lei"))
+        if not chain:
+            continue
+        edge(vendor["vendor_id"], f"L:{chain['parent']['lei']}", chain["relation"])
+        edges[-1]["source"] = "gleif"
+        real_vendor_links += 1
+
     out = {
         "provenance": {
-            "synthetic": True,
+            "synthetic_nodes": True,
+            "real_vendor_chains": real_vendor_links,
+            "real_chains_from_gleif": real_count,
+            "note": "Nodes with source='gleif' and their edges are REAL, retrieved from "
+                    "the GLEIF Level 2 API and joined to OFAC SDN entries that publish an "
+                    "LEI. The remaining nodes are synthetic, because the fictional vendors "
+                    "they belong to have no LEI.",
             "modelled_on": "GLEIF Level 2 direct and ultimate accounting-consolidating parent relationships",
             "not_included": "ownership percentages -- GLEIF does not publish them, so no percentage is asserted anywhere",
             "listed_entities_are_real": "parent nodes of kind 'entity' are real OFAC SDN records from sanctions_sample.json",
@@ -113,6 +157,8 @@ def main() -> None:
 
     print(f"wrote {target.relative_to(ROOT)}  {len(nodes)} nodes, {len(edges)} edges, "
           f"{target.stat().st_size / 1024:.0f} KB")
+    print(f"  real GLEIF chains merged: {real_count}")
+    print(f"  real vendors linked to real parents: {real_vendor_links}")
     print("\nplanted routes:")
     print(f"  V0004 -> Baltic Holdings Oy -> {khaverim['caption']}  [LISTED]")
     print(f"  V0010 -> Aurora Beteiligungs GmbH -> {shahid['caption']}  [LISTED]")

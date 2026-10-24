@@ -4322,6 +4322,363 @@
       ],
       "programme": "ILLICIT-DRUGS-EO14059 - Executive Order 14059 (Illicit Drugs)",
       "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-6VbLUDHV38j7XMRGYbNTfn",
+      "caption": "GAS INDUSTRY INSURANCE COMPANY SOGAZ",
+      "aliases": [
+        "Insurance Company of Gaz Industry Sogaz",
+        "Sogaz Insurance"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-8DqqvwSrEdWwZFJkFRmEmV",
+      "caption": "PUBLIC JOINT STOCK COMPANY BANK ALEXANDROVSKY",
+      "aliases": [
+        "Public Joint Stock Company Bank Aleksandrovsky",
+        "Tekhnokhimbank"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-B3GSATSiHvyRLfEcVbukkR",
+      "caption": "GOLDEN GLOBAL YATIRIM BANKASI ANONİM ŞİRKETİ",
+      "aliases": [
+        "Golden Global Investment Bank",
+        "Golden Global Yatirim Bankasi Anonim Sirketi"
+      ],
+      "country": "TR",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-HkGpeehSFsNLXBJ9tywZCf",
+      "caption": "Hebei Xinhai Chemical Group Co., Ltd.",
+      "aliases": [
+        "河北鑫海化工集团有限公司"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "caption": "Alstone Investment AG",
+      "aliases": [
+        "Alstone Investment Ltd",
+        "Alstone Investment SA",
+        "Swiru Holding AG",
+        "Swiru Trustee Ltd"
+      ],
+      "country": "CH",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-Qk3Ft6UZxsv3fmbrdrQDgA",
+      "caption": "SBL Energy Limited",
+      "aliases": [
+        "Amin Explosives Private Limited",
+        "SBL Energy Private Limited"
+      ],
+      "country": "IN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "SUDAN-EO14098 - Executive Order 14098 (Sudan)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-QtJ5Z4HCEzSmQMQ2knDUtk",
+      "caption": "PUBLIC JOINT STOCK COMPANY BANK SINARA",
+      "aliases": [],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "caption": "LUKOIL OAO",
+      "aliases": [
+        "Lukoil",
+        "Lukoil Oil Company",
+        "NK Lukoil OAO",
+        "Neftyanaya Kompaniya Lukoil OOO",
+        "PUBLIC JOINT-STOCK COMPANY OIL COMPANY LUKOIL",
+        "ЛУКОЙЛ",
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО НЕФТЯНАЯ КОМПАНИЯ ЛУКОЙЛ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-UwDN5nyVs4G3qsZVnCBscV",
+      "caption": "Publichnoe Aktsionernoe Obschestvo Magnitogorskiy Metallurgicheskiy Kombinat",
+      "aliases": [
+        "MMK PAO",
+        "Magnitogorsk Iron & Steel Works",
+        "Magnitogorsk Iron and Steel Works PJSC",
+        "Open Joint Stock Company Magnitogorsk Iron & Steel Works",
+        "PJSC MMK",
+        "Public Joint Stock Company Magnitogorsk Metallurgical Combine",
+        "ПАО ММК",
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО МАГНИТОГОРСКИЙ МЕТАЛЛУРГИЧЕСКИЙ КОМБИНАТ"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-VDEKGF5ZgHAkye4kGuUXs3",
+      "caption": "JOINT STOCK COMPANY SOVCOMFLOT",
+      "aliases": [
+        "JSC Sovcomflot",
+        "PAO Sovcomflot",
+        "Public Joint Stock Company Modern Commercial Fleet",
+        "Publichnoe Aktsionernoe Obschestvo Sovremennyy Kommercheskiy Flot",
+        "SCF",
+        "SCF Group"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-c8kQT5N2o5NHXaYAR857mT",
+      "caption": "MOSCOW EXCHANGE",
+      "aliases": [
+        "MOEX",
+        "PUBLIC JOINT STOCK COMPANY MOSCOW EXCHANGE MICEX RTS",
+        "ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО МОСКОВСКАЯ БИРЖА ММВБ-РТС"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eM63QnMNeHYd4fLGZTDuwW",
+      "caption": "PUBLIC JOINT STOCK COMPANY METKOMBANK",
+      "aliases": [],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-eyGem2AhvVFkniDghv3Vm6",
+      "caption": "T-BANK",
+      "aliases": [
+        "JSC Tinkoff Bank",
+        "Khimmashbank",
+        "Tinkoff Credit Systems Bank Closed Joint Stock Company"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "caption": "Gazprombank Joint Stock Company",
+      "aliases": [
+        "Bank GPB JSC",
+        "Gazprombank Open Joint Stock Company",
+        "Joint Stock Bank of the Gas Industry Gazprombank",
+        "Газпромбанк Акционерное общество"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-fyWg4f4koDvZkP5mZ2zdwu",
+      "caption": "SPB EXCHANGE",
+      "aliases": [
+        "PJSC SPB Exchange",
+        "PUBLIC JOINT STOCK COMPANY SAINT PETERSBURG EXCHANGE",
+        "Public Joint Stock Company SPB Exchange"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-ib3vAUEbxdfcqXqFdx6HYB",
+      "caption": "BBR Bank Joint Stock Company",
+      "aliases": [
+        "BBR Bank Closed Joint Stock Company",
+        "Baltic Development Bank Closed Joint Stock Company"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-iug77aFLjrD5aszCuhtyhb",
+      "caption": "SISTEMA PUBLIC JOINT STOCK FINANCIAL CORPORATION",
+      "aliases": [
+        "Publichnoe Aktsionernoe Obschestvo Aktsionernaya Finansovaya Sistema"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-jY3WG3j2oxHiTUPCquxGa8",
+      "caption": "Public Joint Stock Company Bank UralSib",
+      "aliases": [
+        "Bank UralSib OAO",
+        "Bank UralSib PAO",
+        "Bank Uralsib OJSC",
+        "BashCreditBank",
+        "Ural-Siberian Bank",
+        "Uralo-Sibirskiy Bank OAO"
+      ],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "caption": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+      "aliases": [
+        "BANK VNESHNEI TORGOVLI RSFSR",
+        "BANK VNESHNEY TORGOVLI JOINT STOCK COMPANY",
+        "BANK VNESHNEY TORGOVLI OPEN JOINT STOCK COMPANY",
+        "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINT STOCK COMPANY",
+        "BANK VTB OAO",
+        "BANK VTB OPEN JOINT STOCK COMPANY",
+        "Bank VTB PAO",
+        "Bank VTB Publichnoe Aktsionernoe Obshchestvo",
+        "Bank Vneshei Torgovli OAO",
+        "Bank Vneshnei Torgovli Rossiskoi Federatsii as a Private Joint Stock Company",
+        "Bank for Foreign Trade of RSFSR",
+        "Bank of Foreign Trade of the Russian Federation",
+        "CJSC Bank for Foreign Trade of the Russian Federation",
+        "JSC VTB BANK",
+        "JSC VTB Bank New Delhi Branch",
+        "OAO Bank VTB",
+        "OAO Vneshtorgbank",
+        "OJSC CJSC Bank for Foreign Trade",
+        "Russian Vneshtorgbank",
+        "VNESHTORGBANK ROSSII CLOSED JOINT STOCK COMPANY",
+        "VTB BANK OAO",
+        "VTB Bank",
+        "VTB Bank PAO",
+        "VTB Bank PJSC",
+        "VTB Bank PJSC Shanghai Branch",
+        "VTB Bank open joint stock company",
+        "Vneshtorgbank",
+        "Vneshtorgbank of RSFSR",
+        "Банк ВТБ ПАО",
+        "Банк ВТБ публичное акционерное общество"
+      ],
+      "country": "CN",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-n5DAEoXcNua7soB3rjwowE",
+      "caption": "COMMERCIAL BANK ABSOLUT BANK PAO",
+      "aliases": [],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
+    },
+    {
+      "id": "NK-oHBqM6kAcfq99CUmKSxfaa",
+      "caption": "JOINT STOCK COMPANY RUSSIAN STANDARD BANK",
+      "aliases": [],
+      "country": "RU",
+      "topics": [
+        "sanction"
+      ],
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)",
+      "dataset": "us_ofac_sdn"
     }
+  ],
+  "gleif_linked": [
+    "NK-6VbLUDHV38j7XMRGYbNTfn",
+    "NK-8DqqvwSrEdWwZFJkFRmEmV",
+    "NK-B3GSATSiHvyRLfEcVbukkR",
+    "NK-HkGpeehSFsNLXBJ9tywZCf",
+    "NK-LKco5zKYD9qm9RC2YMDwGm",
+    "NK-Qk3Ft6UZxsv3fmbrdrQDgA",
+    "NK-QtJ5Z4HCEzSmQMQ2knDUtk",
+    "NK-T3oRNWY3XhL72vfsVMcXzX",
+    "NK-UwDN5nyVs4G3qsZVnCBscV",
+    "NK-VDEKGF5ZgHAkye4kGuUXs3",
+    "NK-c8kQT5N2o5NHXaYAR857mT",
+    "NK-eM63QnMNeHYd4fLGZTDuwW",
+    "NK-eyGem2AhvVFkniDghv3Vm6",
+    "NK-f7u9JR4f7piS8PngjTkUSa",
+    "NK-fyWg4f4koDvZkP5mZ2zdwu",
+    "NK-ib3vAUEbxdfcqXqFdx6HYB",
+    "NK-iug77aFLjrD5aszCuhtyhb",
+    "NK-jY3WG3j2oxHiTUPCquxGa8",
+    "NK-mvzx7uNDj9jZf8EAxaHH2h",
+    "NK-n5DAEoXcNua7soB3rjwowE",
+    "NK-oHBqM6kAcfq99CUmKSxfaa"
   ]
 }

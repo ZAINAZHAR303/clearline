@@ -1,6 +1,9 @@
 {
   "provenance": {
-    "synthetic": true,
+    "synthetic_nodes": true,
+    "real_vendor_chains": 2,
+    "real_chains_from_gleif": 47,
+    "note": "Nodes with source='gleif' and their edges are REAL, retrieved from the GLEIF Level 2 API and joined to OFAC SDN entries that publish an LEI. The remaining nodes are synthetic, because the fictional vendors they belong to have no LEI.",
     "modelled_on": "GLEIF Level 2 direct and ultimate accounting-consolidating parent relationships",
     "not_included": "ownership percentages -- GLEIF does not publish them, so no percentage is asserted anywhere",
     "listed_entities_are_real": "parent nodes of kind 'entity' are real OFAC SDN records from sanctions_sample.json"
@@ -64,1345 +67,1345 @@
     },
     {
       "key": "V0009",
-      "name": "Baltic Trading GmbH",
-      "country": "AU",
-      "kind": "vendor",
-      "entity_id": null
-    },
-    {
-      "key": "V0010",
-      "name": "Orchard Logistics L.L.C.",
+      "name": "Xing Ao Energy Pte. Ltd.",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
+      "key": "V0010",
+      "name": "Rayblue International Corp.",
+      "country": "VG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
       "key": "V0011",
-      "name": "Thornhill Logistics S.A.",
-      "country": "AE",
+      "name": "Stormline Industries LLC",
+      "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
       "key": "V0012",
-      "name": "Kestrel Trading B.V.",
-      "country": "GB",
+      "name": "Stormline Industries L.L.C.",
+      "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
       "key": "V0013",
+      "name": "Ironside Supply Co Pte Ltd",
+      "country": "AU",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0014",
       "name": "Larkspur Supply Co Pte Ltd",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0014",
+      "key": "V0015",
       "name": "Oakhaven Supply Co Limited",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0015",
+      "key": "V0016",
       "name": "Stormline Logistics B.V.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0016",
+      "key": "V0017",
       "name": "Pinecrest Partners Limited",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0017",
+      "key": "V0018",
       "name": "Greyfriars Supply Co Ltd",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0018",
+      "key": "V0019",
       "name": "Cedar Point Supply Co Limited",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0019",
-      "name": "Kestrel Partners Pte Ltd",
-      "country": "PL",
-      "kind": "vendor",
-      "entity_id": null
-    },
-    {
       "key": "V0020",
-      "name": "Thornhill Supply Co Limited",
+      "name": "Kestrel Partners Pte Ltd",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
       "key": "V0021",
+      "name": "Thornhill Supply Co Limited",
+      "country": "PL",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0022",
       "name": "Fenwick Industries L.L.C.",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0022",
+      "key": "V0023",
       "name": "Ironside Trading Inc",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0023",
+      "key": "V0024",
       "name": "Lantern Supply Co Inc",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0024",
+      "key": "V0025",
       "name": "Bluewater Trading S.A.",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0025",
+      "key": "V0026",
       "name": "Ridgeway Industries S.A.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0026",
+      "key": "V0027",
       "name": "Fairweather Trading Pte Ltd",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0027",
+      "key": "V0028",
       "name": "Halcyon Logistics L.L.C.",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0028",
+      "key": "V0029",
       "name": "Saltmarsh Partners S.A.",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0029",
+      "key": "V0030",
       "name": "Fairweather Partners L.L.C.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0030",
+      "key": "V0031",
       "name": "Kestrel Logistics L.L.C.",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0031",
+      "key": "V0032",
       "name": "Thornhill Partners Limited",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0032",
+      "key": "V0033",
       "name": "Lantern Trading Inc",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0033",
+      "key": "V0034",
       "name": "Stormline Trading GmbH",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0034",
-      "name": "Fenwick Trading GmbH",
-      "country": "SG",
-      "kind": "vendor",
-      "entity_id": null
-    },
-    {
       "key": "V0035",
-      "name": "Northwind Trading GmbH",
+      "name": "Fenwick Trading GmbH",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
       "key": "V0036",
+      "name": "Northwind Trading GmbH",
+      "country": "SG",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0037",
       "name": "Ridgeway Logistics S.A.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0037",
+      "key": "V0038",
       "name": "Ironside Trading Limited",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0038",
+      "key": "V0039",
       "name": "Copperline Trading B.V.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0039",
+      "key": "V0040",
       "name": "Fairweather Supply Co L.L.C.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0040",
+      "key": "V0041",
       "name": "Fairweather Logistics Limited",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0041",
+      "key": "V0042",
       "name": "Northwind Logistics LLC",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0042",
+      "key": "V0043",
       "name": "Greyfriars Industries Pte Ltd",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0043",
+      "key": "V0044",
       "name": "Lantern Industries B.V.",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0044",
+      "key": "V0045",
       "name": "Quarry Logistics S.A.",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0045",
+      "key": "V0046",
       "name": "Ridgeway Logistics GmbH",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0046",
+      "key": "V0047",
       "name": "Pinecrest Trading Limited",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0047",
+      "key": "V0048",
       "name": "Bluewater Trading Ltd",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0048",
+      "key": "V0049",
       "name": "Fenwick Supply Co Inc",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0049",
+      "key": "V0050",
       "name": "Baltic Trading Limited",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0050",
+      "key": "V0051",
       "name": "Ridgeway Trading Inc",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0051",
+      "key": "V0052",
       "name": "Cedar Point Logistics L.L.C.",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0052",
+      "key": "V0053",
       "name": "Fenwick Trading Limited",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0053",
+      "key": "V0054",
       "name": "Saltmarsh Industries Pte Ltd",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0054",
+      "key": "V0055",
       "name": "Vantage Logistics Pte Ltd",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0055",
+      "key": "V0056",
       "name": "Fairweather Partners Ltd",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0056",
-      "name": "Quarry Supply Co B.V.",
-      "country": "FR",
-      "kind": "vendor",
-      "entity_id": null
-    },
-    {
       "key": "V0057",
-      "name": "Lantern Industries Ltd",
+      "name": "Quarry Supply Co B.V.",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
       "key": "V0058",
-      "name": "Saltmarsh Supply Co GmbH",
+      "name": "Lantern Industries Ltd",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
       "key": "V0059",
+      "name": "Saltmarsh Supply Co GmbH",
+      "country": "FR",
+      "kind": "vendor",
+      "entity_id": null
+    },
+    {
+      "key": "V0060",
       "name": "Sandstone Supply Co Pte Ltd",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0060",
+      "key": "V0061",
       "name": "Saltmarsh Logistics S.A.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0061",
+      "key": "V0062",
       "name": "Meridian Logistics Inc",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0062",
+      "key": "V0063",
       "name": "Thornhill Partners GmbH",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0063",
+      "key": "V0064",
       "name": "Quarry Supply Co B.V.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0064",
+      "key": "V0065",
       "name": "Ridgeway Partners L.L.C.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0065",
+      "key": "V0066",
       "name": "Oakhaven Supply Co Inc",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0066",
+      "key": "V0067",
       "name": "Vantage Partners B.V.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0067",
+      "key": "V0068",
       "name": "Kestrel Industries L.L.C.",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0068",
+      "key": "V0069",
       "name": "Larkspur Partners GmbH",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0069",
+      "key": "V0070",
       "name": "Fenwick Trading GmbH",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0070",
+      "key": "V0071",
       "name": "Meridian Partners GmbH",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0071",
+      "key": "V0072",
       "name": "Cedar Point Supply Co Limited",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0072",
+      "key": "V0073",
       "name": "Meridian Supply Co L.L.C.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0073",
+      "key": "V0074",
       "name": "Greyfriars Industries L.L.C.",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0074",
+      "key": "V0075",
       "name": "Orchard Supply Co Inc",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0075",
+      "key": "V0076",
       "name": "Cedar Point Trading GmbH",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0076",
+      "key": "V0077",
       "name": "Kestrel Industries Ltd",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0077",
+      "key": "V0078",
       "name": "Fenwick Logistics S.A.",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0078",
+      "key": "V0079",
       "name": "Northwind Trading Ltd",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0079",
+      "key": "V0080",
       "name": "Kestrel Partners Pte Ltd",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0080",
+      "key": "V0081",
       "name": "Orchard Supply Co Inc",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0081",
+      "key": "V0082",
       "name": "Quarry Supply Co S.A.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0082",
+      "key": "V0083",
       "name": "Greyfriars Supply Co Ltd",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0083",
+      "key": "V0084",
       "name": "Oakhaven Trading LLC",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0084",
+      "key": "V0085",
       "name": "Meridian Trading Inc",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0085",
+      "key": "V0086",
       "name": "Ridgeway Supply Co L.L.C.",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0086",
+      "key": "V0087",
       "name": "Pinecrest Industries GmbH",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0087",
+      "key": "V0088",
       "name": "Lantern Partners S.A.",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0088",
+      "key": "V0089",
       "name": "Baltic Supply Co Pte Ltd",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0089",
+      "key": "V0090",
       "name": "Meridian Industries S.A.",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0090",
+      "key": "V0091",
       "name": "Kestrel Partners Pte Ltd",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0091",
+      "key": "V0092",
       "name": "Ridgeway Partners Limited",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0092",
+      "key": "V0093",
       "name": "Oakhaven Industries Inc",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0093",
+      "key": "V0094",
       "name": "Lantern Supply Co LLC",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0094",
+      "key": "V0095",
       "name": "Greyfriars Trading Inc",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0095",
+      "key": "V0096",
       "name": "Thornhill Partners LLC",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0096",
+      "key": "V0097",
       "name": "Thornhill Trading Pte Ltd",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0097",
+      "key": "V0098",
       "name": "Northwind Supply Co GmbH",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0098",
+      "key": "V0099",
       "name": "Bluewater Trading GmbH",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0099",
+      "key": "V0100",
       "name": "Thornhill Partners B.V.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0100",
+      "key": "V0101",
       "name": "Halcyon Logistics S.A.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0101",
+      "key": "V0102",
       "name": "Meridian Industries LLC",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0102",
+      "key": "V0103",
       "name": "Kestrel Industries Inc",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0103",
+      "key": "V0104",
       "name": "Vantage Partners S.A.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0104",
+      "key": "V0105",
       "name": "Meridian Industries Ltd",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0105",
+      "key": "V0106",
       "name": "Lantern Partners Pte Ltd",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0106",
+      "key": "V0107",
       "name": "Baltic Logistics L.L.C.",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0107",
+      "key": "V0108",
       "name": "Baltic Logistics L.L.C.",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0108",
+      "key": "V0109",
       "name": "Baltic Trading LLC",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0109",
+      "key": "V0110",
       "name": "Halcyon Industries GmbH",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0110",
+      "key": "V0111",
       "name": "Halcyon Logistics L.L.C.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0111",
+      "key": "V0112",
       "name": "Larkspur Supply Co Inc",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0112",
+      "key": "V0113",
       "name": "Larkspur Partners GmbH",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0113",
+      "key": "V0114",
       "name": "Fenwick Industries Limited",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0114",
+      "key": "V0115",
       "name": "Fairweather Partners GmbH",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0115",
+      "key": "V0116",
       "name": "Copperline Trading Pte Ltd",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0116",
+      "key": "V0117",
       "name": "Lantern Supply Co Limited",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0117",
+      "key": "V0118",
       "name": "Halcyon Industries S.A.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0118",
+      "key": "V0119",
       "name": "Sandstone Logistics B.V.",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0119",
+      "key": "V0120",
       "name": "Lantern Logistics Limited",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0120",
+      "key": "V0121",
       "name": "Northwind Logistics GmbH",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0121",
+      "key": "V0122",
       "name": "Halcyon Industries Limited",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0122",
+      "key": "V0123",
       "name": "Larkspur Partners Limited",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0123",
+      "key": "V0124",
       "name": "Stormline Supply Co Inc",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0124",
+      "key": "V0125",
       "name": "Stormline Partners Inc",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0125",
+      "key": "V0126",
       "name": "Sandstone Trading GmbH",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0126",
+      "key": "V0127",
       "name": "Pinecrest Logistics Limited",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0127",
+      "key": "V0128",
       "name": "Saltmarsh Supply Co GmbH",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0128",
+      "key": "V0129",
       "name": "Cedar Point Industries L.L.C.",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0129",
+      "key": "V0130",
       "name": "Quarry Industries S.A.",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0130",
+      "key": "V0131",
       "name": "Bluewater Trading GmbH",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0131",
+      "key": "V0132",
       "name": "Stormline Partners B.V.",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0132",
+      "key": "V0133",
       "name": "Kestrel Industries B.V.",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0133",
+      "key": "V0134",
       "name": "Oakhaven Partners S.A.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0134",
+      "key": "V0135",
       "name": "Greyfriars Partners LLC",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0135",
+      "key": "V0136",
       "name": "Bluewater Supply Co Inc",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0136",
+      "key": "V0137",
       "name": "Stormline Industries B.V.",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0137",
+      "key": "V0138",
       "name": "Quarry Partners LLC",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0138",
+      "key": "V0139",
       "name": "Ridgeway Logistics LLC",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0139",
+      "key": "V0140",
       "name": "Northwind Logistics LLC",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0140",
+      "key": "V0141",
       "name": "Sandstone Partners S.A.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0141",
+      "key": "V0142",
       "name": "Orchard Partners LLC",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0142",
+      "key": "V0143",
       "name": "Bluewater Trading GmbH",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0143",
+      "key": "V0144",
       "name": "Sandstone Partners S.A.",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0144",
+      "key": "V0145",
       "name": "Lantern Industries S.A.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0145",
+      "key": "V0146",
       "name": "Cedar Point Supply Co B.V.",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0146",
+      "key": "V0147",
       "name": "Bluewater Logistics Limited",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0147",
+      "key": "V0148",
       "name": "Fenwick Supply Co Ltd",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0148",
+      "key": "V0149",
       "name": "Meridian Trading GmbH",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0149",
+      "key": "V0150",
       "name": "Oakhaven Partners L.L.C.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0150",
+      "key": "V0151",
       "name": "Stormline Industries S.A.",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0151",
+      "key": "V0152",
       "name": "Oakhaven Logistics GmbH",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0152",
+      "key": "V0153",
       "name": "Saltmarsh Logistics LLC",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0153",
+      "key": "V0154",
       "name": "Oakhaven Trading Limited",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0154",
+      "key": "V0155",
       "name": "Quarry Partners Pte Ltd",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0155",
+      "key": "V0156",
       "name": "Baltic Logistics GmbH",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0156",
+      "key": "V0157",
       "name": "Orchard Supply Co B.V.",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0157",
+      "key": "V0158",
       "name": "Ridgeway Logistics Limited",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0158",
+      "key": "V0159",
       "name": "Orchard Supply Co B.V.",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0159",
+      "key": "V0160",
       "name": "Stormline Supply Co B.V.",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0160",
+      "key": "V0161",
       "name": "Baltic Industries L.L.C.",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0161",
+      "key": "V0162",
       "name": "Lantern Supply Co Limited",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0162",
+      "key": "V0163",
       "name": "Northwind Trading Inc",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0163",
+      "key": "V0164",
       "name": "Fenwick Trading Limited",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0164",
+      "key": "V0165",
       "name": "Stormline Industries S.A.",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0165",
+      "key": "V0166",
       "name": "Ironside Trading Inc",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0166",
+      "key": "V0167",
       "name": "Greyfriars Industries GmbH",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0167",
+      "key": "V0168",
       "name": "Halcyon Industries Inc",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0168",
+      "key": "V0169",
       "name": "Meridian Trading GmbH",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0169",
+      "key": "V0170",
       "name": "Ironside Partners GmbH",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0170",
+      "key": "V0171",
       "name": "Orchard Partners B.V.",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0171",
+      "key": "V0172",
       "name": "Oakhaven Partners Pte Ltd",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0172",
+      "key": "V0173",
       "name": "Stormline Logistics Inc",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0173",
+      "key": "V0174",
       "name": "Quarry Trading B.V.",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0174",
+      "key": "V0175",
       "name": "Quarry Supply Co Limited",
       "country": "FR",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0175",
+      "key": "V0176",
       "name": "Bluewater Logistics B.V.",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0176",
+      "key": "V0177",
       "name": "Cedar Point Partners Inc",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0177",
+      "key": "V0178",
       "name": "Sandstone Industries Limited",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0178",
+      "key": "V0179",
       "name": "Saltmarsh Trading B.V.",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0179",
+      "key": "V0180",
       "name": "Halcyon Supply Co B.V.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0180",
+      "key": "V0181",
       "name": "Pinecrest Industries Ltd",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0181",
+      "key": "V0182",
       "name": "Quarry Logistics LLC",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0182",
+      "key": "V0183",
       "name": "Fenwick Logistics Inc",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0183",
+      "key": "V0184",
       "name": "Greyfriars Logistics L.L.C.",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0184",
+      "key": "V0185",
       "name": "Baltic Industries L.L.C.",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0185",
+      "key": "V0186",
       "name": "Pinecrest Supply Co Ltd",
       "country": "CA",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0186",
+      "key": "V0187",
       "name": "Quarry Supply Co S.A.",
       "country": "DE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0187",
+      "key": "V0188",
       "name": "Bluewater Logistics L.L.C.",
       "country": "NL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0188",
+      "key": "V0189",
       "name": "Sandstone Partners S.A.",
       "country": "GB",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0189",
+      "key": "V0190",
       "name": "Lantern Logistics Inc",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0190",
+      "key": "V0191",
       "name": "Bluewater Partners L.L.C.",
       "country": "US",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0191",
+      "key": "V0192",
       "name": "Northwind Trading Pte Ltd",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0192",
+      "key": "V0193",
       "name": "Cedar Point Partners L.L.C.",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0193",
+      "key": "V0194",
       "name": "Fairweather Trading GmbH",
       "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0194",
+      "key": "V0195",
       "name": "Halcyon Supply Co GmbH",
       "country": "PL",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0195",
+      "key": "V0196",
       "name": "Northwind Logistics GmbH",
       "country": "JP",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0196",
+      "key": "V0197",
       "name": "Fairweather Industries LLC",
       "country": "AU",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0197",
+      "key": "V0198",
       "name": "Kestrel Logistics Ltd",
       "country": "SG",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0198",
+      "key": "V0199",
       "name": "Orchard Partners GmbH",
       "country": "AE",
       "kind": "vendor",
       "entity_id": null
     },
     {
-      "key": "V0199",
+      "key": "V0200",
       "name": "Vantage Supply Co B.V.",
       "country": "DE",
-      "kind": "vendor",
-      "entity_id": null
-    },
-    {
-      "key": "V0200",
-      "name": "Pinecrest Partners B.V.",
-      "country": "IN",
       "kind": "vendor",
       "entity_id": null
     },
@@ -1755,6 +1758,681 @@
       "country": "GB",
       "kind": "holdco",
       "entity_id": null
+    },
+    {
+      "key": "L:253400YDU6F3939GZB77",
+      "name": "Общество с ограниченной ответственностью \"Страховая Компания СОГАЗ-ЖИЗНЬ\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400YDU6F3939GZB77",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400L5RQK7PU6R7J04",
+      "name": "GAS INDUSTRY INSURANCE COMPANY SOGAZ",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-6VbLUDHV38j7XMRGYbNTfn",
+      "lei": "253400L5RQK7PU6R7J04",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-6VbLUDHV38j7XMRGYbNTfn",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:2534006PW83DFZHA8W75",
+      "name": "Общество с ограниченной ответственностью \"УК \"А-Капитал\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534006PW83DFZHA8W75",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400D38E021531V531",
+      "name": "PUBLIC JOINT STOCK COMPANY BANK ALEXANDROVSKY",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-8DqqvwSrEdWwZFJkFRmEmV",
+      "lei": "253400D38E021531V531",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-8DqqvwSrEdWwZFJkFRmEmV",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:789000J1YGZ3PLCXMQ38",
+      "name": "GOLDEN GLOBAL PORTFÖY YÖNETİMİ ANONİM ŞİRKETİ",
+      "country": "TR",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "789000J1YGZ3PLCXMQ38",
+      "source": "gleif"
+    },
+    {
+      "key": "L:789000LV7F75LALJ3F52",
+      "name": "GOLDEN GLOBAL YATIRIM BANKASI ANONİM ŞİRKETİ",
+      "country": "TR",
+      "kind": "real_entity",
+      "entity_id": "NK-B3GSATSiHvyRLfEcVbukkR",
+      "lei": "789000LV7F75LALJ3F52",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-B3GSATSiHvyRLfEcVbukkR",
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)"
+    },
+    {
+      "key": "L:254900CSJGVBZ6CA9D24",
+      "name": "Xing Ao Energy Pte. Ltd.",
+      "country": "SG",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "254900CSJGVBZ6CA9D24",
+      "source": "gleif"
+    },
+    {
+      "key": "L:655600I0RTPZ3DFASH49",
+      "name": "Hebei Xinhai Chemical Group Co., Ltd.",
+      "country": "CN",
+      "kind": "real_entity",
+      "entity_id": "NK-HkGpeehSFsNLXBJ9tywZCf",
+      "lei": "655600I0RTPZ3DFASH49",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-HkGpeehSFsNLXBJ9tywZCf",
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)"
+    },
+    {
+      "key": "L:549300TI4Z3BV40ZZS46",
+      "name": "Rayblue International Corp.",
+      "country": "VG",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "549300TI4Z3BV40ZZS46",
+      "source": "gleif"
+    },
+    {
+      "key": "L:5493009YJ817TFZ7IY48",
+      "name": "Alstone Investment AG",
+      "country": "CH",
+      "kind": "real_entity",
+      "entity_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "lei": "5493009YJ817TFZ7IY48",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:5493000HYVYGGJD6WD50",
+      "name": "Watertight International Inc.",
+      "country": "VG",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "5493000HYVYGGJD6WD50",
+      "source": "gleif"
+    },
+    {
+      "key": "L:549300A111N4Z3HU2S06",
+      "name": "SGI Investment Group Ltd.",
+      "country": "VG",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "549300A111N4Z3HU2S06",
+      "source": "gleif"
+    },
+    {
+      "key": "L:549300X9D1GFNNYNLM74",
+      "name": "Burlington Properties S.A.",
+      "country": "LU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "549300X9D1GFNNYNLM74",
+      "source": "gleif"
+    },
+    {
+      "key": "L:549300JPG0LATOO6U958",
+      "name": "IFI Estates S.A.",
+      "country": "LU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "549300JPG0LATOO6U958",
+      "source": "gleif"
+    },
+    {
+      "key": "L:549300UOZWP600U87905",
+      "name": "VH Estates S.A.",
+      "country": "LU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "549300UOZWP600U87905",
+      "source": "gleif"
+    },
+    {
+      "key": "L:254900O7XOB7N7LENG84",
+      "name": "س بي ال انترناشيونال تريدينغ ش.م.ح",
+      "country": "AE",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "254900O7XOB7N7LENG84",
+      "source": "gleif"
+    },
+    {
+      "key": "L:3358008I6IEH1VUCXE19",
+      "name": "SBL Energy Limited",
+      "country": "IN",
+      "kind": "real_entity",
+      "entity_id": "NK-Qk3Ft6UZxsv3fmbrdrQDgA",
+      "lei": "3358008I6IEH1VUCXE19",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-Qk3Ft6UZxsv3fmbrdrQDgA",
+      "programme": "SUDAN-EO14098 - Executive Order 14098 (Sudan)"
+    },
+    {
+      "key": "L:2549003685D6HQ8O0J73",
+      "name": "S B L OVERSEAS TRADING L.L.C",
+      "country": "AE",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2549003685D6HQ8O0J73",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400D41E6VN0NCHW49",
+      "name": "Калужский газовый и энергетический акционерный банк \"Газэнергобанк\" (акционерное общество)",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400D41E6VN0NCHW49",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400WD8ULWSUGGXP64",
+      "name": "PUBLIC JOINT STOCK COMPANY BANK SINARA",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-QtJ5Z4HCEzSmQMQ2knDUtk",
+      "lei": "253400WD8ULWSUGGXP64",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-QtJ5Z4HCEzSmQMQ2knDUtk",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:724500IVNQ6LF8OFIO42",
+      "name": "LUKOIL Securities B.V.",
+      "country": "NL",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "724500IVNQ6LF8OFIO42",
+      "source": "gleif"
+    },
+    {
+      "key": "L:549300LCJ1UJXHYBWI24",
+      "name": "LUKOIL OAO",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "lei": "549300LCJ1UJXHYBWI24",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:7872006AZAFVTVIQ3G32",
+      "name": "PETROTEL-LUKOIL SA",
+      "country": "RO",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "7872006AZAFVTVIQ3G32",
+      "source": "gleif"
+    },
+    {
+      "key": "L:213800FXBZXOXNXKWP95",
+      "name": "LUKOIL SECURITIES LIMITED",
+      "country": "CY",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "213800FXBZXOXNXKWP95",
+      "source": "gleif"
+    },
+    {
+      "key": "L:2534008CRS9Q4TCJ0Q32",
+      "name": "Общество с ограниченной ответственностью \"ЛУКОЙЛ-Резервнефтепродукт-Трейдинг\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534008CRS9Q4TCJ0Q32",
+      "source": "gleif"
+    },
+    {
+      "key": "L:5299007PQV6X4DPL9Y20",
+      "name": "LUKOIL INTERNATIONAL GmbH",
+      "country": "AT",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "5299007PQV6X4DPL9Y20",
+      "source": "gleif"
+    },
+    {
+      "key": "L:724500W9R73O6ROR3K41",
+      "name": "LUKOIL Netherlands B.V.",
+      "country": "NL",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "724500W9R73O6ROR3K41",
+      "source": "gleif"
+    },
+    {
+      "key": "L:5493007XYP6TMCO8L243",
+      "name": "إل إم إي تريدينغ م.د.م.س",
+      "country": "AE",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "5493007XYP6TMCO8L243",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400T0B3YA0V01TL29",
+      "name": "Общество с ограниченной ответственностью Инвестиционная компания \"ММК-Финанс\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400T0B3YA0V01TL29",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400XSJ4C01YMCXG44",
+      "name": "Publichnoe Aktsionernoe Obschestvo Magnitogorskiy Metallurgicheskiy Kombinat",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-UwDN5nyVs4G3qsZVnCBscV",
+      "lei": "253400XSJ4C01YMCXG44",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-UwDN5nyVs4G3qsZVnCBscV",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:549300T8W114GXW7VJ40",
+      "name": "SERAFINA ENTERPRISES INCORPORATED",
+      "country": "LR",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "549300T8W114GXW7VJ40",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400DYLWR5A6YAWJ69",
+      "name": "JOINT STOCK COMPANY SOVCOMFLOT",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-VDEKGF5ZgHAkye4kGuUXs3",
+      "lei": "253400DYLWR5A6YAWJ69",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-VDEKGF5ZgHAkye4kGuUXs3",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "key": "L:253400M18U5TB02TW421",
+      "name": "Небанковская кредитная организация акционерное общество \"Национальный расчетный депозитарий\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400M18U5TB02TW421",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400M5M1222KPNWE87",
+      "name": "MOSCOW EXCHANGE",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-c8kQT5N2o5NHXaYAR857mT",
+      "lei": "253400M5M1222KPNWE87",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-c8kQT5N2o5NHXaYAR857mT",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:2534007UK6G30KDX1A47",
+      "name": "Небанковская кредитная организация-центральный контрагент \"Национальный Клиринговый Центр\" (Акционерное общество)",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534007UK6G30KDX1A47",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400BH3NDYBUVHJ650",
+      "name": "Акционерное общество \"Акционерно-коммерческий банк реконструкции и развития \"Экономбанк\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400BH3NDYBUVHJ650",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400D6K5L2K3M4R485",
+      "name": "PUBLIC JOINT STOCK COMPANY METKOMBANK",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-eM63QnMNeHYd4fLGZTDuwW",
+      "lei": "253400D6K5L2K3M4R485",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-eM63QnMNeHYd4fLGZTDuwW",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:253400HT8W559RHRJD67",
+      "name": "Общество с ограниченной ответственностью \"РУСФИНАНС\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400HT8W559RHRJD67",
+      "source": "gleif"
+    },
+    {
+      "key": "L:2534000KL0PLD6KG7T76",
+      "name": "T-BANK",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-eyGem2AhvVFkniDghv3Vm6",
+      "lei": "2534000KL0PLD6KG7T76",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-eyGem2AhvVFkniDghv3Vm6",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:253400Q0L716KBG35857",
+      "name": "Общество с ограниченной ответственностью \"Т-Капитал\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400Q0L716KBG35857",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400WTRHJ2U1RCRA02",
+      "name": "Акционерное общество \"Газпром-Медиа Холдинг\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400WTRHJ2U1RCRA02",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400WSS48YWMBUA688",
+      "name": "Gazprombank Joint Stock Company",
+      "country": "CN",
+      "kind": "real_entity",
+      "entity_id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "lei": "253400WSS48YWMBUA688",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "key": "L:52990002BY85ORK97W78",
+      "name": "GPB (Schweiz) AG",
+      "country": "CH",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "52990002BY85ORK97W78",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400MD780G2CR8BM30",
+      "name": "Акционерное общество \"ААА Управление Капиталом\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400MD780G2CR8BM30",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400RQYN91FHYPRS96",
+      "name": "\"Кредит Урал Банк\" (Акционерное общество)",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400RQYN91FHYPRS96",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400KG97JQ0E3WRA08",
+      "name": "Акционерное общество \"Восход\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400KG97JQ0E3WRA08",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400T8G8SXRUHTL526",
+      "name": "SPB EXCHANGE",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-fyWg4f4koDvZkP5mZ2zdwu",
+      "lei": "253400T8G8SXRUHTL526",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-fyWg4f4koDvZkP5mZ2zdwu",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:253400DDXRL535CQ5T91",
+      "name": "Общество с ограниченной ответственностью \"ББР БРОКЕР\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400DDXRL535CQ5T91",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400MF70R9W1E92E58",
+      "name": "BBR Bank Joint Stock Company",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-ib3vAUEbxdfcqXqFdx6HYB",
+      "lei": "253400MF70R9W1E92E58",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-ib3vAUEbxdfcqXqFdx6HYB",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:2534004JKXBEM0T4LW33",
+      "name": "Акционерное общество \"Система Финанс\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534004JKXBEM0T4LW33",
+      "source": "gleif"
+    },
+    {
+      "key": "L:213800JSZ2UUK4QQK694",
+      "name": "SISTEMA PUBLIC JOINT STOCK FINANCIAL CORPORATION",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-iug77aFLjrD5aszCuhtyhb",
+      "lei": "213800JSZ2UUK4QQK694",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-iug77aFLjrD5aszCuhtyhb",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:253400M8F9ZXY9CN3U71",
+      "name": "Общество с ограниченной ответственностью \"Система Телеком Активы\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400M8F9ZXY9CN3U71",
+      "source": "gleif"
+    },
+    {
+      "key": "L:2534008FX8EXH1FMJA74",
+      "name": "Публичное акционерное общество \"Мобильные ТелеСистемы\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534008FX8EXH1FMJA74",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400TBQW7TGPBCP709",
+      "name": "Общество с ограниченной ответственностью микрокредитная компания \"УРАЛСИБ Финанс\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400TBQW7TGPBCP709",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400HYBTF10T9XBR98",
+      "name": "Public Joint Stock Company Bank UralSib",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-jY3WG3j2oxHiTUPCquxGa8",
+      "lei": "253400HYBTF10T9XBR98",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-jY3WG3j2oxHiTUPCquxGa8",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:254900F23AOTVJF93825",
+      "name": "Banco VTB Africa S.A.",
+      "country": "AO",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "254900F23AOTVJF93825",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400V1H6ART1UQ0N98",
+      "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+      "country": "CN",
+      "kind": "real_entity",
+      "entity_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "lei": "253400V1H6ART1UQ0N98",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:253400NUHHU2RJ8KWS36",
+      "name": "Общество с ограниченной ответственностью \"Бизнес-Финанс\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400NUHHU2RJ8KWS36",
+      "source": "gleif"
+    },
+    {
+      "key": "L:25340077S9WKUJJ9YT95",
+      "name": "\"VTB Bank (Armenia)\" Closed Joint-Stock Company",
+      "country": "AM",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "25340077S9WKUJJ9YT95",
+      "source": "gleif"
+    },
+    {
+      "key": "L:2534001V6UL0XTK2JV78",
+      "name": "Акционерное общество ВТБ Регистратор",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534001V6UL0XTK2JV78",
+      "source": "gleif"
+    },
+    {
+      "key": "L:254900JHWE3G4G31ZK94",
+      "name": "Дочерняя организация Акционерное общество Банк ВТБ (Казахстан)",
+      "country": "KZ",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "254900JHWE3G4G31ZK94",
+      "source": "gleif"
+    },
+    {
+      "key": "L:2534006SR63SEUSS8172",
+      "name": "Акционерное общество \"БМ-Банк\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "2534006SR63SEUSS8172",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400QNUPKPRDBSAQ31",
+      "name": "Акционерное общество ВТБ Специализированный депозитарий",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400QNUPKPRDBSAQ31",
+      "source": "gleif"
+    },
+    {
+      "key": "L:74OG4PIVJ3TT4O5NSN12",
+      "name": "VTB CAPITAL PLC",
+      "country": "GB",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "74OG4PIVJ3TT4O5NSN12",
+      "source": "gleif"
+    },
+    {
+      "key": "L:25340083BKK3QVY4X088",
+      "name": "Публичное акционерное общество \"Балтийский Инвестиционный Банк\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "25340083BKK3QVY4X088",
+      "source": "gleif"
+    },
+    {
+      "key": "L:253400YGMAHH3EQH3G74",
+      "name": "COMMERCIAL BANK ABSOLUT BANK PAO",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-n5DAEoXcNua7soB3rjwowE",
+      "lei": "253400YGMAHH3EQH3G74",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-n5DAEoXcNua7soB3rjwowE",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "key": "L:253400QBWHEHQXUR4075",
+      "name": "Акционерное общество \"Русский Стандарт Страхование\"",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": null,
+      "lei": "253400QBWHEHQXUR4075",
+      "source": "gleif"
+    },
+    {
+      "key": "L:549300F4ZEG3A9JDGZ08",
+      "name": "JOINT STOCK COMPANY RUSSIAN STANDARD BANK",
+      "country": "RU",
+      "kind": "real_entity",
+      "entity_id": "NK-oHBqM6kAcfq99CUmKSxfaa",
+      "lei": "549300F4ZEG3A9JDGZ08",
+      "source": "gleif",
+      "sanctioned": true,
+      "ofac_id": "NK-oHBqM6kAcfq99CUmKSxfaa",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
     }
   ],
   "edges": [
@@ -2012,6 +2690,300 @@
       "child": "V0060",
       "parent": "H:plain39",
       "relation": "DIRECT_PARENT"
+    },
+    {
+      "child": "L:253400YDU6F3939GZB77",
+      "parent": "L:253400L5RQK7PU6R7J04",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534006PW83DFZHA8W75",
+      "parent": "L:253400D38E021531V531",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:789000J1YGZ3PLCXMQ38",
+      "parent": "L:789000LV7F75LALJ3F52",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:254900CSJGVBZ6CA9D24",
+      "parent": "L:655600I0RTPZ3DFASH49",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:549300TI4Z3BV40ZZS46",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:5493000HYVYGGJD6WD50",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:549300A111N4Z3HU2S06",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:549300X9D1GFNNYNLM74",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:549300JPG0LATOO6U958",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:549300UOZWP600U87905",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:254900O7XOB7N7LENG84",
+      "parent": "L:3358008I6IEH1VUCXE19",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2549003685D6HQ8O0J73",
+      "parent": "L:3358008I6IEH1VUCXE19",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400D41E6VN0NCHW49",
+      "parent": "L:253400WD8ULWSUGGXP64",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:724500IVNQ6LF8OFIO42",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:7872006AZAFVTVIQ3G32",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:213800FXBZXOXNXKWP95",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534008CRS9Q4TCJ0Q32",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:5299007PQV6X4DPL9Y20",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:724500W9R73O6ROR3K41",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:5493007XYP6TMCO8L243",
+      "parent": "L:549300LCJ1UJXHYBWI24",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400T0B3YA0V01TL29",
+      "parent": "L:253400XSJ4C01YMCXG44",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:549300T8W114GXW7VJ40",
+      "parent": "L:253400DYLWR5A6YAWJ69",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400M18U5TB02TW421",
+      "parent": "L:253400M5M1222KPNWE87",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534007UK6G30KDX1A47",
+      "parent": "L:253400M5M1222KPNWE87",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400BH3NDYBUVHJ650",
+      "parent": "L:253400D6K5L2K3M4R485",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400HT8W559RHRJD67",
+      "parent": "L:2534000KL0PLD6KG7T76",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400Q0L716KBG35857",
+      "parent": "L:2534000KL0PLD6KG7T76",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400WTRHJ2U1RCRA02",
+      "parent": "L:253400WSS48YWMBUA688",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:52990002BY85ORK97W78",
+      "parent": "L:253400WSS48YWMBUA688",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400MD780G2CR8BM30",
+      "parent": "L:253400WSS48YWMBUA688",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400RQYN91FHYPRS96",
+      "parent": "L:253400WSS48YWMBUA688",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400KG97JQ0E3WRA08",
+      "parent": "L:253400T8G8SXRUHTL526",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400DDXRL535CQ5T91",
+      "parent": "L:253400MF70R9W1E92E58",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534004JKXBEM0T4LW33",
+      "parent": "L:213800JSZ2UUK4QQK694",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400M8F9ZXY9CN3U71",
+      "parent": "L:213800JSZ2UUK4QQK694",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534008FX8EXH1FMJA74",
+      "parent": "L:213800JSZ2UUK4QQK694",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400TBQW7TGPBCP709",
+      "parent": "L:253400HYBTF10T9XBR98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:254900F23AOTVJF93825",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400NUHHU2RJ8KWS36",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:25340077S9WKUJJ9YT95",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534001V6UL0XTK2JV78",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:254900JHWE3G4G31ZK94",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:2534006SR63SEUSS8172",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400QNUPKPRDBSAQ31",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:74OG4PIVJ3TT4O5NSN12",
+      "parent": "L:253400V1H6ART1UQ0N98",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:25340083BKK3QVY4X088",
+      "parent": "L:253400YGMAHH3EQH3G74",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "L:253400QBWHEHQXUR4075",
+      "parent": "L:549300F4ZEG3A9JDGZ08",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "V0009",
+      "parent": "L:655600I0RTPZ3DFASH49",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
+    },
+    {
+      "child": "V0010",
+      "parent": "L:5493009YJ817TFZ7IY48",
+      "relation": "ULTIMATE_PARENT",
+      "source": "gleif"
     }
   ]
 }

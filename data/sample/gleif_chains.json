@@ -1,0 +1,812 @@
+{
+  "provenance": {
+    "source": "GLEIF Level 2 direct-children, joined to OFAC SDN entries carrying an LEI",
+    "gleif_api": "https://api.gleif.org/api/v1/lei-records/{lei}/direct-children",
+    "relationship_type": "accounting consolidating parent",
+    "not_included": "ownership percentages -- GLEIF does not publish them and none is inferred",
+    "both_halves_are_public_record": true,
+    "retrieved": "2026-10-24",
+    "parents_probed": 187
+  },
+  "chains": [
+    {
+      "child": {
+        "lei": "253400YDU6F3939GZB77",
+        "name": "Общество с ограниченной ответственностью \"Страховая Компания СОГАЗ-ЖИЗНЬ\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400L5RQK7PU6R7J04",
+        "name": "GAS INDUSTRY INSURANCE COMPANY SOGAZ",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-6VbLUDHV38j7XMRGYbNTfn",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534006PW83DFZHA8W75",
+        "name": "Общество с ограниченной ответственностью \"УК \"А-Капитал\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400D38E021531V531",
+        "name": "PUBLIC JOINT STOCK COMPANY BANK ALEXANDROVSKY",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-8DqqvwSrEdWwZFJkFRmEmV",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "789000J1YGZ3PLCXMQ38",
+        "name": "GOLDEN GLOBAL PORTFÖY YÖNETİMİ ANONİM ŞİRKETİ",
+        "country": "TR",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "789000LV7F75LALJ3F52",
+        "name": "GOLDEN GLOBAL YATIRIM BANKASI ANONİM ŞİRKETİ",
+        "country": "TR",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-B3GSATSiHvyRLfEcVbukkR",
+      "programme": "IRAN-EO13902 - Executive Order 13902 (Iran)"
+    },
+    {
+      "child": {
+        "lei": "254900CSJGVBZ6CA9D24",
+        "name": "Xing Ao Energy Pte. Ltd.",
+        "country": "SG",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "655600I0RTPZ3DFASH49",
+        "name": "Hebei Xinhai Chemical Group Co., Ltd.",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-HkGpeehSFsNLXBJ9tywZCf",
+      "programme": "IRAN-EO13846 - Executive Order 13846 (Iran)"
+    },
+    {
+      "child": {
+        "lei": "549300TI4Z3BV40ZZS46",
+        "name": "Rayblue International Corp.",
+        "country": "VG",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "5493009YJ817TFZ7IY48",
+        "name": "Alstone Investment AG",
+        "country": "CH",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "5493000HYVYGGJD6WD50",
+        "name": "Watertight International Inc.",
+        "country": "VG",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "5493009YJ817TFZ7IY48",
+        "name": "Alstone Investment AG",
+        "country": "CH",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "549300A111N4Z3HU2S06",
+        "name": "SGI Investment Group Ltd.",
+        "country": "VG",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "5493009YJ817TFZ7IY48",
+        "name": "Alstone Investment AG",
+        "country": "CH",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "549300X9D1GFNNYNLM74",
+        "name": "Burlington Properties S.A.",
+        "country": "LU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "5493009YJ817TFZ7IY48",
+        "name": "Alstone Investment AG",
+        "country": "CH",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "549300JPG0LATOO6U958",
+        "name": "IFI Estates S.A.",
+        "country": "LU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "5493009YJ817TFZ7IY48",
+        "name": "Alstone Investment AG",
+        "country": "CH",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "549300UOZWP600U87905",
+        "name": "VH Estates S.A.",
+        "country": "LU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "5493009YJ817TFZ7IY48",
+        "name": "Alstone Investment AG",
+        "country": "CH",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-LKco5zKYD9qm9RC2YMDwGm",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "254900O7XOB7N7LENG84",
+        "name": "س بي ال انترناشيونال تريدينغ ش.م.ح",
+        "country": "AE",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "3358008I6IEH1VUCXE19",
+        "name": "SBL Energy Limited",
+        "country": "IN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-Qk3Ft6UZxsv3fmbrdrQDgA",
+      "programme": "SUDAN-EO14098 - Executive Order 14098 (Sudan)"
+    },
+    {
+      "child": {
+        "lei": "2549003685D6HQ8O0J73",
+        "name": "S B L OVERSEAS TRADING L.L.C",
+        "country": "AE",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "3358008I6IEH1VUCXE19",
+        "name": "SBL Energy Limited",
+        "country": "IN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-Qk3Ft6UZxsv3fmbrdrQDgA",
+      "programme": "SUDAN-EO14098 - Executive Order 14098 (Sudan)"
+    },
+    {
+      "child": {
+        "lei": "253400D41E6VN0NCHW49",
+        "name": "Калужский газовый и энергетический акционерный банк \"Газэнергобанк\" (акционерное общество)",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400WD8ULWSUGGXP64",
+        "name": "PUBLIC JOINT STOCK COMPANY BANK SINARA",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-QtJ5Z4HCEzSmQMQ2knDUtk",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "724500IVNQ6LF8OFIO42",
+        "name": "LUKOIL Securities B.V.",
+        "country": "NL",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "7872006AZAFVTVIQ3G32",
+        "name": "PETROTEL-LUKOIL SA",
+        "country": "RO",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "213800FXBZXOXNXKWP95",
+        "name": "LUKOIL SECURITIES LIMITED",
+        "country": "CY",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534008CRS9Q4TCJ0Q32",
+        "name": "Общество с ограниченной ответственностью \"ЛУКОЙЛ-Резервнефтепродукт-Трейдинг\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "5299007PQV6X4DPL9Y20",
+        "name": "LUKOIL INTERNATIONAL GmbH",
+        "country": "AT",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "724500W9R73O6ROR3K41",
+        "name": "LUKOIL Netherlands B.V.",
+        "country": "NL",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "5493007XYP6TMCO8L243",
+        "name": "إل إم إي تريدينغ م.د.م.س",
+        "country": "AE",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300LCJ1UJXHYBWI24",
+        "name": "LUKOIL OAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-T3oRNWY3XhL72vfsVMcXzX",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400T0B3YA0V01TL29",
+        "name": "Общество с ограниченной ответственностью Инвестиционная компания \"ММК-Финанс\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400XSJ4C01YMCXG44",
+        "name": "Publichnoe Aktsionernoe Obschestvo Magnitogorskiy Metallurgicheskiy Kombinat",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-UwDN5nyVs4G3qsZVnCBscV",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "549300T8W114GXW7VJ40",
+        "name": "SERAFINA ENTERPRISES INCORPORATED",
+        "country": "LR",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400DYLWR5A6YAWJ69",
+        "name": "JOINT STOCK COMPANY SOVCOMFLOT",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-VDEKGF5ZgHAkye4kGuUXs3",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "child": {
+        "lei": "253400M18U5TB02TW421",
+        "name": "Небанковская кредитная организация акционерное общество \"Национальный расчетный депозитарий\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400M5M1222KPNWE87",
+        "name": "MOSCOW EXCHANGE",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-c8kQT5N2o5NHXaYAR857mT",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534007UK6G30KDX1A47",
+        "name": "Небанковская кредитная организация-центральный контрагент \"Национальный Клиринговый Центр\" (Акционерное общество)",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400M5M1222KPNWE87",
+        "name": "MOSCOW EXCHANGE",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-c8kQT5N2o5NHXaYAR857mT",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400BH3NDYBUVHJ650",
+        "name": "Акционерное общество \"Акционерно-коммерческий банк реконструкции и развития \"Экономбанк\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400D6K5L2K3M4R485",
+        "name": "PUBLIC JOINT STOCK COMPANY METKOMBANK",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-eM63QnMNeHYd4fLGZTDuwW",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400HT8W559RHRJD67",
+        "name": "Общество с ограниченной ответственностью \"РУСФИНАНС\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "2534000KL0PLD6KG7T76",
+        "name": "T-BANK",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-eyGem2AhvVFkniDghv3Vm6",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400Q0L716KBG35857",
+        "name": "Общество с ограниченной ответственностью \"Т-Капитал\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "2534000KL0PLD6KG7T76",
+        "name": "T-BANK",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-eyGem2AhvVFkniDghv3Vm6",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400WTRHJ2U1RCRA02",
+        "name": "Акционерное общество \"Газпром-Медиа Холдинг\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400WSS48YWMBUA688",
+        "name": "Gazprombank Joint Stock Company",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "child": {
+        "lei": "52990002BY85ORK97W78",
+        "name": "GPB (Schweiz) AG",
+        "country": "CH",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400WSS48YWMBUA688",
+        "name": "Gazprombank Joint Stock Company",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "child": {
+        "lei": "253400MD780G2CR8BM30",
+        "name": "Акционерное общество \"ААА Управление Капиталом\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400WSS48YWMBUA688",
+        "name": "Gazprombank Joint Stock Company",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "child": {
+        "lei": "253400RQYN91FHYPRS96",
+        "name": "\"Кредит Урал Банк\" (Акционерное общество)",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400WSS48YWMBUA688",
+        "name": "Gazprombank Joint Stock Company",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-f7u9JR4f7piS8PngjTkUSa",
+      "programme": "UKRAINE-EO13662 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia) - 2022-03-26"
+    },
+    {
+      "child": {
+        "lei": "253400KG97JQ0E3WRA08",
+        "name": "Акционерное общество \"Восход\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400T8G8SXRUHTL526",
+        "name": "SPB EXCHANGE",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-fyWg4f4koDvZkP5mZ2zdwu",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400DDXRL535CQ5T91",
+        "name": "Общество с ограниченной ответственностью \"ББР БРОКЕР\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400MF70R9W1E92E58",
+        "name": "BBR Bank Joint Stock Company",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-ib3vAUEbxdfcqXqFdx6HYB",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534004JKXBEM0T4LW33",
+        "name": "Акционерное общество \"Система Финанс\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "213800JSZ2UUK4QQK694",
+        "name": "SISTEMA PUBLIC JOINT STOCK FINANCIAL CORPORATION",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-iug77aFLjrD5aszCuhtyhb",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400M8F9ZXY9CN3U71",
+        "name": "Общество с ограниченной ответственностью \"Система Телеком Активы\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "213800JSZ2UUK4QQK694",
+        "name": "SISTEMA PUBLIC JOINT STOCK FINANCIAL CORPORATION",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-iug77aFLjrD5aszCuhtyhb",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534008FX8EXH1FMJA74",
+        "name": "Публичное акционерное общество \"Мобильные ТелеСистемы\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "213800JSZ2UUK4QQK694",
+        "name": "SISTEMA PUBLIC JOINT STOCK FINANCIAL CORPORATION",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-iug77aFLjrD5aszCuhtyhb",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400TBQW7TGPBCP709",
+        "name": "Общество с ограниченной ответственностью микрокредитная компания \"УРАЛСИБ Финанс\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400HYBTF10T9XBR98",
+        "name": "Public Joint Stock Company Bank UralSib",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-jY3WG3j2oxHiTUPCquxGa8",
+      "programme": "RUSSIA-EO14024 - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "254900F23AOTVJF93825",
+        "name": "Banco VTB Africa S.A.",
+        "country": "AO",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400NUHHU2RJ8KWS36",
+        "name": "Общество с ограниченной ответственностью \"Бизнес-Финанс\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "25340077S9WKUJJ9YT95",
+        "name": "\"VTB Bank (Armenia)\" Closed Joint-Stock Company",
+        "country": "AM",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534001V6UL0XTK2JV78",
+        "name": "Акционерное общество ВТБ Регистратор",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "254900JHWE3G4G31ZK94",
+        "name": "Дочерняя организация Акционерное общество Банк ВТБ (Казахстан)",
+        "country": "KZ",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "2534006SR63SEUSS8172",
+        "name": "Акционерное общество \"БМ-Банк\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400QNUPKPRDBSAQ31",
+        "name": "Акционерное общество ВТБ Специализированный депозитарий",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "74OG4PIVJ3TT4O5NSN12",
+        "name": "VTB CAPITAL PLC",
+        "country": "GB",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400V1H6ART1UQ0N98",
+        "name": "VTB BANK PUBLIC JOINT STOCK COMPANY",
+        "country": "CN",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-mvzx7uNDj9jZf8EAxaHH2h",
+      "programme": "UKRAINE-EO13662 - Executive Order 13902 (Iran) - Executive Order 13662 (Ukraine) - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "25340083BKK3QVY4X088",
+        "name": "Публичное акционерное общество \"Балтийский Инвестиционный Банк\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "253400YGMAHH3EQH3G74",
+        "name": "COMMERCIAL BANK ABSOLUT BANK PAO",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-n5DAEoXcNua7soB3rjwowE",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    },
+    {
+      "child": {
+        "lei": "253400QBWHEHQXUR4075",
+        "name": "Акционерное общество \"Русский Стандарт Страхование\"",
+        "country": "RU",
+        "status": "ACTIVE"
+      },
+      "parent": {
+        "lei": "549300F4ZEG3A9JDGZ08",
+        "name": "JOINT STOCK COMPANY RUSSIAN STANDARD BANK",
+        "country": "RU",
+        "status": "SANCTIONED"
+      },
+      "relation": "ULTIMATE_PARENT",
+      "ofac_id": "NK-oHBqM6kAcfq99CUmKSxfaa",
+      "programme": "RUSSIA-EO14024 - Executive Order 14024 (Russia)"
+    }
+  ]
+}

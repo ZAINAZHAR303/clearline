@@ -58,6 +58,41 @@ def find(anchors: dict[str, dict], needle: str) -> dict:
     raise SystemExit(f"anchor matching {needle!r} not in the sample; re-run fetch_sanctions.py")
 
 
+def real_cases() -> list[dict]:
+    """Demo vendors that are REAL companies with real LEIs.
+
+    Their exposure is not invented: the parent relationship is self-reported
+    to GLEIF by the entity, and the parent's designation is published by OFAC.
+    Clearline joins two public records and says nothing beyond what they
+    already say. Nothing here asserts an ownership percentage.
+    """
+    path = SAMPLE / "gleif_chains.json"
+    if not path.exists():
+        return []
+    chains = json.loads(path.read_text(encoding="utf-8"))["chains"]
+
+    # Pick readable, ASCII-named children in jurisdictions a Western buyer
+    # would onboard without a second thought -- which is the whole point.
+    wanted = ["Xing Ao Energy", "Rayblue International"]
+    out = []
+    for needle in wanted:
+        chain = next((c for c in chains if needle.lower() in (c["child"]["name"] or "").lower()), None)
+        if not chain:
+            continue
+        child, parent = chain["child"], chain["parent"]
+        out.append({
+            "legal_name": child["name"], "trading_name": child["name"].split()[0],
+            "country": child.get("country") or "SG", "bank_country": None,
+            "lei": child["lei"],
+            "expect": "BLOCK",
+            "why": (f"REAL company. GLEIF reports its ultimate parent as "
+                    f"{parent['name']!r}, which is on the OFAC SDN list. Clean on its "
+                    f"own name; only the chain walk finds it."),
+            "anchor": None,
+        })
+    return out
+
+
 def build_cases(anchors: dict[str, dict]) -> list[dict]:
     """The demo cases, each derived from a real listed entity.
 
@@ -140,7 +175,7 @@ def main() -> None:
     vendors: list[dict] = []
     cases: dict[str, dict] = {}
 
-    def add(legal, trading, country, tax_id, bank_country=None):
+    def add(legal, trading, country, tax_id, bank_country=None, lei=None):
         vid = f"V{len(vendors) + 1:04d}"
         vendors.append({
             "vendor_id": vid,
@@ -154,13 +189,14 @@ def main() -> None:
             "onboarded_date": f"20{rng.randint(18, 25)}-{rng.randint(1, 12):02d}-{rng.randint(1, 28):02d}",
             "annual_spend_usd": rng.choice([12_000, 48_000, 115_000, 340_000, 890_000, 2_100_000]),
             "category": rng.choice(CATEGORIES),
+            **({"lei": lei} if lei else {}),
         })
         return vid
 
-    for case in build_cases(anchors):
+    for case in build_cases(anchors) + real_cases():
         tax = None if case.get("no_tax_id") else f"{case['country']}{rng.randint(10**8, 10**9 - 1)}"
         vid = add(case["legal_name"], case["trading_name"], case["country"],
-                  tax, case["bank_country"])
+                  tax, case["bank_country"], lei=case.get("lei"))
         cases[vid] = {"expect": case["expect"], "why": case["why"], "anchor": case["anchor"]}
 
     # Filler with realistic mess: suffix variation and ~15% missing tax ids,
