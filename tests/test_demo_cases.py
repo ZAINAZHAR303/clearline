@@ -158,3 +158,33 @@ def test_reviewer_override_changes_the_next_decision():
     actions = [e["action"] for e in ledger("V0001")]
     assert "create" in actions and "feedback" in actions, actions
     assert any(m["overridden"] for m in recall("V0001"))
+
+
+def test_rejected_name_candidates_still_get_the_chain_walked():
+    """Name-clean is not exposure-clean.
+
+    V0010 has weak watchlist candidates that the critic correctly rejects. The
+    walk originally fired only when NO candidate matched, so this vendor was
+    cleared without anyone checking who owns it -- while its control chain
+    reaches a listed entity two hops up. Portfolio screening found it; this
+    keeps it found.
+    """
+    decision, _ = screen("V0010")
+    assert decision.decision == "BLOCK", (
+        f"V0010's owner is sanctioned; rejecting its name candidates must not "
+        f"clear it (got {decision.decision})")
+    assert any("chain" in e.claim.lower() for e in decision.evidence), decision.evidence
+
+
+def test_triage_reviews_a_small_share_of_the_book():
+    """The portfolio argument: deliberation is spent where it is warranted."""
+    from clearline.batch import triage
+    vendors = MASTER["vendors"]
+    flagged = triage(vendors)
+    assert len(flagged) < len(vendors) * 0.2, (
+        f"triage flagged {len(flagged)}/{len(vendors)}; if most of the book needs "
+        f"the full agent system the triage is not earning its place")
+    # Every planted case that must not be cleared has to survive triage.
+    for vendor_id, case in CASES.items():
+        if case["expect"] in ("BLOCK", "ESCALATE"):
+            assert vendor_id in flagged, f"{vendor_id} ({case['why']}) was triaged away"

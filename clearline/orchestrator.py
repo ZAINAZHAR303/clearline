@@ -177,6 +177,19 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
             trace.branch("revision budget exhausted", "STOP_AND_ESCALATE", rounds=round_no)
         break
 
+    # 3b -- no confirmed name match means ownership is still unchecked.
+    #
+    # The walk used to fire only on REROUTE, i.e. when no candidate matched the
+    # name at all. A vendor whose weak candidates the critic REJECTED therefore
+    # went straight to adjudication and was cleared without anyone looking at
+    # who owns it -- and name-clean is not exposure-clean, which is the whole
+    # premise of this product. Portfolio screening found it: V0010 was triaged
+    # as "control chain reaches a listed entity" and then cleared.
+    if verdict and verdict.verdict != "ACCEPT" and not chain_walked:
+        trace.branch("no confirmed name match; ownership still unchecked",
+                     "WALK_CONTROL_CHAIN_BEFORE_CLEARING")
+        chain, chain_walked = ownership_walker(vendor, trace)
+
     # 4 -- adjudication, with the budget scaled by risk and critic pushback
     decision = adjudicator(vendor, proposal, verdict, chain, dq, trace,
                            routed.risk_tier, rejections, chain_walked=chain_walked)

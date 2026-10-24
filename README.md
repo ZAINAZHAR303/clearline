@@ -125,6 +125,27 @@ live in `data/sample/vendor_master.json` under `_demo_cases`; nothing in
 **V0002 and V0003 are the pair worth watching.** Same watchlist entity,
 near-identical names, opposite outcomes — and the system has to say why.
 
+### Screen the whole book
+
+```bash
+python -m clearline.batch --fake
+```
+
+```
+VENDOR BOOK   200 vendors · $128,438,000 annual spend
+TRIAGE        9 need review, 191 cleared without it (4.5% reviewed) in 3.9s
+DECISIONS     4 BLOCK   2 ESCALATE   3 CLEAR
+EXPOSURE      $386,000 of spend needs action, of $3,491,000 reviewed
+```
+
+Screening is two stages, and the split is the same thesis as the reasoning
+budget — spend effort in proportion to risk. **Triage** is deterministic and
+runs over every vendor: a watchlist candidate above the noise floor, a name too
+generic to resolve, banking in a country it is not registered in, or a control
+chain that reaches a listed entity. Only those vendors get the **full agent
+system**. The other 191 are cleared with a recorded reason, because "nothing
+matched" and "we never looked" have to stay distinguishable.
+
 ### The correction loop
 
 ```bash
