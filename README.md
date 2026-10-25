@@ -221,7 +221,7 @@ Details and what the first run caught: [`docs/measurements.md`](docs/measurement
 ## Tests
 
 ```bash
-pytest -q                  # 17 tests, offline, deterministic, ~15s
+pytest -q                  # 24 tests, offline, deterministic, ~75s
 bash scripts/conformance.sh
 ```
 
@@ -262,7 +262,7 @@ clearline/      agents, orchestrator, matching, memory, walker, Zetaris client, 
 engines/        Markovian and H-MEM, implemented from the Meterless specs
 sql/            Lightning SQL: databases, REST tables, the USL Counterparty model
 scripts/        data generation, SQL application, conformance, trace summaries
-tests/          17 offline assertions over the planted cases
+tests/          24 offline assertions: the planted cases, and the ledger's invariants
 docs/           measured before/after numbers
 data/sample/    committed samples, with provenance — see data/README.md
 ```

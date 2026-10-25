@@ -85,9 +85,17 @@ def override(vendor_id: str, entity_id: str, verdict: str = "wrong",
                  "--verdict", verdict, "--reviewer", reviewer])
 
 
-def ledger(vendor_id: str | None = None) -> list[dict[str, Any]]:
+def ledger(vendor_id: str | None = None, limit: int = 100) -> list[dict[str, Any]]:
+    """The trust ledger, most recent `limit` entries; `limit=0` for all of it.
+
+    Bounded by default because an append-only log only grows, and a reader that
+    asks for all of it is one `JSON.stringify` away from the string-length
+    ceiling that the duplication bug in cli.ts used to reach on its own.
+    """
     try:
-        args = ["ledger"] + (["--vendor", vendor_id] if vendor_id else [])
+        args = ["ledger", "--limit", str(limit)]
+        if vendor_id:
+            args += ["--vendor", vendor_id]
         return _run(args).get("entries", [])
     except (MemoryUnavailable, subprocess.TimeoutExpired):
         return []

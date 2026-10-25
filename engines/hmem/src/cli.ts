@@ -4,7 +4,7 @@
  *   tsx src/cli.ts remember --vendor V0001 --entity NK-... --decision BLOCK --confidence 0.95
  *   tsx src/cli.ts recall   --vendor V0001
  *   tsx src/cli.ts override --vendor V0001 --entity NK-... --verdict wrong --reviewer alice
- *   tsx src/cli.ts ledger   --vendor V0001
+ *   tsx src/cli.ts ledger   --vendor V0001 [--limit 100]
  *
  * The engine itself is in-memory, as the spec has it. Clearline needs those
  * memories to outlive a process, so state is rehydrated from and persisted to
@@ -37,6 +37,7 @@ interface Persisted {
   records: MemoryRecord[];
   ledger: unknown[];
   sequence: number;
+  ledgerSequence?: number;
 }
 
 function load(): { hmem: HMEM; persisted: Persisted } {
@@ -51,7 +52,32 @@ function load(): { hmem: HMEM; persisted: Persisted } {
         (hmem.store as any).put(record);
       }
       (hmem as any).sequence = persisted.sequence ?? persisted.records?.length ?? 0;
-      for (const entry of persisted.ledger ?? []) (hmem.ledger as any).entries?.push(entry);
+      // Rehydrate the ledger, dropping repeated ids.
+      //
+      // `save` used to write `[...previousLedger, ...hmem.ledger.all()]` while
+      // this loop had already pushed previousLedger into that same array, so
+      // every invocation persisted the whole history twice over: 1, 3, 7, 15,
+      // ... 255 entries after eight calls, every one of them a copy of
+      // `led-1`. Past a few dozen calls JSON.stringify exceeded V8's maximum
+      // string length and the memory file could no longer be read OR written.
+      //
+      // Dropping duplicates discards copies, never evidence, so a file written
+      // by the old behaviour heals the first time it is read.
+      const seenEntries = new Set<string>();
+      for (const entry of persisted.ledger ?? []) {
+        const id = String((entry as { id?: string }).id ?? "");
+        if (id && seenEntries.has(id)) continue;
+        seenEntries.add(id);
+        (hmem.ledger as any).entries?.push(entry);
+      }
+      // The ledger's id counter lives in the process. Without restoring it the
+      // next entry is `led-1` all over again, and ids stop identifying
+      // anything -- an audit entry no decision can cite.
+      const highestEntry = Math.max(
+        0,
+        ...[...seenEntries].map((id) => Number(id.replace(/^led-/, "")) || 0),
+      );
+      (hmem.ledger as any).sequence = persisted.ledgerSequence ?? highestEntry;
     } catch {
       // A corrupt file must not silently become an empty memory: say so.
       process.stderr.write(`warning: could not parse ${STATE}; starting empty\n`);
@@ -60,12 +86,15 @@ function load(): { hmem: HMEM; persisted: Persisted } {
   return { hmem, persisted };
 }
 
-function save(hmem: HMEM, previousLedger: unknown[]) {
+function save(hmem: HMEM) {
   fs.mkdirSync(path.dirname(STATE), { recursive: true });
   const payload: Persisted = {
     records: hmem.store.all(),
-    ledger: [...previousLedger, ...hmem.ledger.all()],
+    // load() rehydrated the earlier entries into this ledger, so this IS the
+    // whole history. Prepending the loaded copy again is what duplicated it.
+    ledger: hmem.ledger.all(),
     sequence: (hmem as any).sequence ?? hmem.store.all().length,
+    ledgerSequence: (hmem.ledger as any).sequence ?? 0,
   };
   const temp = `${STATE}.tmp`;
   fs.writeFileSync(temp, JSON.stringify(payload, null, 2), "utf-8");
@@ -80,7 +109,6 @@ const tagFor = (vendorId: string, entityId: string) => `match:${vendorId}:${enti
 function main() {
   const command = process.argv[2];
   const { hmem, persisted } = load();
-  const previousLedger = persisted.ledger ?? [];
 
   const vendorId = arg("--vendor");
   const entityId = arg("--entity");
@@ -105,7 +133,7 @@ function main() {
         tags: [tag, "screening", decision.toLowerCase()],
         entities: [vendorId, entityId],
       });
-      save(hmem, previousLedger);
+      save(hmem);
       out({ status: "remembered", record });
       return;
     }
@@ -141,7 +169,7 @@ function main() {
       const before = target.confidence;
       hmem.feedback(target.id, verdict, reviewer);
       const after = hmem.store.get(target.id)!;
-      save(hmem, previousLedger);
+      save(hmem);
       out({
         status: "override-recorded",
         record_id: target.id,
@@ -156,14 +184,23 @@ function main() {
     }
 
     case "ledger": {
-      const entries = [...previousLedger, ...hmem.ledger.all()] as Array<Record<string, unknown>>;
+      const entries = hmem.ledger.all() as Array<Record<string, unknown>>;
       const filtered = vendorId
         ? entries.filter((e) => {
             const record = hmem.store.get(String(e.memoryId));
             return record?.entities.includes(vendorId);
           })
         : entries;
-      out({ vendor_id: vendorId ?? null, entries: filtered });
+      // Bounded by default: an append-only log only ever grows, and a
+      // reviewer wants the recent end of it. `--limit 0` prints all of it.
+      const limit = Number(arg("--limit", "100"));
+      const shown = limit > 0 ? filtered.slice(-limit) : filtered;
+      out({
+        vendor_id: vendorId ?? null,
+        total: filtered.length,
+        showing: shown.length,
+        entries: shown,
+      });
       return;
     }
 
