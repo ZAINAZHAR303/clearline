@@ -84,6 +84,14 @@
   .why { color:var(--dim); font-size:13px; }
   pre { background:#12151c; border:1px solid var(--line); border-radius:6px; padding:10px;
     overflow-x:auto; font-size:12px; }
+  .legend {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 18px;
+    padding: 9px 20px; border-bottom: 1px solid var(--line);
+    background: var(--panel); font-size: 12.5px; color: var(--dim);
+  }
+  .legend b { color: var(--ink); font-weight: 600; }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .swatch { width: 3px; height: 13px; border-radius: 2px; display: inline-block; }
 </style>
 </head>
 <body>
@@ -95,6 +103,8 @@
   </div>
   <div class="who">reviewer <input id="who" value="" placeholder="your name"></div>
 </header>
+
+<div class="legend" id="legend"></div>
 
 <div id="queue"><div class="empty">loading…</div></div>
 <div id="traces">
@@ -128,44 +138,47 @@ async function loadQueue() {
       <code>python -m clearline.batch --fake</code></div>`;
     return;
   }
-  const c = q.counts || {};
   const needs = q.needs_attention || [];
+  const book = q.book || {}, tri = q.triage || {}, dec = q.decisions || {},
+        exp = q.exposure || {}, cost = q.cost || {};
+  const pct = tri.share_reviewed != null ? Math.round(tri.share_reviewed * 100) + "%" : "—";
   el.innerHTML = `
     <div class="counts">
-      <div class="c"><div class="k">Screened</div><div class="v">${q.total_screened}</div></div>
+      <div class="c"><div class="k">Vendor book</div><div class="v">${book.vendors ?? "—"}</div></div>
       <div class="c"><div class="k">Need you</div><div class="v" style="color:var(--block)">${needs.length}</div></div>
-      <div class="c"><div class="k">Blocked</div><div class="v">${c.BLOCK||0}</div></div>
-      <div class="c"><div class="k">Escalated</div><div class="v">${c.ESCALATE||0}</div></div>
-      <div class="c"><div class="k">Cleared</div><div class="v">${c.CLEAR||0}</div></div>
-      <div class="c"><div class="k">Sweep took</div><div class="v">${q.elapsed_seconds}s</div></div>
+      <div class="c"><div class="k">Reviewed</div><div class="v">${pct}</div></div>
+      <div class="c"><div class="k">Blocked</div><div class="v">${dec.BLOCK||0}</div></div>
+      <div class="c"><div class="k">Escalated</div><div class="v">${dec.ESCALATE||0}</div></div>
+      <div class="c"><div class="k">Spend needing action</div><div class="v">${money(exp.spend_needing_action_usd)}</div></div>
+      <div class="c"><div class="k">Sweep</div><div class="v">${cost.wall_clock_seconds ?? "—"}s</div></div>
     </div>
-    <div class="lede">Of <b>${q.total_screened}</b> vendors, <b>${needs.length}</b> need a human.
-      The other <b>${c.CLEAR||0}</b> cleared and are a number, not a list.</div>
+    <div class="lede">Of <b>${book.vendors ?? "?"}</b> vendors, <b>${needs.length}</b> need a human.
+      Triage cleared <b>${tri.cleared_without_review ?? 0}</b> without deliberation in
+      ${tri.seconds ?? 0}s — the rest is where reasoning was actually spent.</div>
     ${needs.map(caseCard).join("")}
-    <div class="restful">Swept ${esc(q.generated_at)} ·
-      ${c.CLEAR||0} cleared vendors are not shown by design — a queue you have to read in full is not a queue.</div>`;
+    <div class="restful">${esc(q.report_file || "")} · swept ${esc(q.generated_at || "")} ·
+      mode ${esc(q.mode || "?")} · ${cost.llm_calls ?? 0} LLM calls,
+      ${(cost.reasoning_tokens ?? 0).toLocaleString()} reasoning tokens.
+      Cleared vendors are a number, not a list — a queue you must read in full is not a queue.</div>`;
   wire();
 }
 
 function caseCard(r) {
-  const ev = (r.evidence || []).map(e =>
-    `<li>${esc(e.claim)} <span class="src">[${esc(e.source)} ${esc(e.row_ref)}]</span></li>`).join("");
-  const entity = (r.evidence || []).map(e => e.row_ref).find(Boolean) || "";
-  return `<div class="case" data-vendor="${esc(r.vendor_id)}" data-entity="${esc(entity)}">
+  const reasons = (r.triage_reasons || []).map(x => `<li>${esc(x)}</li>`).join("");
+  return `<div class="case" data-vendor="${esc(r.vendor_id)}" data-trace="${esc(r.trace || "")}">
     <div class="top">
       <span class="pill ${esc(r.decision)}">${esc(r.decision)}</span>
       <span class="name">${esc(r.legal_name)}</span>
       <span class="sub">${esc(r.country || "")} · ${money(r.annual_spend_usd)}/yr<br>${esc(r.vendor_id)}</span>
     </div>
-    <div class="head">${esc(r.headline)}</div>
-    ${r.question ? `<div class="q">Asks you: ${esc(r.question)}</div>` : ""}
-    ${ev ? `<details class="ev"><summary>Evidence (${(r.evidence||[]).length}) and caveats</summary>
-       <ul>${ev}</ul>
-       <ul>${(r.caveats||[]).map(c => `<li class="src">${esc(c)}</li>`).join("")}</ul></details>` : ""}
+    <div class="head">${esc(r.rationale || "")}</div>
+    ${r.human_question ? `<div class="q">Asks you: ${esc(r.human_question)}</div>` : ""}
+    ${reasons ? `<details class="ev"><summary>Why this reached you (${(r.triage_reasons||[]).length})</summary>
+       <ul>${reasons}</ul></details>` : ""}
     <div class="acts">
       <button class="primary act" data-action="approve">Approve</button>
       <button class="danger act" data-action="override">Wrong match</button>
-      <button class="trace" data-trace="${esc(r.trace)}">See how it decided</button>
+      <button class="trace" data-trace="${esc(r.trace || "")}">See how it decided</button>
       <span class="done" style="display:none"></span>
     </div></div>`;
 }
@@ -173,7 +186,7 @@ function caseCard(r) {
 function wire() {
   document.querySelectorAll(".act").forEach(b => b.onclick = async () => {
     const card = b.closest(".case");
-    const body = { vendor_id: card.dataset.vendor, entity_id: card.dataset.entity,
+    const body = { vendor_id: card.dataset.vendor, trace: card.dataset.trace,
                    action: b.dataset.action, reviewer: who() };
     card.querySelectorAll("button").forEach(x => x.disabled = true);
     const note = card.querySelector(".done");
@@ -283,6 +296,25 @@ function renderTrace(s, events) {
 }
 
 loadQueue();
+</script>
+<script>
+// The legend tracks the tab: a reviewer on the queue needs different words
+// from someone reading a trace, and a wrong caption is worse than none.
+const LEGEND = {
+  queue: `<span><b>Vendors needing a decision.</b> Triage cleared the rest without deliberation.
+          Approve, or mark a wrong match &mdash; a correction persists and changes the next run.</span>`,
+  traces: `<span><b>A completed screening run, step by step.</b> Left: every run. Right: its timeline.</span>
+    <span class="key"><i class="swatch" style="background:var(--accent)"></i>agent turn</span>
+    <span class="key"><i class="swatch" style="background:var(--branch)"></i><b>branch</b> &mdash; a decision point</span>
+    <span class="key"><i class="swatch" style="background:var(--engine)"></i>Meterless engine</span>`,
+};
+function paintLegend() {
+  const active = document.querySelector(".tab.on")?.dataset.view || "queue";
+  const el = document.getElementById("legend");
+  if (el) el.innerHTML = LEGEND[active] || "";
+}
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => setTimeout(paintLegend, 0)));
+paintLegend();
 </script>
 </body>
 </html>
