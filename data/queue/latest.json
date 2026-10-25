@@ -1,0 +1,1861 @@
+{
+  "generated_at": "2026-10-25T12:28:24Z",
+  "total_screened": 200,
+  "elapsed_seconds": 667.2,
+  "counts": {
+    "BLOCK": 13,
+    "CLEAR": 180,
+    "ESCALATE": 7
+  },
+  "needs_attention": [
+    {
+      "vendor_id": "V0014",
+      "legal_name": "'MASHURA WAAD LAADAT AL-AAMAR",
+      "country": "LB",
+      "annual_spend_usd": 890000,
+      "category": "packaging",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to WAAD PROJECT",
+      "rationale": "'MASHURA WAAD LAADAT AL-AAMAR is an exact alias of listed entity WAAD PROJECT, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to WAAD PROJECT",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2qwt6eV2sLUsce8viEvWUb"
+        },
+        {
+          "claim": "jurisdiction agrees (LB)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2qwt6eV2sLUsce8viEvWUb"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171801-087fce87.jsonl",
+      "seconds": 20.4
+    },
+    {
+      "vendor_id": "V0021",
+      "legal_name": "Oakhaven Components GmbH",
+      "country": "DE",
+      "annual_spend_usd": 890000,
+      "category": "professional services",
+      "decision": "BLOCK",
+      "confidence": 0.9,
+      "headline": "control chain hop 1: Pellervo Invest AB 10 (DIRECT_PARENT)",
+      "rationale": "Oakhaven Components GmbH is clean on its own name, but its control chain reaches Gent Elektrik Enerjisi Toptan Satis Anonim Sirketi, a listed entity, at depth 2 via ultimate parent.",
+      "evidence": [
+        {
+          "claim": "control chain hop 1: Pellervo Invest AB 10 (DIRECT_PARENT)",
+          "source": "control_graph",
+          "row_ref": "H:eval10"
+        },
+        {
+          "claim": "control chain hop 2: Gent Elektrik Enerjisi Toptan Satis Anonim Sirketi (ULTIMATE_PARENT)",
+          "source": "control_graph",
+          "row_ref": "E:NK-3odNMdm6xQ3XeJeFhaoRP2"
+        },
+        {
+          "claim": "Gent Elektrik Enerjisi Toptan Satis Anonim Sirketi is listed",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-3odNMdm6xQ3XeJeFhaoRP2"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide"
+      ],
+      "question": "Confirm the control relationship with the registry before freezing payments.",
+      "trace": "run-20261025T171821-98f2e016.jsonl",
+      "seconds": 27.8
+    },
+    {
+      "vendor_id": "V0010",
+      "legal_name": "Rayblue International Corp.",
+      "country": "VG",
+      "annual_spend_usd": 115000,
+      "category": "facilities",
+      "decision": "BLOCK",
+      "confidence": 0.9,
+      "headline": "control chain hop 1: Aurora Beteiligungs GmbH (DIRECT_PARENT)",
+      "rationale": "Rayblue International Corp. is clean on its own name, but its control chain reaches Alstone Investment AG, a listed entity, at depth 2 via direct parent.",
+      "evidence": [
+        {
+          "claim": "control chain hop 1: Aurora Beteiligungs GmbH (DIRECT_PARENT)",
+          "source": "control_graph",
+          "row_ref": "H:aurora"
+        },
+        {
+          "claim": "control chain hop 2: Alstone Investment AG (DIRECT_PARENT)",
+          "source": "control_graph",
+          "row_ref": "L:5493009YJ817TFZ7IY48"
+        },
+        {
+          "claim": "Alstone Investment AG is listed",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-LKco5zKYD9qm9RC2YMDwGm"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide"
+      ],
+      "question": "Confirm the control relationship with the registry before freezing payments.",
+      "trace": "run-20261025T171717-9530f637.jsonl",
+      "seconds": 44.9
+    },
+    {
+      "vendor_id": "V0015",
+      "legal_name": "SCF NYK Delta Shipping Pte Ltd",
+      "country": "SG",
+      "annual_spend_usd": 115000,
+      "category": "contract manufacturing",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to LNG Delta Shipping PTE LTD",
+      "rationale": "SCF NYK Delta Shipping Pte Ltd is an exact alias of listed entity LNG Delta Shipping PTE LTD, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to LNG Delta Shipping PTE LTD",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2rbjmwJ6FmGAA8GJG3eMfr"
+        },
+        {
+          "claim": "jurisdiction agrees (SG)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2rbjmwJ6FmGAA8GJG3eMfr"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171802-22208c6d.jsonl",
+      "seconds": 23.4
+    },
+    {
+      "vendor_id": "V0001",
+      "legal_name": "Metaalkunde BV",
+      "country": "BE",
+      "annual_spend_usd": 48000,
+      "category": "raw materials",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to TAWU Mechanical Engineering and Trading Company",
+      "rationale": "Metaalkunde BV is an exact alias of listed entity TAWU Mechanical Engineering and Trading Company, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to TAWU Mechanical Engineering and Trading Company",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-24kqBFxEsFzjqBYhaNHkC9"
+        },
+        {
+          "claim": "jurisdiction agrees (BE)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-24kqBFxEsFzjqBYhaNHkC9"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171717-6d78386b.jsonl",
+      "seconds": 39.5
+    },
+    {
+      "vendor_id": "V0004",
+      "legal_name": "Nordvik Components GmbH",
+      "country": "DE",
+      "annual_spend_usd": 48000,
+      "category": "professional services",
+      "decision": "BLOCK",
+      "confidence": 0.9,
+      "headline": "control chain hop 1: Baltic Holdings Oy (DIRECT_PARENT)",
+      "rationale": "Nordvik Components GmbH is clean on its own name, but its control chain reaches LIMITED LIABILITY COMPANY KHAVERIM, a listed entity, at depth 2 via ultimate parent.",
+      "evidence": [
+        {
+          "claim": "control chain hop 1: Baltic Holdings Oy (DIRECT_PARENT)",
+          "source": "control_graph",
+          "row_ref": "H:baltic"
+        },
+        {
+          "claim": "control chain hop 2: LIMITED LIABILITY COMPANY KHAVERIM (ULTIMATE_PARENT)",
+          "source": "control_graph",
+          "row_ref": "E:NK-2CdXhyCy9XzyZgcFcHXrTZ"
+        },
+        {
+          "claim": "LIMITED LIABILITY COMPANY KHAVERIM is listed",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2CdXhyCy9XzyZgcFcHXrTZ"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide"
+      ],
+      "question": "Confirm the control relationship with the registry before freezing payments.",
+      "trace": "run-20261025T171717-a8a6d0ed.jsonl",
+      "seconds": 45.4
+    },
+    {
+      "vendor_id": "V0009",
+      "legal_name": "Xing Ao Energy Pte. Ltd.",
+      "country": "SG",
+      "annual_spend_usd": 48000,
+      "category": "raw materials",
+      "decision": "BLOCK",
+      "confidence": 0.9,
+      "headline": "control chain hop 1: Hebei Xinhai Chemical Group Co., Ltd. (ULTIMATE_PARENT)",
+      "rationale": "Xing Ao Energy Pte. Ltd. is clean on its own name, but its control chain reaches Hebei Xinhai Chemical Group Co., Ltd., a listed entity, at depth 1 via ultimate parent.",
+      "evidence": [
+        {
+          "claim": "control chain hop 1: Hebei Xinhai Chemical Group Co., Ltd. (ULTIMATE_PARENT)",
+          "source": "control_graph",
+          "row_ref": "L:655600I0RTPZ3DFASH49"
+        },
+        {
+          "claim": "Hebei Xinhai Chemical Group Co., Ltd. is listed",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-HkGpeehSFsNLXBJ9tywZCf"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide"
+      ],
+      "question": "Confirm the control relationship with the registry before freezing payments.",
+      "trace": "run-20261025T171717-26397b3e.jsonl",
+      "seconds": 44.9
+    },
+    {
+      "vendor_id": "V0011",
+      "legal_name": "FARMACIA TRINIDAD",
+      "country": "MX",
+      "annual_spend_usd": 48000,
+      "category": "packaging",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to FARMACIA Y MINI SUPER TRINIDAD",
+      "rationale": "FARMACIA TRINIDAD is an exact alias of listed entity FARMACIA Y MINI SUPER TRINIDAD, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to FARMACIA Y MINI SUPER TRINIDAD",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2ZMYBhEKVGEG6YH83wLbxk"
+        },
+        {
+          "claim": "jurisdiction agrees (MX)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2ZMYBhEKVGEG6YH83wLbxk"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171755-d1754055.jsonl",
+      "seconds": 18.6
+    },
+    {
+      "vendor_id": "V0012",
+      "legal_name": "OOO Standart Lain",
+      "country": "RU",
+      "annual_spend_usd": 48000,
+      "category": "components",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to OOO STANDARD LINE",
+      "rationale": "OOO Standart Lain is an exact alias of listed entity OOO STANDARD LINE, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to OOO STANDARD LINE",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2gnXxYSmNUWxsvX5gyMmGh"
+        },
+        {
+          "claim": "jurisdiction agrees (RU)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2gnXxYSmNUWxsvX5gyMmGh"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171756-44b63147.jsonl",
+      "seconds": 18.7
+    },
+    {
+      "vendor_id": "V0013",
+      "legal_name": "Iranian Petrochemical Investment Group Company",
+      "country": "IR",
+      "annual_spend_usd": 48000,
+      "category": "professional services",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to IRANIAN INVESTMENT PETROCHEMICAL GROUP COMPANY",
+      "rationale": "Iranian Petrochemical Investment Group Company is an exact alias of listed entity IRANIAN INVESTMENT PETROCHEMICAL GROUP COMPANY, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to IRANIAN INVESTMENT PETROCHEMICAL GROUP COMPANY",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2jgGmJaCam25UVaLGFrL4y"
+        },
+        {
+          "claim": "jurisdiction agrees (IR)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-2jgGmJaCam25UVaLGFrL4y"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171800-d6e2b409.jsonl",
+      "seconds": 20.7
+    },
+    {
+      "vendor_id": "V0019",
+      "legal_name": "Stormline Systems GmbH",
+      "country": "DE",
+      "annual_spend_usd": 48000,
+      "category": "raw materials",
+      "decision": "BLOCK",
+      "confidence": 0.9,
+      "headline": "control chain hop 1: Riga Industrial Holding 8 (DIRECT_PARENT)",
+      "rationale": "Stormline Systems GmbH is clean on its own name, but its control chain reaches SHREEGEE IMPEX PRIVATE LIMITED, a listed entity, at depth 2 via ultimate parent.",
+      "evidence": [
+        {
+          "claim": "control chain hop 1: Riga Industrial Holding 8 (DIRECT_PARENT)",
+          "source": "control_graph",
+          "row_ref": "H:eval8"
+        },
+        {
+          "claim": "control chain hop 2: SHREEGEE IMPEX PRIVATE LIMITED (ULTIMATE_PARENT)",
+          "source": "control_graph",
+          "row_ref": "E:NK-3YZ6aYzLaf7ogQQGiBcmZn"
+        },
+        {
+          "claim": "SHREEGEE IMPEX PRIVATE LIMITED is listed",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-3YZ6aYzLaf7ogQQGiBcmZn"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide"
+      ],
+      "question": "Confirm the control relationship with the registry before freezing payments.",
+      "trace": "run-20261025T171814-f755cceb.jsonl",
+      "seconds": 24.2
+    },
+    {
+      "vendor_id": "V0020",
+      "legal_name": "Fenwick Supply GmbH",
+      "country": "DE",
+      "annual_spend_usd": 48000,
+      "category": "IT services",
+      "decision": "BLOCK",
+      "confidence": 0.9,
+      "headline": "control chain hop 1: Baltic Holdings Oy 9 (DIRECT_PARENT)",
+      "rationale": "Fenwick Supply GmbH is clean on its own name, but its control chain reaches LLC Cityimpex, a listed entity, at depth 2 via ultimate parent.",
+      "evidence": [
+        {
+          "claim": "control chain hop 1: Baltic Holdings Oy 9 (DIRECT_PARENT)",
+          "source": "control_graph",
+          "row_ref": "H:eval9"
+        },
+        {
+          "claim": "control chain hop 2: LLC Cityimpex (ULTIMATE_PARENT)",
+          "source": "control_graph",
+          "row_ref": "E:NK-3gZb2Q6E77zNmGUKiP92RC"
+        },
+        {
+          "claim": "LLC Cityimpex is listed",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-3gZb2Q6E77zNmGUKiP92RC"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide"
+      ],
+      "question": "Confirm the control relationship with the registry before freezing payments.",
+      "trace": "run-20261025T171815-49ca433c.jsonl",
+      "seconds": 24.0
+    },
+    {
+      "vendor_id": "V0002",
+      "legal_name": "South Wealth Resources Ltd.",
+      "country": "IQ",
+      "annual_spend_usd": 12000,
+      "category": "logistics",
+      "decision": "BLOCK",
+      "confidence": 1.0,
+      "headline": "exact alias match to South Wealth Resources Company",
+      "rationale": "South Wealth Resources Ltd. is an exact alias of listed entity South Wealth Resources Company, in the same jurisdiction.",
+      "evidence": [
+        {
+          "claim": "exact alias match to South Wealth Resources Company",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-26aLUdNdrvaLZphX6xQrr5"
+        },
+        {
+          "claim": "jurisdiction agrees (IQ)",
+          "source": "us_ofac_sdn",
+          "row_ref": "NK-26aLUdNdrvaLZphX6xQrr5"
+        }
+      ],
+      "unresolved": [],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain NOT walked for this vendor"
+      ],
+      "question": "Confirm the alias match before freezing payments.",
+      "trace": "run-20261025T171717-e7bc7598.jsonl",
+      "seconds": 38.5
+    },
+    {
+      "vendor_id": "V0016",
+      "legal_name": "Atacar Otomotiv Dis Ticaret Ve Savunma Sanayi Limited Sirketi",
+      "country": "NL",
+      "annual_spend_usd": 2100000,
+      "category": "packaging",
+      "decision": "ESCALATE",
+      "confidence": 0.85,
+      "headline": "vendor name is an exact alias of a listed entity",
+      "rationale": "No watchlist match on the vendor's own name, and the control chain was walked (0 hop(s)) without reaching a listed entity.",
+      "evidence": [],
+      "unresolved": [
+        "vendor name is an exact alias of a listed entity"
+      ],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain walked, no listed entity found"
+      ],
+      "question": "This name is an exact alias of a listed entity in another jurisdiction. Confirm whether it is the same company.",
+      "trace": "run-20261025T171802-65991b05.jsonl",
+      "seconds": 30.3
+    },
+    {
+      "vendor_id": "V0017",
+      "legal_name": "Rotek-Elpom",
+      "country": "NL",
+      "annual_spend_usd": 2100000,
+      "category": "facilities",
+      "decision": "ESCALATE",
+      "confidence": 0.85,
+      "headline": "vendor name is an exact alias of a listed entity",
+      "rationale": "No watchlist match on the vendor's own name, and the control chain was walked (0 hop(s)) without reaching a listed entity.",
+      "evidence": [],
+      "unresolved": [
+        "vendor name is an exact alias of a listed entity"
+      ],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain walked, no listed entity found"
+      ],
+      "question": "This name is an exact alias of a listed entity in another jurisdiction. Confirm whether it is the same company.",
+      "trace": "run-20261025T171802-b9377a44.jsonl",
+      "seconds": 28.8
+    },
+    {
+      "vendor_id": "V0018",
+      "legal_name": "AO Natsionalny Eksportny Tsentr",
+      "country": "NL",
+      "annual_spend_usd": 340000,
+      "category": "logistics",
+      "decision": "ESCALATE",
+      "confidence": 0.85,
+      "headline": "vendor name is an exact alias of a listed entity",
+      "rationale": "No watchlist match on the vendor's own name, and the control chain was walked (0 hop(s)) without reaching a listed entity.",
+      "evidence": [],
+      "unresolved": [
+        "vendor name is an exact alias of a listed entity"
+      ],
+      "caveats": [
+        "tax_id is unreliable in this source",
+        "watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities",
+        "control chain walked, no listed entity found"
+      ],
+      "question": "This name is an exact alias of a listed entity in another jurisdiction. Confirm whether it is the same company.",
+      "trace": "run-20261025T171802-41698224.jsonl",
+      "seconds": 29.1
+    },
+    {
+      "vendor_id": "V0032",
+      "legal_name": "Global Solutions Group",
+      "country": "AU",
+      "annual_spend_usd": 340000,
+      "category": "facilities",
+      "decision": "ESCALATE",
+      "confidence": 0.0,
+      "headline": "generic trading name",
+      "rationale": "The vendor name is too generic to resolve against a watchlist without additional identifiers.",
+      "evidence": [],
+      "unresolved": [
+        "generic trading name"
+      ],
+      "caveats": [],
+      "question": "Can you supply a tax ID, LEI or registry number for this vendor?",
+      "trace": "run-20261025T171858-4febcf76.jsonl",
+      "seconds": 0.0
+    },
+    {
+      "vendor_id": "V0005",
+      "legal_name": "Global Trading Ltd",
+      "country": "FR",
+      "annual_spend_usd": 115000,
+      "category": "raw materials",
+      "decision": "ESCALATE",
+      "confidence": 0.0,
+      "headline": "generic trading name",
+      "rationale": "The vendor name is too generic to resolve against a watchlist without additional identifiers.",
+      "evidence": [],
+      "unresolved": [
+        "generic trading name"
+      ],
+      "caveats": [],
+      "question": "Can you supply a tax ID, LEI or registry number for this vendor?",
+      "trace": "run-20261025T171717-71fa8a58.jsonl",
+      "seconds": 0.0
+    },
+    {
+      "vendor_id": "V0006",
+      "legal_name": "International Services LLC",
+      "country": "SG",
+      "annual_spend_usd": 115000,
+      "category": "packaging",
+      "decision": "ESCALATE",
+      "confidence": 0.0,
+      "headline": "generic trading name",
+      "rationale": "The vendor name is too generic to resolve against a watchlist without additional identifiers.",
+      "evidence": [],
+      "unresolved": [
+        "generic trading name"
+      ],
+      "caveats": [],
+      "question": "Can you supply a tax ID, LEI or registry number for this vendor?",
+      "trace": "run-20261025T171717-11a68a6e.jsonl",
+      "seconds": 0.0
+    },
+    {
+      "vendor_id": "V0033",
+      "legal_name": "International Holdings Ltd",
+      "country": "IN",
+      "annual_spend_usd": 12000,
+      "category": "professional services",
+      "decision": "ESCALATE",
+      "confidence": 0.0,
+      "headline": "generic trading name",
+      "rationale": "The vendor name is too generic to resolve against a watchlist without additional identifiers.",
+      "evidence": [],
+      "unresolved": [
+        "generic trading name"
+      ],
+      "caveats": [],
+      "question": "Can you supply a tax ID, LEI or registry number for this vendor?",
+      "trace": "run-20261025T171858-e5e2f7b9.jsonl",
+      "seconds": 0.0
+    }
+  ],
+  "cleared": [
+    {
+      "vendor_id": "V0003",
+      "legal_name": "Southwealth Resources Pty Ltd",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0007",
+      "legal_name": "Copperline Industries Limited",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0008",
+      "legal_name": "Copperline Industries Ltd.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0022",
+      "legal_name": "Barash Aviation Group B.V.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0023",
+      "legal_name": "LIABILITY PROTEY Group B.V.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0024",
+      "legal_name": "Lamafoods International Offshore S.A.L. Holdings Ltd",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0025",
+      "legal_name": "Saman Air Trading GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0026",
+      "legal_name": "VTBleasing JOINT STOCK Group B.V.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0027",
+      "legal_name": "Federal State Trading GmbH",
+      "country": "RU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0028",
+      "legal_name": "GASindustry INSURANCE SOGAZ Pty Ltd",
+      "country": "RU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0029",
+      "legal_name": "EAST ASIA Pty Ltd",
+      "country": "CN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0030",
+      "legal_name": "Fairweather Industries Ltd",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0031",
+      "legal_name": "Ironside Industries Ltd",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0034",
+      "legal_name": "Kestrel Logistics Pte Ltd",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0035",
+      "legal_name": "Baltic Partners Ltd",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0036",
+      "legal_name": "Baltic Industries LLC",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0037",
+      "legal_name": "Greyfriars Supply Co S.A.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0038",
+      "legal_name": "Thornhill Industries Ltd",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0039",
+      "legal_name": "Cedar Point Logistics GmbH",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0040",
+      "legal_name": "Stormline Trading GmbH",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0041",
+      "legal_name": "Fenwick Trading GmbH",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0042",
+      "legal_name": "Northwind Trading GmbH",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0043",
+      "legal_name": "Ridgeway Logistics S.A.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0044",
+      "legal_name": "Ironside Trading Limited",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0045",
+      "legal_name": "Copperline Trading B.V.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0046",
+      "legal_name": "Fairweather Supply Co L.L.C.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0047",
+      "legal_name": "Fairweather Logistics Limited",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0048",
+      "legal_name": "Northwind Logistics LLC",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0049",
+      "legal_name": "Greyfriars Industries Pte Ltd",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0050",
+      "legal_name": "Lantern Industries B.V.",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0051",
+      "legal_name": "Quarry Logistics S.A.",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0052",
+      "legal_name": "Ridgeway Logistics GmbH",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0053",
+      "legal_name": "Pinecrest Trading Limited",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0054",
+      "legal_name": "Bluewater Trading Ltd",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0055",
+      "legal_name": "Fenwick Supply Co Inc",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0056",
+      "legal_name": "Baltic Trading Limited",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0057",
+      "legal_name": "Ridgeway Trading Inc",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0058",
+      "legal_name": "Cedar Point Logistics L.L.C.",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0059",
+      "legal_name": "Fenwick Trading Limited",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0060",
+      "legal_name": "Saltmarsh Industries Pte Ltd",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0061",
+      "legal_name": "Vantage Logistics Pte Ltd",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0062",
+      "legal_name": "Fairweather Partners Ltd",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0063",
+      "legal_name": "Quarry Supply Co B.V.",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0064",
+      "legal_name": "Lantern Industries Ltd",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0065",
+      "legal_name": "Saltmarsh Supply Co GmbH",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0066",
+      "legal_name": "Sandstone Supply Co Pte Ltd",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0067",
+      "legal_name": "Saltmarsh Logistics S.A.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0068",
+      "legal_name": "Meridian Logistics Inc",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0069",
+      "legal_name": "Thornhill Partners GmbH",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0070",
+      "legal_name": "Quarry Supply Co B.V.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0071",
+      "legal_name": "Ridgeway Partners L.L.C.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0072",
+      "legal_name": "Oakhaven Supply Co Inc",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0073",
+      "legal_name": "Vantage Partners B.V.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0074",
+      "legal_name": "Kestrel Industries L.L.C.",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0075",
+      "legal_name": "Larkspur Partners GmbH",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0076",
+      "legal_name": "Fenwick Trading GmbH",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0077",
+      "legal_name": "Meridian Partners GmbH",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0078",
+      "legal_name": "Cedar Point Supply Co Limited",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0079",
+      "legal_name": "Meridian Supply Co L.L.C.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0080",
+      "legal_name": "Greyfriars Industries L.L.C.",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0081",
+      "legal_name": "Orchard Supply Co Inc",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0082",
+      "legal_name": "Cedar Point Trading GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0083",
+      "legal_name": "Kestrel Industries Ltd",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0084",
+      "legal_name": "Fenwick Logistics S.A.",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0085",
+      "legal_name": "Northwind Trading Ltd",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0086",
+      "legal_name": "Kestrel Partners Pte Ltd",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0087",
+      "legal_name": "Orchard Supply Co Inc",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0088",
+      "legal_name": "Quarry Supply Co S.A.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0089",
+      "legal_name": "Greyfriars Supply Co Ltd",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0090",
+      "legal_name": "Oakhaven Trading LLC",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0091",
+      "legal_name": "Meridian Trading Inc",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0092",
+      "legal_name": "Ridgeway Supply Co L.L.C.",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0093",
+      "legal_name": "Pinecrest Industries GmbH",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0094",
+      "legal_name": "Lantern Partners S.A.",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0095",
+      "legal_name": "Baltic Supply Co Pte Ltd",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0096",
+      "legal_name": "Meridian Industries S.A.",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0097",
+      "legal_name": "Kestrel Partners Pte Ltd",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0098",
+      "legal_name": "Ridgeway Partners Limited",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0099",
+      "legal_name": "Oakhaven Industries Inc",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0100",
+      "legal_name": "Lantern Supply Co LLC",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0101",
+      "legal_name": "Greyfriars Trading Inc",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0102",
+      "legal_name": "Thornhill Partners LLC",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0103",
+      "legal_name": "Thornhill Trading Pte Ltd",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0104",
+      "legal_name": "Northwind Supply Co GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0105",
+      "legal_name": "Bluewater Trading GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0106",
+      "legal_name": "Thornhill Partners B.V.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0107",
+      "legal_name": "Halcyon Logistics S.A.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0108",
+      "legal_name": "Meridian Industries LLC",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0109",
+      "legal_name": "Kestrel Industries Inc",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0110",
+      "legal_name": "Vantage Partners S.A.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0111",
+      "legal_name": "Meridian Industries Ltd",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0112",
+      "legal_name": "Lantern Partners Pte Ltd",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0113",
+      "legal_name": "Baltic Logistics L.L.C.",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0114",
+      "legal_name": "Baltic Logistics L.L.C.",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0115",
+      "legal_name": "Baltic Trading LLC",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0116",
+      "legal_name": "Halcyon Industries GmbH",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0117",
+      "legal_name": "Halcyon Logistics L.L.C.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0118",
+      "legal_name": "Larkspur Supply Co Inc",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0119",
+      "legal_name": "Larkspur Partners GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0120",
+      "legal_name": "Fenwick Industries Limited",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0121",
+      "legal_name": "Fairweather Partners GmbH",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0122",
+      "legal_name": "Copperline Trading Pte Ltd",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0123",
+      "legal_name": "Lantern Supply Co Limited",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0124",
+      "legal_name": "Halcyon Industries S.A.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0125",
+      "legal_name": "Sandstone Logistics B.V.",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0126",
+      "legal_name": "Lantern Logistics Limited",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0127",
+      "legal_name": "Northwind Logistics GmbH",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0128",
+      "legal_name": "Halcyon Industries Limited",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0129",
+      "legal_name": "Larkspur Partners Limited",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0130",
+      "legal_name": "Stormline Supply Co Inc",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0131",
+      "legal_name": "Stormline Partners Inc",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0132",
+      "legal_name": "Sandstone Trading GmbH",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0133",
+      "legal_name": "Pinecrest Logistics Limited",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0134",
+      "legal_name": "Saltmarsh Supply Co GmbH",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0135",
+      "legal_name": "Cedar Point Industries L.L.C.",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0136",
+      "legal_name": "Quarry Industries S.A.",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0137",
+      "legal_name": "Bluewater Trading GmbH",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0138",
+      "legal_name": "Stormline Partners B.V.",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0139",
+      "legal_name": "Kestrel Industries B.V.",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0140",
+      "legal_name": "Oakhaven Partners S.A.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0141",
+      "legal_name": "Greyfriars Partners LLC",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0142",
+      "legal_name": "Bluewater Supply Co Inc",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0143",
+      "legal_name": "Stormline Industries B.V.",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0144",
+      "legal_name": "Quarry Partners LLC",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0145",
+      "legal_name": "Ridgeway Logistics LLC",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0146",
+      "legal_name": "Northwind Logistics LLC",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0147",
+      "legal_name": "Sandstone Partners S.A.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0148",
+      "legal_name": "Orchard Partners LLC",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0149",
+      "legal_name": "Bluewater Trading GmbH",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0150",
+      "legal_name": "Sandstone Partners S.A.",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0151",
+      "legal_name": "Lantern Industries S.A.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0152",
+      "legal_name": "Cedar Point Supply Co B.V.",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0153",
+      "legal_name": "Bluewater Logistics Limited",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0154",
+      "legal_name": "Fenwick Supply Co Ltd",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0155",
+      "legal_name": "Meridian Trading GmbH",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0156",
+      "legal_name": "Oakhaven Partners L.L.C.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0157",
+      "legal_name": "Stormline Industries S.A.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0158",
+      "legal_name": "Oakhaven Logistics GmbH",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0159",
+      "legal_name": "Saltmarsh Logistics LLC",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0160",
+      "legal_name": "Oakhaven Trading Limited",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0161",
+      "legal_name": "Quarry Partners Pte Ltd",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0162",
+      "legal_name": "Baltic Logistics GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0163",
+      "legal_name": "Orchard Supply Co B.V.",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0164",
+      "legal_name": "Ridgeway Logistics Limited",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0165",
+      "legal_name": "Orchard Supply Co B.V.",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0166",
+      "legal_name": "Stormline Supply Co B.V.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0167",
+      "legal_name": "Baltic Industries L.L.C.",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0168",
+      "legal_name": "Lantern Supply Co Limited",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0169",
+      "legal_name": "Northwind Trading Inc",
+      "country": "JP",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0170",
+      "legal_name": "Fenwick Trading Limited",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0171",
+      "legal_name": "Stormline Industries S.A.",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0172",
+      "legal_name": "Ironside Trading Inc",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0173",
+      "legal_name": "Greyfriars Industries GmbH",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0174",
+      "legal_name": "Halcyon Industries Inc",
+      "country": "SG",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0175",
+      "legal_name": "Meridian Trading GmbH",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0176",
+      "legal_name": "Ironside Partners GmbH",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0177",
+      "legal_name": "Orchard Partners B.V.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0178",
+      "legal_name": "Oakhaven Partners Pte Ltd",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0179",
+      "legal_name": "Stormline Logistics Inc",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0180",
+      "legal_name": "Quarry Trading B.V.",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0181",
+      "legal_name": "Quarry Supply Co Limited",
+      "country": "FR",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0182",
+      "legal_name": "Bluewater Logistics B.V.",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0183",
+      "legal_name": "Cedar Point Partners Inc",
+      "country": "AE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0184",
+      "legal_name": "Sandstone Industries Limited",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    },
+    {
+      "vendor_id": "V0185",
+      "legal_name": "Saltmarsh Trading B.V.",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0186",
+      "legal_name": "Halcyon Supply Co B.V.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0187",
+      "legal_name": "Pinecrest Industries Ltd",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0188",
+      "legal_name": "Quarry Logistics LLC",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0189",
+      "legal_name": "Fenwick Logistics Inc",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0190",
+      "legal_name": "Greyfriars Logistics L.L.C.",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0191",
+      "legal_name": "Baltic Industries L.L.C.",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0192",
+      "legal_name": "Pinecrest Supply Co Ltd",
+      "country": "CA",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0193",
+      "legal_name": "Quarry Supply Co S.A.",
+      "country": "DE",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0194",
+      "legal_name": "Bluewater Logistics L.L.C.",
+      "country": "NL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0195",
+      "legal_name": "Sandstone Partners S.A.",
+      "country": "GB",
+      "decision": "CLEAR",
+      "annual_spend_usd": 115000
+    },
+    {
+      "vendor_id": "V0196",
+      "legal_name": "Lantern Logistics Inc",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 890000
+    },
+    {
+      "vendor_id": "V0197",
+      "legal_name": "Bluewater Partners L.L.C.",
+      "country": "US",
+      "decision": "CLEAR",
+      "annual_spend_usd": 12000
+    },
+    {
+      "vendor_id": "V0198",
+      "legal_name": "Northwind Trading Pte Ltd",
+      "country": "PL",
+      "decision": "CLEAR",
+      "annual_spend_usd": 2100000
+    },
+    {
+      "vendor_id": "V0199",
+      "legal_name": "Cedar Point Partners L.L.C.",
+      "country": "AU",
+      "decision": "CLEAR",
+      "annual_spend_usd": 48000
+    },
+    {
+      "vendor_id": "V0200",
+      "legal_name": "Fairweather Trading GmbH",
+      "country": "IN",
+      "decision": "CLEAR",
+      "annual_spend_usd": 340000
+    }
+  ],
+  "errors": []
+}

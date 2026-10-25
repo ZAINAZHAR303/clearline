@@ -41,7 +41,7 @@ def _field_available(name: str) -> bool:
     return bool(tail) and any(_tail(f) == tail for f in AVAILABLE_FIELDS)  # a third round never converged and cost ~90s
 
 
-def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
+def screen(vendor_id: str, remember_decision: bool = True) -> tuple[Decision | None, Trace]:
     trace = Trace(subject=vendor_id)
     vendor = get_vendor(vendor_id)
     if vendor is None:
@@ -246,8 +246,10 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
         })
 
     # Remember what was decided, so the next run can be corrected against it.
+    # A batch sweep produces recommendations; memory records adjudications.
+    # Skipping it also avoids many workers racing on one ledger file.
     top_entity = proposal.candidates[0].source_id if (proposal and proposal.candidates) else None
-    if top_entity:
+    if top_entity and remember_decision:
         stored = remember(vendor_id, top_entity, decision.decision, decision.confidence)
         if stored:
             trace.event("hmem.remember", status=stored.get("status"),
