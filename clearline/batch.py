@@ -17,7 +17,7 @@ budget -- spend effort in proportion to risk:
             which is a reason a human would want a second look.
   REVIEW    the full agent system, only for vendors triage flagged.
 
-On the sample book that is 9 of 200. The other 191 are cleared with a recorded
+On the sample book that is 25 of 200. The other 175 are cleared with a recorded
 reason, not silently dropped -- "nothing matched" and "we never looked" have to
 stay distinguishable, here as everywhere else in this system.
 """

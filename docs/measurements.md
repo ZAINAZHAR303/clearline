@@ -110,7 +110,7 @@ python scripts/evaluate.py --fake
 
 Eight demo cases passing proves little -- a reader is entitled to wonder
 whether eight cases were chosen because they pass. 33 labelled cases, 16 with
-genuine exposure and 17 clean, across seven categories:
+genuine exposure and 17 clean, across eight categories:
 
 | | result |
 |---|---|

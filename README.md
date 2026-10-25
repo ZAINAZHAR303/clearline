@@ -71,7 +71,7 @@ cd clearline
 python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   # Windows
 #    python3 -m venv .venv && .venv/bin/pip install -r requirements.txt # macOS/Linux
 
-python scripts/fetch_sanctions.py      # curates 300 OFAC records (one download, cached)
+python scripts/fetch_sanctions.py      # curates 321 OFAC records (one download, cached)
 python scripts/gen_vendor_master.py    # builds the vendor book around them
 python scripts/fetch_gleif_chains.py   # REAL ownership chains from GLEIF
 python scripts/gen_control_graph.py    # builds the control graph
@@ -135,10 +135,10 @@ python -m clearline.batch --fake
 ```
 
 ```
-VENDOR BOOK   200 vendors · $128,438,000 annual spend
-TRIAGE        9 need review, 191 cleared without it (4.5% reviewed) in 3.9s
-DECISIONS     4 BLOCK   2 ESCALATE   3 CLEAR
-EXPOSURE      $386,000 of spend needs action, of $3,491,000 reviewed
+VENDOR BOOK   200 vendors · $120,630,000 annual spend
+TRIAGE        25 need review, 175 cleared without it (12.5% reviewed) in 3.6s
+DECISIONS     13 BLOCK   7 ESCALATE   5 CLEAR
+EXPOSURE      $7,528,000 of spend needs action, of $12,781,000 reviewed
 ```
 
 Screening is two stages, and the split is the same thesis as the reasoning
@@ -146,7 +146,7 @@ budget — spend effort in proportion to risk. **Triage** is deterministic and
 runs over every vendor: a watchlist candidate above the noise floor, a name too
 generic to resolve, banking in a country it is not registered in, or a control
 chain that reaches a listed entity. Only those vendors get the **full agent
-system**. The other 191 are cleared with a recorded reason, because "nothing
+system**. The other 175 are cleared with a recorded reason, because "nothing
 matched" and "we never looked" have to stay distinguishable.
 
 ### The correction loop
@@ -212,7 +212,7 @@ tier to ~110s, and the router from 102.8s to 2.9s.
 python scripts/evaluate.py --fake
 ```
 
-33 labelled cases, 16 exposed and 17 clean, across seven categories:
+33 labelled cases, 16 exposed and 17 clean, across eight categories:
 **0 misses, 0 false blocks, recall 16/16**, 7 escalations. Misses and false
 blocks are reported separately and never averaged, because clearing an exposed
 vendor is a legal violation while blocking a clean one freezes a supplier.
@@ -250,8 +250,8 @@ Stated plainly, because a screening tool that overclaims is worse than none.
   consolidation relationships, not percentages. OFAC's 50% rule needs ownership
   data these sources do not provide, so indirect findings are reported as
   control relationships and flagged for human confirmation. A test enforces it.
-- **The watchlist is a 300-record curated subset** of ~72,600, with the
-  snapshot date recorded in the file. Raise `SAMPLE_SIZE` and re-fetch for more.
+- **The watchlist is a 321-record curated subset** of 72,614, with the
+  snapshot date (2026-10-22) recorded in the file. Raise `SAMPLE_SIZE` and re-fetch for more.
 - **Decision support, not decision authority.** Every output names what a human
   must confirm.
 

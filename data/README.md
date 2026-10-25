@@ -22,8 +22,8 @@ samples are committed.
 | Source | US OFAC Specially Designated Nationals (SDN) List, via OpenSanctions |
 | Publisher | Office of Foreign Assets Control |
 | URL | `https://data.opensanctions.org/datasets/latest/us_ofac_sdn/targets.simple.csv` |
-| Full dataset | ~72,600 entities / 7.6 MB |
-| Committed subset | **300 organisations**, 126 KB |
+| Full dataset | 72,614 entities / 7.6 MB |
+| Committed subset | **321 organisations**, 140 KB |
 | Snapshot | recorded in the file under `provenance.snapshot_updated_at` |
 
 Selection: `Organization` and `Company` records that have at least one alias

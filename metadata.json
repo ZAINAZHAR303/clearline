@@ -74,7 +74,7 @@
   "how_a_judge_runs_it_without_our_keys": {
     "command": "python -m clearline.run --vendor V0001 --fake",
     "explanation": "--fake substitutes deterministic model responses. The whole agent system - every branch, the revision loop, the control-chain walk, the override loop - runs offline in about a second with no API key and no Zetaris. Data quality and sanctions lookups fall back to local files, recording in the trace which path ran.",
-    "tests": "pytest -q  (17 tests, offline, ~15s)",
+    "tests": "pytest -q  (24 tests, offline, ~75s)",
     "conformance": "bash scripts/conformance.sh  (8/8 Markovian, 13/13 H-MEM)"
   },
 
@@ -88,7 +88,7 @@
   "limitations": [
     "The vendor book is synthetic; real vendor masters are confidential. The control graph is part real: 47 chains come from the GLEIF Level 2 API joined to OFAC entries publishing an LEI, and V0009/V0010 are real companies whose real ultimate parents are really designated. Both halves are public record.",
     "No ownership percentage is ever asserted: the sources publish control and consolidation relationships, not percentages, and OFAC's 50% rule needs data they do not provide. A test enforces this.",
-    "The watchlist is a 300-record curated subset of ~72,600, with the snapshot date recorded in the file.",
+    "The watchlist is a 321-record curated subset of 72,614, with the snapshot date (2026-10-22) recorded in the file.",
     "Decision support, not decision authority: every output names what a human must confirm."
   ]
 }
