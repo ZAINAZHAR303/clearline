@@ -206,6 +206,18 @@ tier to ~110s, and the router from 102.8s to 2.9s.
 
 ---
 
+## Accuracy
+
+```bash
+python scripts/evaluate.py --fake
+```
+
+33 labelled cases, 16 exposed and 17 clean, across seven categories:
+**0 misses, 0 false blocks, recall 16/16**, 7 escalations. Misses and false
+blocks are reported separately and never averaged, because clearing an exposed
+vendor is a legal violation while blocking a clean one freezes a supplier.
+Details and what the first run caught: [`docs/measurements.md`](docs/measurements.md).
+
 ## Tests
 
 ```bash

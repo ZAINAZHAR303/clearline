@@ -41,6 +41,10 @@ function arg(flag: string, fallback?: string): string | undefined {
 }
 
 interface CarriedState {
+  /** Nodes still to visit. A company can have several parents, and following
+   *  only the first silently misses exposure through the others -- the
+   *  labelled set caught exactly that. Breadth-first, bounded by maxChunks. */
+  frontier: string[];
   current: string | null;
   visited: string[];
   hits: Array<{ key: string; name: string; entity_id: string; depth: number }>;
@@ -50,6 +54,7 @@ interface CarriedState {
 const encode = (s: CarriedState) =>
   [
     `CURRENT: ${s.current ?? "none"}`,
+    `FRONTIER: ${s.frontier.join(",")}`,
     `DEPTH: ${s.depth}`,
     `VISITED: ${s.visited.join(",")}`,
     `HITS: ${s.hits.map((h) => `${h.key}|${h.entity_id}|${h.depth}`).join(";") || "none"}`,
@@ -62,10 +67,12 @@ function decode(text: string, previous: CarriedState): CarriedState {
   const field = (name: string) =>
     (text.split("\n").find((l) => l.startsWith(`${name}:`)) ?? "").slice(name.length + 1).trim();
   const current = field("CURRENT");
+  const frontierRaw = field("FRONTIER");
   const visited = field("VISITED");
   const depth = Number.parseInt(field("DEPTH"), 10);
   return {
     current: current && current !== "none" ? current : null,
+    frontier: frontierRaw ? frontierRaw.split(",").filter(Boolean) : previous.frontier,
     visited: visited ? visited.split(",").filter(Boolean) : previous.visited,
     hits: previous.hits,
     depth: Number.isFinite(depth) ? depth : previous.depth,
@@ -102,7 +109,9 @@ async function main() {
   const vendorBankCountry = vendorRecord?.bank_country ?? vendorNode?.country ?? "";
   const assessments: string[] = [];
   let carriedSummary = "";
-  let state: CarriedState = { current: vendorId, visited: [vendorId], hits: [], depth: 0 };
+  let state: CarriedState = {
+    current: vendorId, frontier: [], visited: [vendorId], hits: [], depth: 0,
+  };
   let terminated = "DEPTH";
 
   const generator = async (prompt: string) => {
@@ -123,12 +132,23 @@ async function main() {
       return { text: `No further parent. ${MARKERS.complete}` };
     }
 
-    const edges = parents.get(from) ?? [];
-    const next = edges[0];
-    if (!next) {
-      terminated = "ROOT";
-      return { text: `${nodes.get(from)?.name ?? from} has no recorded parent. ${MARKERS.complete}` };
+    // Enqueue every parent of the current node, then take the next unvisited
+    // one. Following only parents[0] made a second ownership route invisible.
+    const discovered = (parents.get(from) ?? [])
+      .filter((e) => !state.visited.includes(e.parent) && !state.frontier.includes(e.parent))
+      .map((e) => e.parent);
+    const queue = [...state.frontier, ...discovered];
+
+    if (!queue.length) {
+      terminated = state.visited.length > 1 ? "ROOT" : "ROOT";
+      return {
+        text: `No further parents to check above ${nodes.get(from)?.name ?? from}. ${MARKERS.complete}`,
+      };
     }
+
+    const nextKey = queue.shift()!;
+    const next = (parents.get(from) ?? []).find((e) => e.parent === nextKey)
+      ?? { child: from, parent: nextKey, relation: "DIRECT_PARENT" };
 
     if (state.visited.includes(next.parent)) {
       terminated = "CYCLE";
@@ -180,6 +200,7 @@ async function main() {
 
     state = {
       current: next.parent,
+      frontier: queue,
       visited: [...state.visited, next.parent],
       hits: hit
         ? [...state.hits, { key: next.parent, name: parentNode!.name, entity_id: hit, depth }]

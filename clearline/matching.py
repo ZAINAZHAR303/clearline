@@ -105,6 +105,14 @@ def match_features(vendor: dict, entity: dict) -> dict:
     if country_agreement:
         features.append("country_agreement")
         score += 0.15
+    elif exact_alias:
+        # A jurisdiction mismatch on an EXACT alias is a caveat for the
+        # reviewer, not evidence against identity. Companies operate across
+        # borders, and a listed entity's alias turning up in a vendor book
+        # under another jurisdiction is how evasion looks -- it was the
+        # Pegasus pattern. Subtracting here cleared three exposed vendors in
+        # the labelled set; see docs/measurements.md.
+        features.append("country_differs_from_listing")
     else:
         features.append("country_disagreement")
         score -= 0.15

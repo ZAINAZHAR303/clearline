@@ -91,7 +91,11 @@ def main() -> None:
     edge("V0010", "H:aurora")
 
     # --- decoys: ordinary one-hop parents that lead nowhere -----------------
-    plain = [v["vendor_id"] for v in vendors["vendors"][20:60]]
+    # Skip labelled vendors: a second, decoy parent would compete with the
+    # chain the case is labelled against.
+    labelled = set(vendors.get("_demo_cases", {})) | set(vendors.get("_eval_cases", {}))
+    plain = [v["vendor_id"] for v in vendors["vendors"][20:60]
+             if v["vendor_id"] not in labelled]
     for i, vendor_id in enumerate(plain):
         key = f"H:plain{i}"
         node(key, f"{HOLDCO_NAMES[i % len(HOLDCO_NAMES)]} {i}",
@@ -135,6 +139,30 @@ def main() -> None:
         edge(vendor["vendor_id"], f"L:{chain['parent']['lei']}", chain["relation"])
         edges[-1]["source"] = "gleif"
         real_vendor_links += 1
+
+    # --- chains for the labelled evaluation set -----------------------------
+    # Each exposed eval case needs a route to the listed entity it is labelled
+    # against, and each clean one needs a chain that terminates without a hit,
+    # so "clean" is tested against a walk that actually ran.
+    eval_cases = vendors.get("_eval_cases", {})
+    for i, (vid, case) in enumerate(eval_cases.items()):
+        target = case.get("chain_to")
+        if not target:
+            continue
+        mid = f"H:eval{i}"
+        node(mid, f"{HOLDCO_NAMES[i % len(HOLDCO_NAMES)]} {i}",
+             rng.choice(["NL", "LU", "CY", "MT"]), "holdco")
+        edge(vid, mid)
+        if target == "CLEAN":
+            tail = f"H:evaltail{i}"
+            node(tail, f"{HOLDCO_NAMES[(i + 3) % len(HOLDCO_NAMES)]} {i}B",
+                 rng.choice(["SE", "FI"]), "holdco")
+            edge(mid, tail)   # terminates at a root, no listed entity
+        else:
+            entity = by_id.get(target)
+            if entity:
+                node(f"E:{target}", entity["caption"], entity["country"], "entity", target)
+                edge(mid, f"E:{target}", "ULTIMATE_PARENT")
 
     out = {
         "provenance": {

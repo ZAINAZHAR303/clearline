@@ -194,6 +194,25 @@ def screen(vendor_id: str) -> tuple[Decision | None, Trace]:
     decision = adjudicator(vendor, proposal, verdict, chain, dq, trace,
                            routed.risk_tier, rejections, chain_walked=chain_walked)
 
+    # Safety floor: an exact alias match is never CLEARED without a human.
+    #
+    # Identity evidence this strong may be outweighed by a reviewer, but not
+    # silently by a threshold. Scoring alone cleared three exposed vendors
+    # whose names were exact aliases of listed entities registered elsewhere.
+    if decision.decision == "CLEAR" and any(
+        h.get("_features", {}).get("exact_alias") for h in hits
+    ):
+        trace.branch("exact alias match may not be cleared without review",
+                     "FLOOR_EXACT_ALIAS_TO_ESCALATE")
+        decision = decision.model_copy(update={
+            "decision": "ESCALATE",
+            "unresolved_conflicts": decision.unresolved_conflicts
+            + ["vendor name is an exact alias of a listed entity"],
+            "human_question": decision.human_question
+            or "This name is an exact alias of a listed entity in another jurisdiction. "
+               "Confirm whether it is the same company.",
+        })
+
     # Branch 5: a block must rest on evidence that clears the bar.
     #
     # Compares the DETERMINISTIC match score, not the adjudicator's

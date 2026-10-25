@@ -124,282 +124,354 @@
     },
     {
       "vendor_id": "V0011",
-      "legal_name": "Stormline Industries LLC",
-      "trading_name": "Stormline",
-      "tax_id": "NL362863730",
-      "country": "NL",
-      "address": "42 Harbour St, NL",
-      "bank_country": "NL",
-      "onboarded_date": "2024-05-21",
-      "annual_spend_usd": 2100000,
-      "category": "facilities"
-    },
-    {
-      "vendor_id": "V0012",
-      "legal_name": "Stormline Industries L.L.C.",
-      "trading_name": "Stormline",
-      "tax_id": "SG964411347",
-      "country": "SG",
-      "address": "81 Harbour St, SG",
-      "bank_country": "SG",
-      "onboarded_date": "2022-02-07",
-      "annual_spend_usd": 890000,
-      "category": "contract manufacturing"
-    },
-    {
-      "vendor_id": "V0013",
-      "legal_name": "Ironside Supply Co Pte Ltd",
-      "trading_name": "Ironside",
-      "tax_id": "AU790256940",
-      "country": "AU",
-      "address": "118 Mill St, AU",
-      "bank_country": "AU",
-      "onboarded_date": "2022-03-08",
-      "annual_spend_usd": 2100000,
+      "legal_name": "FARMACIA TRINIDAD",
+      "trading_name": "FARMACIA",
+      "tax_id": "MX524806516",
+      "country": "MX",
+      "address": "227 Harbour St, MX",
+      "bank_country": "MX",
+      "onboarded_date": "2020-05-05",
+      "annual_spend_usd": 48000,
       "category": "packaging"
     },
     {
+      "vendor_id": "V0012",
+      "legal_name": "OOO Standart Lain",
+      "trading_name": "OOO",
+      "tax_id": "RU902099969",
+      "country": "RU",
+      "address": "150 Harbour St, RU",
+      "bank_country": "RU",
+      "onboarded_date": "2024-06-08",
+      "annual_spend_usd": 48000,
+      "category": "components"
+    },
+    {
+      "vendor_id": "V0013",
+      "legal_name": "Iranian Petrochemical Investment Group Company",
+      "trading_name": "Iranian",
+      "tax_id": "IR197613238",
+      "country": "IR",
+      "address": "194 High St, IR",
+      "bank_country": "IR",
+      "onboarded_date": "2019-03-21",
+      "annual_spend_usd": 48000,
+      "category": "professional services"
+    },
+    {
       "vendor_id": "V0014",
-      "legal_name": "Larkspur Supply Co Pte Ltd",
-      "trading_name": "Larkspur",
-      "tax_id": "CA248532577",
-      "country": "CA",
-      "address": "131 Harbour St, CA",
-      "bank_country": "CA",
-      "onboarded_date": "2019-01-28",
-      "annual_spend_usd": 12000,
-      "category": "IT services"
+      "legal_name": "'MASHURA WAAD LAADAT AL-AAMAR",
+      "trading_name": "'MASHURA",
+      "tax_id": "LB740389325",
+      "country": "LB",
+      "address": "17 Harbour St, LB",
+      "bank_country": "LB",
+      "onboarded_date": "2024-10-15",
+      "annual_spend_usd": 890000,
+      "category": "packaging"
     },
     {
       "vendor_id": "V0015",
-      "legal_name": "Oakhaven Supply Co Limited",
-      "trading_name": "Oakhaven",
-      "tax_id": "DE739830322",
-      "country": "DE",
-      "address": "120 Market St, DE",
-      "bank_country": "DE",
-      "onboarded_date": "2022-09-28",
-      "annual_spend_usd": 12000,
-      "category": "raw materials"
+      "legal_name": "SCF NYK Delta Shipping Pte Ltd",
+      "trading_name": "SCF",
+      "tax_id": "SG694021782",
+      "country": "SG",
+      "address": "221 High St, SG",
+      "bank_country": "SG",
+      "onboarded_date": "2019-11-18",
+      "annual_spend_usd": 115000,
+      "category": "contract manufacturing"
     },
     {
       "vendor_id": "V0016",
-      "legal_name": "Stormline Logistics B.V.",
-      "trading_name": "Stormline",
-      "tax_id": null,
-      "country": "PL",
-      "address": "112 Mill St, PL",
-      "bank_country": "PL",
-      "onboarded_date": "2025-01-24",
+      "legal_name": "Atacar Otomotiv Dis Ticaret Ve Savunma Sanayi Limited Sirketi",
+      "trading_name": "Atacar",
+      "tax_id": "NL219778234",
+      "country": "NL",
+      "address": "76 Harbour St, NL",
+      "bank_country": "NL",
+      "onboarded_date": "2020-08-01",
       "annual_spend_usd": 2100000,
       "category": "packaging"
     },
     {
       "vendor_id": "V0017",
-      "legal_name": "Pinecrest Partners Limited",
-      "trading_name": "Pinecrest",
-      "tax_id": "DE420452650",
-      "country": "DE",
-      "address": "216 Market St, DE",
-      "bank_country": "DE",
-      "onboarded_date": "2021-03-12",
-      "annual_spend_usd": 48000,
-      "category": "logistics"
+      "legal_name": "Rotek-Elpom",
+      "trading_name": "Rotek-Elpom",
+      "tax_id": "NL637500247",
+      "country": "NL",
+      "address": "196 Mill St, NL",
+      "bank_country": "NL",
+      "onboarded_date": "2019-11-10",
+      "annual_spend_usd": 2100000,
+      "category": "facilities"
     },
     {
       "vendor_id": "V0018",
-      "legal_name": "Greyfriars Supply Co Ltd",
-      "trading_name": "Greyfriars",
-      "tax_id": null,
-      "country": "SG",
-      "address": "93 Station St, SG",
-      "bank_country": "SG",
-      "onboarded_date": "2021-01-08",
-      "annual_spend_usd": 890000,
-      "category": "raw materials"
+      "legal_name": "AO Natsionalny Eksportny Tsentr",
+      "trading_name": "AO",
+      "tax_id": "NL264109919",
+      "country": "NL",
+      "address": "96 Mill St, NL",
+      "bank_country": "NL",
+      "onboarded_date": "2018-10-11",
+      "annual_spend_usd": 340000,
+      "category": "logistics"
     },
     {
       "vendor_id": "V0019",
-      "legal_name": "Cedar Point Supply Co Limited",
-      "trading_name": "Cedar Point",
-      "tax_id": "JP671988889",
-      "country": "JP",
-      "address": "197 Mill St, JP",
-      "bank_country": "JP",
-      "onboarded_date": "2020-11-16",
-      "annual_spend_usd": 890000,
-      "category": "IT services"
+      "legal_name": "Stormline Systems GmbH",
+      "trading_name": "Stormline",
+      "tax_id": "DE220117054",
+      "country": "DE",
+      "address": "238 Station St, DE",
+      "bank_country": "IN",
+      "onboarded_date": "2022-04-02",
+      "annual_spend_usd": 48000,
+      "category": "raw materials"
     },
     {
       "vendor_id": "V0020",
-      "legal_name": "Kestrel Partners Pte Ltd",
-      "trading_name": "Kestrel",
-      "tax_id": "PL679064766",
-      "country": "PL",
-      "address": "194 Mill St, PL",
-      "bank_country": "PL",
-      "onboarded_date": "2022-07-22",
-      "annual_spend_usd": 2100000,
-      "category": "contract manufacturing"
+      "legal_name": "Fenwick Supply GmbH",
+      "trading_name": "Fenwick",
+      "tax_id": "DE191969690",
+      "country": "DE",
+      "address": "188 Harbour St, DE",
+      "bank_country": "RU",
+      "onboarded_date": "2019-09-25",
+      "annual_spend_usd": 48000,
+      "category": "IT services"
     },
     {
       "vendor_id": "V0021",
-      "legal_name": "Thornhill Supply Co Limited",
-      "trading_name": "Thornhill",
-      "tax_id": "PL168747287",
-      "country": "PL",
-      "address": "87 High St, PL",
-      "bank_country": "PL",
+      "legal_name": "Oakhaven Components GmbH",
+      "trading_name": "Oakhaven",
+      "tax_id": "DE808402051",
+      "country": "DE",
+      "address": "122 Market St, DE",
+      "bank_country": "TR",
+      "onboarded_date": "2020-05-17",
+      "annual_spend_usd": 890000,
+      "category": "professional services"
+    },
+    {
+      "vendor_id": "V0022",
+      "legal_name": "Barash Aviation Group B.V.",
+      "trading_name": "Barash",
+      "tax_id": "AU327416584",
+      "country": "AU",
+      "address": "238 Market St, AU",
+      "bank_country": "AU",
+      "onboarded_date": "2021-12-10",
+      "annual_spend_usd": 340000,
+      "category": "contract manufacturing"
+    },
+    {
+      "vendor_id": "V0023",
+      "legal_name": "LIABILITY PROTEY Group B.V.",
+      "trading_name": "LIABILITY",
+      "tax_id": "AU570406376",
+      "country": "AU",
+      "address": "231 Market St, AU",
+      "bank_country": "AU",
+      "onboarded_date": "2025-02-08",
+      "annual_spend_usd": 48000,
+      "category": "raw materials"
+    },
+    {
+      "vendor_id": "V0024",
+      "legal_name": "Lamafoods International Offshore S.A.L. Holdings Ltd",
+      "trading_name": "Lamafoods",
+      "tax_id": "AU463016614",
+      "country": "AU",
+      "address": "6 Market St, AU",
+      "bank_country": "AU",
       "onboarded_date": "2021-10-08",
       "annual_spend_usd": 12000,
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0022",
-      "legal_name": "Fenwick Industries L.L.C.",
-      "trading_name": "Fenwick",
-      "tax_id": null,
+      "vendor_id": "V0025",
+      "legal_name": "Saman Air Trading GmbH",
+      "trading_name": "Saman",
+      "tax_id": "AU860038427",
       "country": "AU",
-      "address": "9 Station St, AU",
+      "address": "162 High St, AU",
       "bank_country": "AU",
-      "onboarded_date": "2019-09-08",
-      "annual_spend_usd": 115000,
-      "category": "components"
-    },
-    {
-      "vendor_id": "V0023",
-      "legal_name": "Ironside Trading Inc",
-      "trading_name": "Ironside",
-      "tax_id": "PL607850824",
-      "country": "PL",
-      "address": "207 Harbour St, PL",
-      "bank_country": "PL",
-      "onboarded_date": "2021-02-04",
-      "annual_spend_usd": 2100000,
-      "category": "professional services"
-    },
-    {
-      "vendor_id": "V0024",
-      "legal_name": "Lantern Supply Co Inc",
-      "trading_name": "Lantern",
-      "tax_id": "AE158165865",
-      "country": "AE",
-      "address": "173 High St, AE",
-      "bank_country": "AE",
-      "onboarded_date": "2018-07-24",
+      "onboarded_date": "2021-02-02",
       "annual_spend_usd": 115000,
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0025",
-      "legal_name": "Bluewater Trading S.A.",
-      "trading_name": "Bluewater",
-      "tax_id": "FR552991960",
-      "country": "FR",
-      "address": "47 Station St, FR",
-      "bank_country": "FR",
-      "onboarded_date": "2025-04-28",
+      "vendor_id": "V0026",
+      "legal_name": "VTBleasing JOINT STOCK Group B.V.",
+      "trading_name": "VTBleasing",
+      "tax_id": "AU652070932",
+      "country": "AU",
+      "address": "61 Station St, AU",
+      "bank_country": "AU",
+      "onboarded_date": "2025-04-18",
+      "annual_spend_usd": 48000,
+      "category": "components"
+    },
+    {
+      "vendor_id": "V0027",
+      "legal_name": "Federal State Trading GmbH",
+      "trading_name": "Federal",
+      "tax_id": "RU360916298",
+      "country": "RU",
+      "address": "201 Harbour St, RU",
+      "bank_country": "RU",
+      "onboarded_date": "2024-04-04",
+      "annual_spend_usd": 12000,
+      "category": "professional services"
+    },
+    {
+      "vendor_id": "V0028",
+      "legal_name": "GASindustry INSURANCE SOGAZ Pty Ltd",
+      "trading_name": "GASindustry",
+      "tax_id": "RU480424119",
+      "country": "RU",
+      "address": "109 Harbour St, RU",
+      "bank_country": "RU",
+      "onboarded_date": "2025-12-02",
+      "annual_spend_usd": 2100000,
+      "category": "raw materials"
+    },
+    {
+      "vendor_id": "V0029",
+      "legal_name": "EAST ASIA Pty Ltd",
+      "trading_name": "EAST",
+      "tax_id": "CN165082363",
+      "country": "CN",
+      "address": "104 Station St, CN",
+      "bank_country": "CN",
+      "onboarded_date": "2019-04-07",
+      "annual_spend_usd": 48000,
+      "category": "components"
+    },
+    {
+      "vendor_id": "V0030",
+      "legal_name": "Fairweather Industries Ltd",
+      "trading_name": "Fairweather",
+      "tax_id": "GB250519597",
+      "country": "GB",
+      "address": "109 Mill St, GB",
+      "bank_country": "GB",
+      "onboarded_date": "2022-08-08",
       "annual_spend_usd": 12000,
       "category": "components"
     },
     {
-      "vendor_id": "V0026",
-      "legal_name": "Ridgeway Industries S.A.",
-      "trading_name": "Ridgeway",
-      "tax_id": "GB200140141",
+      "vendor_id": "V0031",
+      "legal_name": "Ironside Industries Ltd",
+      "trading_name": "Ironside",
+      "tax_id": "GB967607278",
       "country": "GB",
-      "address": "238 Mill St, GB",
+      "address": "221 Market St, GB",
       "bank_country": "GB",
+      "onboarded_date": "2019-01-21",
+      "annual_spend_usd": 890000,
+      "category": "logistics"
+    },
+    {
+      "vendor_id": "V0032",
+      "legal_name": "Global Solutions Group",
+      "trading_name": "Global",
+      "tax_id": null,
+      "country": "AU",
+      "address": "24 Mill St, AU",
+      "bank_country": "AU",
       "onboarded_date": "2020-07-16",
       "annual_spend_usd": 340000,
       "category": "facilities"
     },
     {
-      "vendor_id": "V0027",
-      "legal_name": "Fairweather Trading Pte Ltd",
-      "trading_name": "Fairweather",
+      "vendor_id": "V0033",
+      "legal_name": "International Holdings Ltd",
+      "trading_name": "International",
       "tax_id": null,
-      "country": "US",
-      "address": "100 Station St, US",
-      "bank_country": "US",
-      "onboarded_date": "2025-05-14",
-      "annual_spend_usd": 2100000,
-      "category": "components"
-    },
-    {
-      "vendor_id": "V0028",
-      "legal_name": "Halcyon Logistics L.L.C.",
-      "trading_name": "Halcyon",
-      "tax_id": "FR721890096",
-      "country": "FR",
-      "address": "189 Market St, FR",
-      "bank_country": "FR",
-      "onboarded_date": "2018-12-11",
-      "annual_spend_usd": 12000,
-      "category": "logistics"
-    },
-    {
-      "vendor_id": "V0029",
-      "legal_name": "Saltmarsh Partners S.A.",
-      "trading_name": "Saltmarsh",
-      "tax_id": "IN645276696",
       "country": "IN",
-      "address": "21 Mill St, IN",
+      "address": "222 Harbour St, IN",
       "bank_country": "IN",
-      "onboarded_date": "2019-10-03",
-      "annual_spend_usd": 2100000,
+      "onboarded_date": "2018-03-13",
+      "annual_spend_usd": 12000,
+      "category": "professional services"
+    },
+    {
+      "vendor_id": "V0034",
+      "legal_name": "Kestrel Logistics Pte Ltd",
+      "trading_name": "Kestrel",
+      "tax_id": "IN884374109",
+      "country": "IN",
+      "address": "201 Market St, IN",
+      "bank_country": "IN",
+      "onboarded_date": "2025-03-07",
+      "annual_spend_usd": 115000,
       "category": "facilities"
     },
     {
-      "vendor_id": "V0030",
-      "legal_name": "Fairweather Partners L.L.C.",
-      "trading_name": "Fairweather",
-      "tax_id": "GB142672287",
-      "country": "GB",
-      "address": "159 High St, GB",
-      "bank_country": "GB",
-      "onboarded_date": "2024-11-19",
+      "vendor_id": "V0035",
+      "legal_name": "Baltic Partners Ltd",
+      "trading_name": "Baltic",
+      "tax_id": "CA161380746",
+      "country": "CA",
+      "address": "13 Market St, CA",
+      "bank_country": "CA",
+      "onboarded_date": "2025-09-28",
       "annual_spend_usd": 890000,
+      "category": "IT services"
+    },
+    {
+      "vendor_id": "V0036",
+      "legal_name": "Baltic Industries LLC",
+      "trading_name": "Baltic",
+      "tax_id": null,
+      "country": "PL",
+      "address": "18 Mill St, PL",
+      "bank_country": "PL",
+      "onboarded_date": "2024-02-19",
+      "annual_spend_usd": 48000,
+      "category": "logistics"
+    },
+    {
+      "vendor_id": "V0037",
+      "legal_name": "Greyfriars Supply Co S.A.",
+      "trading_name": "Greyfriars",
+      "tax_id": "GB379995032",
+      "country": "GB",
+      "address": "53 Station St, GB",
+      "bank_country": "GB",
+      "onboarded_date": "2021-05-13",
+      "annual_spend_usd": 48000,
+      "category": "packaging"
+    },
+    {
+      "vendor_id": "V0038",
+      "legal_name": "Thornhill Industries Ltd",
+      "trading_name": "Thornhill",
+      "tax_id": "SG704509817",
+      "country": "SG",
+      "address": "26 High St, SG",
+      "bank_country": "SG",
+      "onboarded_date": "2021-09-09",
+      "annual_spend_usd": 48000,
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0031",
-      "legal_name": "Kestrel Logistics L.L.C.",
-      "trading_name": "Kestrel",
-      "tax_id": "FR240529481",
+      "vendor_id": "V0039",
+      "legal_name": "Cedar Point Logistics GmbH",
+      "trading_name": "Cedar Point",
+      "tax_id": "FR995226828",
       "country": "FR",
-      "address": "172 Station St, FR",
+      "address": "140 Station St, FR",
       "bank_country": "FR",
-      "onboarded_date": "2025-06-25",
-      "annual_spend_usd": 12000,
-      "category": "logistics"
-    },
-    {
-      "vendor_id": "V0032",
-      "legal_name": "Thornhill Partners Limited",
-      "trading_name": "Thornhill",
-      "tax_id": null,
-      "country": "CA",
-      "address": "55 Market St, CA",
-      "bank_country": "CA",
-      "onboarded_date": "2022-03-12",
-      "annual_spend_usd": 12000,
-      "category": "facilities"
-    },
-    {
-      "vendor_id": "V0033",
-      "legal_name": "Lantern Trading Inc",
-      "trading_name": "Lantern",
-      "tax_id": "NL855420240",
-      "country": "NL",
-      "address": "78 Market St, NL",
-      "bank_country": "NL",
       "onboarded_date": "2018-11-27",
       "annual_spend_usd": 890000,
       "category": "packaging"
     },
     {
-      "vendor_id": "V0034",
+      "vendor_id": "V0040",
       "legal_name": "Stormline Trading GmbH",
       "trading_name": "Stormline",
       "tax_id": null,
@@ -411,7 +483,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0035",
+      "vendor_id": "V0041",
       "legal_name": "Fenwick Trading GmbH",
       "trading_name": "Fenwick",
       "tax_id": "SG369639388",
@@ -423,7 +495,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0036",
+      "vendor_id": "V0042",
       "legal_name": "Northwind Trading GmbH",
       "trading_name": "Northwind",
       "tax_id": "SG574417266",
@@ -435,7 +507,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0037",
+      "vendor_id": "V0043",
       "legal_name": "Ridgeway Logistics S.A.",
       "trading_name": "Ridgeway",
       "tax_id": null,
@@ -447,7 +519,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0038",
+      "vendor_id": "V0044",
       "legal_name": "Ironside Trading Limited",
       "trading_name": "Ironside",
       "tax_id": "AU701170349",
@@ -459,7 +531,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0039",
+      "vendor_id": "V0045",
       "legal_name": "Copperline Trading B.V.",
       "trading_name": "Copperline",
       "tax_id": "US542073642",
@@ -471,7 +543,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0040",
+      "vendor_id": "V0046",
       "legal_name": "Fairweather Supply Co L.L.C.",
       "trading_name": "Fairweather",
       "tax_id": "US594246837",
@@ -483,7 +555,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0041",
+      "vendor_id": "V0047",
       "legal_name": "Fairweather Logistics Limited",
       "trading_name": "Fairweather",
       "tax_id": "SG399708182",
@@ -495,7 +567,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0042",
+      "vendor_id": "V0048",
       "legal_name": "Northwind Logistics LLC",
       "trading_name": "Northwind",
       "tax_id": "GB385042337",
@@ -507,7 +579,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0043",
+      "vendor_id": "V0049",
       "legal_name": "Greyfriars Industries Pte Ltd",
       "trading_name": "Greyfriars",
       "tax_id": "PL304095531",
@@ -519,7 +591,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0044",
+      "vendor_id": "V0050",
       "legal_name": "Lantern Industries B.V.",
       "trading_name": "Lantern",
       "tax_id": "AE812306873",
@@ -531,7 +603,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0045",
+      "vendor_id": "V0051",
       "legal_name": "Quarry Logistics S.A.",
       "trading_name": "Quarry",
       "tax_id": null,
@@ -543,7 +615,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0046",
+      "vendor_id": "V0052",
       "legal_name": "Ridgeway Logistics GmbH",
       "trading_name": "Ridgeway",
       "tax_id": "US943702118",
@@ -555,7 +627,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0047",
+      "vendor_id": "V0053",
       "legal_name": "Pinecrest Trading Limited",
       "trading_name": "Pinecrest",
       "tax_id": "IN812807629",
@@ -567,7 +639,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0048",
+      "vendor_id": "V0054",
       "legal_name": "Bluewater Trading Ltd",
       "trading_name": "Bluewater",
       "tax_id": null,
@@ -579,7 +651,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0049",
+      "vendor_id": "V0055",
       "legal_name": "Fenwick Supply Co Inc",
       "trading_name": "Fenwick",
       "tax_id": "JP258453521",
@@ -591,7 +663,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0050",
+      "vendor_id": "V0056",
       "legal_name": "Baltic Trading Limited",
       "trading_name": "Baltic",
       "tax_id": "PL960514523",
@@ -603,7 +675,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0051",
+      "vendor_id": "V0057",
       "legal_name": "Ridgeway Trading Inc",
       "trading_name": "Ridgeway",
       "tax_id": "IN907214179",
@@ -615,7 +687,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0052",
+      "vendor_id": "V0058",
       "legal_name": "Cedar Point Logistics L.L.C.",
       "trading_name": "Cedar Point",
       "tax_id": "JP443285529",
@@ -627,7 +699,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0053",
+      "vendor_id": "V0059",
       "legal_name": "Fenwick Trading Limited",
       "trading_name": "Fenwick",
       "tax_id": "DE455281184",
@@ -639,7 +711,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0054",
+      "vendor_id": "V0060",
       "legal_name": "Saltmarsh Industries Pte Ltd",
       "trading_name": "Saltmarsh",
       "tax_id": "JP477698143",
@@ -651,7 +723,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0055",
+      "vendor_id": "V0061",
       "legal_name": "Vantage Logistics Pte Ltd",
       "trading_name": "Vantage",
       "tax_id": "FR517532243",
@@ -663,7 +735,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0056",
+      "vendor_id": "V0062",
       "legal_name": "Fairweather Partners Ltd",
       "trading_name": "Fairweather",
       "tax_id": null,
@@ -675,7 +747,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0057",
+      "vendor_id": "V0063",
       "legal_name": "Quarry Supply Co B.V.",
       "trading_name": "Quarry",
       "tax_id": "FR507083673",
@@ -687,7 +759,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0058",
+      "vendor_id": "V0064",
       "legal_name": "Lantern Industries Ltd",
       "trading_name": "Lantern",
       "tax_id": "FR365518424",
@@ -699,7 +771,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0059",
+      "vendor_id": "V0065",
       "legal_name": "Saltmarsh Supply Co GmbH",
       "trading_name": "Saltmarsh",
       "tax_id": "FR280162221",
@@ -711,7 +783,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0060",
+      "vendor_id": "V0066",
       "legal_name": "Sandstone Supply Co Pte Ltd",
       "trading_name": "Sandstone",
       "tax_id": "CA312954978",
@@ -723,7 +795,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0061",
+      "vendor_id": "V0067",
       "legal_name": "Saltmarsh Logistics S.A.",
       "trading_name": "Saltmarsh",
       "tax_id": "US497897455",
@@ -735,7 +807,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0062",
+      "vendor_id": "V0068",
       "legal_name": "Meridian Logistics Inc",
       "trading_name": "Meridian",
       "tax_id": "AE567600762",
@@ -747,7 +819,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0063",
+      "vendor_id": "V0069",
       "legal_name": "Thornhill Partners GmbH",
       "trading_name": "Thornhill",
       "tax_id": "AE363598427",
@@ -759,7 +831,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0064",
+      "vendor_id": "V0070",
       "legal_name": "Quarry Supply Co B.V.",
       "trading_name": "Quarry",
       "tax_id": "US327761953",
@@ -771,7 +843,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0065",
+      "vendor_id": "V0071",
       "legal_name": "Ridgeway Partners L.L.C.",
       "trading_name": "Ridgeway",
       "tax_id": null,
@@ -783,7 +855,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0066",
+      "vendor_id": "V0072",
       "legal_name": "Oakhaven Supply Co Inc",
       "trading_name": "Oakhaven",
       "tax_id": "JP199915275",
@@ -795,7 +867,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0067",
+      "vendor_id": "V0073",
       "legal_name": "Vantage Partners B.V.",
       "trading_name": "Vantage",
       "tax_id": "PL900942073",
@@ -807,7 +879,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0068",
+      "vendor_id": "V0074",
       "legal_name": "Kestrel Industries L.L.C.",
       "trading_name": "Kestrel",
       "tax_id": "FR897662466",
@@ -819,7 +891,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0069",
+      "vendor_id": "V0075",
       "legal_name": "Larkspur Partners GmbH",
       "trading_name": "Larkspur",
       "tax_id": "CA994027897",
@@ -831,7 +903,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0070",
+      "vendor_id": "V0076",
       "legal_name": "Fenwick Trading GmbH",
       "trading_name": "Fenwick",
       "tax_id": null,
@@ -843,7 +915,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0071",
+      "vendor_id": "V0077",
       "legal_name": "Meridian Partners GmbH",
       "trading_name": "Meridian",
       "tax_id": "US572949775",
@@ -855,7 +927,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0072",
+      "vendor_id": "V0078",
       "legal_name": "Cedar Point Supply Co Limited",
       "trading_name": "Cedar Point",
       "tax_id": "AE837071174",
@@ -867,7 +939,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0073",
+      "vendor_id": "V0079",
       "legal_name": "Meridian Supply Co L.L.C.",
       "trading_name": "Meridian",
       "tax_id": "PL508427798",
@@ -879,7 +951,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0074",
+      "vendor_id": "V0080",
       "legal_name": "Greyfriars Industries L.L.C.",
       "trading_name": "Greyfriars",
       "tax_id": "JP384161612",
@@ -891,7 +963,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0075",
+      "vendor_id": "V0081",
       "legal_name": "Orchard Supply Co Inc",
       "trading_name": "Orchard",
       "tax_id": "US604564682",
@@ -903,7 +975,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0076",
+      "vendor_id": "V0082",
       "legal_name": "Cedar Point Trading GmbH",
       "trading_name": "Cedar Point",
       "tax_id": "AU771150922",
@@ -915,7 +987,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0077",
+      "vendor_id": "V0083",
       "legal_name": "Kestrel Industries Ltd",
       "trading_name": "Kestrel",
       "tax_id": "DE430295664",
@@ -927,7 +999,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0078",
+      "vendor_id": "V0084",
       "legal_name": "Fenwick Logistics S.A.",
       "trading_name": "Fenwick",
       "tax_id": "AE570040006",
@@ -939,7 +1011,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0079",
+      "vendor_id": "V0085",
       "legal_name": "Northwind Trading Ltd",
       "trading_name": "Northwind",
       "tax_id": "GB821856853",
@@ -951,7 +1023,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0080",
+      "vendor_id": "V0086",
       "legal_name": "Kestrel Partners Pte Ltd",
       "trading_name": "Kestrel",
       "tax_id": "DE627986559",
@@ -963,7 +1035,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0081",
+      "vendor_id": "V0087",
       "legal_name": "Orchard Supply Co Inc",
       "trading_name": "Orchard",
       "tax_id": "SG529982328",
@@ -975,7 +1047,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0082",
+      "vendor_id": "V0088",
       "legal_name": "Quarry Supply Co S.A.",
       "trading_name": "Quarry",
       "tax_id": "GB101235946",
@@ -987,7 +1059,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0083",
+      "vendor_id": "V0089",
       "legal_name": "Greyfriars Supply Co Ltd",
       "trading_name": "Greyfriars",
       "tax_id": "IN689720101",
@@ -999,7 +1071,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0084",
+      "vendor_id": "V0090",
       "legal_name": "Oakhaven Trading LLC",
       "trading_name": "Oakhaven",
       "tax_id": "CA114682844",
@@ -1011,7 +1083,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0085",
+      "vendor_id": "V0091",
       "legal_name": "Meridian Trading Inc",
       "trading_name": "Meridian",
       "tax_id": "AU413383963",
@@ -1023,7 +1095,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0086",
+      "vendor_id": "V0092",
       "legal_name": "Ridgeway Supply Co L.L.C.",
       "trading_name": "Ridgeway",
       "tax_id": "DE645719501",
@@ -1035,7 +1107,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0087",
+      "vendor_id": "V0093",
       "legal_name": "Pinecrest Industries GmbH",
       "trading_name": "Pinecrest",
       "tax_id": "NL999232921",
@@ -1047,7 +1119,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0088",
+      "vendor_id": "V0094",
       "legal_name": "Lantern Partners S.A.",
       "trading_name": "Lantern",
       "tax_id": "SG445505799",
@@ -1059,7 +1131,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0089",
+      "vendor_id": "V0095",
       "legal_name": "Baltic Supply Co Pte Ltd",
       "trading_name": "Baltic",
       "tax_id": "SG812630453",
@@ -1071,7 +1143,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0090",
+      "vendor_id": "V0096",
       "legal_name": "Meridian Industries S.A.",
       "trading_name": "Meridian",
       "tax_id": "IN116479358",
@@ -1083,7 +1155,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0091",
+      "vendor_id": "V0097",
       "legal_name": "Kestrel Partners Pte Ltd",
       "trading_name": "Kestrel",
       "tax_id": "SG452794611",
@@ -1095,7 +1167,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0092",
+      "vendor_id": "V0098",
       "legal_name": "Ridgeway Partners Limited",
       "trading_name": "Ridgeway",
       "tax_id": "US834868441",
@@ -1107,7 +1179,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0093",
+      "vendor_id": "V0099",
       "legal_name": "Oakhaven Industries Inc",
       "trading_name": "Oakhaven",
       "tax_id": "JP421549249",
@@ -1119,7 +1191,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0094",
+      "vendor_id": "V0100",
       "legal_name": "Lantern Supply Co LLC",
       "trading_name": "Lantern",
       "tax_id": "SG542437192",
@@ -1131,7 +1203,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0095",
+      "vendor_id": "V0101",
       "legal_name": "Greyfriars Trading Inc",
       "trading_name": "Greyfriars",
       "tax_id": "AU253671484",
@@ -1143,7 +1215,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0096",
+      "vendor_id": "V0102",
       "legal_name": "Thornhill Partners LLC",
       "trading_name": "Thornhill",
       "tax_id": null,
@@ -1155,7 +1227,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0097",
+      "vendor_id": "V0103",
       "legal_name": "Thornhill Trading Pte Ltd",
       "trading_name": "Thornhill",
       "tax_id": "NL214518079",
@@ -1167,7 +1239,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0098",
+      "vendor_id": "V0104",
       "legal_name": "Northwind Supply Co GmbH",
       "trading_name": "Northwind",
       "tax_id": null,
@@ -1179,7 +1251,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0099",
+      "vendor_id": "V0105",
       "legal_name": "Bluewater Trading GmbH",
       "trading_name": "Bluewater",
       "tax_id": "AU874090950",
@@ -1191,7 +1263,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0100",
+      "vendor_id": "V0106",
       "legal_name": "Thornhill Partners B.V.",
       "trading_name": "Thornhill",
       "tax_id": "US196779973",
@@ -1203,7 +1275,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0101",
+      "vendor_id": "V0107",
       "legal_name": "Halcyon Logistics S.A.",
       "trading_name": "Halcyon",
       "tax_id": "PL392624015",
@@ -1215,7 +1287,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0102",
+      "vendor_id": "V0108",
       "legal_name": "Meridian Industries LLC",
       "trading_name": "Meridian",
       "tax_id": "IN342251928",
@@ -1227,7 +1299,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0103",
+      "vendor_id": "V0109",
       "legal_name": "Kestrel Industries Inc",
       "trading_name": "Kestrel",
       "tax_id": "PL904245086",
@@ -1239,7 +1311,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0104",
+      "vendor_id": "V0110",
       "legal_name": "Vantage Partners S.A.",
       "trading_name": "Vantage",
       "tax_id": "US755070775",
@@ -1251,7 +1323,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0105",
+      "vendor_id": "V0111",
       "legal_name": "Meridian Industries Ltd",
       "trading_name": "Meridian",
       "tax_id": "DE628951656",
@@ -1263,7 +1335,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0106",
+      "vendor_id": "V0112",
       "legal_name": "Lantern Partners Pte Ltd",
       "trading_name": "Lantern",
       "tax_id": "AU880179899",
@@ -1275,7 +1347,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0107",
+      "vendor_id": "V0113",
       "legal_name": "Baltic Logistics L.L.C.",
       "trading_name": "Baltic",
       "tax_id": "JP353524015",
@@ -1287,7 +1359,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0108",
+      "vendor_id": "V0114",
       "legal_name": "Baltic Logistics L.L.C.",
       "trading_name": "Baltic",
       "tax_id": "AE984968439",
@@ -1299,7 +1371,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0109",
+      "vendor_id": "V0115",
       "legal_name": "Baltic Trading LLC",
       "trading_name": "Baltic",
       "tax_id": "SG320337809",
@@ -1311,7 +1383,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0110",
+      "vendor_id": "V0116",
       "legal_name": "Halcyon Industries GmbH",
       "trading_name": "Halcyon",
       "tax_id": "CA255357534",
@@ -1323,7 +1395,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0111",
+      "vendor_id": "V0117",
       "legal_name": "Halcyon Logistics L.L.C.",
       "trading_name": "Halcyon",
       "tax_id": "US116944811",
@@ -1335,7 +1407,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0112",
+      "vendor_id": "V0118",
       "legal_name": "Larkspur Supply Co Inc",
       "trading_name": "Larkspur",
       "tax_id": "GB651085057",
@@ -1347,7 +1419,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0113",
+      "vendor_id": "V0119",
       "legal_name": "Larkspur Partners GmbH",
       "trading_name": "Larkspur",
       "tax_id": "AU133447745",
@@ -1359,7 +1431,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0114",
+      "vendor_id": "V0120",
       "legal_name": "Fenwick Industries Limited",
       "trading_name": "Fenwick",
       "tax_id": "IN259272239",
@@ -1371,7 +1443,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0115",
+      "vendor_id": "V0121",
       "legal_name": "Fairweather Partners GmbH",
       "trading_name": "Fairweather",
       "tax_id": "CA750072069",
@@ -1383,7 +1455,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0116",
+      "vendor_id": "V0122",
       "legal_name": "Copperline Trading Pte Ltd",
       "trading_name": "Copperline",
       "tax_id": "IN586940738",
@@ -1395,7 +1467,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0117",
+      "vendor_id": "V0123",
       "legal_name": "Lantern Supply Co Limited",
       "trading_name": "Lantern",
       "tax_id": null,
@@ -1407,7 +1479,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0118",
+      "vendor_id": "V0124",
       "legal_name": "Halcyon Industries S.A.",
       "trading_name": "Halcyon",
       "tax_id": "PL819421270",
@@ -1419,7 +1491,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0119",
+      "vendor_id": "V0125",
       "legal_name": "Sandstone Logistics B.V.",
       "trading_name": "Sandstone",
       "tax_id": null,
@@ -1431,7 +1503,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0120",
+      "vendor_id": "V0126",
       "legal_name": "Lantern Logistics Limited",
       "trading_name": "Lantern",
       "tax_id": "PL716435189",
@@ -1443,7 +1515,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0121",
+      "vendor_id": "V0127",
       "legal_name": "Northwind Logistics GmbH",
       "trading_name": "Northwind",
       "tax_id": "DE476908532",
@@ -1455,7 +1527,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0122",
+      "vendor_id": "V0128",
       "legal_name": "Halcyon Industries Limited",
       "trading_name": "Halcyon",
       "tax_id": "JP330997172",
@@ -1467,7 +1539,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0123",
+      "vendor_id": "V0129",
       "legal_name": "Larkspur Partners Limited",
       "trading_name": "Larkspur",
       "tax_id": "SG267052653",
@@ -1479,7 +1551,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0124",
+      "vendor_id": "V0130",
       "legal_name": "Stormline Supply Co Inc",
       "trading_name": "Stormline",
       "tax_id": "AE331465414",
@@ -1491,7 +1563,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0125",
+      "vendor_id": "V0131",
       "legal_name": "Stormline Partners Inc",
       "trading_name": "Stormline",
       "tax_id": "AU431162800",
@@ -1503,7 +1575,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0126",
+      "vendor_id": "V0132",
       "legal_name": "Sandstone Trading GmbH",
       "trading_name": "Sandstone",
       "tax_id": "FR228832213",
@@ -1515,7 +1587,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0127",
+      "vendor_id": "V0133",
       "legal_name": "Pinecrest Logistics Limited",
       "trading_name": "Pinecrest",
       "tax_id": "PL896760809",
@@ -1527,7 +1599,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0128",
+      "vendor_id": "V0134",
       "legal_name": "Saltmarsh Supply Co GmbH",
       "trading_name": "Saltmarsh",
       "tax_id": null,
@@ -1539,7 +1611,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0129",
+      "vendor_id": "V0135",
       "legal_name": "Cedar Point Industries L.L.C.",
       "trading_name": "Cedar Point",
       "tax_id": "AE529979713",
@@ -1551,7 +1623,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0130",
+      "vendor_id": "V0136",
       "legal_name": "Quarry Industries S.A.",
       "trading_name": "Quarry",
       "tax_id": "DE669732591",
@@ -1563,7 +1635,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0131",
+      "vendor_id": "V0137",
       "legal_name": "Bluewater Trading GmbH",
       "trading_name": "Bluewater",
       "tax_id": "GB746820987",
@@ -1575,7 +1647,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0132",
+      "vendor_id": "V0138",
       "legal_name": "Stormline Partners B.V.",
       "trading_name": "Stormline",
       "tax_id": "CA773469560",
@@ -1587,7 +1659,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0133",
+      "vendor_id": "V0139",
       "legal_name": "Kestrel Industries B.V.",
       "trading_name": "Kestrel",
       "tax_id": "CA433297890",
@@ -1599,7 +1671,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0134",
+      "vendor_id": "V0140",
       "legal_name": "Oakhaven Partners S.A.",
       "trading_name": "Oakhaven",
       "tax_id": "GB723123952",
@@ -1611,7 +1683,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0135",
+      "vendor_id": "V0141",
       "legal_name": "Greyfriars Partners LLC",
       "trading_name": "Greyfriars",
       "tax_id": "IN583745511",
@@ -1623,7 +1695,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0136",
+      "vendor_id": "V0142",
       "legal_name": "Bluewater Supply Co Inc",
       "trading_name": "Bluewater",
       "tax_id": "JP754773573",
@@ -1635,7 +1707,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0137",
+      "vendor_id": "V0143",
       "legal_name": "Stormline Industries B.V.",
       "trading_name": "Stormline",
       "tax_id": null,
@@ -1647,7 +1719,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0138",
+      "vendor_id": "V0144",
       "legal_name": "Quarry Partners LLC",
       "trading_name": "Quarry",
       "tax_id": "GB433108786",
@@ -1659,7 +1731,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0139",
+      "vendor_id": "V0145",
       "legal_name": "Ridgeway Logistics LLC",
       "trading_name": "Ridgeway",
       "tax_id": "AE990087914",
@@ -1671,7 +1743,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0140",
+      "vendor_id": "V0146",
       "legal_name": "Northwind Logistics LLC",
       "trading_name": "Northwind",
       "tax_id": "SG466932310",
@@ -1683,7 +1755,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0141",
+      "vendor_id": "V0147",
       "legal_name": "Sandstone Partners S.A.",
       "trading_name": "Sandstone",
       "tax_id": "GB665359037",
@@ -1695,7 +1767,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0142",
+      "vendor_id": "V0148",
       "legal_name": "Orchard Partners LLC",
       "trading_name": "Orchard",
       "tax_id": "JP146914391",
@@ -1707,7 +1779,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0143",
+      "vendor_id": "V0149",
       "legal_name": "Bluewater Trading GmbH",
       "trading_name": "Bluewater",
       "tax_id": "PL942211135",
@@ -1719,7 +1791,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0144",
+      "vendor_id": "V0150",
       "legal_name": "Sandstone Partners S.A.",
       "trading_name": "Sandstone",
       "tax_id": "AE274008639",
@@ -1731,7 +1803,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0145",
+      "vendor_id": "V0151",
       "legal_name": "Lantern Industries S.A.",
       "trading_name": "Lantern",
       "tax_id": "PL406084084",
@@ -1743,7 +1815,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0146",
+      "vendor_id": "V0152",
       "legal_name": "Cedar Point Supply Co B.V.",
       "trading_name": "Cedar Point",
       "tax_id": "FR545492166",
@@ -1755,7 +1827,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0147",
+      "vendor_id": "V0153",
       "legal_name": "Bluewater Logistics Limited",
       "trading_name": "Bluewater",
       "tax_id": "US797889971",
@@ -1767,7 +1839,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0148",
+      "vendor_id": "V0154",
       "legal_name": "Fenwick Supply Co Ltd",
       "trading_name": "Fenwick",
       "tax_id": "IN120405269",
@@ -1779,7 +1851,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0149",
+      "vendor_id": "V0155",
       "legal_name": "Meridian Trading GmbH",
       "trading_name": "Meridian",
       "tax_id": null,
@@ -1791,7 +1863,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0150",
+      "vendor_id": "V0156",
       "legal_name": "Oakhaven Partners L.L.C.",
       "trading_name": "Oakhaven",
       "tax_id": "PL412750915",
@@ -1803,7 +1875,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0151",
+      "vendor_id": "V0157",
       "legal_name": "Stormline Industries S.A.",
       "trading_name": "Stormline",
       "tax_id": "AU172670118",
@@ -1815,7 +1887,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0152",
+      "vendor_id": "V0158",
       "legal_name": "Oakhaven Logistics GmbH",
       "trading_name": "Oakhaven",
       "tax_id": "AE483426624",
@@ -1827,7 +1899,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0153",
+      "vendor_id": "V0159",
       "legal_name": "Saltmarsh Logistics LLC",
       "trading_name": "Saltmarsh",
       "tax_id": null,
@@ -1839,7 +1911,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0154",
+      "vendor_id": "V0160",
       "legal_name": "Oakhaven Trading Limited",
       "trading_name": "Oakhaven",
       "tax_id": "DE591429705",
@@ -1851,7 +1923,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0155",
+      "vendor_id": "V0161",
       "legal_name": "Quarry Partners Pte Ltd",
       "trading_name": "Quarry",
       "tax_id": "NL683074770",
@@ -1863,7 +1935,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0156",
+      "vendor_id": "V0162",
       "legal_name": "Baltic Logistics GmbH",
       "trading_name": "Baltic",
       "tax_id": null,
@@ -1875,7 +1947,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0157",
+      "vendor_id": "V0163",
       "legal_name": "Orchard Supply Co B.V.",
       "trading_name": "Orchard",
       "tax_id": "IN657568201",
@@ -1887,7 +1959,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0158",
+      "vendor_id": "V0164",
       "legal_name": "Ridgeway Logistics Limited",
       "trading_name": "Ridgeway",
       "tax_id": null,
@@ -1899,7 +1971,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0159",
+      "vendor_id": "V0165",
       "legal_name": "Orchard Supply Co B.V.",
       "trading_name": "Orchard",
       "tax_id": "JP880411013",
@@ -1911,7 +1983,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0160",
+      "vendor_id": "V0166",
       "legal_name": "Stormline Supply Co B.V.",
       "trading_name": "Stormline",
       "tax_id": "AU905196831",
@@ -1923,7 +1995,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0161",
+      "vendor_id": "V0167",
       "legal_name": "Baltic Industries L.L.C.",
       "trading_name": "Baltic",
       "tax_id": "DE493342201",
@@ -1935,7 +2007,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0162",
+      "vendor_id": "V0168",
       "legal_name": "Lantern Supply Co Limited",
       "trading_name": "Lantern",
       "tax_id": "SG668503222",
@@ -1947,7 +2019,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0163",
+      "vendor_id": "V0169",
       "legal_name": "Northwind Trading Inc",
       "trading_name": "Northwind",
       "tax_id": "JP703091482",
@@ -1959,7 +2031,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0164",
+      "vendor_id": "V0170",
       "legal_name": "Fenwick Trading Limited",
       "trading_name": "Fenwick",
       "tax_id": null,
@@ -1971,7 +2043,7 @@
       "category": "contract manufacturing"
     },
     {
-      "vendor_id": "V0165",
+      "vendor_id": "V0171",
       "legal_name": "Stormline Industries S.A.",
       "trading_name": "Stormline",
       "tax_id": "SG422076028",
@@ -1983,7 +2055,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0166",
+      "vendor_id": "V0172",
       "legal_name": "Ironside Trading Inc",
       "trading_name": "Ironside",
       "tax_id": null,
@@ -1995,7 +2067,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0167",
+      "vendor_id": "V0173",
       "legal_name": "Greyfriars Industries GmbH",
       "trading_name": "Greyfriars",
       "tax_id": "GB869801588",
@@ -2007,7 +2079,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0168",
+      "vendor_id": "V0174",
       "legal_name": "Halcyon Industries Inc",
       "trading_name": "Halcyon",
       "tax_id": "SG655511084",
@@ -2019,7 +2091,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0169",
+      "vendor_id": "V0175",
       "legal_name": "Meridian Trading GmbH",
       "trading_name": "Meridian",
       "tax_id": "PL446454337",
@@ -2031,7 +2103,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0170",
+      "vendor_id": "V0176",
       "legal_name": "Ironside Partners GmbH",
       "trading_name": "Ironside",
       "tax_id": null,
@@ -2043,7 +2115,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0171",
+      "vendor_id": "V0177",
       "legal_name": "Orchard Partners B.V.",
       "trading_name": "Orchard",
       "tax_id": "AU705180256",
@@ -2055,7 +2127,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0172",
+      "vendor_id": "V0178",
       "legal_name": "Oakhaven Partners Pte Ltd",
       "trading_name": "Oakhaven",
       "tax_id": "FR132519237",
@@ -2067,7 +2139,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0173",
+      "vendor_id": "V0179",
       "legal_name": "Stormline Logistics Inc",
       "trading_name": "Stormline",
       "tax_id": null,
@@ -2079,7 +2151,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0174",
+      "vendor_id": "V0180",
       "legal_name": "Quarry Trading B.V.",
       "trading_name": "Quarry",
       "tax_id": "CA442863363",
@@ -2091,7 +2163,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0175",
+      "vendor_id": "V0181",
       "legal_name": "Quarry Supply Co Limited",
       "trading_name": "Quarry",
       "tax_id": "FR366200875",
@@ -2103,7 +2175,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0176",
+      "vendor_id": "V0182",
       "legal_name": "Bluewater Logistics B.V.",
       "trading_name": "Bluewater",
       "tax_id": "DE271092615",
@@ -2115,7 +2187,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0177",
+      "vendor_id": "V0183",
       "legal_name": "Cedar Point Partners Inc",
       "trading_name": "Cedar Point",
       "tax_id": "AE331009561",
@@ -2127,7 +2199,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0178",
+      "vendor_id": "V0184",
       "legal_name": "Sandstone Industries Limited",
       "trading_name": "Sandstone",
       "tax_id": "PL383975609",
@@ -2139,7 +2211,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0179",
+      "vendor_id": "V0185",
       "legal_name": "Saltmarsh Trading B.V.",
       "trading_name": "Saltmarsh",
       "tax_id": "PL178954113",
@@ -2151,7 +2223,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0180",
+      "vendor_id": "V0186",
       "legal_name": "Halcyon Supply Co B.V.",
       "trading_name": "Halcyon",
       "tax_id": "GB464090064",
@@ -2163,7 +2235,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0181",
+      "vendor_id": "V0187",
       "legal_name": "Pinecrest Industries Ltd",
       "trading_name": "Pinecrest",
       "tax_id": null,
@@ -2175,7 +2247,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0182",
+      "vendor_id": "V0188",
       "legal_name": "Quarry Logistics LLC",
       "trading_name": "Quarry",
       "tax_id": "CA761962359",
@@ -2187,7 +2259,7 @@
       "category": "components"
     },
     {
-      "vendor_id": "V0183",
+      "vendor_id": "V0189",
       "legal_name": "Fenwick Logistics Inc",
       "trading_name": "Fenwick",
       "tax_id": "CA495521185",
@@ -2199,7 +2271,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0184",
+      "vendor_id": "V0190",
       "legal_name": "Greyfriars Logistics L.L.C.",
       "trading_name": "Greyfriars",
       "tax_id": "IN726553348",
@@ -2211,7 +2283,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0185",
+      "vendor_id": "V0191",
       "legal_name": "Baltic Industries L.L.C.",
       "trading_name": "Baltic",
       "tax_id": null,
@@ -2223,7 +2295,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0186",
+      "vendor_id": "V0192",
       "legal_name": "Pinecrest Supply Co Ltd",
       "trading_name": "Pinecrest",
       "tax_id": "CA656931857",
@@ -2235,7 +2307,7 @@
       "category": "professional services"
     },
     {
-      "vendor_id": "V0187",
+      "vendor_id": "V0193",
       "legal_name": "Quarry Supply Co S.A.",
       "trading_name": "Quarry",
       "tax_id": "DE480412754",
@@ -2247,7 +2319,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0188",
+      "vendor_id": "V0194",
       "legal_name": "Bluewater Logistics L.L.C.",
       "trading_name": "Bluewater",
       "tax_id": "NL625063062",
@@ -2259,7 +2331,7 @@
       "category": "packaging"
     },
     {
-      "vendor_id": "V0189",
+      "vendor_id": "V0195",
       "legal_name": "Sandstone Partners S.A.",
       "trading_name": "Sandstone",
       "tax_id": "GB523625992",
@@ -2271,7 +2343,7 @@
       "category": "raw materials"
     },
     {
-      "vendor_id": "V0190",
+      "vendor_id": "V0196",
       "legal_name": "Lantern Logistics Inc",
       "trading_name": "Lantern",
       "tax_id": "IN989006374",
@@ -2283,7 +2355,7 @@
       "category": "facilities"
     },
     {
-      "vendor_id": "V0191",
+      "vendor_id": "V0197",
       "legal_name": "Bluewater Partners L.L.C.",
       "trading_name": "Bluewater",
       "tax_id": "US156361897",
@@ -2295,7 +2367,7 @@
       "category": "IT services"
     },
     {
-      "vendor_id": "V0192",
+      "vendor_id": "V0198",
       "legal_name": "Northwind Trading Pte Ltd",
       "trading_name": "Northwind",
       "tax_id": "PL610778600",
@@ -2307,7 +2379,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0193",
+      "vendor_id": "V0199",
       "legal_name": "Cedar Point Partners L.L.C.",
       "trading_name": "Cedar Point",
       "tax_id": "AU876441691",
@@ -2319,7 +2391,7 @@
       "category": "logistics"
     },
     {
-      "vendor_id": "V0194",
+      "vendor_id": "V0200",
       "legal_name": "Fairweather Trading GmbH",
       "trading_name": "Fairweather",
       "tax_id": "IN109950544",
@@ -2329,78 +2401,6 @@
       "onboarded_date": "2019-06-10",
       "annual_spend_usd": 340000,
       "category": "components"
-    },
-    {
-      "vendor_id": "V0195",
-      "legal_name": "Halcyon Supply Co GmbH",
-      "trading_name": "Halcyon",
-      "tax_id": "PL220953538",
-      "country": "PL",
-      "address": "85 Mill St, PL",
-      "bank_country": "PL",
-      "onboarded_date": "2025-11-09",
-      "annual_spend_usd": 2100000,
-      "category": "IT services"
-    },
-    {
-      "vendor_id": "V0196",
-      "legal_name": "Northwind Logistics GmbH",
-      "trading_name": "Northwind",
-      "tax_id": "JP913126162",
-      "country": "JP",
-      "address": "50 Mill St, JP",
-      "bank_country": "JP",
-      "onboarded_date": "2024-07-17",
-      "annual_spend_usd": 115000,
-      "category": "raw materials"
-    },
-    {
-      "vendor_id": "V0197",
-      "legal_name": "Fairweather Industries LLC",
-      "trading_name": "Fairweather",
-      "tax_id": "AU612662437",
-      "country": "AU",
-      "address": "83 Mill St, AU",
-      "bank_country": "AU",
-      "onboarded_date": "2018-05-13",
-      "annual_spend_usd": 48000,
-      "category": "components"
-    },
-    {
-      "vendor_id": "V0198",
-      "legal_name": "Kestrel Logistics Ltd",
-      "trading_name": "Kestrel",
-      "tax_id": "SG486066116",
-      "country": "SG",
-      "address": "178 Mill St, SG",
-      "bank_country": "SG",
-      "onboarded_date": "2018-11-04",
-      "annual_spend_usd": 340000,
-      "category": "packaging"
-    },
-    {
-      "vendor_id": "V0199",
-      "legal_name": "Orchard Partners GmbH",
-      "trading_name": "Orchard",
-      "tax_id": "AE785811060",
-      "country": "AE",
-      "address": "235 Station St, AE",
-      "bank_country": "AE",
-      "onboarded_date": "2023-10-08",
-      "annual_spend_usd": 48000,
-      "category": "IT services"
-    },
-    {
-      "vendor_id": "V0200",
-      "legal_name": "Vantage Supply Co B.V.",
-      "trading_name": "Vantage",
-      "tax_id": "DE689736058",
-      "country": "DE",
-      "address": "234 Harbour St, DE",
-      "bank_country": "DE",
-      "onboarded_date": "2021-04-22",
-      "annual_spend_usd": 890000,
-      "category": "raw materials"
     }
   ],
   "_demo_cases": {
@@ -2453,6 +2453,254 @@
       "expect": "BLOCK",
       "why": "REAL company. GLEIF reports its ultimate parent as 'Alstone Investment AG', which is on the OFAC SDN list. Clean on its own name; only the chain walk finds it.",
       "anchor": null
+    }
+  },
+  "_eval_cases": {
+    "V0011": {
+      "category": "alias_exact_same_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK"
+      ],
+      "why": "exact alias of 'FARMACIA Y MINI SUPER TRINIDAD', same jurisdiction",
+      "anchor": "NK-2ZMYBhEKVGEG6YH83wLbxk",
+      "chain_to": null
+    },
+    "V0012": {
+      "category": "alias_exact_same_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK"
+      ],
+      "why": "exact alias of 'OOO STANDARD LINE', same jurisdiction",
+      "anchor": "NK-2gnXxYSmNUWxsvX5gyMmGh",
+      "chain_to": null
+    },
+    "V0013": {
+      "category": "alias_exact_same_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK"
+      ],
+      "why": "exact alias of 'IRANIAN INVESTMENT PETROCHEMICAL GROUP COMPANY', same jurisdiction",
+      "anchor": "NK-2jgGmJaCam25UVaLGFrL4y",
+      "chain_to": null
+    },
+    "V0014": {
+      "category": "alias_exact_same_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK"
+      ],
+      "why": "exact alias of 'WAAD PROJECT', same jurisdiction",
+      "anchor": "NK-2qwt6eV2sLUsce8viEvWUb",
+      "chain_to": null
+    },
+    "V0015": {
+      "category": "alias_exact_same_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK"
+      ],
+      "why": "exact alias of 'LNG Delta Shipping PTE LTD', same jurisdiction",
+      "anchor": "NK-2rbjmwJ6FmGAA8GJG3eMfr",
+      "chain_to": null
+    },
+    "V0016": {
+      "category": "alias_exact_diff_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK",
+        "ESCALATE"
+      ],
+      "why": "exact alias of 'SIA FALCON INTERNATIONAL GROUP' but registered in NL",
+      "anchor": "NK-2udNfFsJBAPopMJ9yroFvQ",
+      "chain_to": null
+    },
+    "V0017": {
+      "category": "alias_exact_diff_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK",
+        "ESCALATE"
+      ],
+      "why": "exact alias of 'Rotek Elpom, LLC' but registered in NL",
+      "anchor": "NK-3KjKEauQtEsXvHa7g9VYiq",
+      "chain_to": null
+    },
+    "V0018": {
+      "category": "alias_exact_diff_country",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK",
+        "ESCALATE"
+      ],
+      "why": "exact alias of 'JSC RUSSIAN EXPORT CENTER' but registered in NL",
+      "anchor": "NK-3WV9EaEUBS45g2zsEKnREH",
+      "chain_to": null
+    },
+    "V0019": {
+      "category": "chain_indirect",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK",
+        "ESCALATE"
+      ],
+      "why": "clean on its own name; control chain reaches 'SHREEGEE IMPEX PRIVATE LIMITED'",
+      "anchor": "NK-3YZ6aYzLaf7ogQQGiBcmZn",
+      "chain_to": "NK-3YZ6aYzLaf7ogQQGiBcmZn"
+    },
+    "V0020": {
+      "category": "chain_indirect",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK",
+        "ESCALATE"
+      ],
+      "why": "clean on its own name; control chain reaches 'LLC Cityimpex'",
+      "anchor": "NK-3gZb2Q6E77zNmGUKiP92RC",
+      "chain_to": "NK-3gZb2Q6E77zNmGUKiP92RC"
+    },
+    "V0021": {
+      "category": "chain_indirect",
+      "exposed": true,
+      "acceptable": [
+        "BLOCK",
+        "ESCALATE"
+      ],
+      "why": "clean on its own name; control chain reaches 'Gent Elektrik Enerjisi Toptan Satis Anonim Sirketi'",
+      "anchor": "NK-3odNMdm6xQ3XeJeFhaoRP2",
+      "chain_to": "NK-3odNMdm6xQ3XeJeFhaoRP2"
+    },
+    "V0022": {
+      "category": "near_miss_diff_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "name overlaps 'Barash Aviation and Cargo Company Limited' but is a different company in AU",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0023": {
+      "category": "near_miss_diff_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "name overlaps 'LIMITED LIABILITY COMPANY PROTEY SPETSTEKHNIKA' but is a different company in AU",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0024": {
+      "category": "near_miss_diff_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "name overlaps 'Lama Foods International Offshore S.A.L.' but is a different company in AU",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0025": {
+      "category": "near_miss_diff_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "name overlaps 'Saman Air Services Company' but is a different company in AU",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0026": {
+      "category": "near_miss_diff_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "name overlaps 'VTB LEASING JOINT STOCK COMPANY' but is a different company in AU",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0027": {
+      "category": "near_miss_same_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "overlaps 'Federal State Enterprise Amur Cartridge Plant Vympel' in the same jurisdiction, but is not an alias",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0028": {
+      "category": "near_miss_same_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "overlaps 'GAS INDUSTRY INSURANCE COMPANY SOGAZ' in the same jurisdiction, but is not an alias",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0029": {
+      "category": "near_miss_same_country",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "overlaps 'EAST ASIA TRADING IMPORT AND EXPORT TRADE CO., LTD.' in the same jurisdiction, but is not an alias",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0030": {
+      "category": "clean_deep_chain",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "ownership chain terminates without reaching a listed entity",
+      "anchor": null,
+      "chain_to": "CLEAN"
+    },
+    "V0031": {
+      "category": "clean_deep_chain",
+      "exposed": false,
+      "acceptable": [
+        "CLEAR",
+        "ESCALATE"
+      ],
+      "why": "ownership chain terminates without reaching a listed entity",
+      "anchor": null,
+      "chain_to": "CLEAN"
+    },
+    "V0032": {
+      "category": "generic_name",
+      "exposed": false,
+      "acceptable": [
+        "ESCALATE"
+      ],
+      "why": "no distinctive token and no identifier: cannot be resolved",
+      "anchor": null,
+      "chain_to": null
+    },
+    "V0033": {
+      "category": "generic_name",
+      "exposed": false,
+      "acceptable": [
+        "ESCALATE"
+      ],
+      "why": "no distinctive token and no identifier: cannot be resolved",
+      "anchor": null,
+      "chain_to": null
     }
   }
 }

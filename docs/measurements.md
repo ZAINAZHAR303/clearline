@@ -102,6 +102,48 @@ round, a reroute to the control chain, and a confidence escalation.
 
 ---
 
+## Accuracy, measured against a labelled set
+
+```bash
+python scripts/evaluate.py --fake
+```
+
+Eight demo cases passing proves little -- a reader is entitled to wonder
+whether eight cases were chosen because they pass. 33 labelled cases, 16 with
+genuine exposure and 17 clean, across seven categories:
+
+| | result |
+|---|---|
+| **Misses** (exposed vendor CLEARED) | **0 / 16** — recall 16/16 |
+| **False blocks** (clean vendor BLOCKED) | **0 / 17** |
+| Escalations | 7 / 33 — review workload, not failure |
+
+The two error types are never averaged into one "accuracy" number, because
+they are not symmetric: clearing an exposed vendor is the legal violation,
+blocking a clean one freezes a real supplier, and escalating either is a safe
+outcome that costs review time. A tool that escalated everything would show
+zero misses and be useless, so the escalation rate is reported beside them.
+
+### What the first run found
+
+Four misses, all real product bugs rather than test artifacts:
+
+**Three cross-border alias matches were cleared.** An exact alias with a
+different registered country scored `0.30 + 0.50 − 0.15 + 0.05 = 0.70` against
+a 0.82 bar, so it fell short and was rejected. But a listed entity's alias
+appearing in a vendor book under another jurisdiction is how evasion looks --
+it is the Pegasus pattern. Jurisdiction mismatch is now a caveat recorded for
+the reviewer rather than evidence against identity, and a safety floor means an
+exact alias is never CLEARED without a human.
+
+**One ownership chain was missed because the walker followed only the first
+parent.** A company can have several parent relationships; taking `parents[0]`
+and stopping made a second route invisible. The walk is now breadth-first over
+every parent, still bounded by `maxChunks`. This is the kind of defect that
+single-case testing structurally cannot surface.
+
+---
+
 ## Day 2 — correctness and cost together
 
 All five demo cases now produce the right decision against the live model.
