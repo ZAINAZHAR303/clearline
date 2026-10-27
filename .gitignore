@@ -13,3 +13,6 @@ engines/hmem/node_modules/
 data/memory/
 .claude/
 data/queue/
+
+# Internal planning doc, kept out of the public submission
+BUILD-PLAN.md

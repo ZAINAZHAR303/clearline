@@ -7,7 +7,7 @@ of NVIDIA Nemotron" award, which is the largest single prize in the event.
   SUPER  the Resolver/Critic loop -- tool calling and real multi-step reasoning
   ULTRA  the Adjudicator, contested cases only
 
-Budget policy (BUILD-PLAN.md section 6): spend reasoning in proportion to
+Budget policy (docs/measurements.md): spend reasoning in proportion to
 stakes, log what was spent, and show the histogram in the demo.
 
 NOTE ON THE BUDGET PARAMETER
