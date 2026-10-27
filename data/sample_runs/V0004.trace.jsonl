@@ -1,0 +1,30 @@
+{"t": 0.002, "run_id": "d0d2a0ba", "kind": "run.start", "subject": "V0004"}
+{"t": 0.005, "run_id": "d0d2a0ba", "kind": "vendor.loaded", "vendor_id": "V0004", "legal_name": "Nordvik Components GmbH", "country": "DE", "annual_spend_usd": 48000}
+{"t": 0.006, "run_id": "d0d2a0ba", "kind": "agent.start", "agent": "router", "vendor_id": "V0004"}
+{"t": 0.006, "run_id": "d0d2a0ba", "kind": "llm.call", "agent": "router", "tier": "nano", "budget": 1, "faked": true}
+{"t": 0.007, "run_id": "d0d2a0ba", "kind": "router.out", "risk_tier": "MED", "ambiguous": false, "signals": ["bank_country != country"]}
+{"t": 0.007, "run_id": "d0d2a0ba", "kind": "agent.end", "agent": "router", "ms": 1}
+{"t": 4.128, "run_id": "d0d2a0ba", "kind": "tool.call", "tool": "dq_report", "table": "lightning.metastore.clearline.counterparty_usl.counterparty", "source": "local-fallback", "columns": {"tax_id": 0.145, "country": 0.0, "bank_country": 0.0}, "constraints": []}
+{"t": 4.128, "run_id": "d0d2a0ba", "kind": "branch", "reason": "tax_id unreliable in this source (tax_id 14% null)", "taken": "RAISE_EVIDENCE_BAR", "from_bar": 0.7, "to_bar": 0.82}
+{"t": 5.177, "run_id": "d0d2a0ba", "kind": "tool.call", "tool": "search_sanctions", "terms": ["Nordvik Components GmbH", "Nordvik"], "n_hits": 0, "candidates": []}
+{"t": 5.177, "run_id": "d0d2a0ba", "kind": "agent.start", "agent": "resolver", "n_candidates": 0, "revision": false}
+{"t": 5.177, "run_id": "d0d2a0ba", "kind": "llm.call", "agent": "resolver", "tier": "nano", "budget": 1, "faked": true}
+{"t": 5.178, "run_id": "d0d2a0ba", "kind": "resolver.out", "confidence": 0.0, "n": 0}
+{"t": 5.178, "run_id": "d0d2a0ba", "kind": "agent.end", "agent": "resolver", "ms": 1}
+{"t": 5.178, "run_id": "d0d2a0ba", "kind": "agent.start", "agent": "critic", "round": 1}
+{"t": 5.179, "run_id": "d0d2a0ba", "kind": "llm.call", "agent": "critic", "tier": "super", "budget": 3, "faked": true}
+{"t": 5.179, "run_id": "d0d2a0ba", "kind": "verdict", "agent": "critic", "verdict": "REROUTE", "reasons": ["no watchlist candidate on the vendor's own name"], "round": 1}
+{"t": 5.179, "run_id": "d0d2a0ba", "kind": "agent.end", "agent": "critic", "ms": 0}
+{"t": 5.179, "run_id": "d0d2a0ba", "kind": "branch", "reason": "name evidence exhausted", "taken": "WALK_CONTROL_CHAIN"}
+{"t": 5.179, "run_id": "d0d2a0ba", "kind": "agent.start", "agent": "ownership_walker", "vendor_id": "V0004", "max_depth": 5}
+{"t": 7.711, "run_id": "d0d2a0ba", "kind": "tool.call", "tool": "markovian.walk", "engine": "meterless/markovian", "implementation": "clearline (engines/markovian/src/index.ts)", "chunks": 2, "carryover_tokens": 640, "token_label": "estimated", "standard_cost": 215, "markovian_cost": 1415, "terminated_because": "SANCTIONS_HIT"}
+{"t": 7.711, "run_id": "d0d2a0ba", "kind": "walker.hop", "depth": 1, "name": "Baltic Holdings Oy", "country": "FI", "relation": "DIRECT_PARENT", "sanctions_hit": false}
+{"t": 7.711, "run_id": "d0d2a0ba", "kind": "walker.hop", "depth": 2, "name": "LIMITED LIABILITY COMPANY KHAVERIM", "country": "RU", "relation": "ULTIMATE_PARENT", "sanctions_hit": true}
+{"t": 7.711, "run_id": "d0d2a0ba", "kind": "branch", "reason": "control chain reaches listed entity 'LIMITED LIABILITY COMPANY KHAVERIM' at depth 2", "taken": "INDIRECT_EXPOSURE_FOUND"}
+{"t": 7.711, "run_id": "d0d2a0ba", "kind": "agent.end", "agent": "ownership_walker", "ms": 2532}
+{"t": 7.711, "run_id": "d0d2a0ba", "kind": "agent.start", "agent": "adjudicator", "tier": "super", "budget": 3, "contested": false}
+{"t": 7.717, "run_id": "d0d2a0ba", "kind": "llm.call", "agent": "adjudicator", "tier": "super", "budget": 3, "faked": true}
+{"t": 7.717, "run_id": "d0d2a0ba", "kind": "adjudicator.out", "decision": "BLOCK", "confidence": 0.9, "budget_spent": 3, "tier": "super"}
+{"t": 7.717, "run_id": "d0d2a0ba", "kind": "agent.end", "agent": "adjudicator", "ms": 5}
+{"t": 7.717, "run_id": "d0d2a0ba", "kind": "evidence.route", "route": "control_chain", "name_evidence": 0.0, "chain_evidence": 0.9}
+{"t": 7.717, "run_id": "d0d2a0ba", "kind": "run.end", "outcome": "BLOCK", "confidence": 0.9, "rejections": 0, "evidence_bar": 0.82}

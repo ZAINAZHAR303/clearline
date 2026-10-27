@@ -265,4 +265,5 @@ scripts/        data generation, SQL application, conformance, trace summaries
 tests/          24 offline assertions: the planted cases, and the ledger's invariants
 docs/           measured before/after numbers
 data/sample/    committed samples, with provenance — see data/README.md
+data/sample_runs/  five vendors end to end: the decision and the full trace behind it
 ```

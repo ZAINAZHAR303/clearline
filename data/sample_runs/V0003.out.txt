@@ -1,0 +1,14 @@
+
+  CLEAR  confidence 0.85
+  A watchlist candidate was considered and rejected: no exact alias match; registered jurisdiction disagrees with the listed entity; token overlap alone cannot carry a block.
+
+  evidence
+    - candidate South Wealth Resources Company rejected  [us_ofac_sdn NK-26aLUdNdrvaLZphX6xQrr5]
+
+  caveats
+    ~ tax_id is unreliable in this source
+    ~ watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities
+    ~ control chain walked, no listed entity found
+
+  trace: D:\Github Repos\genai hackathon\logs\run-20261027T163924-76507b1d.jsonl
+

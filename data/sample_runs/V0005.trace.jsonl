@@ -1,0 +1,9 @@
+{"t": 0.002, "run_id": "1669390b", "kind": "run.start", "subject": "V0005"}
+{"t": 0.007, "run_id": "1669390b", "kind": "vendor.loaded", "vendor_id": "V0005", "legal_name": "Global Trading Ltd", "country": "FR", "annual_spend_usd": 115000}
+{"t": 0.008, "run_id": "1669390b", "kind": "agent.start", "agent": "router", "vendor_id": "V0005"}
+{"t": 0.008, "run_id": "1669390b", "kind": "llm.call", "agent": "router", "tier": "nano", "budget": 1, "faked": true}
+{"t": 0.009, "run_id": "1669390b", "kind": "router.out", "risk_tier": "MED", "ambiguous": true, "signals": []}
+{"t": 0.01, "run_id": "1669390b", "kind": "agent.end", "agent": "router", "ms": 2}
+{"t": 0.01, "run_id": "1669390b", "kind": "branch", "reason": "name is too generic to match reliably", "taken": "ESCALATE_EARLY", "reason_detail": "generic trading name"}
+{"t": 0.012, "run_id": "1669390b", "kind": "adjudicator.out", "decision": "ESCALATE", "confidence": 0.0, "short_circuit": true}
+{"t": 0.012, "run_id": "1669390b", "kind": "run.end", "outcome": "ESCALATE"}

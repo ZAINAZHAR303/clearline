@@ -1,0 +1,39 @@
+{"t": 0.001, "run_id": "76507b1d", "kind": "run.start", "subject": "V0003"}
+{"t": 0.004, "run_id": "76507b1d", "kind": "vendor.loaded", "vendor_id": "V0003", "legal_name": "Southwealth Resources Pty Ltd", "country": "AU", "annual_spend_usd": 2100000}
+{"t": 0.004, "run_id": "76507b1d", "kind": "agent.start", "agent": "router", "vendor_id": "V0003"}
+{"t": 0.004, "run_id": "76507b1d", "kind": "llm.call", "agent": "router", "tier": "nano", "budget": 1, "faked": true}
+{"t": 0.004, "run_id": "76507b1d", "kind": "router.out", "risk_tier": "HIGH", "ambiguous": false, "signals": []}
+{"t": 0.005, "run_id": "76507b1d", "kind": "agent.end", "agent": "router", "ms": 0}
+{"t": 4.131, "run_id": "76507b1d", "kind": "tool.call", "tool": "dq_report", "table": "lightning.metastore.clearline.counterparty_usl.counterparty", "source": "local-fallback", "columns": {"tax_id": 0.145, "country": 0.0, "bank_country": 0.0}, "constraints": []}
+{"t": 4.131, "run_id": "76507b1d", "kind": "branch", "reason": "tax_id unreliable in this source (tax_id 14% null)", "taken": "RAISE_EVIDENCE_BAR", "from_bar": 0.7, "to_bar": 0.82}
+{"t": 5.123, "run_id": "76507b1d", "kind": "tool.call", "tool": "search_sanctions", "terms": ["Southwealth Resources Pty Ltd", "Southwealth"], "n_hits": 1, "candidates": [{"id": "NK-26aLUdNdrvaLZphX6xQrr5", "caption": "South Wealth Resources Company", "exact_alias": false, "matched_alias": "", "country_agreement": false, "token_overlap": 0.67, "features": ["token_overlap_0.67", "country_disagreement", "tax_id_present"], "score": 0.3}]}
+{"t": 5.123, "run_id": "76507b1d", "kind": "agent.start", "agent": "resolver", "n_candidates": 1, "revision": false}
+{"t": 5.123, "run_id": "76507b1d", "kind": "llm.call", "agent": "resolver", "tier": "nano", "budget": 1, "faked": true}
+{"t": 5.124, "run_id": "76507b1d", "kind": "resolver.out", "confidence": 0.3, "n": 1}
+{"t": 5.124, "run_id": "76507b1d", "kind": "agent.end", "agent": "resolver", "ms": 1}
+{"t": 5.124, "run_id": "76507b1d", "kind": "agent.start", "agent": "critic", "round": 1}
+{"t": 5.124, "run_id": "76507b1d", "kind": "llm.call", "agent": "critic", "tier": "super", "budget": 3, "faked": true}
+{"t": 5.124, "run_id": "76507b1d", "kind": "verdict", "agent": "critic", "verdict": "DEMAND_EVIDENCE", "reasons": ["single-source assertion", "token overlap alone is weak"], "round": 1}
+{"t": 5.124, "run_id": "76507b1d", "kind": "agent.end", "agent": "critic", "ms": 0}
+{"t": 5.124, "run_id": "76507b1d", "kind": "branch", "reason": "critic demanded 'vendor.tax_id'", "taken": "REVISE_WITH_FEEDBACK", "round": 1}
+{"t": 5.125, "run_id": "76507b1d", "kind": "agent.start", "agent": "resolver", "n_candidates": 1, "revision": true}
+{"t": 5.125, "run_id": "76507b1d", "kind": "llm.call", "agent": "resolver", "tier": "nano", "budget": 1, "faked": true}
+{"t": 5.125, "run_id": "76507b1d", "kind": "resolver.confidence_override", "model_said": 0.38, "computed": 0.3, "reason": "confidence is the deterministic score, not a model opinion"}
+{"t": 5.125, "run_id": "76507b1d", "kind": "resolver.out", "confidence": 0.3, "n": 1}
+{"t": 5.125, "run_id": "76507b1d", "kind": "agent.end", "agent": "resolver", "ms": 0}
+{"t": 5.125, "run_id": "76507b1d", "kind": "agent.start", "agent": "critic", "round": 2}
+{"t": 5.125, "run_id": "76507b1d", "kind": "llm.call", "agent": "critic", "tier": "super", "budget": 3, "faked": true}
+{"t": 5.125, "run_id": "76507b1d", "kind": "verdict", "agent": "critic", "verdict": "REJECT", "reasons": ["no exact alias match", "registered jurisdiction disagrees with the listed entity", "token overlap alone cannot carry a block"], "round": 2}
+{"t": 5.125, "run_id": "76507b1d", "kind": "agent.end", "agent": "critic", "ms": 0}
+{"t": 5.126, "run_id": "76507b1d", "kind": "branch", "reason": "revision budget exhausted", "taken": "STOP_AND_ESCALATE", "rounds": 2}
+{"t": 5.126, "run_id": "76507b1d", "kind": "branch", "reason": "no confirmed name match; ownership still unchecked", "taken": "WALK_CONTROL_CHAIN_BEFORE_CLEARING"}
+{"t": 5.126, "run_id": "76507b1d", "kind": "agent.start", "agent": "ownership_walker", "vendor_id": "V0003", "max_depth": 5}
+{"t": 9.6, "run_id": "76507b1d", "kind": "tool.call", "tool": "markovian.walk", "engine": "meterless/markovian", "implementation": "clearline (engines/markovian/src/index.ts)", "chunks": 1, "carryover_tokens": 640, "token_label": "estimated", "standard_cost": 20, "markovian_cost": 660, "terminated_because": "ROOT"}
+{"t": 9.6, "run_id": "76507b1d", "kind": "walker.clean", "terminated_because": "ROOT", "hops": 0}
+{"t": 9.6, "run_id": "76507b1d", "kind": "agent.end", "agent": "ownership_walker", "ms": 4474}
+{"t": 9.6, "run_id": "76507b1d", "kind": "agent.start", "agent": "adjudicator", "tier": "ultra", "budget": 6, "contested": true}
+{"t": 9.605, "run_id": "76507b1d", "kind": "llm.call", "agent": "adjudicator", "tier": "ultra", "budget": 6, "faked": true}
+{"t": 9.605, "run_id": "76507b1d", "kind": "adjudicator.out", "decision": "CLEAR", "confidence": 0.85, "budget_spent": 6, "tier": "ultra"}
+{"t": 9.605, "run_id": "76507b1d", "kind": "agent.end", "agent": "adjudicator", "ms": 5}
+{"t": 10.308, "run_id": "76507b1d", "kind": "hmem.remember", "status": "remembered", "record_id": "mem-2", "entity_id": "NK-26aLUdNdrvaLZphX6xQrr5"}
+{"t": 10.308, "run_id": "76507b1d", "kind": "run.end", "outcome": "CLEAR", "confidence": 0.85, "rejections": 2, "evidence_bar": 0.82}

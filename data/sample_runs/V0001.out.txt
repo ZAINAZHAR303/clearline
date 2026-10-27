@@ -1,0 +1,17 @@
+
+  BLOCK  confidence 1.00
+  Metaalkunde BV is an exact alias of listed entity TAWU Mechanical Engineering and Trading Company, in the same jurisdiction.
+
+  evidence
+    - exact alias match to TAWU Mechanical Engineering and Trading Company  [us_ofac_sdn NK-24kqBFxEsFzjqBYhaNHkC9]
+    - jurisdiction agrees (BE)  [us_ofac_sdn NK-24kqBFxEsFzjqBYhaNHkC9]
+
+  caveats
+    ~ tax_id is unreliable in this source
+    ~ watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities
+    ~ control chain NOT walked for this vendor
+
+  ask the reviewer: Confirm the alias match before freezing payments.
+
+  trace: D:\Github Repos\genai hackathon\logs\run-20261027T163906-d191408f.jsonl
+

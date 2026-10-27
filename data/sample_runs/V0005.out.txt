@@ -1,0 +1,11 @@
+
+  ESCALATE  confidence 0.00
+  The vendor name is too generic to resolve against a watchlist without additional identifiers.
+
+  unresolved
+    ! generic trading name
+
+  ask the reviewer: Can you supply a tax ID, LEI or registry number for this vendor?
+
+  trace: D:\Github Repos\genai hackathon\logs\run-20261027T163956-1669390b.jsonl
+

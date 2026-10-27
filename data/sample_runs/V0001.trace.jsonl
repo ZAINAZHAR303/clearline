@@ -1,0 +1,23 @@
+{"t": 0.002, "run_id": "d191408f", "kind": "run.start", "subject": "V0001"}
+{"t": 0.039, "run_id": "d191408f", "kind": "vendor.loaded", "vendor_id": "V0001", "legal_name": "Metaalkunde BV", "country": "BE", "annual_spend_usd": 48000}
+{"t": 0.039, "run_id": "d191408f", "kind": "agent.start", "agent": "router", "vendor_id": "V0001"}
+{"t": 0.039, "run_id": "d191408f", "kind": "llm.call", "agent": "router", "tier": "nano", "budget": 1, "faked": true}
+{"t": 0.046, "run_id": "d191408f", "kind": "router.out", "risk_tier": "MED", "ambiguous": false, "signals": []}
+{"t": 0.046, "run_id": "d191408f", "kind": "agent.end", "agent": "router", "ms": 6}
+{"t": 4.169, "run_id": "d191408f", "kind": "tool.call", "tool": "dq_report", "table": "lightning.metastore.clearline.counterparty_usl.counterparty", "source": "local-fallback", "columns": {"tax_id": 0.145, "country": 0.0, "bank_country": 0.0}, "constraints": []}
+{"t": 4.169, "run_id": "d191408f", "kind": "branch", "reason": "tax_id unreliable in this source (tax_id 14% null)", "taken": "RAISE_EVIDENCE_BAR", "from_bar": 0.7, "to_bar": 0.82}
+{"t": 8.834, "run_id": "d191408f", "kind": "tool.call", "tool": "search_sanctions", "terms": ["Metaalkunde BV", "Metaalkunde"], "n_hits": 1, "candidates": [{"id": "NK-24kqBFxEsFzjqBYhaNHkC9", "caption": "TAWU Mechanical Engineering and Trading Company", "exact_alias": true, "matched_alias": "Metaalkunde BV", "country_agreement": true, "token_overlap": 1.0, "features": ["exact_alias", "country_agreement", "tax_id_present"], "score": 1.0}]}
+{"t": 8.835, "run_id": "d191408f", "kind": "agent.start", "agent": "resolver", "n_candidates": 1, "revision": false}
+{"t": 8.835, "run_id": "d191408f", "kind": "llm.call", "agent": "resolver", "tier": "nano", "budget": 1, "faked": true}
+{"t": 8.836, "run_id": "d191408f", "kind": "resolver.out", "confidence": 1.0, "n": 1}
+{"t": 8.836, "run_id": "d191408f", "kind": "agent.end", "agent": "resolver", "ms": 0}
+{"t": 8.836, "run_id": "d191408f", "kind": "agent.start", "agent": "critic", "round": 1}
+{"t": 8.843, "run_id": "d191408f", "kind": "llm.call", "agent": "critic", "tier": "super", "budget": 3, "faked": true}
+{"t": 8.843, "run_id": "d191408f", "kind": "verdict", "agent": "critic", "verdict": "ACCEPT", "reasons": ["exact alias of a listed entity", "jurisdiction agrees"], "round": 1}
+{"t": 8.843, "run_id": "d191408f", "kind": "agent.end", "agent": "critic", "ms": 6}
+{"t": 8.843, "run_id": "d191408f", "kind": "agent.start", "agent": "adjudicator", "tier": "super", "budget": 3, "contested": false}
+{"t": 8.852, "run_id": "d191408f", "kind": "llm.call", "agent": "adjudicator", "tier": "super", "budget": 3, "faked": true}
+{"t": 8.854, "run_id": "d191408f", "kind": "adjudicator.out", "decision": "BLOCK", "confidence": 1.0, "budget_spent": 3, "tier": "super"}
+{"t": 8.854, "run_id": "d191408f", "kind": "agent.end", "agent": "adjudicator", "ms": 11}
+{"t": 10.437, "run_id": "d191408f", "kind": "hmem.remember", "status": "remembered", "record_id": "mem-1", "entity_id": "NK-24kqBFxEsFzjqBYhaNHkC9"}
+{"t": 10.437, "run_id": "d191408f", "kind": "run.end", "outcome": "BLOCK", "confidence": 1.0, "rejections": 0, "evidence_bar": 0.82}

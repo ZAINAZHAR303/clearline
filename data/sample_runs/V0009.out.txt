@@ -1,0 +1,17 @@
+
+  BLOCK  confidence 0.90
+  Xing Ao Energy Pte. Ltd. is clean on its own name, but its control chain reaches Hebei Xinhai Chemical Group Co., Ltd., a listed entity, at depth 1 via ultimate parent.
+
+  evidence
+    - control chain hop 1: Hebei Xinhai Chemical Group Co., Ltd. (ULTIMATE_PARENT)  [control_graph L:655600I0RTPZ3DFASH49]
+    - Hebei Xinhai Chemical Group Co., Ltd. is listed  [us_ofac_sdn NK-HkGpeehSFsNLXBJ9tywZCf]
+
+  caveats
+    ~ tax_id is unreliable in this source
+    ~ watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities
+    ~ control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide
+
+  ask the reviewer: Confirm the control relationship with the registry before freezing payments.
+
+  trace: D:\Github Repos\genai hackathon\logs\run-20261027T164005-b0b8edf7.jsonl
+

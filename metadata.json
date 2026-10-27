@@ -3,6 +3,12 @@
   "tagline": "Counterparty exposure adjudication across fragmented sources, with an evidence trail for every claim.",
   "track": "Track 1 - Solving Fragmented Intelligence",
   "cross_track_relevance": "Track 2 - every answer is traceable to a source row",
+  "autonomy": {
+    "stated_per_capability": "The two halves of the system sit at different levels on purpose.",
+    "L2_resolution_and_chain_walk": "The agent runs its own loop with no human in it. The resolver proposes candidates, the critic tries to break the match and may demand one specific missing field, and the walker traverses the control graph a bounded hop at a time. It decides for itself when name evidence is exhausted and ownership must be checked, and it has to pass its own checks to proceed.",
+    "L1_block_clear_decision": "The adjudicator recommends; a human approves. Every output names what a person must confirm, an exact alias match is never CLEARED without review, and a block resting on evidence below the required bar is escalated rather than asserted.",
+    "why_not_higher": "Clearing an exposed vendor is a sanctions violation and blocking a clean one freezes a real supplier. Neither error is recoverable by the agent, so the final call stays with a person."
+  },
   "repository": "https://github.com/ZAINAZHAR303/clearline",
   "team": { "name": "Argon", "size": 1 },
 

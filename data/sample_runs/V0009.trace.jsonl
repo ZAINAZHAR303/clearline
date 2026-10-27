@@ -1,0 +1,29 @@
+{"t": 0.001, "run_id": "b0b8edf7", "kind": "run.start", "subject": "V0009"}
+{"t": 0.006, "run_id": "b0b8edf7", "kind": "vendor.loaded", "vendor_id": "V0009", "legal_name": "Xing Ao Energy Pte. Ltd.", "country": "SG", "annual_spend_usd": 48000}
+{"t": 0.006, "run_id": "b0b8edf7", "kind": "agent.start", "agent": "router", "vendor_id": "V0009"}
+{"t": 0.007, "run_id": "b0b8edf7", "kind": "llm.call", "agent": "router", "tier": "nano", "budget": 1, "faked": true}
+{"t": 0.007, "run_id": "b0b8edf7", "kind": "router.out", "risk_tier": "MED", "ambiguous": false, "signals": []}
+{"t": 0.015, "run_id": "b0b8edf7", "kind": "agent.end", "agent": "router", "ms": 9}
+{"t": 4.135, "run_id": "b0b8edf7", "kind": "tool.call", "tool": "dq_report", "table": "lightning.metastore.clearline.counterparty_usl.counterparty", "source": "local-fallback", "columns": {"tax_id": 0.145, "country": 0.0, "bank_country": 0.0}, "constraints": []}
+{"t": 4.135, "run_id": "b0b8edf7", "kind": "branch", "reason": "tax_id unreliable in this source (tax_id 14% null)", "taken": "RAISE_EVIDENCE_BAR", "from_bar": 0.7, "to_bar": 0.82}
+{"t": 4.914, "run_id": "b0b8edf7", "kind": "tool.call", "tool": "search_sanctions", "terms": ["Xing Ao Energy Pte. Ltd.", "Xing"], "n_hits": 0, "candidates": []}
+{"t": 4.914, "run_id": "b0b8edf7", "kind": "agent.start", "agent": "resolver", "n_candidates": 0, "revision": false}
+{"t": 4.915, "run_id": "b0b8edf7", "kind": "llm.call", "agent": "resolver", "tier": "nano", "budget": 1, "faked": true}
+{"t": 4.915, "run_id": "b0b8edf7", "kind": "resolver.out", "confidence": 0.0, "n": 0}
+{"t": 4.915, "run_id": "b0b8edf7", "kind": "agent.end", "agent": "resolver", "ms": 0}
+{"t": 4.915, "run_id": "b0b8edf7", "kind": "agent.start", "agent": "critic", "round": 1}
+{"t": 4.915, "run_id": "b0b8edf7", "kind": "llm.call", "agent": "critic", "tier": "super", "budget": 3, "faked": true}
+{"t": 4.916, "run_id": "b0b8edf7", "kind": "verdict", "agent": "critic", "verdict": "REROUTE", "reasons": ["no watchlist candidate on the vendor's own name"], "round": 1}
+{"t": 4.916, "run_id": "b0b8edf7", "kind": "agent.end", "agent": "critic", "ms": 1}
+{"t": 4.916, "run_id": "b0b8edf7", "kind": "branch", "reason": "name evidence exhausted", "taken": "WALK_CONTROL_CHAIN"}
+{"t": 4.916, "run_id": "b0b8edf7", "kind": "agent.start", "agent": "ownership_walker", "vendor_id": "V0009", "max_depth": 5}
+{"t": 7.789, "run_id": "b0b8edf7", "kind": "tool.call", "tool": "markovian.walk", "engine": "meterless/markovian", "implementation": "clearline (engines/markovian/src/index.ts)", "chunks": 1, "carryover_tokens": 640, "token_label": "estimated", "standard_cost": 45, "markovian_cost": 685, "terminated_because": "SANCTIONS_HIT"}
+{"t": 7.789, "run_id": "b0b8edf7", "kind": "walker.hop", "depth": 1, "name": "Hebei Xinhai Chemical Group Co., Ltd.", "country": "CN", "relation": "ULTIMATE_PARENT", "sanctions_hit": true}
+{"t": 7.789, "run_id": "b0b8edf7", "kind": "branch", "reason": "control chain reaches listed entity 'Hebei Xinhai Chemical Group Co., Ltd.' at depth 1", "taken": "INDIRECT_EXPOSURE_FOUND"}
+{"t": 7.789, "run_id": "b0b8edf7", "kind": "agent.end", "agent": "ownership_walker", "ms": 2873}
+{"t": 7.789, "run_id": "b0b8edf7", "kind": "agent.start", "agent": "adjudicator", "tier": "super", "budget": 3, "contested": false}
+{"t": 7.796, "run_id": "b0b8edf7", "kind": "llm.call", "agent": "adjudicator", "tier": "super", "budget": 3, "faked": true}
+{"t": 7.797, "run_id": "b0b8edf7", "kind": "adjudicator.out", "decision": "BLOCK", "confidence": 0.9, "budget_spent": 3, "tier": "super"}
+{"t": 7.797, "run_id": "b0b8edf7", "kind": "agent.end", "agent": "adjudicator", "ms": 7}
+{"t": 7.797, "run_id": "b0b8edf7", "kind": "evidence.route", "route": "control_chain", "name_evidence": 0.0, "chain_evidence": 0.9}
+{"t": 7.797, "run_id": "b0b8edf7", "kind": "run.end", "outcome": "BLOCK", "confidence": 0.9, "rejections": 0, "evidence_bar": 0.82}

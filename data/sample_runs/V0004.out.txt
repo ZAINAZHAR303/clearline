@@ -1,0 +1,18 @@
+
+  BLOCK  confidence 0.90
+  Nordvik Components GmbH is clean on its own name, but its control chain reaches LIMITED LIABILITY COMPANY KHAVERIM, a listed entity, at depth 2 via ultimate parent.
+
+  evidence
+    - control chain hop 1: Baltic Holdings Oy (DIRECT_PARENT)  [control_graph H:baltic]
+    - control chain hop 2: LIMITED LIABILITY COMPANY KHAVERIM (ULTIMATE_PARENT)  [control_graph E:NK-2CdXhyCy9XzyZgcFcHXrTZ]
+    - LIMITED LIABILITY COMPANY KHAVERIM is listed  [us_ofac_sdn NK-2CdXhyCy9XzyZgcFcHXrTZ]
+
+  caveats
+    ~ tax_id is unreliable in this source
+    ~ watchlist: us_ofac_sdn snapshot 2026-10-22, curated subset of 72614 entities
+    ~ control relationship, NOT a measured ownership percentage: the source publishes consolidation relationships, and OFAC's 50% rule needs ownership data it does not provide
+
+  ask the reviewer: Confirm the control relationship with the registry before freezing payments.
+
+  trace: D:\Github Repos\genai hackathon\logs\run-20261027T163941-d0d2a0ba.jsonl
+
